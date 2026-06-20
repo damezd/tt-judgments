@@ -1,0 +1,5015 @@
+[
+  {
+    "title": "Brathwaite-Eversley v Oilfield Workers' Trade Union",
+    "date": "2026-06-10",
+    "url": "https://www.ttlawcourts.org/attachments/article/15839/CvA_20_P306DD10Jun2026.pdf",
+    "citation": "CvA_20_P306",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [],
+    "claimants": [
+      "Brathwaite-Eversley"
+    ],
+    "defendants": [
+      "Oilfield Workers' Trade Union (OWTU)"
+    ],
+    "companies": [
+      {
+        "name": "Oilfield Workers' Trade Union (OWTU)",
+        "role": "Respondent (major trade union)",
+        "directors_officers": [],
+        "ownership_notes": "Document not retrievable; identity inferred from case title"
+      }
+    ],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "NOT RETRIEVED: hosted on www.ttlawcourts.org/attachments host which returns empty via web_fetch on all attempts (incl. backoff). Title indicates an appeal involving the Oilfield Workers' Trade Union. Flagged for manual retrieval.",
+    "fetch_failed": true
+  },
+  {
+    "title": "The State v Small, Warren",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2024/cr_24_pos458DD5Jun2026.pdf",
+    "citation": "CR-HC-POS-2024-458-1",
+    "court": "High Court of Justice, Criminal Division, Port of Spain",
+    "judges": [
+      "Madame Justice Nalini Singh"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Warren Small aka Warren \"Quincy\" Small aka \"Blacks\""
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Darrie Simon",
+        "role": "Deceased (murder victim)",
+        "notes": "Son of eyewitness Ms Joseph Tinto; shot 3 March 2020 at Acono Junction, Maracas, St Joseph"
+      },
+      {
+        "name": "Sharlene Ramkissoon",
+        "role": "Deceased (murder victim)",
+        "notes": "Killed in same incident"
+      },
+      {
+        "name": "Ms Joseph Tinto",
+        "role": "Eyewitness",
+        "notes": "Operated minimart; key recognition witness"
+      },
+      {
+        "name": "Celine Rebeiro",
+        "role": "Witness",
+        "notes": "Daughter of Sharlene Ramkissoon"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Accused found NOT GUILTY on all counts (2 murders, possession of firearm and ammunition).",
+    "osint_value": "low",
+    "osint_notes": "Criminal murder/firearm case; no business entities, financial figures, or property/lease content.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Holder (estate of Cyril Holder) v Marshall",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2023/cv_23_02147DD5Jun2026.pdf",
+    "citation": "CV2023-02147",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Garland Holder (representative of Estate of Cyril Holder, deceased)"
+    ],
+    "defendants": [
+      "Mary Marshall"
+    ],
+    "companies": [
+      {
+        "name": "D Hannays & Company",
+        "role": "Firm Cyril Holder attended re Deed of Gift (2021)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Cyril Holder",
+        "role": "Deceased property owner (died 8 Sept 2025, age 86 at deed)",
+        "notes": "Owned No. 26 El Dorado Road, Tunapuna since 1969; transferred it by Deed of Gift 2021"
+      },
+      {
+        "name": "Garland Holder",
+        "role": "Claimant / son / estate representative",
+        "notes": "Appointed Committee under Mental Health Act 30 Jan 2023"
+      },
+      {
+        "name": "Mary Marshall",
+        "role": "Defendant / daughter (eldest, born outside marriage)",
+        "notes": "Pension nominee June 2020; joint account holder Oct 2022; donee of property"
+      },
+      {
+        "name": "Shirley Holder",
+        "role": "Cyril's ex-wife",
+        "notes": "Married 1974, divorced 1993"
+      },
+      {
+        "name": "Karen Holder",
+        "role": "Daughter/witness",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "210000.00",
+        "currency": "TTD",
+        "what_it_is": "Pension funds the claimant alleged (unproven) the defendant misappropriated"
+      },
+      {
+        "amount": "91000.00",
+        "currency": "TTD",
+        "what_it_is": "Pension cheques encashed June 2020 onward"
+      },
+      {
+        "amount": "28000.00",
+        "currency": "TTD",
+        "what_it_is": "Re-issued cheque value (Jan-June 2018)"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Joint account deposit (21 Oct 2022); also prescribed costs sum"
+      },
+      {
+        "amount": "100000.00",
+        "currency": "TTD",
+        "what_it_is": "Claimed renovations to the home"
+      },
+      {
+        "amount": "50000.00",
+        "currency": "TTD",
+        "what_it_is": "Treated value of the claim for costs"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 26 El Dorado Road, Tunapuna, 5,324 sq ft; Deed of Conveyance No. 8860 of 1969",
+        "lease_terms": "Deed of Gift dated 21 April 2021, registered DE 2021 009067 57D001",
+        "rent": "",
+        "landlord": "Cyril Holder (donor)",
+        "tenant": "Mary Marshall (donee)",
+        "outcome": "Deed of Gift declared lawful and valid; property not part of estate"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Republic Bank",
+      "First Citizens Bank (cited authority Nature Resorts Ltd v First Citizens Bank)"
+    ],
+    "outcome": "Claim dismissed. Deed of Gift upheld as valid; no undue influence/incapacity established; misappropriation claim unsupported. Costs reserved.",
+    "osint_value": "medium",
+    "osint_notes": "Estate/property dispute. Named property with deed numbers and value; pension financial figures; family ownership chain. Useful for asset tracing on Holder/Marshall family and No. 26 El Dorado Road.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Albert, Sayyid O. v The Attorney General",
+    "date": "2026-06-03",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2020/cv_20_00649DD3Jun2026.pdf",
+    "citation": "CV2020-00649",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Sayyid Obi Albert"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Sayyid Obi Albert",
+        "role": "Claimant / remand prisoner",
+        "notes": "Held at Port of Spain Remand Prison since 2011, charged with murder of Keyon Alleyne"
+      },
+      {
+        "name": "PO II Anil Ramsaroop",
+        "role": "Prison officer (alleged assailant)",
+        "notes": ""
+      },
+      {
+        "name": "PO I Steve Polo",
+        "role": "Prison officer (alleged assailant)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "180000.00",
+        "currency": "TTD",
+        "what_it_is": "General damages incl. aggravated damages awarded to claimant"
+      },
+      {
+        "amount": "50000.00",
+        "currency": "TTD",
+        "what_it_is": "Exemplary damages awarded"
+      },
+      {
+        "amount": "46368.49",
+        "currency": "TTD",
+        "what_it_is": "Pre-judgment interest on general damages"
+      },
+      {
+        "amount": "49136.85",
+        "currency": "TTD",
+        "what_it_is": "Prescribed scale costs"
+      },
+      {
+        "amount": "12000.00",
+        "currency": "TTD",
+        "what_it_is": "Reimbursement of expert fees"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimant against the State; total damages TT$230,000 plus interest, costs and expert fees.",
+    "osint_value": "low",
+    "osint_notes": "Prison assault/battery claim against State. Damages figures present but no business entities, banks or property. Limited OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Corridon, Keola et al v Corridon, Ashford et al (AG mislabel)",
+    "date": "2026-06-03",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2018/cv_18_04822DD3Jun2026.pdf",
+    "citation": "CV2018-04822",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Keola Corridon",
+      "Ricardo Corridon",
+      "Gwynette Joann Corridon",
+      "Jessiah Rose",
+      "Jabari Sylvester"
+    ],
+    "defendants": [
+      "Ashford Corridon",
+      "Earlyn Johnson",
+      "Lukeisha Cleary",
+      "Marilyn Feveque",
+      "Neville Johnson",
+      "Obadele Trim"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Ashford Corridon",
+        "role": "First defendant",
+        "notes": "Registered himself as tenant of land; admitted tenant status, disputed who landlord was"
+      },
+      {
+        "name": "Rupert Corridon",
+        "role": "Ashford's deceased father",
+        "notes": "Former tenant of disputed land"
+      },
+      {
+        "name": "Hilda Isabel Lazare",
+        "role": "Land owner (Lazare lands)",
+        "notes": ""
+      },
+      {
+        "name": "Sir Ellis Emmanuel Clarke",
+        "role": "Historic landowner referenced",
+        "notes": "Defendant registered as tenant of Sir Ellis Clarke 1983"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "30000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass awarded to claimants"
+      },
+      {
+        "amount": "5597.26",
+        "currency": "TTD",
+        "what_it_is": "Pre-judgment interest (2.5% p.a.)"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on claim (and again on counterclaim)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "LP #5, 18 Sparrow Drive, Petit Valley, Diego Martin (Lazare lands, Simeon Road; part of 'La Puerta Estate'), 430.4 sq m / 4,633 sq ft; Deed DE 199614714022",
+        "lease_terms": "Disputed tenancy; land rent historically paid to owner/agents; last rent ~2010",
+        "rent": "Land rent (amount not specified); receipt dated 28 Dec 1995",
+        "landlord": "Hilda Isabel Lazare (owner) / historically Sir Ellis Clarke",
+        "tenant": "Ashford Corridon / Rupert Corridon (claimed)",
+        "outcome": "Claimants granted possession; defendants to vacate within 60 days; counterclaim for equitable interest dismissed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimants: possession, TT$30,000 nominal trespass damages + interest + costs; defendants' counterclaim dismissed.",
+    "osint_value": "medium",
+    "osint_notes": "Family land/possession dispute. Named property with deed and ownership chain (Lazare lands, Sir Ellis Clarke, La Puerta Estate). Useful for land/title tracing in Petit Valley.",
+    "fetch_failed": false
+  },
+  {
+    "title": "AG v Mohan, Rishi / Ransome, Ronald",
+    "date": "2026-06-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2023/Rajkumar/CvA_23_P368DD2Jun2026.pdf",
+    "citation": "CA P368/2023 & CA P300/2024 (CV2023-00054; CV2023-01012)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Boodoosingh CJ",
+      "M. Mohammed JA",
+      "P.A. Rajkumar JA"
+    ],
+    "claimants": [
+      "Rishi Mohan (police officer)",
+      "Ronald Ransome (police officer)"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Rishi Mohan",
+        "role": "Police officer / respondent-claimant",
+        "notes": "Mugshot published by TTPS after bribery-related charge"
+      },
+      {
+        "name": "Ronald Ransome",
+        "role": "Police officer / appellant-claimant",
+        "notes": "Mugshot publication held to infringe constitutional rights"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "10000.00",
+        "currency": "TTD",
+        "what_it_is": "Constitutional damages to Mohan (reduced, vindicatory element removed)"
+      },
+      {
+        "amount": "10000.00",
+        "currency": "TTD",
+        "what_it_is": "Constitutional damages to Ransome"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Consolidated with Ronald Ransome v AG (CA P300/2024)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "TTPS publication of officers' mugshots held unlawful/unconstitutional (privacy, presumption of innocence). Damages of $10,000 each; vindicatory damages refused; mugshots to be removed from social media.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional/privacy case re police mugshot publication. No business entities/financials/property. Notable only for TTPS social-media practice ruling.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Maloney, Timothy v The Attorney General",
+    "date": "2026-05-19",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2022/boodoosingh/CvA_22_P135DD19May2026.pdf",
+    "citation": "CA P135/2022 (CV2021-01544)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Boodoosingh CJ",
+      "Maria T.M. Wilson JA",
+      "Ricky Rahim JA"
+    ],
+    "claimants": [
+      "Timothy Maloney"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Timothy Maloney",
+        "role": "Appellant",
+        "notes": "Soldier (Sergeant), TT Regiment from 1992; sought promotion/reinstatement"
+      },
+      {
+        "name": "Lt Col Patrick Gomez",
+        "role": "Officer",
+        "notes": "Alleged to have promised promotion"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal dismissed; trial judge's dismissal of constitutional claim affirmed. No promotion entitlement/legitimate expectation; no damages.",
+    "osint_value": "low",
+    "osint_notes": "Military promotion/constitutional claim. No business entities, financials or property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Questel, Quinten v Thomas, Shem",
+    "date": "2026-05-19",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2020/cv_20_02476DD19May2026.pdf",
+    "citation": "CV2020-02476",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Quinten Questel"
+    ],
+    "defendants": [
+      "Shem Thomas"
+    ],
+    "companies": [
+      {
+        "name": "DV8 (business traded by Shem Thomas)",
+        "role": "Business sold as going concern",
+        "directors_officers": [
+          "Shem Thomas (owner/vendor)"
+        ],
+        "ownership_notes": "Sold to Quinten Questel by agreement 7 June 2019 for $135,000"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Quinten Questel",
+        "role": "Claimant / purchaser of DV8",
+        "notes": "Funded purchase via credit union loan; new business affected"
+      },
+      {
+        "name": "Shem Thomas",
+        "role": "Defendant / vendor of DV8",
+        "notes": "Allegedly failed to return $20,000 surplus"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "135000.00",
+        "currency": "TTD",
+        "what_it_is": "Purchase price for DV8 business as going concern; also loan proceeds"
+      },
+      {
+        "amount": "20000.00",
+        "currency": "TTD",
+        "what_it_is": "Deposit / disputed surplus overpaid due to credit union error"
+      },
+      {
+        "amount": "155000.00",
+        "currency": "TTD",
+        "what_it_is": "Total claimed (price + surplus) plus interest"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Unnamed credit union (loan funder)"
+    ],
+    "outcome": "Interlocutory ruling: claimant granted limited permission to file Reply; paragraphs 2,4,5,6,7 struck out. Substantive monies claim ongoing; CMC scheduled 29 June 2026.",
+    "osint_value": "medium",
+    "osint_notes": "Business acquisition dispute over DV8 going-concern sale ($135k). Identifies business owner Shem Thomas and purchaser Questel; references Grand Bazaar and 'Blink'. Procedural ruling only.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Rahim-Peters v Borough of Point Fortin",
+    "date": "2026-05-19",
+    "url": "https://webopac.ttlawcourts.org//LibraryJud/Judgments/coa/2022/Rahim/CvA_22_S219DD19May2026.pdf",
+    "citation": "CA S219/2022 (CV2019-01984)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Boodoosingh CJ",
+      "M. Wilson JA",
+      "R. Rahim JA"
+    ],
+    "claimants": [
+      "Leslie Ann Rahim-Peters",
+      "Larry Eddie Peters"
+    ],
+    "defendants": [
+      "The Mayor, Aldermen, Councillors & Citizens of the Borough of Point Fortin"
+    ],
+    "companies": [
+      {
+        "name": "Ronald Heeralal Chartered (valuer)",
+        "role": "Post-incident property valuer",
+        "directors_officers": [],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Lawrence Valuation",
+        "role": "Pre-incident property valuer (2013)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Leslie Ann Rahim-Peters",
+        "role": "Appellant/property owner",
+        "notes": ""
+      },
+      {
+        "name": "Larry Eddie Peters",
+        "role": "Appellant/property owner",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "2200000.00",
+        "currency": "TTD",
+        "what_it_is": "Alleged pre-incident property value (Lawrence Valuation 2013)"
+      },
+      {
+        "amount": "1400000.00",
+        "currency": "TTD",
+        "what_it_is": "Alleged post-incident property value (Heeralal valuation)"
+      },
+      {
+        "amount": "800000.00",
+        "currency": "TTD",
+        "what_it_is": "Claimed diminution in value"
+      },
+      {
+        "amount": "1928591.11",
+        "currency": "TTD",
+        "what_it_is": "Repair/reinstatement estimate"
+      },
+      {
+        "amount": "828400.00",
+        "currency": "TTD",
+        "what_it_is": "Total claim value (diminution + special damages)"
+      },
+      {
+        "amount": "48065.00",
+        "currency": "TTD",
+        "what_it_is": "50% prescribed costs ordered against appellants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Appellants' property in Point Fortin with northern retaining wall abutting drain",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Negligence claim for wall collapse/structural damage dismissed; appeal dismissed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal dismissed; trial dismissal of negligence claim affirmed. Appellants liable for 50% prescribed costs ($48,065).",
+    "osint_value": "medium",
+    "osint_notes": "Property negligence claim against Point Fortin Borough Corporation. Detailed property valuations ($1.4M-$2.2M) and named valuation firms; useful for property valuation/asset context.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Howard, Brian v Howard, Gary",
+    "date": "2026-05-07",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2023/cv_23_00260DD7May2026.pdf",
+    "citation": "CV2023-00260",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Margaret Y. Mohammed"
+    ],
+    "claimants": [
+      "Brian Howard"
+    ],
+    "defendants": [
+      "Gary Howard"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Brian Howard",
+        "role": "Claimant / brother",
+        "notes": "Alleges Gary used undue influence/POA over father Cecil Howard"
+      },
+      {
+        "name": "Gary Howard",
+        "role": "Defendant / brother",
+        "notes": "Held Power of Attorney over father; major beneficiary of Will"
+      },
+      {
+        "name": "Cecil Howard",
+        "role": "Deceased father",
+        "notes": "Alleged lack of capacity; executed POA and Will"
+      },
+      {
+        "name": "Aunt Vulma",
+        "role": "Stakeholder",
+        "notes": "Co-owner interest in a pub vs apartment"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "Property in Woodbrook (built with father); an apartment; a pub (jointly with Aunt Vulma)",
+        "lease_terms": "Estate assets at issue under contested Will/POA",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Substantive estate dispute ongoing; this ruling only on evidence"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Unnamed bank (Ms Scipio referenced)"
+    ],
+    "outcome": "Interlocutory reasons: numerous witness-statement paragraphs struck out (opinion/hearsay/irrelevance/departure from pleadings). Substantive will/undue-influence dispute continues.",
+    "osint_value": "medium",
+    "osint_notes": "Family estate dispute over Cecil Howard's estate (Woodbrook property, apartment, pub). Undue influence/POA allegations; useful for asset tracing on Howard family holdings. Procedural ruling only.",
+    "fetch_failed": false
+  },
+  {
+    "title": "AG; Commissioner of Police; Lucas v others",
+    "date": "",
+    "url": "https://www.ttlawcourts.org/attachments/article/15518/AGvLucas%20and%20others.pdf",
+    "citation": "",
+    "court": "",
+    "judges": [],
+    "claimants": [],
+    "defendants": [],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "Document hosted on www.ttlawcourts.org/attachments host, which returns empty via web_fetch (not retrievable). Retried with backoff; no content returned.",
+    "fetch_failed": true
+  },
+  {
+    "title": "The State v K.B.",
+    "date": "2026-04-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/RHinds/2025/cr_25_326DD29Apr2026.pdf",
+    "citation": "CR-HC-SDO-2025-326-1",
+    "court": "High Court of Justice, Criminal Division",
+    "judges": [
+      "Justice Lisa Ramsumair-Hinds"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "K.B. (anonymized)"
+    ],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Accused found GUILTY on 4 counts (3 sexual touching of a child, 1 sexual penetration of a child); victim his 11-year-old daughter.",
+    "osint_value": "low",
+    "osint_notes": "Anonymized child sexual offence case. No business entities, financials or property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Martin, Nicole et al v Waithe, Kirk",
+    "date": "2026-04-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2023/cv_23_04776DD29Apr2026.pdf",
+    "citation": "CV2023-04776",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Nicole Martin",
+      "Quincy Ross",
+      "Richard Lewis"
+    ],
+    "defendants": [
+      "Kirk Waithe (aka Raymond Kirk Waithe)"
+    ],
+    "companies": [
+      {
+        "name": "Nationwide Organisation of We the People (NOW)",
+        "role": "Political party led by defendant",
+        "directors_officers": [
+          "Kirk Waithe (political leader)"
+        ],
+        "ownership_notes": "Claimants hired as 'Creative Team' for NOW's 2020 general election advertising campaign"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Kirk Waithe (Raymond Kirk Waithe)",
+        "role": "Defendant / political leader of NOW",
+        "notes": "Allegedly contracted claimants personally for ad campaign; paid Jan 2020 by personal cheque, partial cash Feb/Apr 2020"
+      },
+      {
+        "name": "Nicole Martin",
+        "role": "First claimant",
+        "notes": "Managed advertising campaign; assembled the team"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "67250.00",
+        "currency": "TTD",
+        "what_it_is": "Combined sum claimed owed for creative team monthly retainer fees (Feb-Dec 2020)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Earlier withdrawn claim CV2022-02928 (same subject matter)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Defendant's strike-out/jurisdiction application dismissed (not abuse of process; jurisdiction challenge out of time). Defence to be filed; costs against defendant.",
+    "osint_value": "medium",
+    "osint_notes": "Contract debt dispute tied to political figure Kirk Waithe and party NOW over 2020 election ad campaign fees ($67,250). Identifies political/financial relationships; procedural ruling.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ramroop-Deoraj, Renata v Gulf View Medical Centre Limited",
+    "date": "2026-04-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2020/cv_20_02583DD29Apr2026.pdf",
+    "citation": "CV2020-02583",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Renata Ramroop-Deoraj"
+    ],
+    "defendants": [
+      "Gulf View Medical Centre Limited"
+    ],
+    "companies": [
+      {
+        "name": "Gulf View Medical Centre Limited",
+        "role": "Defendant private hospital",
+        "directors_officers": [
+          "Tricia Medford (Managing Director)"
+        ],
+        "ownership_notes": "Private hospital; contracts independent specialist medical staff on needs basis"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Renata Ramroop-Deoraj",
+        "role": "Claimant / patient",
+        "notes": "Suffered burns from Sitz bath after childbirth (Aug 2016)"
+      },
+      {
+        "name": "Tricia Medford",
+        "role": "Managing Director of Gulf View Medical Centre Ltd",
+        "notes": "Swore affidavit for defendant"
+      },
+      {
+        "name": "Dr Ravindra M Lalla",
+        "role": "Treating doctor",
+        "notes": "Assessed first-third degree burns on 2% of body"
+      },
+      {
+        "name": "Dr Balkaran Ramkissoon",
+        "role": "Medical report author",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "132188.00",
+        "currency": "TTD",
+        "what_it_is": "Medical bills absorbed by Gulf View Medical Centre in treating claimant (claimed as set-off)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Defendant's application granted; claimant's Amended Statement of Case struck out for filing without permission post-CMC. Claimant to pay costs. Substantive negligence claim continues.",
+    "osint_value": "medium",
+    "osint_notes": "Medical negligence vs private hospital Gulf View Medical Centre Ltd; identifies Managing Director Tricia Medford and $132,188 in absorbed medical costs. Procedural ruling.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Kelly, Dexter; Ramdhanie-Goddard v Adams; Salandy",
+    "date": "2026-04-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/williams_q/2018/cv_18_01555DD29Apr2026.pdf",
+    "citation": "CV2018-01555",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Avason Quinlan-Williams"
+    ],
+    "claimants": [
+      "Dexter Kelly",
+      "Gemma Ramdhanie-Goddard"
+    ],
+    "defendants": [
+      "Virginia Adams",
+      "Abigail Salandy"
+    ],
+    "companies": [
+      {
+        "name": "Jesse Henderson Company Limited",
+        "role": "Adjoining landowner (boundary reference)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Emelda Ramdhanie",
+        "role": "Original lessee (deceased 1979)",
+        "notes": "Lessee of 3A Nile Street under Deed of Lease 3145 of 1962; claimants' predecessor"
+      },
+      {
+        "name": "Alvin Salandy",
+        "role": "Defendants' predecessor",
+        "notes": "Bought No. 4 Sage Street 1978; gifted to defendants 1997"
+      },
+      {
+        "name": "Gillian Burkett",
+        "role": "Land surveyor (2014 plan)",
+        "notes": ""
+      },
+      {
+        "name": "Burton Williams",
+        "role": "Court-appointed joint expert surveyor",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "187710.00",
+        "currency": "TTD",
+        "what_it_is": "Offered purchase price for 3A Nile Street to claimants (2014)"
+      },
+      {
+        "amount": "175000.00",
+        "currency": "TTD",
+        "what_it_is": "Claimant's estimated rental expenditure (claim rejected)"
+      },
+      {
+        "amount": "5000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass awarded"
+      },
+      {
+        "amount": "10000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to claimants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 3A Nile Street, St James, Port-of-Spain, 348.9 sq m; Deed of Lease 3145 of 1962 (25yr term), statutory tenancy renewed 30yr from 2011",
+        "lease_terms": "Lease/statutory tenancy with disputed right of way/steps from Nile Street",
+        "rent": "",
+        "landlord": "Landowners (unnamed)",
+        "tenant": "Estate of Emelda Ramdhanie / claimants",
+        "outcome": "Claimants granted possession of steps; defendants ordered to demolish chain-link fence and gate"
+      },
+      {
+        "address_or_description": "No. 4 Sage Street (aka 3B Nile Street), 5,172 sq ft; Deed 6879 of 1979; Deed of Gift 1997",
+        "lease_terms": "Owned by defendants",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Adverse possession defence over disputed steps rejected"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimants: defendants must remove fence/gate and not obstruct access; nominal trespass damages $5,000 + costs $10,000. Adverse possession defence failed.",
+    "osint_value": "medium",
+    "osint_notes": "Land/right-of-way & adverse possession dispute in St James. Deeds, survey plans, ownership chain (Ramdhanie, Salandy, Jesse Henderson Company Ltd). Useful for property/title tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Quashie, Charmaine v The Attorney General",
+    "date": "2026-04-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/williams_q/2024/cv_24_01683DD29Apr2026.pdf",
+    "citation": "CV2024-01683",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Avason Quinlan-Williams"
+    ],
+    "claimants": [
+      "Charmaine Quashie"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Charmaine Quashie",
+        "role": "Claimant / Ministry of Health employee",
+        "notes": "Transferred to SouthWest Regional Health Authority and salary stopped without consultation"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "200000.00",
+        "currency": "TTD",
+        "what_it_is": "Compensatory damages"
+      },
+      {
+        "amount": "150000.00",
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages"
+      },
+      {
+        "amount": "20000.00",
+        "currency": "TTD",
+        "what_it_is": "Exemplary damages"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Constitutional breach found (transfer and salary stoppage without consultation/fair hearing). Damages totalling $370,000 awarded; costs to be heard.",
+    "osint_value": "low",
+    "osint_notes": "Public-sector employment/constitutional claim re Ministry of Health transfer. Damages figures only; no business entities or property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Carter, Dexter v Cumberbatch; Arima Borough Corporation",
+    "date": "2026-04-28",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2023/cv_23_03907DD28Apr2026.pdf",
+    "citation": "CV2023-03907",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Dexter Carter"
+    ],
+    "defendants": [
+      "Constable Brandon Cumberbatch",
+      "Arima Borough Corporation (Mayor, Aldermen, Councillors and Citizens)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Dexter Carter",
+        "role": "Claimant / graphics artist & roti maker",
+        "notes": "Alleged assault by police 11 Mar 2021"
+      },
+      {
+        "name": "Constable Brandon Cumberbatch",
+        "role": "First defendant / municipal police officer",
+        "notes": "Alibi (training workshop); had charged claimant's brother with drug trafficking"
+      },
+      {
+        "name": "Juliette Carter Baldwin",
+        "role": "Witness / roti shop owner (claimant's mother)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to defendants (VAT exclusive)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Claim dismissed. Court accepted an assault occurred but claimant failed to prove it happened on pleaded date (11 Mar 2021) given officer's alibi. Costs $14,000 against claimant.",
+    "osint_value": "low",
+    "osint_notes": "Police assault/battery claim dismissed on pleadings. No business entities/financials/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Maharaj, Denesh v ASP Anthony St. Clair; AG",
+    "date": "2026-04-27",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/seepersad/2025/cv_25_03973DD27Apr2026.pdf",
+    "citation": "CV2025-03973",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Frank Seepersad"
+    ],
+    "claimants": [
+      "Denesh Maharaj"
+    ],
+    "defendants": [
+      "ASP (Ag.) Anthony St. Clair",
+      "Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Denesh Maharaj",
+        "role": "Claimant / detainee",
+        "notes": "Detained under 2025 State of Emergency EPR; alleged Resistance Gang shooter; found with firearm/ammo/cannabis (alleged); linked to disappearance of businessman Imraz Ali"
+      },
+      {
+        "name": "Imraz Ali",
+        "role": "Businessman (disappearance referenced)",
+        "notes": "Anti-Kidnapping Unit reports allegedly linked claimant to his disappearance"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Criminal charges pending; preventative detention review before EPR Tribunal (17 Jan 2026)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Judicial review claim dismissed. Further Detention Order under 2025 State of Emergency EPR held lawful, reasonable, proportionate. Costs against claimant; first defendant's costs certified fit for senior counsel.",
+    "osint_value": "low",
+    "osint_notes": "State of Emergency (declared 18 Jul 2025) detention judicial review. References 'Resistance Gang' and disappearance of businessman Imraz Ali. No business entities/financials/property; modest OSINT value via named persons/gang.",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Motilal, Rishi",
+    "date": "2026-04-27",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2024/cr_24_sdo2095DD27Apr2026.pdf",
+    "citation": "CR-HC-SDO-2024-2095-1",
+    "court": "High Court of Justice, Criminal Division, San Fernando",
+    "judges": [
+      "Madame Justice Nalini Singh"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Rishi Motilal (aka 'Cook Meat')"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Tara Ramsaroop",
+        "role": "Deceased (wife of accused)",
+        "notes": "Chopped to death 8 Oct 2024, Barrackpore"
+      },
+      {
+        "name": "Shermaya Motilal",
+        "role": "Deceased (14-month-old daughter)",
+        "notes": "Killed in same incident"
+      },
+      {
+        "name": "Rishi Motilal",
+        "role": "Accused",
+        "notes": "Self-employed (scrap iron); charged with murder x2 and malicious damage; pleaded guilty to malicious damage"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Prior interim protection order between accused and Tara Ramsaroop"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Domestic double-murder trial (wife and infant daughter) plus malicious damage (guilty plea). Provocation/manslaughter considered. Final murder verdict not fully captured in extracted text.",
+    "osint_value": "low",
+    "osint_notes": "Domestic murder case. No business entities, financials or property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ashton, Daron v The Attorney General",
+    "date": "2026-04-27",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2021/cv_21_03530DD27Apr2026.pdf",
+    "citation": "CV2021-03530",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Daron Ashton"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "Allied Security Services Limited",
+        "role": "Claimant's employer (security firm)",
+        "directors_officers": [],
+        "ownership_notes": "Claimant was Estate Constable assigned to Judiciary IT Dept"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Daron Ashton",
+        "role": "Claimant / Estate Constable",
+        "notes": "Charged re missing Dell laptops at Judiciary IT dept; prosecuted"
+      },
+      {
+        "name": "Sgt. Bissoon",
+        "role": "Charging officer",
+        "notes": "Found to have reasonable and probable cause"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "183600.00",
+        "currency": "TTD",
+        "what_it_is": "Value of missing Dell laptops/accessories (subject of theft charge)"
+      },
+      {
+        "amount": "6006.00",
+        "currency": "TTD",
+        "what_it_is": "Special damages claimed (legal fees/lost salary over adjournments)"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to defendant"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Malicious prosecution claim dismissed (unlawful arrest/detention claims abandoned as statute-barred). Reasonable and probable cause found. Costs $14,000 against claimant.",
+    "osint_value": "low",
+    "osint_notes": "Malicious prosecution claim re Judiciary IT laptop theft. Company appears only as employer (Allied Security Services Ltd). Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Birchwood (estate of Cassell Birchwood) v Duke",
+    "date": "2026-04-27",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2024/cv_24_04520DD27Apr2026.pdf",
+    "citation": "CV2024-04520",
+    "court": "High Court of Justice, Sub-Registry Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Andre Birchwood (Executor of estate of Cassell Birchwood)"
+    ],
+    "defendants": [
+      "Marilyn Duke (as LPR of estate of Lucille Birchwood)",
+      "Marilyn Duke (personally)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Cassell Birchwood",
+        "role": "Deceased (died 17 Jul 2007, domiciled USA)",
+        "notes": "Estate claims Sherwood Park & Lambeau lands per 2000 consent order"
+      },
+      {
+        "name": "Andre Birchwood",
+        "role": "Claimant / Executor & beneficiary",
+        "notes": "Collects rent from Lambeau dwelling house tenants"
+      },
+      {
+        "name": "Marilyn Duke",
+        "role": "Defendant",
+        "notes": "In possession of lands; built apartment complex; agreed to sell Lambeau lands to Mr Azar"
+      },
+      {
+        "name": "Elroy Duke",
+        "role": "Second defendant's son",
+        "notes": "Paved roadway 2023"
+      },
+      {
+        "name": "Mr Azar",
+        "role": "Prospective purchaser of Lambeau lands (2024)",
+        "notes": ""
+      },
+      {
+        "name": "Kiara Medina",
+        "role": "Licensed land surveyor",
+        "notes": "Prepared 2024 survey plan"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "Sherwood Park lands, Carnbee, Tobago, Plots 12-16, ~2 acres 9 perches",
+        "lease_terms": "Subject of 2000 consent order to convey to deceased; 10-bedroom apartment complex built across lots 13-15 (~2019)",
+        "rent": "Apartment tenants' rent collected by defendant",
+        "landlord": "Disputed (Birchwood estate vs Duke)",
+        "tenant": "Various tenants",
+        "outcome": "Possession claim proceeds to trial; injunction maintained restraining obstruction/sale"
+      },
+      {
+        "address_or_description": "Lambeau lands, Tobago, 10,000 sq ft with 2-bedroom dwelling house",
+        "lease_terms": "Agreement for sale to Mr Azar (2024); rent historically collected",
+        "rent": "Rent collected by claimant since 2007",
+        "landlord": "Disputed",
+        "tenant": "Various tenants",
+        "outcome": "Sale restrained pending trial"
+      }
+    ],
+    "related_litigation": [
+      "HCA No. 45 of 2000 (consent order between deceased and first defendant)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Mixed interlocutory: claims to enforce 2000 consent order and for maladministration struck out (statute-barred); possession/declaratory claims proceed to trial. Expanded injunction granted protecting claimant's access. Each party bears own costs.",
+    "osint_value": "medium",
+    "osint_notes": "Estate land dispute in Tobago (Sherwood Park & Lambeau). Development (10-bed apartment complex), rental income, prospective sale to 'Mr Azar', named surveyor. Useful for property/asset tracing on Birchwood/Duke families.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Construtora OAS S.A. v National Infrastructure Development Co (NIDCO)",
+    "date": "",
+    "url": "https://www.ttlawcourts.org/attachments/article/15497/Civil%20Appeal%20No.%20P018%20of%202023.pdf",
+    "citation": "Civil Appeal No. P018 of 2023",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [],
+    "claimants": [
+      "Construtora OAS S.A."
+    ],
+    "defendants": [
+      "National Infrastructure Development Company Limited (NIDCO)"
+    ],
+    "companies": [
+      {
+        "name": "Construtora OAS S.A.",
+        "role": "Appellant (Brazilian construction company)",
+        "directors_officers": [],
+        "ownership_notes": "Document not retrievable; identity inferred from case title"
+      },
+      {
+        "name": "National Infrastructure Development Company Limited (NIDCO)",
+        "role": "Respondent (T&T state infrastructure company)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "high",
+    "osint_notes": "POTENTIALLY HIGH VALUE but NOT RETRIEVED: hosted on www.ttlawcourts.org/attachments host which returns empty via web_fetch. Title indicates major construction dispute between Brazilian contractor Construtora OAS S.A. and T&T state company NIDCO. Flagged for manual retrieval.",
+    "fetch_failed": true
+  },
+  {
+    "title": "Motilal, Mukesh et al v Ramjitsingh, Gita",
+    "date": "2026-04-23",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2019/cv_19_05213DD23Apr2026.pdf",
+    "citation": "CV2019-05213",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Mukesh Motilal",
+      "Mala Motilal",
+      "Pratima Motilal"
+    ],
+    "defendants": [
+      "Gita Ramjitsingh (LPR of estate of Stephan Ramjitsingh, deceased)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Stephan Ramjitsingh",
+        "role": "Original defendant (deceased)",
+        "notes": "Occupied claimants' property at Cacandee Rd, Felicity; ran roti shop; medically retired on disability"
+      },
+      {
+        "name": "Dindial Lochan / Leela Lochan",
+        "role": "Relatives",
+        "notes": "Defendant claimed to have cared for them and repaired their Pierre Rd property"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "137000.00",
+        "currency": "TTD",
+        "what_it_is": "Equitable interest counterclaim (monies spent, no receipts)"
+      },
+      {
+        "amount": "445992.00",
+        "currency": "TTD",
+        "what_it_is": "Sum defendant claimed in witness statement to have spent on repairs/care"
+      },
+      {
+        "amount": "28000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to claimants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 108 Cacandee Road, Felicity, Chaguanas, 705.1 sq m; Grant of State Lands Vol 5780 Folio 201",
+        "lease_terms": "Permissive occupation from ~2000/2006; no tenancy",
+        "rent": "",
+        "landlord": "Motilal claimants",
+        "tenant": "Stephan Ramjitsingh (occupier)",
+        "outcome": "Claimants granted possession; defendant has no legal/equitable interest; must vacate within 60 days"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Western Union (remittances referenced)"
+    ],
+    "outcome": "Judgment for claimants; defendant's equitable interest counterclaim dismissed. Declarations of no interest and trespass; injunctions; possession ordered. Costs $28,000.",
+    "osint_value": "medium",
+    "osint_notes": "Family property/possession & equitable interest dispute (No. 108 Cacandee Rd, Felicity). State land grant reference and disputed expenditure figures. Useful for property/title context.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ready, Jude N.; Ready, Julio A. v AG",
+    "date": "2026-04-23",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_02669DD23Apr2026.pdf",
+    "citation": "CV2022-02669",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Jude Neil Ready",
+      "Julio Armando Ready"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "PC Herbert Gabriel",
+        "role": "Police constable (alleged defamer, 2000)",
+        "notes": "Default judgment 2006, damages assessed 2020"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "380000.00",
+        "currency": "TTD",
+        "what_it_is": "Damages incl. aggravated (first claimant)"
+      },
+      {
+        "amount": "112000.00",
+        "currency": "TTD",
+        "what_it_is": "Damages component with interest"
+      },
+      {
+        "amount": "100000.00",
+        "currency": "TTD",
+        "what_it_is": "Exemplary damages claimed"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Default judgment 9 Mar 2006; damages assessed by Master Alexander 12 Oct 2020"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Defendant's application granted; claim to make State satisfy old assessed judgment struck out as abuse of process / statute-barred / no grounds. No order as to costs.",
+    "osint_value": "low",
+    "osint_notes": "Procedural claim to enforce an old defamation default judgment against the State. Damages figures from prior case; no business/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Yarde, Joel v Chapman, Deon (interpleader: Hubert Chapman)",
+    "date": "2026-04-23",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2021/cv_21_00068DD23Apr2026.pdf",
+    "citation": "CV2021-00068",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Joel Yarde (Judgment Creditor)"
+    ],
+    "defendants": [
+      "Deon Chapman (Judgment Debtor)",
+      "Hubert Chapman (Interpleader Claimant)"
+    ],
+    "companies": [
+      {
+        "name": "Tobago Agribusiness Development Company Limited (TADCO)",
+        "role": "Operator of Shaw Park warehouse where seized goods stored",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Joel Yarde",
+        "role": "Judgment creditor",
+        "notes": "Won default judgment re breach of motor vehicle lease agreement"
+      },
+      {
+        "name": "Deon Chapman",
+        "role": "Judgment debtor",
+        "notes": "Handed over keys to truck not his own, misleading Marshal"
+      },
+      {
+        "name": "Hubert Chapman",
+        "role": "Interpleader claimant",
+        "notes": "Father of deceased truck owner D'Andre Quashie-Warrick"
+      },
+      {
+        "name": "D'Andre Quashie-Warrick (nee Natasha Tricia Chapman, aka D'Andre Quashie)",
+        "role": "Deceased registered owner of truck",
+        "notes": "Died 30 Jun 2019; married Erin W. Warrick in Brooklyn NY 2006"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "121229.74",
+        "currency": "TTD",
+        "what_it_is": "Default judgment debt (vehicle lease breach)"
+      },
+      {
+        "amount": "139501.93",
+        "currency": "TTD",
+        "what_it_is": "Judgment debt with accrued interest by Feb 2024"
+      },
+      {
+        "amount": "45506.25",
+        "currency": "TTD",
+        "what_it_is": "Accumulated storage fees on seized goods"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Motor vehicle lease (truck); execution at 29 Gaskin Bay Road, Bon Accord, Tobago",
+        "lease_terms": "Lease agreement for a motor vehicle (subject of original debt)",
+        "rent": "",
+        "landlord": "Joel Yarde (lessor)",
+        "tenant": "Deon Chapman (lessee)",
+        "outcome": "Truck TBZ 7240 (belonging to deceased's estate) released to interpleader; storage fees split 50/50 between creditor and debtor"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Interpleader granted: seized truck released to estate of D'Andre Quashie-Warrick. Storage fees ($45,506.25) and costs apportioned 50/50 between Yarde and Deon Chapman. Sale of other seized goods to proceed.",
+    "osint_value": "low",
+    "osint_notes": "Enforcement/interpleader over vehicle lease debt. Asset (Mitsubishi Canter truck) and judgment figures; TADCO only as warehouse. Modest OSINT value via named persons/asset.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Carrera, Parbatee v Mohammed, Cita et al",
+    "date": "2026-04-23",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2016/cv_16_04049DD23Apr2026.pdf",
+    "citation": "CV2016-04049",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Parbatee Carrera"
+    ],
+    "defendants": [
+      "Cita Mohammed",
+      "Leela Lalmatee Keshwah",
+      "Samdaye George",
+      "Annadaye Jagessar",
+      "Sohan Sukram",
+      "Roopchan Mano",
+      "Rookmin Maharaj"
+    ],
+    "companies": [
+      {
+        "name": "Aranguez Estates Limited",
+        "role": "Landowner/lessor of the leasehold estate property",
+        "directors_officers": [],
+        "ownership_notes": "Conveyed portion to Meena and Javed Iqbal with deceased's consent"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Mano Sukram",
+        "role": "Deceased (died 3 Nov 2003)",
+        "notes": "Testator; will dated 12 Jul 2001 upheld; owned property at LP 6A 8th Avenue, Barataria"
+      },
+      {
+        "name": "Penelope Beckles-Robinson",
+        "role": "Attorney who prepared/witnessed will",
+        "notes": "Key witness establishing due execution"
+      },
+      {
+        "name": "Meena Iqbal / Javed Iqbal",
+        "role": "Granddaughter & husband / land recipients",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "LP No. 6A 8th Avenue, Barataria, Trinidad (~half acre leasehold from Aranguez Estates Ltd); 7 houses on the land",
+        "lease_terms": "Leasehold; multiple family members built homes on the land",
+        "rent": "",
+        "landlord": "Aranguez Estates Limited",
+        "tenant": "Estate of Mano Sukram / family",
+        "outcome": "Will upheld; estate subject to defendants' proprietary rights; First Defendant granted equitable life interest in downstairs of main house"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Will of Mano Sukram (12 Jul 2001) held valid and propounded in solemn form; claimant entitled to probate. Estate subject to defendants' proprietary estoppel rights; First Defendant granted equitable life interest in downstairs portion. Each party bears own costs.",
+    "osint_value": "medium",
+    "osint_notes": "Family estate/will & proprietary estoppel dispute over Barataria leasehold (Aranguez Estates Ltd). Property/ownership chain useful for title/asset tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ramsubhagh v Victor, Anthony; Maraj-Victor",
+    "date": "2026-04-23",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2017/cv_17_02777DD23Apr2026.pdf",
+    "citation": "CV2017-02777",
+    "court": "High Court of Justice, Civil Division, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Dhanraj Ramsubhagh",
+      "Vidya Ramsubhagh"
+    ],
+    "defendants": [
+      "Anthony Victor",
+      "Maria Maraj-Victor"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad and Tobago Oil Company Limited",
+        "role": "Transferee of 830.3 sq m for gas line installation (1990)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Lal Chanderpersad Gokool",
+        "role": "Original landowner (died 5 Jan 1987)",
+        "notes": "Grandfather; held 4 acres in Siparia with 4 children as joint tenants"
+      },
+      {
+        "name": "Ronnie Victor",
+        "role": "Defendants' son (migrated to USA)",
+        "notes": "Subject of alleged land gift/promise; estoppel claim failed for lack of detriment"
+      },
+      {
+        "name": "Bhanmati Lal / Madden Sein",
+        "role": "Co-owners (deceased)",
+        "notes": "Allegedly promised two lots to Ronnie"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "25250.00",
+        "currency": "TTD",
+        "what_it_is": "Backfilling cost paid by first defendant (2008)"
+      },
+      {
+        "amount": "50000.00",
+        "currency": "TTD",
+        "what_it_is": "Approx. construction expenditure claimed by defendants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Parcel ~1.5282 ha in Ward of Siparia, Certificate of Title Vol 2136 Folio 225 (part of former 4-acre Gokool estate subdivided into 6 lots)",
+        "lease_terms": "Freehold; adverse possession of one lot (1995-2017)",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claimants' title to one lot extinguished by defendants' adverse possession (16+ yrs); defendants get fee simple in that lot; proprietary estoppel & constructive trust counterclaims dismissed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Mixed: defendants succeeded on adverse possession (claimants' title to one lot extinguished, fee simple granted); proprietary estoppel and constructive trust counterclaims dismissed. Each party bears own costs.",
+    "osint_value": "medium",
+    "osint_notes": "Family land/adverse possession dispute in Siparia with detailed title chain (Gokool estate, 6-lot subdivision, T&T Oil Company gas-line parcel). Useful for property/title tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Atticus Development Ltd et al v The Registrar General",
+    "date": "2026-04-22",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/seepersad/2025/cv_25_01220DD22Apr2026.pdf",
+    "citation": "CV2025-01220",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Frank Seepersad"
+    ],
+    "claimants": [
+      "Atticus Development Ltd.",
+      "First Floor Ltd.",
+      "Mezzanine Ltd.",
+      "Second Floor Ltd.",
+      "Super Brands Ltd.",
+      "Ultras Brands Ltd.",
+      "Coronet Brands Ltd."
+    ],
+    "defendants": [
+      "The Registrar General"
+    ],
+    "companies": [
+      {
+        "name": "Atticus Development Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [
+          "Najoom Galy",
+          "Elias Galy"
+        ],
+        "ownership_notes": "Part of a cluster of related companies; affidavits sworn by Najoom Galy and Elias Galy"
+      },
+      {
+        "name": "First Floor Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related to Atticus/Galy cluster"
+      },
+      {
+        "name": "Mezzanine Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related cluster"
+      },
+      {
+        "name": "Second Floor Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related cluster"
+      },
+      {
+        "name": "Super Brands Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related cluster"
+      },
+      {
+        "name": "Ultras Brands Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related cluster"
+      },
+      {
+        "name": "Coronet Brands Ltd.",
+        "role": "Claimant company",
+        "directors_officers": [],
+        "ownership_notes": "Related cluster; claimants said new process stalled their banking business"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Najoom Galy",
+        "role": "Affiant for claimant companies",
+        "notes": "Likely director/officer of the company cluster"
+      },
+      {
+        "name": "Elias Galy",
+        "role": "Affiant for claimant companies",
+        "notes": "Likely director/officer of the company cluster"
+      },
+      {
+        "name": "Nicole Singh",
+        "role": "Senior Legal Officer, Office of Registrar General",
+        "notes": "Affiant for defendant"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judicial review granted. Registrar General's exclusive electronic-filing (CROS) policy held ultra vires the Companies Act; decision quashed (certiorari); mandamus to accept hardcopy filings. Breach of legitimate expectation. Costs to claimants; 42-day stay.",
+    "osint_value": "medium",
+    "osint_notes": "Cluster of 7 related companies (Atticus Development, First Floor, Mezzanine, Second Floor, Super Brands, Ultras Brands, Coronet Brands) linked to Galy family (Najoom & Elias Galy), with banking interests. Valuable for corporate network mapping; AML/CFT/FATF context.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Arion Contractors Limited v Hydraulic Supplies Limited",
+    "date": "2026-04-17",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2020/cv_20_01863DD17Apr2026.pdf",
+    "citation": "CV2020-01863",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Arion Contractors Limited"
+    ],
+    "defendants": [
+      "Hydraulic Supplies Limited"
+    ],
+    "companies": [
+      {
+        "name": "Arion Contractors Limited",
+        "role": "Claimant / buyer of bulldozer",
+        "directors_officers": [],
+        "ownership_notes": "Contracting business; rented replacement bulldozer at $4,500/day"
+      },
+      {
+        "name": "Hydraulic Supplies Limited",
+        "role": "Defendant / seller of bulldozer",
+        "directors_officers": [],
+        "ownership_notes": "Sold and later repossessed/sold the bulldozer"
+      },
+      {
+        "name": "Motor Critic Ltd",
+        "role": "Independent valuer of the bulldozer pre-sale",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Mr. Bruce",
+        "role": "Claimant's negotiator/representative",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "1086750.00",
+        "currency": "TTD",
+        "what_it_is": "Purchase price of used CAT D6R XL Dozer (VAT incl.)"
+      },
+      {
+        "amount": "819852.31",
+        "currency": "TTD",
+        "what_it_is": "Balance defendant sued for in earlier action CV2019-02818"
+      },
+      {
+        "amount": "400000.00",
+        "currency": "TTD",
+        "what_it_is": "Price at which defendant resold the repossessed bulldozer / awarded as its loss value"
+      },
+      {
+        "amount": "100000.00",
+        "currency": "TTD",
+        "what_it_is": "Damages for breach of contract awarded to claimant"
+      },
+      {
+        "amount": "21000.00",
+        "currency": "TTD",
+        "what_it_is": "Sum obtained via garnishee of claimant's bank account"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "CV2019-02818 (defendant's earlier debt claim; default judgment set aside)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimant: defendant breached 15 Jul 2019 forbearance agreement by entering default judgment, garnisheeing accounts and repossessing/selling the bulldozer. Awarded $400,000 (loss of bulldozer) + $100,000 damages + interest + costs; default judgment set aside.",
+    "osint_value": "medium",
+    "osint_notes": "Commercial equipment-finance dispute between Arion Contractors Ltd and Hydraulic Supplies Ltd over a CAT bulldozer (~$1.09M). Financial figures, garnishee, valuer Motor Critic Ltd. Useful for commercial/asset intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Skeete, Jhodi v Mark, John et al",
+    "date": "2026-04-17",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2022/cv_22_01836DD17Apr2026.pdf",
+    "citation": "CV2022-01836",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Jhodi Skeete (substituted; for elderly Mrs Mentor)"
+    ],
+    "defendants": [
+      "John Mark",
+      "Jo-Anne Mark",
+      "Carl Mark",
+      "Andre Phillips"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Herbert and Maggie Mark",
+        "role": "Predecessor occupants (defendants' parents)",
+        "notes": ""
+      },
+      {
+        "name": "Catherine Mark Phillips",
+        "role": "Predecessor occupant (4th defendant's ancestor)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs of claim awarded to defendants (and again $14,000 on counterclaim)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Land at Mentor Drive, Signal Hill, St Andrew, Tobago, 0.5153 ha; Certificate of Title Vol 6263 Folio 321 (2019)",
+        "lease_terms": "Adverse possession of Lots 2, 2A and 4 by defendants (40+ years claimed)",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claimant's RPA title defeated by defendants' adverse possession; Lots 2, 2A, 4 to be excised and transferred to defendants"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Claim dismissed; judgment for defendants on counterclaim. Adverse possession extinguished claimant's registered (RPA) title to occupied lots; excision and transfer ordered. Costs $28,000 against claimant.",
+    "osint_value": "medium",
+    "osint_notes": "Tobago land/adverse possession dispute; registered title (RPA) defeated by long occupation. Detailed title/boundary chain. Useful for property/title tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Siewnarine, Parbatie et al v Siewnarine, Diana et al",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2022/pemberton/CvA_22_P276DD16Apr2026.pdf",
+    "citation": "CA P276/2022 (CV2018-02410)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "C. Pemberton JA",
+      "G. Lucky JA",
+      "M. Dean-Armorer JA"
+    ],
+    "claimants": [
+      "Diana Siewnarine",
+      "Victoria Siewnarine"
+    ],
+    "defendants": [
+      "Parbatie Siewnarine",
+      "Rosabelle Heeralal",
+      "Sattie Huggins"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad Sugar Estates Limited",
+        "role": "Adjoining landowner (boundary reference)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Jewan Siewnarine",
+        "role": "Deceased property co-owner",
+        "notes": "Married Parbatie Siewnarine 1972; joint tenant of No. 2 Ninth Street, Dinsley Gardens"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "54000.00",
+        "currency": "TTD",
+        "what_it_is": "High Court costs (re-allocated to respondents)"
+      },
+      {
+        "amount": "36000.00",
+        "currency": "TTD",
+        "what_it_is": "Court of Appeal costs (2/3 rule)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 2 Ninth Street, Dinsley Gardens (joint-tenancy property)",
+        "lease_terms": "Dispute over severance of joint tenancy / 1/2 share interest",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Appeal partly succeeded; costs orders reallocated to respondents"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal re joint-tenancy severance over Dinsley Gardens property; trial findings largely upheld but costs orders set aside and reallocated against respondents (HC $54,000; CoA $36,000).",
+    "osint_value": "medium",
+    "osint_notes": "Family property/joint-tenancy dispute (No. 2 Ninth Street, Dinsley Gardens). Title chain and boundary reference to Trinidad Sugar Estates Ltd. Useful for property tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Brathwaite, Lynden L. v Brathwaite, Karen; Partap",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2024/cv_24_02564DD16Apr2026.pdf",
+    "citation": "CV2024-02564",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Lynden Lemuel Brathwaite"
+    ],
+    "defendants": [
+      "Karen Valentine Brathwaite",
+      "Tahfari Joshua Partap"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Lynden Lemuel Brathwaite",
+        "role": "Claimant / ex-husband",
+        "notes": "Seeks to set aside matrimonial consent order alleging coercion"
+      },
+      {
+        "name": "Karen Valentine Brathwaite",
+        "role": "First defendant / ex-wife",
+        "notes": ""
+      },
+      {
+        "name": "Tahfari Joshua Partap",
+        "role": "Second defendant (ex-wife's son)",
+        "notes": "Donee of Piparo Road property under consent order"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "1000000.00",
+        "currency": "TTD",
+        "what_it_is": "Sum claimant to pay first defendant on sale of matrimonial home (consent order)"
+      },
+      {
+        "amount": "300.00",
+        "currency": "TTD",
+        "what_it_is": "Weekly payment to first defendant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Matrimonial home (to be sold); property at Piparo Road, Tabaquite (gifted to second defendant)",
+        "lease_terms": "Subject of matrimonial consent orders being challenged",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Civil High Court has jurisdiction; fresh action to set aside consent order/Deed of Gift proceeds"
+      }
+    ],
+    "related_litigation": [
+      "Matrimonial proceedings FH 02647 of 2020 (consent orders 2020-2024)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Point in limine: Civil High Court (not Family Court) has jurisdiction to hear fresh action to set aside matrimonial consent order and Deed of Gift. Strike-out refused. Costs to claimant.",
+    "osint_value": "medium",
+    "osint_notes": "Matrimonial consent-order/Deed of Gift challenge involving $1M matrimonial home payment and Piparo Road property gift. Property/financial assets useful for asset tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "La Borde, Oriel v Pennie, Raymond; Pennie, Petra; TTMF",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2020/cv_20_03991DD16Apr2026.pdf",
+    "citation": "CV2020-03991",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Oriel La Borde (through attorney Debra Phillips)"
+    ],
+    "defendants": [
+      "Raymond Pennie",
+      "Petra Pennie",
+      "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)",
+        "role": "Third defendant / mortgagee",
+        "directors_officers": [],
+        "ownership_notes": "Provided mortgage of $472,500 to the Pennies for the property"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Oriel La Borde",
+        "role": "Claimant / registered owner",
+        "notes": "Alleged fraudulent conveyance of his property; did not testify"
+      },
+      {
+        "name": "Raymond Pennie / Petra Pennie",
+        "role": "First/second defendants / purchasers",
+        "notes": ""
+      },
+      {
+        "name": "Debra Phillips",
+        "role": "Claimant's attorney (POA), sister",
+        "notes": "Found not creditworthy"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "472500.00",
+        "currency": "TTD",
+        "what_it_is": "Mortgage amount from TTMF to the Pennies"
+      },
+      {
+        "amount": "252000.00",
+        "currency": "TTD",
+        "what_it_is": "Title value benefit obtained by defendants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 63 Battoo Boulevard, Marabella, 6,564 sq ft; Deed 1167 of 1979; conveyance DE201400756287",
+        "lease_terms": "Conveyed to Pennies (2014); mortgaged to TTMF",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Alleged fraudulent conveyance not proven; claim dismissed; conveyance/mortgage stand"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)"
+    ],
+    "outcome": "Claim of fraudulent conveyance dismissed (claimant failed to testify; adverse inference drawn). Judgment for defendants; conveyance and TTMF mortgage upheld. Costs against claimant.",
+    "osint_value": "medium",
+    "osint_notes": "Alleged property/title fraud (No. 63 Battoo Boulevard, Marabella) involving TTMF mortgage ($472,500). Property/financial institution intel; useful for asset/title tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Maharaj, Robindranath v The Firearms Appeal Board",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2024/cv_24_03029DD16Apr2026.pdf",
+    "citation": "CV2024-03029",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Robindranath Maharaj"
+    ],
+    "defendants": [
+      "The Firearms Appeal Board"
+    ],
+    "companies": [
+      {
+        "name": "Columbus Communications Trinidad Limited (FLOW)",
+        "role": "Claimant's employer",
+        "directors_officers": [
+          "Robindranath Maharaj (Director, Technical Operations)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Fortress Security Services Limited",
+        "role": "FLOW's security provider",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Robindranath Maharaj",
+        "role": "Claimant / Director Technical Operations at FLOW",
+        "notes": "Sought firearm licence; father murdered 2001, wife attempted kidnapping 2008; owns rental property in Ste Madeleine"
+      },
+      {
+        "name": "Fazal Mohammed",
+        "role": "Chairman, Firearms Appeal Board",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "10000-15000",
+        "currency": "TTD",
+        "what_it_is": "Monthly rental sums claimant collects (cited reason for firearm)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Two-apartment rental property in Ste. Madeleine",
+        "lease_terms": "",
+        "rent": "$10,000-$15,000/month collected in cash",
+        "landlord": "Robindranath Maharaj",
+        "tenant": "",
+        "outcome": "Cited as reason for firearm; not basis of decision"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimant: Firearms Appeal Board's dismissal of FUL appeal held unlawful/error of law (applied wrong 'imminent threat' test). Mandamus to rehear without imminence requirement. Half costs to claimant.",
+    "osint_value": "low",
+    "osint_notes": "Firearm licence judicial review. Notes claimant is FLOW (Columbus Communications) Director of Technical Operations with rental property; modest OSINT via employment/asset detail.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Romeo, Kendel v NUGFW",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2023/cv_23_00623DD16Apr2026.pdf",
+    "citation": "CV2023-00623",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Kendel Romeo"
+    ],
+    "defendants": [
+      "National Union of Government and Federated Workers (NUGFW)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Kendel Romeo",
+        "role": "Claimant / former Ministry of Health watchman & union member",
+        "notes": "Alleged poor union representation in trade dispute TD 577/2014"
+      },
+      {
+        "name": "Clifton Simpson",
+        "role": "NUGFW Second Deputy President General (deceased)",
+        "notes": "Union representative whose conduct was challenged"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to defendant union (VAT exclusive)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Industrial Court Trade Dispute TD 577/2014 (dismissed Feb 2019)"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Claim against union for breach of contract/fiduciary duty dismissed; mostly statute-barred, no breach of duty of fair representation. Costs $14,000 against claimant.",
+    "osint_value": "low",
+    "osint_notes": "Union representation/breach of duty claim. No business entities/financials/property of intel value. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Figaro, Sterlyn",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/gonzales/2023/cr_23_pos2DD16Apr2026.pdf",
+    "citation": "CR-HC-POS-IND-2-2023-1",
+    "court": "High Court of Justice, Criminal Division",
+    "judges": [
+      "Madame Justice G. Gonzales"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Sterlyn Figaro"
+    ],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Motion to quash indictment dismissed; committal valid. Defendant faces seven-count indictment (kidnapping, child sexual offences, false imprisonment) re two male children. Statutory interpretation of s.16C Preliminary Inquiry Act.",
+    "osint_value": "low",
+    "osint_notes": "Criminal procedure ruling (child sexual offences). No business entities/financials/property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Chin Hong Romain, Meelin v The Attorney General",
+    "date": "2026-04-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/masRamrattan/2018/cv_18_01122DD16Apr2026.pdf",
+    "citation": "CV2018-01122",
+    "court": "High Court of Justice, Trinidad and Tobago (Master)",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Meelin Chin Hong Romain"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad Cement Limited",
+        "role": "Factory near claimant's school (cement dust exposure)",
+        "directors_officers": [],
+        "ownership_notes": "Referenced re proximity, not a party"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Meelin Chin Hong Romain",
+        "role": "Claimant / Ministry of Education teacher",
+        "notes": "Developed occupational asthma; indebted to State $395,180.18 (backpay withheld)"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "240137.00",
+        "currency": "TTD",
+        "what_it_is": "General damages awarded (incl. interest)"
+      },
+      {
+        "amount": "16613.27",
+        "currency": "TTD",
+        "what_it_is": "Special damages awarded (incl. interest)"
+      },
+      {
+        "amount": "47175.50",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs"
+      },
+      {
+        "amount": "395180.18",
+        "currency": "TTD",
+        "what_it_is": "Claimant's debt to the State (backpay withheld against it)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Assessment of damages (liability admitted by consent) for occupational asthma negligence vs Ministry of Education. Awarded ~$240k general + $16.6k special damages + costs + expert fees; loss of earnings/future earnings claims rejected for failure to plead.",
+    "osint_value": "low",
+    "osint_notes": "Occupational injury (asthma) damages assessment vs State. References Trinidad Cement Ltd factory proximity. Damages figures only; low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Felix, Keston v The Attorney General",
+    "date": "2026-04-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2021/boodoosingh/CvA_21_P061DD10Apr2026.pdf",
+    "citation": "CA P061/2021 (CV2020-00858)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Boodoosingh CJ",
+      "Bereaux JA",
+      "Rajkumar JA"
+    ],
+    "claimants": [
+      "Keston Felix"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Keston Felix",
+        "role": "Appellant",
+        "notes": "Challenged police retention of fingerprint data of arrested-but-uncharged persons"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "27000.00",
+        "currency": "TTD",
+        "what_it_is": "One-third of appeal costs awarded to appellant"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Costs ruling: retention of fingerprint data of arrested-but-uncharged persons held unconstitutional; appellant awarded one-third of appeal costs ($27,000). Constitutional right to private life vindicated.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional/privacy (fingerprint retention) costs ruling. No business entities/financials/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re estate of Malcolm Jones (Jones v Jones-Pierre)",
+    "date": "2026-04-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2019/cv_19_01312DD10Apr2026.pdf",
+    "citation": "CV2019-01312",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Agnita Jones"
+    ],
+    "defendants": [
+      "Anastacia Jones-Pierre"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Malcolm Jones",
+        "role": "Deceased testator (died 10 May 2015)",
+        "notes": "Late of No. 14 Francis Road, Saddle Road, San Juan; competing 1995 and 2001 wills"
+      },
+      {
+        "name": "Agnita Jones / Anastacia Jones-Pierre",
+        "role": "Claimant / Defendant (sisters)",
+        "notes": ""
+      },
+      {
+        "name": "Egbert Lewis",
+        "role": "Co-executor of disputed 2001 will",
+        "notes": "Not called as witness"
+      },
+      {
+        "name": "Glen Parmassar",
+        "role": "Forensic document examiner (claimant)",
+        "notes": "Found 2001 signature likely forged"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "Estate of Malcolm Jones; No. 14 Francis Road, Saddle Road, San Juan",
+        "lease_terms": "Estate assets under disputed wills",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "1995 will upheld; 2001 will declared forged/invalid"
+      }
+    ],
+    "related_litigation": [
+      "Estate Proceedings/Probate No. L3811 of 2017 (set aside)"
+    ],
+    "banks_financial_institutions": [
+      "First Citizens Bank (San Juan branch; safety deposit box and joint account)"
+    ],
+    "outcome": "2001 will declared invalid (signature forged; not duly executed). 1995 will pronounced valid in solemn form; probate application on 2001 will set aside. Assessed costs to claimant.",
+    "osint_value": "medium",
+    "osint_notes": "Estate/will-forgery dispute (Malcolm Jones estate, No. 14 Francis Road San Juan). First Citizens Bank safety deposit/joint account; forensic forgery finding. Useful for asset/estate context.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Haneiph-Noel, Jacinta et al v Guyadeen-Haneiph, Narda et al",
+    "date": "2026-04-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2023/cv_23_00415DD10Apr2026.pdf",
+    "citation": "CV2023-00415",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Jacinta Haneiph-Noel",
+      "Merle Haneiph",
+      "Gloria Haneiph",
+      "Dennis Haneiph",
+      "Anthony Haneiph",
+      "Diane Haneiph",
+      "Maurine Haneiph",
+      "Patricia Haneiph-Smith"
+    ],
+    "defendants": [
+      "Narda Guyadeen-Haneiph",
+      "Hyacinth Haneiph",
+      "Heidi Haneiph",
+      "Hannah Haneiph"
+    ],
+    "companies": [
+      {
+        "name": "Haneiph's House of Fashion",
+        "role": "Tailoring business run by deceased Hecliff Haneiph from the property (~30 years)",
+        "directors_officers": [
+          "Hecliff Haneiph (proprietor, deceased)"
+        ],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Hecliff Haneiph",
+        "role": "Deceased joint tenant (died 13 Sept 2022)",
+        "notes": "Occupied family property; ran tailoring business; First Defendant's husband"
+      },
+      {
+        "name": "Mugzood Haneiph",
+        "role": "Original leaseholder (deceased 1975)",
+        "notes": "Father of claimants"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "283000.00",
+        "currency": "TTD",
+        "what_it_is": "Cost of two-storey extension (2011-2017) claimed by defendants"
+      },
+      {
+        "amount": "30000.00",
+        "currency": "TTD",
+        "what_it_is": "Trespass damages awarded to claimants"
+      },
+      {
+        "amount": "11200.00",
+        "currency": "TTD",
+        "what_it_is": "Outstanding WASA water bill"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs of claim (and again on counterclaim)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 70 Cedar Drive, Pleasantville, San Fernando (leasehold; Deed of Lease 8595 of 1960; new lease DE202300675297 of 2023)",
+        "lease_terms": "Family leasehold; joint tenancy; survivorship to claimants on Hecliff's death",
+        "rent": "",
+        "landlord": "Landowner (unnamed)",
+        "tenant": "Haneiph claimants (surviving joint tenants)",
+        "outcome": "Claimants declared owners/entitled to possession; defendants' adverse possession defence failed; possession ordered within 3 months"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimants: defendants unlawfully in occupation; adverse possession defence failed (occupation was with deceased co-owner's permission). Possession ordered; $30,000 trespass damages + $28,000 costs; counterclaim dismissed.",
+    "osint_value": "medium",
+    "osint_notes": "Family leasehold property/adverse possession dispute (No. 70 Cedar Drive, Pleasantville). Title chain, tailoring business Haneiph's House of Fashion, extension expenditure. Useful for property/asset tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Trinidad and Tobago Mortgage Finance Company Limited v Young, Annette",
+    "date": "2026-04-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/gobin/2019/cv_19_02947DD10Apr2026.pdf",
+    "citation": "CV2019-02947",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Madam Justice Carol Gobin"
+    ],
+    "claimants": [
+      "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)"
+    ],
+    "defendants": [
+      "Annette Young (also Annette Brenda Young)"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)",
+        "role": "Claimant / state mortgage lender",
+        "directors_officers": [
+          "Caren Ojar-Atwaroo (Assistant Manager, Portfolio Maintenance)"
+        ],
+        "ownership_notes": "Mortgagee whose action was struck out for abuse of process; court found the 2017 deed of mortgage 'invalid'/'fraudulent'"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Annette Young",
+        "role": "Defendant / borrower",
+        "notes": "Denied attending attorney to execute the 2017 deed of mortgage"
+      },
+      {
+        "name": "Caren Ojar-Atwaroo",
+        "role": "TTMF Assistant Manager, Portfolio Maintenance",
+        "notes": "Affiant for claimant"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "1239375.61",
+        "currency": "TTD",
+        "what_it_is": "Mortgage balance claimed as at 15 Jul 2019"
+      },
+      {
+        "amount": "1363534.84",
+        "currency": "TTD",
+        "what_it_is": "Expanded sum claimed in later statement of case (struck out)"
+      },
+      {
+        "amount": "879662.00",
+        "currency": "TTD",
+        "what_it_is": "Original loan/secured sum referenced"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 38, The Crossings at Santa Rosa West, Arima, 483.0 sq m; Deed of Mortgage DE201802061686D001 (2017)",
+        "lease_terms": "Mortgaged HDC/lease property; 2009 loan agreement, 2010/2017 mortgage deeds",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Mortgagee action struck out as abuse of process; deed of mortgage found invalid/'fraudulent' (signature pages improperly attached)"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Trinidad and Tobago Mortgage Finance Company Limited (TTMF)"
+    ],
+    "outcome": "TTMF's mortgagee action STRUCK OUT as abuse of process. Court found the deed of mortgage 'invalid'/effectively 'fraudulent' (attorney attached different signature pages). Expanded statement-of-case reliefs struck out; TTMF to pay defendant's costs.",
+    "osint_value": "medium",
+    "osint_notes": "Notable: state lender TTMF's foreclosure action struck out with judicial finding of an invalid/'fraudulent' mortgage deed (~$1.24M) on Santa Rosa West property. Reputational/conduct intel on TTMF; useful for due-diligence.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Nelson, Vincent KC v The Attorney General",
+    "date": "2026-04-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2022/cv_22_00408DD10Apr2026.pdf",
+    "citation": "CV2022-00408",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Vincent Nelson KC"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "39 Essex Street Chambers (London)",
+        "role": "Claimant's barristers' chambers",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Vincent Nelson KC",
+        "role": "Claimant / English barrister",
+        "notes": "Pleaded guilty (2019) to criminal offences re corrupt legal-fee kickback scheme; fined TT$2.25m (2020); state witness under Nov 2017 indemnity Agreement"
+      },
+      {
+        "name": "Anand Ramlogan SC",
+        "role": "Former Attorney General (alleged co-conspirator)",
+        "notes": "Alleged corrupt scheme with Nelson re legal fees"
+      },
+      {
+        "name": "Gerald Ramdeen",
+        "role": "Attorney-at-law (alleged co-conspirator)",
+        "notes": ""
+      },
+      {
+        "name": "Faris Al-Rawi SC",
+        "role": "Then-Attorney General who signed the 2017 indemnity Agreement",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "2250000.00",
+        "currency": "TTD",
+        "what_it_is": "Fine imposed on Nelson (2 Mar 2020)"
+      },
+      {
+        "amount": "2000000000",
+        "currency": "TTD",
+        "what_it_is": "~TT$2 billion in government payments referenced in the corrupt legal-fee scheme"
+      },
+      {
+        "amount": "288403.10",
+        "currency": "TTD",
+        "what_it_is": "Legal costs referenced"
+      },
+      {
+        "amount": "12163468.00",
+        "currency": "GBP",
+        "what_it_is": "Large GBP figure in damages/loss schedule"
+      },
+      {
+        "amount": "3300000.00",
+        "currency": "GBP",
+        "what_it_is": "GBP figure in claimed losses"
+      },
+      {
+        "amount": "1485578.00",
+        "currency": "GBP",
+        "what_it_is": "GBP figure in claimed losses"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Criminal prosecution of Nelson (guilty plea 2019, sentenced 2020 before Holdip J); related corruption proceedings vs Ramlogan/Ramdeen"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Claim DISMISSED. Nelson sought to recover damages under indemnity in 2017 cooperation Agreement with the State; court held his losses arose from his own guilty plea/conviction/reputational damage, outside the indemnity's scope (Clause 5).",
+    "osint_value": "high",
+    "osint_notes": "MAJOR corruption matter. English KC Vincent Nelson, state witness, sought to enforce indemnity from the Government re a corrupt legal-fee kickback scheme involving former AG Anand Ramlogan SC and attorney Gerald Ramdeen, tied to ~TT$2 billion in state payments; signed by then-AG Faris Al-Rawi. Large GBP loss figures. High-value political/financial intelligence.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In estate of Veronica De Gale: Pirtam, Elizabeth v Thomas",
+    "date": "2026-04-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2022/cv_22_01735DD09Apr2026.pdf",
+    "citation": "CV2022-01735",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Elizabeth Pirtam"
+    ],
+    "defendants": [
+      "Juanita Thomas (personally & LPR of Dowling Thomas)",
+      "John Broadbelt",
+      "Monika Thomas",
+      "Bernice Jardine Thomas"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Veronica De Gale",
+        "role": "Deceased testatrix (died 5 Jul 2001)",
+        "notes": "Competing wills 1983 and 2000; owned ~15-acre and 10-acre land parcels"
+      },
+      {
+        "name": "Dowling Thomas",
+        "role": "Beneficiary under disputed 2000 will (deceased 2008)",
+        "notes": "Received the land parcels via assents"
+      },
+      {
+        "name": "Phulandaye Sinanan",
+        "role": "Executrix of disputed 2000 will",
+        "notes": "Transferred parcels to Dowling Thomas"
+      },
+      {
+        "name": "Winston Seales",
+        "role": "Co-beneficiary/executor under 2000 will (deceased 2001)",
+        "notes": ""
+      },
+      {
+        "name": "Glenn Parmassar",
+        "role": "Handwriting expert (claimant)",
+        "notes": "Inconclusive (only 4 samples)"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "15-acre parcel (Wards of Tamana/Pointe-a-Pierre; Cert of Title Vol 2671 Folio 477) and 10-acre parcel (Ward of Turure; Cert of Title Vol 4020 Folio 123)",
+        "lease_terms": "Estate land transferred under contested 2000 will via Memoranda of Assent",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claim to revoke 2000 will/assents dismissed; transfers to Dowling Thomas/his beneficiaries stand"
+      }
+    ],
+    "related_litigation": [
+      "1987 land proceedings (Dowling Thomas v Veronica De Gale, settled by 1996 consent order); Probate L404 of 2004"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Claim to set aside 2000 will and consequential land transfers DISMISSED (fraud/incapacity not proven; 18-year delay; inconclusive handwriting evidence). Costs to defendants.",
+    "osint_value": "medium",
+    "osint_notes": "Estate/will-fraud dispute over ~25 acres of land in Tamana/Turure; detailed title chain and assents. Useful for land/title tracing on De Gale/Thomas estates.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Incorporated Trustees of the Anglican Church, Diocese of T&T v Ramcharan",
+    "date": "2026-04-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2024/cv_24_03594DD9Apr2026.pdf",
+    "citation": "CV2024-03594",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "The Incorporated Trustees of the Anglican Church in the Diocese of Trinidad and Tobago"
+    ],
+    "defendants": [
+      "Peter Lloyd Ramcharan (Administrator Ad Litem, Estate of Dr Lloyd Ramcharan)",
+      "Peter Lloyd Ramcharan (Administrator Ad Litem, Estate of David Ramcharan)"
+    ],
+    "companies": [
+      {
+        "name": "Incorporated Trustees of the Anglican Church in the Diocese of Trinidad and Tobago",
+        "role": "Claimant landlord",
+        "directors_officers": [
+          "Eon Brumigin (Property Manager)",
+          "Sonya Yorke (former Property Manager)"
+        ],
+        "ownership_notes": "Owns 6 Farfan Street, Arima; governance via Building and Lands Board / Bishop in Council"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Dr Lloyd Ramcharan",
+        "role": "Deceased lessee",
+        "notes": "Ramcharan family leased property since 1947"
+      },
+      {
+        "name": "Peter Lloyd Ramcharan",
+        "role": "Defendant / son & estate representative",
+        "notes": "Continued occupation/business at old rate"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "6667.00",
+        "currency": "TTD",
+        "what_it_is": "Old monthly rent paid by defendants"
+      },
+      {
+        "amount": "15833.33",
+        "currency": "TTD",
+        "what_it_is": "Market monthly rent (2019 valuation); basis for mesne profits"
+      },
+      {
+        "amount": "190000.00",
+        "currency": "TTD",
+        "what_it_is": "Proposed annual rent for new 25-year lease (never finalised)"
+      },
+      {
+        "amount": "320888.84",
+        "currency": "TTD",
+        "what_it_is": "Mesne profits awarded (Aug 2024-Apr 2026)"
+      },
+      {
+        "amount": "763349.72",
+        "currency": "TTD",
+        "what_it_is": "Rent arrears originally claimed"
+      },
+      {
+        "amount": "54266.93",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on claim"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 6 Farfan Street, Arima (commercial premises owned by Anglican Diocese)",
+        "lease_terms": "25-year commercial lease from 1 Jun 1993, expired 31 May 2018; held over month-to-month; new lease negotiations failed over retroactive commencement",
+        "rent": "Old $6,667/mo; market $15,833.33/mo",
+        "landlord": "Incorporated Trustees of the Anglican Church, Diocese of T&T",
+        "tenant": "Ramcharan estate",
+        "outcome": "Possession granted to Diocese; tenant must vacate by 9 Jul 2026; mesne profits $320,888.84 + costs; counterclaim (estoppel/binding lease) dismissed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for Anglican Diocese: month-to-month tenancy validly terminated; possession ordered; mesne profits $320,888.84 at market rate + interest + costs. Defendants' counterclaim for binding 25-year lease/estoppel dismissed.",
+    "osint_value": "medium",
+    "osint_notes": "Commercial lease/possession dispute over 6 Farfan Street, Arima (Anglican Diocese landlord, Ramcharan family tenants since 1947). Rent/market valuations, mesne profits. Useful for commercial property intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Gardiner, Rosana E. v Baker, Keldon et al",
+    "date": "2026-03-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2017/cv_17_01909DD08Mar2026.pdf",
+    "citation": "CV2017-01909",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [],
+    "claimants": [
+      "Rosana E. Gardiner"
+    ],
+    "defendants": [
+      "Keldon Baker",
+      "et al"
+    ],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "PDF returned empty via web_fetch on three attempts with backoff (other webopac PDFs retrieved normally, indicating this specific file is unavailable/corrupt server-side). Not extracted.",
+    "fetch_failed": true
+  },
+  {
+    "title": "Paul, Basdeo v Ramsingh, Motilal",
+    "date": "2026-03-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2022/cv_22_00454DD08Mar2026.pdf",
+    "citation": "CV2022-00454",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [],
+    "claimants": [
+      "Basdeo Paul"
+    ],
+    "defendants": [
+      "Motilal Ramsingh"
+    ],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "PDF returned empty via web_fetch on multiple attempts with backoff. This file (dated DD08Mar2026) appears unavailable server-side. Not extracted.",
+    "fetch_failed": true
+  },
+  {
+    "title": "Wohler, Donald R. v Boyce, Albert",
+    "date": "2026-03-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2017/cv_17_02631DD08Mar2026.pdf",
+    "citation": "CV2017-02631",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [],
+    "claimants": [
+      "Donald R. Wohler"
+    ],
+    "defendants": [
+      "Albert Boyce"
+    ],
+    "companies": [],
+    "individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "PDF returned empty via web_fetch (DD08Mar2026 file). Third consecutive March-dated file unavailable server-side. Not extracted.",
+    "fetch_failed": true
+  },
+  {
+    "title": "Louis, Keith v Louis, Melissa; Colonial Fire and General Insurance Company",
+    "date": "2026-04-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2021/cv_21_00627DD8Apr2026.pdf",
+    "citation": "CV2021-00627",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Keith Louis"
+    ],
+    "defendants": [
+      "Melissa Louis",
+      "Colonial Fire and General Insurance Company (COLFIRE)"
+    ],
+    "companies": [
+      {
+        "name": "Colonial Fire and General Insurance Company (COLFIRE)",
+        "role": "Second defendant / insurer",
+        "directors_officers": [],
+        "ownership_notes": "Found negligent in delaying adjuster assessment"
+      },
+      {
+        "name": "Auto Body Works Ltd",
+        "role": "Vehicle repair shop where car stored",
+        "directors_officers": [],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Insurance Investigators Services Limited",
+        "role": "COLFIRE's adjuster",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Keith Louis",
+        "role": "Claimant",
+        "notes": "Motor vehicle accident; Lexus E300"
+      },
+      {
+        "name": "Melissa Louis",
+        "role": "First defendant / other driver",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "193368.24",
+        "currency": "TTD",
+        "what_it_is": "Special damages claimed"
+      },
+      {
+        "amount": "50248.20",
+        "currency": "TTD",
+        "what_it_is": "Cost of repairs awarded (reduced)"
+      },
+      {
+        "amount": "90410.70",
+        "currency": "TTD",
+        "what_it_is": "Total special damages awarded (70% liability)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Colonial Fire and General Insurance Company (COLFIRE)"
+    ],
+    "outcome": "Motor vehicle negligence claim: liability apportioned 70% to defendants / 30% to claimant. COLFIRE found negligent in delaying adjuster (storage/rental costs). Damages ~$90,410.70 + costs awarded to claimant.",
+    "osint_value": "low",
+    "osint_notes": "Motor vehicle accident/insurer-negligence claim. Names insurer COLFIRE and adjuster firms; damages figures. Modest OSINT value (insurer conduct).",
+    "fetch_failed": false
+  },
+  {
+    "title": "Soca Bookings Incorporated v Roberts, Patrice",
+    "date": "2026-04-07",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2020/cv_20_00534DD07Apr2026.pdf",
+    "citation": "CV2020-00534",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Soca Bookings Incorporated"
+    ],
+    "defendants": [
+      "Patrice Roberts"
+    ],
+    "companies": [
+      {
+        "name": "Soca Bookings Incorporated",
+        "role": "Claimant / artiste management company",
+        "directors_officers": [],
+        "ownership_notes": "Ontario, Canada company; registered office 7850 Woodbine Ave, Suite 300, Markham, Ontario; '360 All Rights' management service"
+      },
+      {
+        "name": "HD Productions",
+        "role": "Patrice Roberts' former management (with Machel Montano)",
+        "directors_officers": [
+          "Machel Montano"
+        ],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Patrice Roberts",
+        "role": "Defendant / soca artiste",
+        "notes": "Well-known Caribbean soca performer; disputed management fees/loans"
+      },
+      {
+        "name": "Machel Montano",
+        "role": "Patrice Roberts' prior manager (HD Productions)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "42335.00",
+        "currency": "USD",
+        "what_it_is": "Total claimed: management fees + loans/cash advances"
+      },
+      {
+        "amount": "22535.00",
+        "currency": "USD",
+        "what_it_is": "Management fees on quantum meruit"
+      },
+      {
+        "amount": "19800.00",
+        "currency": "USD",
+        "what_it_is": "Adjusted balance of loans/cash advances"
+      },
+      {
+        "amount": "9000.00",
+        "currency": "USD",
+        "what_it_is": "Counterclaim awarded to Roberts (digital sales proceeds held in escrow)"
+      },
+      {
+        "amount": "25104.12",
+        "currency": "USD",
+        "what_it_is": "Net balance Roberts liable to pay after set-off"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Artiste-management fee dispute. Claimant largely succeeded (commission 20%/15% structure; fees + loans). Defendant won counterclaim US$9,000 (escrowed digital sales). Net after set-off: Roberts to pay ~US$25,104 + costs.",
+    "osint_value": "medium",
+    "osint_notes": "Entertainment-industry management dispute: Ontario company Soca Bookings Inc vs soca star Patrice Roberts; references Machel Montano/HD Productions. Commission terms, USD financials, cross-border company. Notable named persons.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Hearn, Stefan v Magistrate Ali, Rehana",
+    "date": "2026-04-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2024/bereaux/CvA_24_P160DD02Apr2026.pdf",
+    "citation": "CA P160/2024 (CV2023-03724)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Bereaux JA",
+      "M. Mohammed JA",
+      "M. Wilson JA"
+    ],
+    "claimants": [
+      "Stefan Hearn"
+    ],
+    "defendants": [
+      "Magistrate Rehana Ali"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Stefan Hearn",
+        "role": "Appellant",
+        "notes": "Charged with DUI; sought judicial review of adjournment"
+      },
+      {
+        "name": "Magistrate Rehana Ali",
+        "role": "Respondent magistrate",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal dismissed; magistrate's adjournment of DUI trial upheld as proper exercise of discretion. Notable: court held the practice of naming magistrates as parties to judicial review (and cross-examining them) is wrong and should be discontinued.",
+    "osint_value": "low",
+    "osint_notes": "Judicial review/procedural appeal (DUI adjournment). No business/financial/property. Legal-precedent interest only; low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Attorney General v Ramjattan, Dervanand",
+    "date": "2026-04-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2018/bereaux/CvA_18_P283DD02Apr2026.pdf",
+    "citation": "CA P283/2018 (CV2016-01175)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Bereaux JA",
+      "M. Mohammed JA",
+      "M. Wilson JA"
+    ],
+    "claimants": [
+      "The Attorney General of Trinidad and Tobago (Appellant)"
+    ],
+    "defendants": [
+      "Dervanand Ramjattan (Respondent)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Dervanand Ramjattan",
+        "role": "Respondent / original claimant",
+        "notes": "Malicious prosecution claim re purchase of Absolut Vodka cases ($3,800)"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "3800.00",
+        "currency": "TTD",
+        "what_it_is": "Price paid for 2 cases of Absolut Vodka (subject of the underlying charge)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "AG's appeal ALLOWED; trial judge's findings (malicious prosecution, damages incl. aggravated/exemplary) reversed and set aside. Court found material errors in evaluation of evidence.",
+    "osint_value": "low",
+    "osint_notes": "Malicious prosecution appeal (Absolut Vodka matter). Minor financial figure; no business entities/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ashmead Ali Contracting Services Limited v Kaizen Trading Company Limited",
+    "date": "2026-04-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2021/cv_21_03534DD02Apr2026.pdf",
+    "citation": "CV2021-03534",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Ashmead Ali Contracting Services Limited"
+    ],
+    "defendants": [
+      "Kaizen Trading Company Limited"
+    ],
+    "companies": [
+      {
+        "name": "Ashmead Ali Contracting Services Limited",
+        "role": "Claimant / supplier of concrete, hot mix, aggregate",
+        "directors_officers": [
+          "Ashmead Ali (Managing Director & principal)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Kaizen Trading Company Limited",
+        "role": "Defendant / supplier of sharp sand & raw materials",
+        "directors_officers": [
+          "Fayad Adams (Managing Director & principal)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Readymix (West Indies) Limited",
+        "role": "Materials supplier in the chain",
+        "directors_officers": [],
+        "ownership_notes": ""
+      },
+      {
+        "name": "KJS Enterprises Ltd",
+        "role": "Debtor whose $1M debt was assigned to claimant",
+        "directors_officers": [],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Anand Low Price Limited",
+        "role": "Third party buyer of repossessed trucks/trailers",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Ashmead Ali",
+        "role": "MD/principal of claimant",
+        "notes": ""
+      },
+      {
+        "name": "Fayad Adams",
+        "role": "MD/principal of defendant",
+        "notes": ""
+      },
+      {
+        "name": "Keith Subiah",
+        "role": "Person behind alleged investment venture",
+        "notes": "$2M allegedly invested via him"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "9209757.22",
+        "currency": "TTD",
+        "what_it_is": "Sum originally claimed (running account)"
+      },
+      {
+        "amount": "68761221.34",
+        "currency": "TTD",
+        "what_it_is": "Total value of materials supplied 2010-2019"
+      },
+      {
+        "amount": "4232000.00",
+        "currency": "TTD",
+        "what_it_is": "Indebtedness admitted in joint 30 Jan 2019 letter to First Citizens Bank"
+      },
+      {
+        "amount": "5322257.22",
+        "currency": "TTD",
+        "what_it_is": "Net sum AWARDED to claimant as damages"
+      },
+      {
+        "amount": "237222.57",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of claim"
+      },
+      {
+        "amount": "2000000.00",
+        "currency": "TTD",
+        "what_it_is": "Disputed loan/investment (repayable as $4M, rejected by court)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "First Citizens Bank (Point Lisas)"
+    ],
+    "outcome": "Judgment for claimant: defendant to pay $5,322,257.22 damages for breach of contract + ~$237k costs. Disputed $4M loan and truck-sale loss claims rejected; defendant's counterclaim ($1.65M) dismissed.",
+    "osint_value": "medium",
+    "osint_notes": "Large construction-materials commercial dispute (~$70M running account) between Ashmead Ali Contracting Services Ltd and Kaizen Trading Co Ltd; principals Ashmead Ali & Fayad Adams; involves Readymix (WI) Ltd, KJS Enterprises, Anand Low Price Ltd, First Citizens Bank. Rich commercial/financial network intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Mathews, Peter v The State",
+    "date": "2026-04-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2025/Wilson/CrA_25_P048DD2Apr2026.pdf",
+    "citation": "CR P048 of 2025 (CR-HC-POS-IND-28-2025-1)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Bereaux JA",
+      "M.T.M. Wilson JA",
+      "G.A. Henderson JA"
+    ],
+    "claimants": [
+      "Peter Matthews (Appellant)"
+    ],
+    "defendants": [
+      "The State"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Peter Matthews",
+        "role": "Appellant / convicted of murder",
+        "notes": "Resentenced to 50 years for murder of Roslyn Lucas; ~46 years already in custody"
+      },
+      {
+        "name": "Roslyn Lucas",
+        "role": "Deceased (murder victim)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Sentencing appeal: 50-year resentence quashed; matter remitted to High Court for resentencing before another judge with prison reports.",
+    "osint_value": "low",
+    "osint_notes": "Murder resentencing appeal. No business/financial/property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Minister of Works and Transport v Neranjen, Navin et al",
+    "date": "2026-04-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2019/Boodoosingh/CvA_19_P209DD01Apr2026.pdf",
+    "citation": "CA P209/2019",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Boodoosingh CJ (dissenting)",
+      "Bereaux JA",
+      "M. Mohammed JA"
+    ],
+    "claimants": [
+      "The Honourable Minister of Works and Transport (Appellant)"
+    ],
+    "defendants": [
+      "Navin Neranjen",
+      "Doodnath Neranjen (Respondents)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Navin Neranjen / Doodnath Neranjen",
+        "role": "Respondents / claimants",
+        "notes": "Priority Bus Route permit/roadblock judicial review"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal allowed (majority); trial judge's orders set aside, judicial review claim dismissed. Concerned Priority Bus Route (Special Roads Toll) Regulations 1998 permit conditions. Respondents to pay costs.",
+    "osint_value": "low",
+    "osint_notes": "Judicial review re Priority Bus Route permit/regulations. No business entities/financials/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ramkissoon, Regan v Guerra, Daniel (t/a DG Readymix)",
+    "date": "2026-04-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/charles/2021/cv_21_01285DD01Apr2026.pdf",
+    "citation": "CV2021-01285",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Joan Charles"
+    ],
+    "claimants": [
+      "Regan Ramkissoon",
+      "Shamiza Ali-Ramkissoon"
+    ],
+    "defendants": [
+      "Daniel Guerra (trading as DG Readymix)"
+    ],
+    "companies": [
+      {
+        "name": "DG Readymix (Daniel Guerra t/a)",
+        "role": "Defendant / concrete supplier",
+        "directors_officers": [
+          "Daniel Guerra (proprietor)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Etercnoc Limited Concrete Solutions",
+        "role": "Claimants' concrete consultant",
+        "directors_officers": [
+          "Danny H. Jairam"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "CARIRI",
+        "role": "Tested concrete core samples",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Wilson Maloney",
+        "role": "Claimants' contractor",
+        "notes": "Built residential house in Toco; accepted the concrete on site"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "30600.00",
+        "currency": "TTD",
+        "what_it_is": "Paid for 28m concrete + pump rental"
+      },
+      {
+        "amount": "359934.69",
+        "currency": "TTD",
+        "what_it_is": "Value of claim (basis for costs against claimants)"
+      },
+      {
+        "amount": "220000.00",
+        "currency": "TTD",
+        "what_it_is": "Labour cost claimed in special damages"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Negligence/Sale of Goods claim over allegedly defective ready-mix concrete DISMISSED (expert report struck out; no causal proof; contractor accepted concrete). Claimants to pay prescribed costs on $359,934.69.",
+    "osint_value": "low",
+    "osint_notes": "Construction/sale-of-goods concrete dispute (DG Readymix). Names supplier, consultant Etercnoc Ltd, CARIRI; financial figures. Modest commercial OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "National Security Council (Rowley et al) v Griffith",
+    "date": "2026-02-24",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2023/Moosai/CvA_23_P152DD24Feb2026.pdf",
+    "citation": "CA P152/2023 (CV2022-03915)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Moosai JA",
+      "Lucky JA",
+      "Aboud JA"
+    ],
+    "claimants": [
+      "The National Security Council (Dr Keith Rowley PM; Faris Al-Rawi; Fitzgerald Hinds; Colm Imbert; Stuart Young; Marvin Gonzales) - Appellants"
+    ],
+    "defendants": [
+      "Gary Griffith (First Respondent)",
+      "The Audit Committee (Wellington Virgil, Raymond Craig, Lennard Charles, Brian Pierre)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Dr Keith Rowley",
+        "role": "Prime Minister / NSC chair (appellant)",
+        "notes": ""
+      },
+      {
+        "name": "Gary Griffith",
+        "role": "Former Commissioner of Police (respondent)",
+        "notes": "Challenged matters around withdrawal of Police Service Commission Order of Merit List re his reappointment"
+      },
+      {
+        "name": "Faris Al-Rawi / Fitzgerald Hinds / Colm Imbert / Stuart Young / Marvin Gonzales",
+        "role": "Government ministers / NSC members (appellants)",
+        "notes": ""
+      },
+      {
+        "name": "McDonald Jacob",
+        "role": "Deputy Commissioner of Police (referenced)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "75000.00",
+        "currency": "TTD",
+        "what_it_is": "Legal costs (50%) awarded to Griffith, payable in instalments of $25,000"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Related CoP appointment litigation (Civil Appeal P301 of ...); Police Service Commission merit-list proceedings"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "High-profile judicial review appeal concerning the National Security Council, the withdrawal of the Police Service Commission Order of Merit List and Gary Griffith's reappointment as Commissioner of Police; central issue the duty of candour/full and frank disclosure by public authorities. (Full disposition spans a 97-page judgment.)",
+    "osint_value": "high",
+    "osint_notes": "MAJOR political/governance matter: PM Keith Rowley and senior Cabinet ministers (Al-Rawi, Hinds, Imbert, Young, Gonzales) as the National Security Council vs former Commissioner of Police Gary Griffith, re withdrawal of the PolSC Order of Merit List and CoP appointment. Names entire NSC and an Audit Committee. High-value political intelligence.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Bissoon, Rennie v Absolute Transport Limited (formerly K&C Logistics Ltd)",
+    "date": "2026-06-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2019/armorer/CvA_19_P112DD1Jun2026.pdf",
+    "citation": "CA P112/2019 (CV2016-03211)",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Lucky JA",
+      "Dean-Armorer JA",
+      "Brown-Antoine JA"
+    ],
+    "claimants": [
+      "Rennie Bissoon (Appellant)"
+    ],
+    "defendants": [
+      "Absolute Transport Limited (formerly K&C Logistics Ltd)"
+    ],
+    "companies": [
+      {
+        "name": "Absolute Transport Limited (formerly K&C Logistics Ltd)",
+        "role": "Defendant / employer (transport/logistics)",
+        "directors_officers": [],
+        "ownership_notes": "Renamed from K&C Logistics Ltd"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Rennie Bissoon",
+        "role": "Appellant / driver-salesman",
+        "notes": "Fell off truck 2014, back injuries; also weekend market vendor"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "100000.00",
+        "currency": "TTD",
+        "what_it_is": "General damages awarded at trial"
+      },
+      {
+        "amount": "194826.60",
+        "currency": "TTD",
+        "what_it_is": "Loss of future earnings as driver/salesman awarded"
+      },
+      {
+        "amount": "4329.48",
+        "currency": "TTD",
+        "what_it_is": "Appellant's average monthly salary"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal on quantum of damages DISMISSED; trial judge's awards (25% multiplicand deduction, multiplier of 5, refusal of unpleaded/uncorroborated heads) upheld. Employer's counter-appeal earlier discontinued.",
+    "osint_value": "low",
+    "osint_notes": "Workplace personal-injury damages appeal. Notes company rename (K&C Logistics Ltd -> Absolute Transport Ltd) and salary/damages figures. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re the Constitution (Jerome Charles et al v AG)",
+    "date": "2026-06-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/seepersad/2025/cv_25_01622DD1Jun2026.pdf",
+    "citation": "CV2025-01622",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Frank Seepersad"
+    ],
+    "claimants": [
+      "Jerome Charles and 16 others (Defence Force personnel)"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Jerome Charles et al",
+        "role": "Claimants / TT Defence Force members",
+        "notes": "Constitutional claim re equality/protection of the law against Ministry of National Security, Chief of Defence and TTDF (pension/service entitlements)"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "55073825.97",
+        "currency": "TTD",
+        "what_it_is": "Estimated sum referenced (pension/entitlement liability)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Constitutional claim by 17 Defence Force personnel re pension/service entitlements DISMISSED in its entirety (inordinate delay; entitlement governed by statute not expectation). Claimants to pay costs.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional/pension claim by military personnel vs State. Large estimated liability figure ($55M); no business/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Khan, Michael v Capildeo Lands Limited; Prism Trust and Finance Company Limited; Reis",
+    "date": "2026-06-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2019/cv_19_03621DD1Jun2026.pdf",
+    "citation": "CV2019-03621",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Michael Khan"
+    ],
+    "defendants": [
+      "Capildeo Lands Limited",
+      "Prism Trust and Finance Company Limited",
+      "Carlton Reis"
+    ],
+    "companies": [
+      {
+        "name": "Capildeo Lands Limited",
+        "role": "First defendant / employer",
+        "directors_officers": [
+          "Michael Khan (former director/employee)",
+          "Carlton Reis (director/chairman)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Prism Trust and Finance Company Limited",
+        "role": "Second defendant / employer; finance company",
+        "directors_officers": [
+          "Carlton Reis (director/chairman)",
+          "Michael Khan (former director/employee)"
+        ],
+        "ownership_notes": "Registered office 22 French Street, Woodbrook, Port-of-Spain"
+      },
+      {
+        "name": "KM Electrical & Construction",
+        "role": "Claimant's own company",
+        "directors_officers": [
+          "Michael Khan (director/principal)"
+        ],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Michael Khan",
+        "role": "Claimant / former director & employee of defendants",
+        "notes": "Salary TT$20,000/month each contract; claimed wrongful/constructive dismissal"
+      },
+      {
+        "name": "Carlton Reis",
+        "role": "Third defendant / director & Chairman of defendant companies",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "400000.00",
+        "currency": "TTD",
+        "what_it_is": "Substantial damages awarded (across employment contracts)"
+      },
+      {
+        "amount": "805744.30",
+        "currency": "TTD",
+        "what_it_is": "Damages sum referenced"
+      },
+      {
+        "amount": "135817.57",
+        "currency": "TTD",
+        "what_it_is": "Pre-judgment interest"
+      },
+      {
+        "amount": "104617.14",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of claim"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Prism Trust and Finance Company Limited"
+    ],
+    "outcome": "Judgment for claimant on wrongful/constructive dismissal as director/employee of Capildeo Lands Ltd and Prism Trust & Finance Co Ltd; damages plus interest ($135,817.57) and costs (~$104,617.14) awarded against defendants; counterclaim costs also against defendants.",
+    "osint_value": "medium",
+    "osint_notes": "Corporate/employment dispute mapping directors of Capildeo Lands Ltd and Prism Trust and Finance Company Ltd (Carlton Reis chairman; Michael Khan former director), plus KM Electrical & Construction. Finance company address (22 French St, Woodbrook); salary/damages figures. Useful corporate-network intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Maule, Jason; Maule, Nakisha v John, Nicholas; John, Shirley",
+    "date": "2026-06-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2016/cv_16_00757DD1Jun2026.pdf",
+    "citation": "CV2016-00757",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Jason Maule",
+      "Nakisha Maule"
+    ],
+    "defendants": [
+      "Nicholas John",
+      "Shirley John"
+    ],
+    "companies": [
+      {
+        "name": "Eastern Credit Union Co-operative Society Limited",
+        "role": "Mortgagee (defendants' property)",
+        "directors_officers": [],
+        "ownership_notes": "Defendants' lands mortgaged to it"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Jason Maule / Nakisha Maule",
+        "role": "Claimants / landowners (Lot 2A)",
+        "notes": ""
+      },
+      {
+        "name": "Nicholas John / Shirley John",
+        "role": "Defendants / neighbours",
+        "notes": "Established adverse possession of NE portion of Lot 2A"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "5000.00",
+        "currency": "TTD",
+        "what_it_is": "Special damages awarded to claimants"
+      },
+      {
+        "amount": "10000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages awarded to claimants"
+      },
+      {
+        "amount": "60800.00",
+        "currency": "TTD",
+        "what_it_is": "Cost of rented accommodation claimed"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 2A and private access road (boundary/possession dispute); defendants' lands mortgaged to Eastern Credit Union",
+        "lease_terms": "Boundary/adverse possession dispute",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Mixed: defendants extinguished claimants' title to NE portion of Lot 2A by adverse possession; claimants awarded $15,000 damages re other portions"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Eastern Credit Union Co-operative Society Limited"
+    ],
+    "outcome": "Mixed result on land/boundary/adverse possession: defendants extinguished claimants' title to NE portion of Lot 2A; claimants awarded $5,000 special + $10,000 nominal damages. Split costs.",
+    "osint_value": "medium",
+    "osint_notes": "Land/boundary/adverse possession dispute (Lot 2A); defendants' property mortgaged to Eastern Credit Union. Deeds, financials. Useful for property/title context.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Jokhan General Contractors Limited (in receivership) v NIDCO",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2019/cv_19_00383DD29May2026.pdf",
+    "citation": "CV2019-00383",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Jokhan General Contractors Limited (In Receivership)"
+    ],
+    "defendants": [
+      "National Infrastructure Development Company Limited (NIDCO)"
+    ],
+    "companies": [
+      {
+        "name": "Jokhan General Contractors Limited (In Receivership)",
+        "role": "Claimant / landowner-contractor",
+        "directors_officers": [],
+        "ownership_notes": "In receivership; lands at Jokhan Trace, San Francique Road, Penal compulsorily acquired for highway"
+      },
+      {
+        "name": "National Infrastructure Development Company Limited (NIDCO)",
+        "role": "Defendant / state infrastructure company",
+        "directors_officers": [],
+        "ownership_notes": "Acquired claimant's lands for San Fernando-Point Fortin Highway"
+      }
+    ],
+    "individuals": [],
+    "financial_figures": [
+      {
+        "amount": "48642600.00",
+        "currency": "TTD",
+        "what_it_is": "Compensation figure claimant accepted 14 Feb 2017 (disputed)"
+      },
+      {
+        "amount": "26220593.74",
+        "currency": "TTD",
+        "what_it_is": "Total compensation awarded (land + disturbance)"
+      },
+      {
+        "amount": "21787237.73",
+        "currency": "TTD",
+        "what_it_is": "Compensation for disturbance to industrial operations/tenancies/revenue"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "~5.11 acres at Jokhan Trace, San Francique Road, Penal",
+        "lease_terms": "Compulsory acquisition for San Fernando to Point Fortin Highway Project",
+        "rent": "",
+        "landlord": "Jokhan General Contractors Ltd",
+        "tenant": "Commercial tenancies on the land",
+        "outcome": "NIDCO ordered to pay compensation totalling ~TT$26.2M + interest from 2014 + costs"
+      }
+    ],
+    "related_litigation": [
+      "Earlier judgment 20 Sept 2023 entering judgment for claimant on compensation"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Major land-acquisition compensation: NIDCO ordered to pay Jokhan General Contractors Ltd (in receivership) ~TT$26.2M (incl. TT$21.8M disturbance) plus 5% interest from 2014 + costs, for ~5.11 acres taken for the San Fernando-Point Fortin Highway.",
+    "osint_value": "high",
+    "osint_notes": "Large state-infrastructure land-acquisition compensation dispute: NIDCO vs Jokhan General Contractors Ltd (in receivership) re San Fernando-Point Fortin Highway; multi-million TT$ figures ($48.6M claimed, ~$26.2M awarded), industrial/commercial tenancies. High-value financial/property intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Thomas, Junior v Chief of Defence Staff; AG",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/lambert_p/2023/cv_23_03380DD29May2026.pdf",
+    "citation": "CV2023-03380",
+    "court": "High Court of Justice, San Fernando",
+    "judges": [
+      "Madame Justice B.A. Lambert Peterson"
+    ],
+    "claimants": [
+      "Junior Thomas"
+    ],
+    "defendants": [
+      "The Chief of Defence Staff",
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Junior Thomas",
+        "role": "Claimant / former Staff Sergeant, TT Regiment",
+        "notes": "Sought promotion to Warrant Officer Class II; blocked by Reyes Injunction and compulsory retirement"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "CV2022-04043 Russell Reyes v Chief of Defence Staff (the 'Reyes Injunction')"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Judicial review/constitutional claim dismissed. Failure to promote claimant resulted from compliance with the Reyes Injunction and his compulsory retirement, not unlawful/irrational conduct. Costs to be decided.",
+    "osint_value": "low",
+    "osint_notes": "Military promotion judicial review. No business/financial/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Walker, Marsha v The Attorney General",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rahim/2023/cv_23_00302DD29May2026.pdf",
+    "citation": "CV2023-00302",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice R. Rahim"
+    ],
+    "claimants": [
+      "Marsha Walker"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Marsha Walker",
+        "role": "Claimant / protester",
+        "notes": "One-person protest 9 July 2021; rights breached by TTPS conduct"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Constitutional claim partly succeeded: TTPS conduct on 9 July 2021 breached claimant's rights to protection of law, freedom of expression and assembly; damages (incl. vindicatory) to be assessed. Claim re 23 Nov 2021 events dismissed. 50% costs to claimant.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional/protest-rights claim vs State. No business/financial/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Wilson-Hogan, Elizabeth (POA of Chandai Wilson) v Mahabir, Sheila",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_01086DD29May2026.pdf",
+    "citation": "CV2025-01086",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Elizabeth Wilson-Hogan (POA of Chandai Wilson)"
+    ],
+    "defendants": [
+      "Sheila Mahabir"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Chandai Wilson",
+        "role": "Property owner (claimant's mother)",
+        "notes": "POA dated 18 Feb 2025; Cumuto property"
+      },
+      {
+        "name": "Sheila Mahabir",
+        "role": "Defendant / adjoining owner",
+        "notes": "Erected fence blocking alleged right of way"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to defendant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lands at Cumuto; disputed 40-ft right of way on northern side of defendant's premises",
+        "lease_terms": "Alleged prescriptive easement/right of way (30+ years use)",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claim for right of way dismissed (standing/pleading/capacity deficiencies)"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Right-of-way/easement claim dismissed; defendant's fence blocking access upheld. Costs $14,000 to defendant.",
+    "osint_value": "medium",
+    "osint_notes": "Easement/right-of-way land dispute at Cumuto (Wilson family vs Mahabir). Property/POA detail; modest property-tracing value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Geawan, Daryl v The Urban Development Corporation of Trinidad and Tobago (UDeCOTT)",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2020/cv_20_04444DD29May2026.pdf",
+    "citation": "CV2020-04444",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Madame Justice Margaret Y. Mohammed"
+    ],
+    "claimants": [
+      "Daryl Geawan"
+    ],
+    "defendants": [
+      "The Urban Development Corporation of Trinidad and Tobago (UDeCOTT)"
+    ],
+    "companies": [
+      {
+        "name": "Urban Development Corporation of Trinidad and Tobago (UDeCOTT)",
+        "role": "Defendant / state development company & employer",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Daryl Geawan",
+        "role": "Claimant / former UDeCOTT employee (2009-2021)",
+        "notes": "Alleged personal injury from poor air quality at workplace"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "25000.00",
+        "currency": "TTD",
+        "what_it_is": "Special damages claimed (private medical treatment)"
+      },
+      {
+        "amount": "48800.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to UDeCOTT"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Personal injury/negligence/breach of employment contract claim (air quality) against UDeCOTT DISMISSED. Claimant to pay $48,800 costs.",
+    "osint_value": "low",
+    "osint_notes": "Workplace personal-injury claim vs state company UDeCOTT. Damages/costs figures only; low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Modeste, Steve v Reid, Hamilton J.; Cornwall, Natasha; Bankers Insurance",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2021/cv_21_03996DD29May2026.pdf",
+    "citation": "CV2021-03996",
+    "court": "High Court of Justice, San Fernando Sub-Registry (Master)",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Steve Modeste"
+    ],
+    "defendants": [
+      "Hamilton J. Reid",
+      "Natasha Trudy Cornwall",
+      "Bankers Insurance Company of Trinidad and Tobago Limited"
+    ],
+    "companies": [
+      {
+        "name": "Bankers Insurance Company of Trinidad and Tobago Limited",
+        "role": "Co-defendant / motor insurer",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Steve Modeste",
+        "role": "Claimant / contractor-labourer",
+        "notes": "Severe injuries (ankle, liver, PTSD) from 2017 road accident; 30% PPD"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "1865112.55",
+        "currency": "TTD",
+        "what_it_is": "Total damages payable"
+      },
+      {
+        "amount": "672400.00",
+        "currency": "TTD",
+        "what_it_is": "Future loss of earnings"
+      },
+      {
+        "amount": "280000.00",
+        "currency": "TTD",
+        "what_it_is": "General damages (pain/suffering)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Bankers Insurance Company of Trinidad and Tobago Limited"
+    ],
+    "outcome": "Assessment of damages for road-accident personal injury: total ~TT$1.865M awarded (general $308k incl. interest, special $400k, future loss $1.156M) plus costs. Notable use of 'The Smart Tables' actuarial multiplier method.",
+    "osint_value": "low",
+    "osint_notes": "Motor accident PI damages assessment; names insurer Bankers Insurance (T&T) Ltd; large award. Methodologically notable (Smart Tables). Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Mc Donald-Joseph, Sherry Ann v Eastern Credit Union Co-operative Society Limited",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2022/cv_22_02045DD29May2026.pdf",
+    "citation": "CV2022-02045",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Sherry Ann Mc Donald-Joseph"
+    ],
+    "defendants": [
+      "Eastern Credit Union Co-operative Society Limited"
+    ],
+    "companies": [
+      {
+        "name": "Eastern Credit Union Co-operative Society Limited (ECU)",
+        "role": "Defendant / financial cooperative employer",
+        "directors_officers": [
+          "Arvin Isaac (President/former Secretary)",
+          "Kester Lashley (Acting Deputy CEO)",
+          "Carlos Wright (Acting CEO)"
+        ],
+        "ownership_notes": "Registered La Joya, Eastern Main Road, St. Joseph; regulated by Central Bank of T&T"
+      },
+      {
+        "name": "MARSIDS Consultancy Ltd",
+        "role": "Project manager for ECU MasterCard/EMV project",
+        "directors_officers": [],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Harcon Harrington Consulting Limited",
+        "role": "Claimant's consultancy (partner since 2017)",
+        "directors_officers": [
+          "Sherry Ann Mc Donald-Joseph (partner)"
+        ],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Sherry Ann Mc Donald-Joseph",
+        "role": "Claimant / former Deputy & Acting Group CEO of ECU",
+        "notes": "Chartered Accountant; 26 yrs service; salary TT$41,000 + $19,000 acting allowance; summarily dismissed Mar 2022"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "612900.00",
+        "currency": "TTD",
+        "what_it_is": "General damages for breach of contract (lost salary/benefits)"
+      },
+      {
+        "amount": "75000.00",
+        "currency": "TTD",
+        "what_it_is": "Exemplary damages (egregious dismissal/sham audit)"
+      },
+      {
+        "amount": "90992.04",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs"
+      },
+      {
+        "amount": "60000.00",
+        "currency": "TTD",
+        "what_it_is": "Claimant's total monthly remuneration (salary + acting allowance)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Eastern Credit Union Co-operative Society Limited",
+      "Central Bank of Trinidad and Tobago (regulator)"
+    ],
+    "outcome": "Wrongful/summary dismissal of ECU's Acting Group CEO held unjustified (alleged misconduct re MasterCard project, Central Bank disclosure etc. not proven; audit a 'facade'). Awarded $612,900 damages + $75,000 exemplary + costs.",
+    "osint_value": "medium",
+    "osint_notes": "Governance/employment dispute at Eastern Credit Union; names ECU President Arvin Isaac, execs; MasterCard/EMV project, MARSIDS Consultancy, Central Bank regulatory disclosure. Senior exec remuneration and a judicial finding of a 'sham' internal audit. Useful institutional intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re Trust of land .4054 ha (Seasons Ltd v Signature Properties Ltd; Debideen intervener)",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2016/cv_16_04148DD29May2026.pdf",
+    "citation": "CV2016-04148",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Seasons Limited (In Receivership)"
+    ],
+    "defendants": [
+      "Signature Properties Limited",
+      "Dev Debideen (intervener for Signature Properties)"
+    ],
+    "companies": [
+      {
+        "name": "Seasons Limited (In Receivership)",
+        "role": "Claimant; A/C then real-estate company",
+        "directors_officers": [
+          "Dev Debideen (director/50% shareholder)",
+          "Om Prakash Maraj (director/50% shareholder)",
+          "Rajiv Maraj (Receiver/Manager)",
+          "Victor Herde (former Receiver)"
+        ],
+        "ownership_notes": "Incorporated 1996"
+      },
+      {
+        "name": "Signature Properties Limited",
+        "role": "Defendant; non-trading land-holding company",
+        "directors_officers": [
+          "Dev Debideen (director/50%)",
+          "Om Prakash Maraj (director/50%)"
+        ],
+        "ownership_notes": "Held the 0.4054 ha 'Signature Land'; held on trust for Seasons"
+      },
+      {
+        "name": "Maraj Gold Limited",
+        "role": "Debenture holder / licensed moneylender",
+        "directors_officers": [
+          "Rajiv Maraj",
+          "Om Prakash Maraj"
+        ],
+        "ownership_notes": "Funded land purchases; debenture upstamped to $13M"
+      },
+      {
+        "name": "Rajish Limited",
+        "role": "Took conveyance of Lots 2&3",
+        "directors_officers": [
+          "Rajiv Maraj",
+          "Mary Maraj"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Resham Investments Limited",
+        "role": "Took conveyance of Lot 4",
+        "directors_officers": [],
+        "ownership_notes": "Maraj family-owned"
+      },
+      {
+        "name": "Aranguez Estates Limited",
+        "role": "Vendor of the lands",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Dev Debideen",
+        "role": "Director/50% shareholder of Seasons & Signature Properties",
+        "notes": "Intervener; alleged (rejected) USD$100,000 cash contribution"
+      },
+      {
+        "name": "Om Prakash Maraj",
+        "role": "Director of Seasons, Signature Properties, Maraj Gold",
+        "notes": "Conflict-of-interest allegations"
+      },
+      {
+        "name": "Rajiv Maraj",
+        "role": "Receiver of Seasons; director of Maraj Gold & Rajish",
+        "notes": "Son of Om Prakash Maraj"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "13000000.00",
+        "currency": "TTD",
+        "what_it_is": "Sum the debenture was upstamped to cover (2016)"
+      },
+      {
+        "amount": "8788655.67",
+        "currency": "TTD",
+        "what_it_is": "Sums owed by Seasons to Maraj Gold (31 Mar 2016)"
+      },
+      {
+        "amount": "4354126.16",
+        "currency": "TTD",
+        "what_it_is": "Receiver's expenses incl. 20% interest"
+      },
+      {
+        "amount": "1041945.53",
+        "currency": "TTD",
+        "what_it_is": "Purchase price of the Signature Land (1998)"
+      },
+      {
+        "amount": "7158274.71",
+        "currency": "TTD",
+        "what_it_is": "Payment for Lots 2/3 conveyed to Rajish Limited"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "0.4054 ha 'Signature Land' at Churchill Roosevelt Highway, San Juan, Ward of St Anns; Deed 2686 of 1999 (from Aranguez Estates to Signature Properties)",
+        "lease_terms": "Held on resulting/constructive trust",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Declared held on trust for Seasons Ltd; Signature Properties to convey to Seasons within 28 days"
+      },
+      {
+        "address_or_description": "Lots 2,3,4 Aranguez (Daikin Plaza development site)",
+        "lease_terms": "Funded by Maraj Gold; later conveyed to Rajish Ltd / Resham Investments",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Background to trust claim"
+      }
+    ],
+    "related_litigation": [
+      "CV2012-04599, CV2012-04598, CV2006-01349 (Donaldson-Honeywell J, debenture held valid); CoA appeal dismissed 2021"
+    ],
+    "banks_financial_institutions": [
+      "Maraj Gold Limited (licensed moneylender)"
+    ],
+    "outcome": "Claim succeeded: 0.4054 ha 'Signature Land' on Churchill Roosevelt Highway declared held on resulting/constructive trust for Seasons Ltd (In Receivership); Signature Properties to convey it. Debenture legality res judicata; limitation defence rejected. No order as to costs.",
+    "osint_value": "high",
+    "osint_notes": "Dense corporate-network/asset case: Debideen & Maraj families behind Seasons Ltd, Signature Properties, Maraj Gold (moneylender), Rajish Ltd, Resham Investments; $13M debenture; Daikin Plaza; Aranguez Estates vendor. Strong for corporate/asset/beneficial-ownership tracing.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Singh, Shirlanne S. v New Media Sunshine Today Company Limited et al",
+    "date": "2026-05-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2021/cv_21_01782DD29May2026.pdf",
+    "citation": "CV2021-01782",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Shirlanne Sacha Singh"
+    ],
+    "defendants": [
+      "New Media Sunshine Today Company Limited",
+      "Person(s) unknown (editor-in-chief)"
+    ],
+    "companies": [
+      {
+        "name": "New Media Sunshine Today Company Limited",
+        "role": "First defendant / newspaper publisher",
+        "directors_officers": [
+          "Jack Austin Warner (publisher)",
+          "Anthony Alexis (editor-in-chief, deceased 10 May 2021)"
+        ],
+        "ownership_notes": "Publishes Sunshine Today newspaper (print & social media)"
+      },
+      {
+        "name": "Eagles Private Charter Jet Services LLC",
+        "role": "Claimant's company (US)",
+        "directors_officers": [
+          "Shirlanne Sacha Singh (owner/managing member)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Blissful (Chartered) Jets",
+        "role": "Company Quintero registered as agent",
+        "directors_officers": [],
+        "ownership_notes": "Subject of ownership dispute"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Shirlanne Sacha Singh",
+        "role": "Claimant / Trinidad businesswoman (US-resident)",
+        "notes": "Subject of defamatory articles imputing fraud/theft/immorality"
+      },
+      {
+        "name": "Jack Austin Warner",
+        "role": "Publisher of Sunshine Today",
+        "notes": "Former FIFA Vice-President; admitted no proof of the allegations"
+      },
+      {
+        "name": "Jorge Quintero",
+        "role": "US businessman / source of allegations",
+        "notes": "Not called as witness; had US litigation with claimant"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "300000.00",
+        "currency": "TTD",
+        "what_it_is": "General damages (incl. aggravated) for defamation awarded"
+      },
+      {
+        "amount": "55695.89",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs"
+      },
+      {
+        "amount": "500000.00",
+        "currency": "TTD",
+        "what_it_is": "Bank loan the articles falsely alleged claimant fraudulently obtained"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "US: Quintero v Singh, Miami-Dade Circuit Court Case 2020-023457-CA-0"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "Libel claim succeeded against Jack Warner's Sunshine Today newspaper (two articles imputing fraud/theft/immorality). Justification defence failed. $300,000 general damages (incl. aggravated) + interest + costs + permanent injunction; special/exemplary damages refused.",
+    "osint_value": "high",
+    "osint_notes": "Defamation case against Jack Warner's New Media Sunshine Today Company Ltd (Sunshine Today newspaper); editor Anthony Alexis (deceased). Involves businesswoman Sacha Singh, US businessman Jorge Quintero, charter-jet companies, US litigation. Notable public figure (Jack Warner); media/reputation intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Bhagwansingh, Draupati et al v Balkissoon, Tarawatie",
+    "date": "2026-05-28",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2018/cv_18_04908DD28May2026.pdf",
+    "citation": "CV2018-04908",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Draupati Bhagwansingh (Draupatie Kalipersad-Bhagwansingh)",
+      "Tarini Bhagwansingh",
+      "Risal Bhagwansingh",
+      "Aniera Bhagwansingh",
+      "Shivanand Kalipersad"
+    ],
+    "defendants": [
+      "Tarawatie Balkissoon"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Tarawatie Balkissoon",
+        "role": "Defendant (cousin of claimants)",
+        "notes": "Claimed statutory tenancy/adverse possession of subject land"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "8349.65",
+        "currency": "TTD",
+        "what_it_is": "Pre-judgment interest"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on claim"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Land at Siparia Road, Ward of Oropuche, Trinidad",
+        "lease_terms": "Trespass / claimed statutory tenancy / adverse possession",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Judgment for claimants; defendant's adverse possession/statutory tenancy counterclaim largely failed; damages + costs awarded to claimants"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Family land/trespass dispute resolved in claimants' favour; defendant's counterclaim (statutory tenancy/adverse possession) failed. Damages, interest and costs awarded to claimants.",
+    "osint_value": "medium",
+    "osint_notes": "Family land/trespass/adverse-possession dispute (Siparia Road, Oropuche). Property/title context; modest OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Trinidad and Tobago Cricket Board of Control (TTCB) v Ramnarine, Dinanath",
+    "date": "2026-05-27",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2020/armorer/CvA_20_P087DD27May2026.pdf",
+    "citation": "CA P087/2020",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Dean-Armorer JA (and panel)"
+    ],
+    "claimants": [
+      "Trinidad and Tobago Cricket Board of Control (TTCB) - Appellant"
+    ],
+    "defendants": [
+      "Dinanath Ramnarine (Respondent)"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad and Tobago Cricket Board of Control (TTCB)",
+        "role": "Appellant / sports governing body",
+        "directors_officers": [],
+        "ownership_notes": "Incorporated by TTCB (Incorporation) Act 34 of 1989"
+      },
+      {
+        "name": "National Gas Company (NGC)",
+        "role": "TTCB sponsor (subject of a report)",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Dinanath Ramnarine",
+        "role": "TTCB member / respondent",
+        "notes": "Former cricketer; challenged 2019 TTCB executive election for breach of constitution"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Appeal re TTCB 2019 executive election dispute; trial judge had declared breaches of TTCB constitution and directed investigation of an NGC report. Concerns whether TTCB's rules are subsidiary legislation and the lawfulness of the electoral process.",
+    "osint_value": "medium",
+    "osint_notes": "Sports-governance dispute: TTCB vs Dinanath Ramnarine over 2019 executive elections; references NGC sponsorship and an NGC report. Named public figure; governance/integrity intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Seales, Anil v Francis, Dexter",
+    "date": "2026-05-19",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2025/cv_25_03569DD19May2026.pdf",
+    "citation": "CV2025-03569",
+    "court": "High Court of Justice, San Fernando Sub-Registry (Master)",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Anil Seales"
+    ],
+    "defendants": [
+      "Dexter Francis"
+    ],
+    "companies": [
+      {
+        "name": "Omnicorp Construction Limited",
+        "role": "Claimant's employer",
+        "directors_officers": [],
+        "ownership_notes": "Claimant a Senior Mason, $500/day"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Anil Seales",
+        "role": "Claimant / Senior Mason",
+        "notes": "Bitten by defendant's dog Jan 2025"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "30520.70",
+        "currency": "TTD",
+        "what_it_is": "General damages incl. interest"
+      },
+      {
+        "amount": "3494.71",
+        "currency": "TTD",
+        "what_it_is": "Special damages incl. interest"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Dog-bite personal injury assessment of damages (default judgment): ~$30,520 general + $3,494 special damages + costs awarded to claimant.",
+    "osint_value": "low",
+    "osint_notes": "Dog-bite PI damages assessment. Names employer Omnicorp Construction Ltd. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re estate of Leon Davis, 2 Rock Road, Torrecilla Gardens, Arima",
+    "date": "2026-05-19",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2019/cv_19_04116DD19May2026.pdf",
+    "citation": "CV2019-04116",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Ann Marie Davis Millington (lawful attorney of Eileen Davis)"
+    ],
+    "defendants": [
+      "Legal Personal Representative of the Estate of Leon Davis (added party)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Leon Davis",
+        "role": "Deceased (died 27 Aug 2013)",
+        "notes": "Late of No. 2 Rock Road, Torrecilla Gardens, Arima; will dated 2007 challenged"
+      },
+      {
+        "name": "Eileen Davis",
+        "role": "Beneficiary (claimant's principal)",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "No. 2 Rock Road, Torrecilla Gardens, Arima (estate lands; survey plan of Winston Ramcharan 1996)",
+        "lease_terms": "Estate land under contested will",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Grant of probate revoked / will challenged; conveyances of estate lands ordered (Registrar to execute on default)"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Estate/will challenge re Leon Davis estate: 2007 will/Grant of Probate (Nov 2018) set aside; orders for conveyance of estate lands. Each party bears own costs.",
+    "osint_value": "medium",
+    "osint_notes": "Estate/will dispute over Arima property (No. 2 Rock Road, Torrecilla Gardens). Title/survey detail; modest property-tracing value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Ryan, Hayden",
+    "date": "2026-05-18",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/jones_t/2021/cr_21_967DD18May2026.pdf",
+    "citation": "CR-HC-POS-IND-967-2021-3",
+    "court": "High Court of Justice, Criminal Division",
+    "judges": [
+      "Justice Trevor Jones"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Hayden Ryan (aka 'Mataran')"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Hayden Ryan",
+        "role": "Accused",
+        "notes": "Charged re 2006 Cocorite shooting; victims Avalon Strachan, Omari Danglade, Gary Moore"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Found GUILTY of shooting with intent, possession of firearm and possession of ammunition (2006 Cocorite incident).",
+    "osint_value": "low",
+    "osint_notes": "Criminal firearms/shooting case. No business/financial/property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Bowman, Shaun (t/a A Class Roofing Limited) v Life Time Roofing Limited",
+    "date": "2026-05-18",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2022/cv_22_00876DD18May2026.pdf",
+    "citation": "CV2022-00876",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Shaun Bowman (t/a A Class Roofing Limited)"
+    ],
+    "defendants": [
+      "Life Time Roofing Limited"
+    ],
+    "companies": [
+      {
+        "name": "Life Time Roofing Limited",
+        "role": "Defendant / roofing contractor",
+        "directors_officers": [
+          "Kazim Boodoo (Director/Sales Director)",
+          "Anthony Walker (Project Supervisor)",
+          "Raymond Elias",
+          "Constantine Ellis"
+        ],
+        "ownership_notes": "Subcontracted by Weldfab Ltd for MEES project"
+      },
+      {
+        "name": "A Class Roofing Limited (Shaun Bowman t/a)",
+        "role": "Claimant / roofing subcontractor",
+        "directors_officers": [
+          "Shaun Bowman"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Weldfab Limited",
+        "role": "Main contractor",
+        "directors_officers": [
+          "Samantha Narine",
+          "Hafiz Ali"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Massy Energy Engineered Solutions (MEES)",
+        "role": "Project owner/client",
+        "directors_officers": [],
+        "ownership_notes": "New building site at Point Lisas"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Shaun Bowman",
+        "role": "Claimant subcontractor",
+        "notes": "Roofing/cladding works; claim dismissed for poor workmanship"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "315000.00",
+        "currency": "TTD",
+        "what_it_is": "Total contract price (incl. $20k bonus, $35k variations)"
+      },
+      {
+        "amount": "204442.00",
+        "currency": "TTD",
+        "what_it_is": "Shortfall claimant claimed owed"
+      },
+      {
+        "amount": "115023.76",
+        "currency": "TTD",
+        "what_it_is": "Sum Weldfab withheld from defendant (cost of remedying defects)"
+      },
+      {
+        "amount": "87428.76",
+        "currency": "TTD",
+        "what_it_is": "Damages awarded to defendant on counterclaim"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Roofing subcontract dispute: claimant's claim dismissed (defective workmanship); defendant's counterclaim succeeded. Claimant to pay Life Time Roofing $87,428.76 + costs.",
+    "osint_value": "medium",
+    "osint_notes": "Construction subcontract dispute mapping A Class Roofing, Life Time Roofing Ltd (dir. Kazim Boodoo), Weldfab Ltd, Massy Energy Engineered Solutions (Point Lisas). Commercial/contract intel.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Yearwood, Dolores; Yearwood, Acton v Phipps, Vernon C.",
+    "date": "2026-05-18",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2024/cv_22_03829DD25May2026.pdf",
+    "citation": "CV2022-03829",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Dolores Yearwood",
+      "Acton Yearwood"
+    ],
+    "defendants": [
+      "Vernon Cecil Phipps"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Vernon Cecil Phipps",
+        "role": "Defendant / former son-in-law",
+        "notes": "Licensee occupant; refused to vacate after divorce from Afi"
+      },
+      {
+        "name": "Albert King",
+        "role": "Original licensor (deceased 2008/2018)",
+        "notes": "Family landowner"
+      },
+      {
+        "name": "Afi Yearwood Phillips",
+        "role": "Claimants' daughter / ex-wife of defendant",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs awarded to claimants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot at Dades Trace, Tabaquite Road, Rio Claro (part of 10a 1r 26p family land; Crown Grant Vol 235 Folio 49 of 1909)",
+        "lease_terms": "Permissive licence (rent-free) to build/occupy; revocable",
+        "rent": "",
+        "landlord": "Yearwood family",
+        "tenant": "Vernon Phipps (licensee)",
+        "outcome": "Licence revoked; defendant ordered to give vacant possession within 30 days"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judgment for claimants (undefended): defendant held a revocable licence (not irrevocable/constructive trust); ordered to vacate family land within 30 days; costs $14,000.",
+    "osint_value": "medium",
+    "osint_notes": "Family land/licence possession dispute (Dades Trace, Rio Claro; 1909 Crown Grant). Title/family-land context; modest property-tracing value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Stoute, Valerie v University of Trinidad and Tobago",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/lambert_p/2019/cv_19_04589DD15May2026.pdf",
+    "citation": "CV2019-04589",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice B.A. Lambert Peterson"
+    ],
+    "claimants": [
+      "Valerie Stoute"
+    ],
+    "defendants": [
+      "University of Trinidad and Tobago (UTT)"
+    ],
+    "companies": [
+      {
+        "name": "University of Trinidad and Tobago (UTT)",
+        "role": "Defendant / state university employer",
+        "directors_officers": [],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Valerie Stoute",
+        "role": "Claimant / Professor in Practice, Head of Environmental Studies Dept",
+        "notes": "Base salary $36k-$40k/mo; investigation dropped; retired 2019"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "760000.00",
+        "currency": "TTD",
+        "what_it_is": "Breach of contract damages claimed"
+      },
+      {
+        "amount": "15000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages awarded (breach of trust/confidence in investigation)"
+      },
+      {
+        "amount": "143939.06",
+        "currency": "TTD",
+        "what_it_is": "Ex gratia emolument/benefits/salary received on retirement"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Employment claim mostly failed; UTT found to have breached implied trust/confidence only in the manner of its misconduct investigation. Nominal damages $15,000; no fiduciary duty/wrongful dismissal established.",
+    "osint_value": "low",
+    "osint_notes": "Academic employment dispute vs UTT (state university). Salary/benefit figures; no business/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Chickoree, Ramnarine v Scott, Andrew",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_01004DD15May2026.pdf",
+    "citation": "CV2025-01004",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Ramnarine Chickoree"
+    ],
+    "defendants": [
+      "Andrew Scott"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Ramnarine Chickoree",
+        "role": "Claimant",
+        "notes": "Claimed possessory title to land at Souria Trace"
+      },
+      {
+        "name": "Andrew Scott",
+        "role": "Defendant",
+        "notes": "Succeeded on counterclaim re the land"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs on counterclaim awarded to defendant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 19, Souria Trace, Brazil Village, Talparo, Ward of San Raphael, ~37 perches",
+        "lease_terms": "Possessory title/adverse possession dispute",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claimant's possessory-title claim failed; defendant succeeded; injunction protecting defendant's quiet enjoyment; costs to defendant"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Possessory-title/adverse possession land dispute (Souria Trace, Talparo): claimant's claim failed; defendant succeeded on counterclaim with injunction and costs.",
+    "osint_value": "medium",
+    "osint_notes": "Land/possessory-title dispute (Lot 19, Souria Trace, Talparo). Title/boundary detail; modest property-tracing value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Phillip, Andre v Service Commissions Department",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2023/cv_23_01827DD15May2026.pdf",
+    "citation": "CV2023-01827",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Andre Phillip"
+    ],
+    "defendants": [
+      "Service Commissions Department"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Andre Phillip",
+        "role": "Claimant",
+        "notes": "FOIA request re Research Officer promotions/seniority"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Judicial review: Service Commissions Department declared in breach of FOIA s.15 (failure to respond within 30 days). Mandamus claims moot (info eventually supplied); costs to claimant (certified Band D, not Senior Counsel).",
+    "osint_value": "low",
+    "osint_notes": "Freedom of Information Act judicial review. No business/financial/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re estate of Eurina Schullere (Schullere et al v James)",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2023/cv_23_02234DD15May2026.pdf",
+    "citation": "CV2023-02234",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Gregory Harold Schullere",
+      "Joseph Christopher Schullere",
+      "Jeremiah Schullere Jr"
+    ],
+    "defendants": [
+      "Gerard James"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Eurina Schullere",
+        "role": "Deceased (died 8 Aug 2008)",
+        "notes": "Estate owned 4-acre parcel in Ward of Charuma; lived LP 9B Upper Unity Rd, Diego Martin"
+      },
+      {
+        "name": "Gerard James",
+        "role": "Defendant",
+        "notes": "Claimed adverse possession of ~1 acre via grandmother Ruby Blackman"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "500.00",
+        "currency": "TTD",
+        "what_it_is": "Monthly mesne profits ordered"
+      },
+      {
+        "amount": "14000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on claim (and again on counterclaim)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "~1 acre of a 4-acre registered parcel, Ward of Charuma (estate of Eurina Schullere)",
+        "lease_terms": "Permissive family occupation vs adverse possession",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claimants (estate) succeeded; defendant's adverse possession counterclaim failed; possession + mesne profits ($500/mo) + costs"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Family estate land dispute: defendant's adverse-possession claim over ~1 acre failed; estate beneficiaries granted possession, mesne profits and costs.",
+    "osint_value": "medium",
+    "osint_notes": "Estate land/adverse-possession dispute (Schullere estate, Charuma). Property/title context; modest value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Skeete, Curtis v The Attorney General",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_03163DD15May2026.pdf",
+    "citation": "CV2022-03163",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Curtis Skeete"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Curtis Skeete",
+        "role": "Claimant / retired Police Sergeant (35 yrs service)",
+        "notes": "Pension/gratuity unpaid 22+ months after 2020 retirement"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "State's strike-out of constitutional claim dismissed. Court held delayed pension/gratuity payment (pension = property under s.4(a)) properly raised constitutional jurisdiction; exceptional circumstances (~67 months unpaid). State to file evidence in answer; costs to claimant.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional pension/gratuity delay claim by retired police officer. No business/property of note. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re application by Hober Luis Camacho Teran (Constitution)",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2023/cv_23_00211DD15May2026.pdf",
+    "citation": "CV2023-00211",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Hober Luis Camacho Teran"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Hober Luis Camacho Teran",
+        "role": "Claimant / Venezuelan-Colombian national",
+        "notes": "Challenged detention (2019) and 2022 deportation order; UNHCR asylum applicant"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Constitutional/immigration claim dismissed. Detention and deportation order held lawful (Minister's s.11(a) power); 1951 Refugee Convention/2014 draft National Policy not enforceable domestically; no legitimate expectation. Costs to State.",
+    "osint_value": "low",
+    "osint_notes": "Immigration/deportation constitutional claim (Venezuelan migrant). Policy/refugee-law interest only; no business/financial/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re s.62(1) National Insurance Act (Chang Kit v National Insurance Board)",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/williams_q/2023/cv_23_3785DD15May2026.pdf",
+    "citation": "CV2023-3785",
+    "court": "High Court of Justice, San Fernando Sub-Registry",
+    "judges": [
+      "Madame Justice Avason Quinlan-Williams"
+    ],
+    "claimants": [
+      "Richard Chang Kit"
+    ],
+    "defendants": [
+      "The National Insurance Board of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "Gift & Co. (law firm)",
+        "role": "Claimant's engager",
+        "directors_officers": [
+          "Jocelyn Gift (partner/attorney)"
+        ],
+        "ownership_notes": "Bacolet Street, Scarborough, Tobago; engaged claimant as IT consultant"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Richard Chang Kit",
+        "role": "Claimant / retired engineer/IT consultant",
+        "notes": "Disputed NIB finding he was contractor not employee; sought retirement pension"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "63445.41",
+        "currency": "TTD",
+        "what_it_is": "Retirement Grant awarded (in lieu of pension)"
+      },
+      {
+        "amount": "1250.00",
+        "currency": "TTD",
+        "what_it_is": "Claimant's monthly retainer from Gift & Co."
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "National Insurance Appeal Tribunal decision 3 Aug 2023"
+    ],
+    "banks_financial_institutions": [
+      "National Insurance Board of Trinidad and Tobago"
+    ],
+    "outcome": "NIS appeal dismissed: claimant held to be a contractor (contract for services), not an employee, of Gift & Co.; not eligible for Retirement Pension, only the Retirement Grant ($63,445.41).",
+    "osint_value": "low",
+    "osint_notes": "National Insurance pension classification appeal (employee vs contractor). Names law firm Gift & Co. (Tobago). Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re application by Marsha Sookoo (Part 56 / FOIA)",
+    "date": "2026-05-15",
+    "url": "https://webopac.ttlawcourts.org//LibraryJud/Judgments/HC/williams_q/2025/cv_25_02946DD15May2026.pdf",
+    "citation": "CV2025-02946",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Avason Quinlan-Williams"
+    ],
+    "claimants": [
+      "Marsha Sookoo"
+    ],
+    "defendants": [
+      "The Chief Personnel Officer"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Marsha Sookoo",
+        "role": "Claimant / Forester I, Forestry Division",
+        "notes": "Sought FOIA docs re why her Resource/Recreation/Tourism degree deemed not equivalent to Forestry degree for promotion to Assistant Conservator of Forests"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Vijay Singh v Ministry of Agriculture (CV2016-02327; CA S090/2017) - related degree-equivalency case"
+    ],
+    "banks_financial_institutions": [],
+    "outcome": "FOIA judicial review largely succeeded: CPO's refusal of FOIA items 2 (job titles of evaluators), 4 (assessment report, redacted) and 8 (equivalency guidelines) held unlawful; certiorari/mandamus granted; costs (senior+junior counsel) to claimant.",
+    "osint_value": "low",
+    "osint_notes": "FOIA/public-service promotion judicial review (forestry degree equivalency). No business/financial/property. Low OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Lewis, Christopher",
+    "date": "2026-05-13",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2024/cr_24_pos915DD13May2026.pdf",
+    "citation": "CR-HC-POS-2024-915-1",
+    "court": "High Court of Justice, Criminal Division, Port of Spain",
+    "judges": [
+      "Madame Justice Nalini Singh"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Christopher Lewis (aka 'Rockback')"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Christopher Lewis",
+        "role": "Accused",
+        "notes": "Charged with attempted murder etc re 2023 shooting of Jeffrey Bonaparte"
+      },
+      {
+        "name": "Jeffrey Bonaparte",
+        "role": "Virtual complainant",
+        "notes": ""
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Found NOT GUILTY on all counts (attempted murder, shooting with intent, firearm/ammunition possession). Identification evidence held unreliable under Turnbull.",
+    "osint_value": "low",
+    "osint_notes": "Criminal attempted-murder case (acquittal). No business/financial/property. No OSINT value.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Massy Machinery Ltd v JUSAMCO Pavers Limited",
+    "date": "2026-05-13",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2024/cv_24_02638DD13May2026.pdf",
+    "citation": "CV2024-02638",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Margaret Y. Mohammed"
+    ],
+    "claimants": [
+      "Massy Machinery Ltd"
+    ],
+    "defendants": [
+      "JUSAMCO Pavers Limited"
+    ],
+    "companies": [
+      {
+        "name": "Massy Machinery Ltd",
+        "role": "Claimant / equipment supplier",
+        "directors_officers": [
+          "Anjeli Narine (VP Legal & General Counsel)"
+        ],
+        "ownership_notes": "Part of Massy group"
+      },
+      {
+        "name": "JUSAMCO Pavers Limited",
+        "role": "Defendant / debtor",
+        "directors_officers": [],
+        "ownership_notes": "Member of the Junior Sammy Group of Companies"
+      },
+      {
+        "name": "Junior Sammy Group of Companies",
+        "role": "Group to which defendant belongs",
+        "directors_officers": [],
+        "ownership_notes": "Members' indebtedness to Massy discussed"
+      }
+    ],
+    "individuals": [],
+    "financial_figures": [
+      {
+        "amount": "946962.68",
+        "currency": "TTD",
+        "what_it_is": "Debt for equipment/maintenance (2017-2024); judgment sum"
+      },
+      {
+        "amount": "1151571.15",
+        "currency": "TTD",
+        "what_it_is": "Sum acknowledged 'for the most part' by defendant (Sep 2023)"
+      },
+      {
+        "amount": "73515.54",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of the action"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "outcome": "Defence struck out (bare denial, breach of CPR 10.5); judgment for Massy Machinery Ltd. JUSAMCO Pavers Ltd to pay $946,962.68 debt + interest + costs. 2015-2016 invoices conceded statute-barred.",
+    "osint_value": "medium",
+    "osint_notes": "Commercial debt judgment: Massy Machinery Ltd vs JUSAMCO Pavers Ltd (Junior Sammy Group of Companies). ~$947k equipment debt; ties JUSAMCO to Junior Sammy Group; Massy VP Legal Anjeli Narine. Useful commercial/group network intel.",
+    "fetch_failed": false
+  }
+]
