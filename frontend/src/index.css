@@ -130,4 +130,13 @@ body {
 .panel-in { animation: panel-in .4s ease both; }
 
 /* vis-network canvas host */
-.net-host { height: 70vh; min-height: 460px; border-radius: 18px; overflow:hidden; background:#0b1322; border:1px solid rgba(255,255,255,.15); }
+.net-host {
+  height: 70vh;
+  min-height: 460px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #14213d 0%, #0b1322 60%, #070d18 100%);
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: inset 0 0 60px rgba(0,0,0,.4);
+}
