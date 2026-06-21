@@ -18,28 +18,16 @@ function Bar({ label, n, max, sub, onClick }) {
   );
 }
 
-function PropertyRow({ p, onOpenCase }) {
-  // Compact "label: value" chips for whichever lease/rent/party details exist.
-  const meta = [];
-  if (p.rent)        meta.push(['Rent', p.rent]);
-  if (p.lease_terms) meta.push(['Terms', p.lease_terms]);
-  if (p.landlord)    meta.push(['Landlord', p.landlord]);
-  if (p.tenant)      meta.push(['Tenant', p.tenant]);
-  return (
-    <div className="py-2" style={{ borderTop: '1px solid #eef2f8' }}>
-      <button className="text-left font-semibold underline decoration-dotted text-sm" style={{ color: '#1F3864' }}
-        onClick={() => onOpenCase(p.slug)}>{p.description || p.title}</button>
-      {meta.length > 0 && (
-        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs" style={{ color: '#5b6780' }}>
-          {meta.map(([k, v], i) => (
-            <span key={i}><b style={{ color: '#3a4a66' }}>{k}:</b> {v}</span>
-          ))}
-        </div>
-      )}
-      {p.outcome && <p className="text-xs mt-1" style={{ color: '#4a5568' }}>{p.outcome}</p>}
-    </div>
-  );
-}
+// Trim a string to n chars on a word/punctuation boundary.
+const shorten = (s, n) => {
+  s = (s || '').trim();
+  if (s.length <= n) return s;
+  return s.slice(0, n).replace(/[\s,;(]+\S*$/, '') + '…';
+};
+// Headline location (drop deed numbers / parentheticals), short rent, short status.
+const propName   = p => shorten((p.description || p.title || '').split(/[;(]/)[0], 56) || '—';
+const propRent   = p => shorten(p.rent, 24) || '—';
+const propStatus = p => shorten((p.outcome || '').split(/[.;]/)[0], 52) || '—';
 
 function Tile({ num, label, color, onClick }) {
   return (
@@ -81,9 +69,24 @@ export default function Insights({ onOpenCase, onFilterCases }) {
             <span className="text-xs font-semibold ml-2" style={{ color: '#5b6780' }}>{props.length} on record</span>
           </h3>
           {props.length === 0 && <p className="text-sm" style={{ color: '#5b6780' }}>None recorded.</p>}
-          {props.map((p, i) => (
-            <PropertyRow key={i} p={p} onOpenCase={onOpenCase} />
-          ))}
+          {props.length > 0 && (
+            <div style={{ overflowX: 'auto' }}>
+              <table className="itable">
+                <thead>
+                  <tr><th>Property / land</th><th>Rent</th><th>Outcome</th></tr>
+                </thead>
+                <tbody>
+                  {props.map((p, i) => (
+                    <tr key={i} onClick={() => onOpenCase(p.slug)}>
+                      <td style={{ fontWeight: 600, color: '#1F3864' }}>{propName(p)}</td>
+                      <td style={{ color: '#3a4a66', whiteSpace: 'nowrap' }}>{propRent(p)}</td>
+                      <td style={{ color: '#5b6780' }}>{propStatus(p)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
         <div className="result-card">
