@@ -18,6 +18,29 @@ function Bar({ label, n, max, sub, onClick }) {
   );
 }
 
+function PropertyRow({ p, onOpenCase }) {
+  // Compact "label: value" chips for whichever lease/rent/party details exist.
+  const meta = [];
+  if (p.rent)        meta.push(['Rent', p.rent]);
+  if (p.lease_terms) meta.push(['Terms', p.lease_terms]);
+  if (p.landlord)    meta.push(['Landlord', p.landlord]);
+  if (p.tenant)      meta.push(['Tenant', p.tenant]);
+  return (
+    <div className="py-2" style={{ borderTop: '1px solid #eef2f8' }}>
+      <button className="text-left font-semibold underline decoration-dotted text-sm" style={{ color: '#1F3864' }}
+        onClick={() => onOpenCase(p.slug)}>{p.description || p.title}</button>
+      {meta.length > 0 && (
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs" style={{ color: '#5b6780' }}>
+          {meta.map(([k, v], i) => (
+            <span key={i}><b style={{ color: '#3a4a66' }}>{k}:</b> {v}</span>
+          ))}
+        </div>
+      )}
+      {p.outcome && <p className="text-xs mt-1" style={{ color: '#4a5568' }}>{p.outcome}</p>}
+    </div>
+  );
+}
+
 export default function Insights({ onOpenCase }) {
   const [d, setD] = useState(null);
   const [err, setErr] = useState('');
@@ -27,9 +50,8 @@ export default function Insights({ onOpenCase }) {
   if (!d) return <p className="text-center mt-6 text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>Loading…</p>;
 
   const t = d.totals;
-  const maxJudge = Math.max(...d.byJudge.map(j => j.n), 1);
-  const maxCourt = Math.max(...d.byCourt.map(c => c.n), 1);
-  const maxEnt   = Math.max(...d.recurringEntities.map(e => e.cases), 1);
+  const props = d.properties || [];
+  const maxEnt = Math.max(...d.recurringEntities.map(e => e.cases), 1);
 
   return (
     <div className="panel-in" style={{ maxWidth: 1000, margin: '0 auto' }}>
@@ -42,22 +64,23 @@ export default function Insights({ onOpenCase }) {
       </div>
 
       <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))' }}>
+        <div className="result-card" style={{ gridColumn: '1 / -1' }}>
+          <h3 className="font-extrabold mb-2" style={{ color: '#1F3864' }}>
+            Property, land &amp; lease matters
+            <span className="text-xs font-semibold ml-2" style={{ color: '#5b6780' }}>{props.length} on record</span>
+          </h3>
+          {props.length === 0 && <p className="text-sm" style={{ color: '#5b6780' }}>None recorded.</p>}
+          {props.map((p, i) => (
+            <PropertyRow key={i} p={p} onOpenCase={onOpenCase} />
+          ))}
+        </div>
+
         <div className="result-card">
           <h3 className="font-extrabold mb-2" style={{ color: '#1F3864' }}>Recurring entities (in &gt; 1 case)</h3>
           {d.recurringEntities.length === 0 && <p className="text-sm" style={{ color: '#5b6780' }}>None.</p>}
           {d.recurringEntities.map((e, i) => (
             <Bar key={i} label={`${e.name}${e.is_bank ? ' (bank/FI)' : ''}`} n={e.cases} max={maxEnt} sub={`${e.cases} cases`} />
           ))}
-        </div>
-
-        <div className="result-card">
-          <h3 className="font-extrabold mb-2" style={{ color: '#1F3864' }}>Caseload by judge</h3>
-          {d.byJudge.map((j, i) => <Bar key={i} label={j.judge} n={j.n} max={maxJudge} />)}
-        </div>
-
-        <div className="result-card">
-          <h3 className="font-extrabold mb-2" style={{ color: '#1F3864' }}>By court</h3>
-          {d.byCourt.map((c, i) => <Bar key={i} label={c.court_type} n={c.n} max={maxCourt} />)}
         </div>
 
         <div className="result-card">

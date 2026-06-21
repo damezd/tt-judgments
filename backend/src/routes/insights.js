@@ -16,19 +16,13 @@ router.get('/insights', async (req, res) => {
       FROM cases
     `);
 
-    const [byCourt] = await db.query(`
-      SELECT COALESCE(NULLIF(court_type,''),'Other') AS court_type, COUNT(*) AS n
-      FROM cases GROUP BY court_type ORDER BY n DESC
-    `);
-
-    const [byJudge] = await db.query(`
-      SELECT judge, COUNT(*) AS n FROM (
-        SELECT TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(judges,'||',numbers.n),'||',-1)) AS judge
-        FROM cases
-        JOIN (SELECT 1 n UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5) numbers
-          ON CHAR_LENGTH(judges)-CHAR_LENGTH(REPLACE(judges,'||','')) >= numbers.n-1
-        WHERE judges <> ''
-      ) t WHERE judge <> '' GROUP BY judge ORDER BY n DESC LIMIT 12
+    // Property, land & lease matters — addresses, commercial leases, rents, outcomes.
+    const [properties] = await db.query(`
+      SELECT p.description, p.lease_terms, p.rent, p.landlord, p.tenant, p.outcome,
+             c.title, c.slug
+      FROM properties p JOIN cases c ON c.id = p.case_id
+      WHERE p.description <> '' OR p.rent <> '' OR p.lease_terms <> ''
+      ORDER BY (p.rent <> '') DESC, CHAR_LENGTH(p.description) DESC
     `);
 
     // Recurring entities (companies/banks) across >1 case, using a canonical key.
@@ -66,7 +60,7 @@ router.get('/insights', async (req, res) => {
         total: +totals.total, high: +totals.high, medium: +totals.medium,
         low: +totals.low, failed: +totals.failed,
       },
-      byCourt, byJudge, recurringEntities, topFigures,
+      recurringEntities, topFigures, properties,
     });
   } catch (err) {
     console.error('Insights error:', err);

@@ -2,8 +2,17 @@ import { useEffect, useRef, useState } from 'react';
 import { Network, DataSet } from 'vis-network/standalone';
 import { getNetwork } from '../api/client';
 
-const COL = { company: '#2E5BA6', bank: '#E0A800', group: '#7b4fa3', director: '#127a6b', person: '#9aa3ad' };
-const CASECOL = { high: '#C0392B', medium: '#3B73B9', low: '#c9ced6' };
+// Brightened palette so nodes read clearly against the dark canvas
+const COL = { company: '#4a8fff', bank: '#f0b400', group: '#a974d6', director: '#1fae93', person: '#b3bdcb' };
+const CASECOL = { high: '#ff5a47', medium: '#5a93e6', low: '#cdd4de' };
+
+// Shared label styling: a dark halo (strokeWidth) keeps text legible over edges/nodes
+const LABEL_FONT = {
+  color: '#f3f7ff',
+  face: '"Avenir Next", "Segoe UI", sans-serif',
+  strokeWidth: 4,
+  strokeColor: '#0b1322',
+};
 
 export default function NetworkGraph({ onOpenCase }) {
   const host = useRef(null);
@@ -28,24 +37,34 @@ export default function NetworkGraph({ onOpenCase }) {
           id: n.id, label: n.label, _type: n.type, _value: n.value, _slug: n.slug,
           _isDir: isDir, _ncase: n.ncase || 0, _deg: n.deg,
           shape: n.type === 'case' ? 'box' : 'dot',
-          color: { background: color, border: '#ffffff' },
-          size: Math.max(8, Math.min(34, 6 + (n.deg || 1) * 2.2)),
-          font: { size: n.type === 'case' ? 12 : 13, color: '#e8eefc' },
+          color: { background: color, border: '#ffffff', highlight: { background: color, border: '#ffffff' } },
+          size: Math.max(13, Math.min(40, 10 + (n.deg || 1) * 2.4)),
+          font: { ...LABEL_FONT, size: n.type === 'case' ? 16 : 14, bold: n.type === 'case' },
           hidden: !visible({ _type: n.type, _value: n.value, _isDir: isDir }, F),
         };
       });
       const edges = data.edges.map((e, i) => ({
         id: 'e' + i, from: e[0], to: e[1], title: e[2],
-        color: { color: e[2] === 'director/officer' ? '#127a6b' : (e[2] === 'member of' ? '#7b4fa3' : '#5b6a86') },
-        width: e[2] === 'director/officer' ? 2 : 1, smooth: false,
+        color: {
+          color: e[2] === 'director/officer' ? '#1fae93' : (e[2] === 'member of' ? '#a974d6' : '#7a8aa8'),
+          highlight: '#ffffff', opacity: 0.7,
+        },
+        width: e[2] === 'director/officer' ? 2.5 : 1.5, selectionWidth: 2, smooth: false,
       }));
       const ds = new DataSet(nodes);
       dsRef.current = ds;
       const net = new Network(host.current, { nodes: ds, edges: new DataSet(edges) }, {
-        physics: { stabilization: { iterations: 200 }, barnesHut: { gravitationalConstant: -9000, springLength: 130, springConstant: 0.03, avoidOverlap: 0.3 } },
-        interaction: { hover: true, tooltipDelay: 120 }, nodes: { borderWidth: 1.5 },
+        physics: { stabilization: { iterations: 250 }, barnesHut: { gravitationalConstant: -5000, springLength: 95, springConstant: 0.04, avoidOverlap: 0.6 } },
+        interaction: { hover: true, tooltipDelay: 120, hideEdgesOnDrag: true, navigationButtons: false },
+        nodes: {
+          borderWidth: 2,
+          // keep labels drawn even when zoomed out (default hides them below ~5px)
+          scaling: { label: { enabled: false, drawThreshold: 1 } },
+        },
       });
       netRef.current = net;
+      // frame the graph nicely once physics settle
+      net.once('stabilizationIterationsDone', () => net.fit({ animation: { duration: 400 } }));
       net.on('click', p => {
         if (!p.nodes.length) return;
         const n = ds.get(p.nodes[0]);
