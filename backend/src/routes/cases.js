@@ -8,6 +8,7 @@ router.get('/cases', async (req, res) => {
   const court = (req.query.court || '').trim();
   const q     = (req.query.q     || '').trim();
   const crime = (req.query.crime || '').trim();
+  const failed = (req.query.failed || '').trim();
 
   try {
     const cond = [];
@@ -15,6 +16,7 @@ router.get('/cases', async (req, res) => {
     if (value && ['high', 'medium', 'low'].includes(value)) { cond.push('osint_value = ?'); params.push(value); }
     if (court) { cond.push('court_type = ?'); params.push(court); }
     if (crime === '1') cond.push('is_crime = 1');
+    if (failed === '1') cond.push('fetch_failed = 1');
     if (q)     { cond.push('(title LIKE ? OR citation LIKE ? OR osint_notes LIKE ?)'); params.push(`%${q}%`, `%${q}%`, `%${q}%`); }
 
     const where = cond.length ? `WHERE ${cond.join(' AND ')}` : '';

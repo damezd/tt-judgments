@@ -22,9 +22,12 @@ export default function App() {
   const [authed, setAuthed] = useState(!!getToken());
   const [tab, setTab]       = useState('people');
   const [openSlug, setOpenSlug] = useState(null);
+  const [casesInit, setCasesInit] = useState(null);
 
   const handleLogout = () => { logout(); setAuthed(false); };
   const openCase = (slug) => setOpenSlug(slug);
+  // Jump to the Cases tab with a filter pre-applied (used by Insights tiles).
+  const filterCases = (filter) => { setCasesInit(filter); setTab('cases'); };
 
   if (!authed) return <LoginPage onLogin={() => setAuthed(true)} />;
 
@@ -43,15 +46,16 @@ export default function App() {
 
       <div className="flex flex-wrap gap-2 mb-6">
         {TABS.map(t => (
-          <button key={t.id} className={`tab ${tab === t.id ? 'active' : ''}`} onClick={() => setTab(t.id)}>{t.label}</button>
+          <button key={t.id} className={`tab ${tab === t.id ? 'active' : ''}`}
+            onClick={() => { setCasesInit(null); setTab(t.id); }}>{t.label}</button>
         ))}
       </div>
 
       {tab === 'people'   && <PeopleSearch onOpenCase={openCase} />}
       {tab === 'entities' && <EntitySearch onOpenCase={openCase} />}
-      {tab === 'cases'    && <CasesBrowse  onOpenCase={openCase} />}
+      {tab === 'cases'    && <CasesBrowse  onOpenCase={openCase} initial={casesInit} />}
       {tab === 'crime'    && <CrimeView    onOpenCase={openCase} />}
-      {tab === 'insights' && <Insights     onOpenCase={openCase} />}
+      {tab === 'insights' && <Insights     onOpenCase={openCase} onFilterCases={filterCases} />}
       {tab === 'network'  && <NetworkGraph onOpenCase={openCase} />}
 
       {openSlug && <CaseDetail slug={openSlug} onClose={() => setOpenSlug(null)} />}

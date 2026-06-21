@@ -41,7 +41,17 @@ function PropertyRow({ p, onOpenCase }) {
   );
 }
 
-export default function Insights({ onOpenCase }) {
+function Tile({ num, label, color, onClick }) {
+  return (
+    <button type="button" className="stat" onClick={onClick}
+      title={onClick ? `Show ${label.toLowerCase()} cases` : undefined}>
+      <div className="num" style={{ color }}>{num}</div>
+      <div className="lbl">{label}</div>
+    </button>
+  );
+}
+
+export default function Insights({ onOpenCase, onFilterCases }) {
   const [d, setD] = useState(null);
   const [err, setErr] = useState('');
   useEffect(() => { getInsights().then(setD).catch(() => setErr('Failed to load insights.')); }, []);
@@ -56,12 +66,12 @@ export default function Insights({ onOpenCase }) {
   return (
     <div className="panel-in" style={{ maxWidth: 1000, margin: '0 auto' }}>
       <div className="grid gap-3 mb-4" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(120px,1fr))' }}>
-        <div className="stat"><div className="num">{fmt(t.total)}</div><div className="lbl">Total cases</div></div>
-        <div className="stat"><div className="num" style={{ color: '#9b2412' }}>{fmt(t.high)}</div><div className="lbl">High value</div></div>
-        <div className="stat"><div className="num" style={{ color: '#1e4e86' }}>{fmt(t.medium)}</div><div className="lbl">Medium</div></div>
-        <div className="stat"><div className="num" style={{ color: '#54606f' }}>{fmt(t.low)}</div><div className="lbl">Low</div></div>
-        <div className="stat"><div className="num" style={{ color: '#8e1414' }}>{fmt(t.crime)}</div><div className="lbl">Crime-flagged</div></div>
-        <div className="stat"><div className="num" style={{ color: '#7a5310' }}>{fmt(t.failed)}</div><div className="lbl">Not retrieved</div></div>
+        <Tile num={fmt(t.total)}  label="Total cases"    onClick={() => onFilterCases?.({})} />
+        <Tile num={fmt(t.high)}   label="High value"     color="#9b2412" onClick={() => onFilterCases?.({ value: 'high' })} />
+        <Tile num={fmt(t.medium)} label="Medium"         color="#1e4e86" onClick={() => onFilterCases?.({ value: 'medium' })} />
+        <Tile num={fmt(t.low)}    label="Low"            color="#54606f" onClick={() => onFilterCases?.({ value: 'low' })} />
+        <Tile num={fmt(t.crime)}  label="Crime-flagged"  color="#8e1414" onClick={() => onFilterCases?.({ crime: true })} />
+        <Tile num={fmt(t.failed)} label="Not retrieved"  color="#7a5310" onClick={() => onFilterCases?.({ failed: true })} />
       </div>
 
       <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))' }}>
