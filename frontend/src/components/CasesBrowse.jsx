@@ -2,24 +2,26 @@ import { useState, useEffect } from 'react';
 import { listCases } from '../api/client';
 import { Badge, CrimeBadge } from './ui';
 
-export default function CasesBrowse({ onOpenCase }) {
-  const [value, setValue] = useState('');
+export default function CasesBrowse({ onOpenCase, initial }) {
+  // `initial` (set when arriving from an Insights tile) pre-applies a filter.
+  const [value, setValue] = useState(initial?.value || '');
   const [court, setCourt] = useState('');
   const [q, setQ] = useState('');
-  const [crime, setCrime] = useState(false);
+  const [crime, setCrime] = useState(!!initial?.crime);
+  const [failed, setFailed] = useState(!!initial?.failed);
   const [state, setState] = useState({ loading: true });
 
   async function load() {
     setState({ loading: true });
     try {
-      const data = await listCases({ value, court, q, crime: crime ? '1' : '' });
+      const data = await listCases({ value, court, q, crime: crime ? '1' : '', failed: failed ? '1' : '' });
       setState({ loading: false, ...data });
     } catch (e) {
       if (e.message === 'UNAUTHORIZED') throw e;
       setState({ loading: false, error: 'Failed to load cases.' });
     }
   }
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [value, court, crime]);
+  useEffect(() => { load(); /* eslint-disable-next-line */ }, [value, court, crime, failed]);
 
   return (
     <div className="panel-in">
@@ -47,6 +49,10 @@ export default function CasesBrowse({ onOpenCase }) {
           <label className="flex items-center gap-1.5 text-xs cursor-pointer pb-2.5" style={{ color: 'rgba(238,244,255,.9)' }}>
             <input type="checkbox" checked={crime} onChange={e => setCrime(e.target.checked)} />
             <span className="badge crime">crime</span> only
+          </label>
+          <label className="flex items-center gap-1.5 text-xs cursor-pointer pb-2.5" style={{ color: 'rgba(238,244,255,.9)' }}>
+            <input type="checkbox" checked={failed} onChange={e => setFailed(e.target.checked)} />
+            <span className="badge failed">not retrieved</span> only
           </label>
           <button className="btn-primary" onClick={load}>Apply</button>
         </div>
