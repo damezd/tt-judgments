@@ -4,7 +4,7 @@ import { getNetwork } from '../api/client';
 
 // Brightened palette so nodes read clearly against the dark canvas
 const COL = { company: '#4a8fff', bank: '#f0b400', group: '#a974d6', director: '#1fae93', person: '#b3bdcb' };
-const CASECOL = { high: '#ff5a47', medium: '#5a93e6', low: '#cdd4de' };
+const CASECOL = { high: '#ff5a47', medium: '#5a93e6', low: '#94a1b2' };
 
 // Shared label styling: a dark halo (strokeWidth) keeps text legible over edges/nodes
 const LABEL_FONT = {
@@ -19,8 +19,9 @@ export default function NetworkGraph({ onOpenCase }) {
   const netRef = useRef(null);
   const dsRef = useRef(null);
   const dataRef = useRef(null);
-  const [info, setInfo] = useState('Click any node for details.');
+  const [info, setInfo] = useState('Tip: pinch / scroll to zoom in — labels appear as you get closer.');
   const [err, setErr] = useState('');
+  const [building, setBuilding] = useState(true);
   const [F, setF] = useState({ company: true, bank: true, group: true, director: true, party: false, caseV: { high: true, medium: true, low: true } });
 
   useEffect(() => {
@@ -38,8 +39,8 @@ export default function NetworkGraph({ onOpenCase }) {
           _isDir: isDir, _ncase: n.ncase || 0, _deg: n.deg,
           shape: n.type === 'case' ? 'box' : 'dot',
           color: { background: color, border: '#ffffff', highlight: { background: color, border: '#ffffff' } },
-          size: Math.max(13, Math.min(40, 10 + (n.deg || 1) * 2.4)),
-          font: { ...LABEL_FONT, size: n.type === 'case' ? 16 : 14, bold: n.type === 'case' },
+          size: Math.max(12, Math.min(36, 9 + (n.deg || 1) * 2.2)),
+          font: { ...LABEL_FONT, size: n.type === 'case' ? 15 : 13, bold: n.type === 'case' },
           hidden: !visible({ _type: n.type, _value: n.value, _isDir: isDir }, F),
         };
       });
@@ -54,17 +55,29 @@ export default function NetworkGraph({ onOpenCase }) {
       const ds = new DataSet(nodes);
       dsRef.current = ds;
       const net = new Network(host.current, { nodes: ds, edges: new DataSet(edges) }, {
-        physics: { stabilization: { iterations: 250 }, barnesHut: { gravitationalConstant: -5000, springLength: 95, springConstant: 0.04, avoidOverlap: 0.6 } },
-        interaction: { hover: true, tooltipDelay: 120, hideEdgesOnDrag: true, navigationButtons: false },
+        // improvedLayout runs an expensive pre-layout on big graphs — skip it for speed.
+        layout: { improvedLayout: false },
+        physics: {
+          stabilization: { enabled: true, iterations: 150, updateInterval: 25, fit: true },
+          barnesHut: { gravitationalConstant: -6000, springLength: 100, springConstant: 0.04, avoidOverlap: 0.85, damping: 0.5 },
+          minVelocity: 1,
+        },
+        interaction: { hover: false, hideEdgesOnDrag: true, navigationButtons: false },
         nodes: {
           borderWidth: 2,
-          // keep labels drawn even when zoomed out (default hides them below ~5px)
-          scaling: { label: { enabled: false, drawThreshold: 1 } },
+          // clean overview (shapes only); labels fade in only once zoomed in enough to read.
+          scaling: { label: { drawThreshold: 9, maxVisible: 26 } },
         },
+        edges: { hoverWidth: 0 },
       });
       netRef.current = net;
-      // frame the graph nicely once physics settle
-      net.once('stabilizationIterationsDone', () => net.fit({ animation: { duration: 400 } }));
+      // Once it settles: freeze physics (smooth panning) and frame the graph.
+      net.once('stabilizationIterationsDone', () => {
+        if (!alive) return;
+        net.setOptions({ physics: false });
+        net.fit({ animation: { duration: 300 } });
+        setBuilding(false);
+      });
       net.on('click', p => {
         if (!p.nodes.length) return;
         const n = ds.get(p.nodes[0]);
@@ -133,7 +146,15 @@ export default function NetworkGraph({ onOpenCase }) {
         </span>
       </div>
       {err && <p className="text-center text-red-300 text-sm">{err}</p>}
-      <div ref={host} className="net-host" />
+      <div style={{ position: 'relative' }}>
+        <div ref={host} className="net-host" />
+        {building && !err && (
+          <div style={{
+            position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            pointerEvents: 'none', color: 'rgba(238,244,255,.85)', fontSize: 14,
+          }}>Laying out network…</div>
+        )}
+      </div>
       <p className="text-xs mt-2" style={{ color: 'rgba(238,244,255,.8)' }}>{info}</p>
     </div>
   );
