@@ -17,12 +17,13 @@ router.get('/cases', async (req, res) => {
     if (court) { cond.push('court_type = ?'); params.push(court); }
     if (crime === '1') cond.push('is_crime = 1');
     if (failed === '1') cond.push('fetch_failed = 1');
-    if (q)     { cond.push('(title LIKE ? OR citation LIKE ? OR osint_notes LIKE ?)'); params.push(`%${q}%`, `%${q}%`, `%${q}%`); }
+    if (q)     { cond.push('(title LIKE ? OR citation LIKE ? OR osint_notes LIKE ? OR social_headline LIKE ?)'); params.push(`%${q}%`, `%${q}%`, `%${q}%`, `%${q}%`); }
 
     const where = cond.length ? `WHERE ${cond.join(' AND ')}` : '';
     const sql = `
       SELECT id, slug, title, citation, court, court_type, case_date,
-             osint_value, fetch_failed, outcome, is_crime, crime_flags
+             osint_value, fetch_failed, outcome, is_crime, crime_flags,
+             social_headline, social_post
       FROM cases
       ${where}
       ORDER BY FIELD(osint_value,'high','medium','low'), case_date DESC, title

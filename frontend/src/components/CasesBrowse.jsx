@@ -63,20 +63,25 @@ export default function CasesBrowse({ onOpenCase, initial }) {
       {state.cases && (
         <div style={{ maxWidth: 980, margin: '0 auto' }}>
           <p className="text-xs mb-1 mt-4" style={{ color: 'rgba(238,244,255,.7)' }}>{state.count} cases</p>
-          {state.cases.map(c => (
-            <div key={c.id} className="result-card cursor-pointer" onClick={() => onOpenCase(c.slug)}>
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge value={c.osint_value} />
-                {c.fetch_failed ? <span className="badge failed">not retrieved</span> : null}
-                {c.is_crime ? <CrimeBadge /> : null}
-                <span className="font-bold" style={{ color: '#1F3864' }}>{c.title}</span>
+          {state.cases.map(c => {
+            const headline = c.social_headline || c.title;
+            const showTitle = c.social_headline && c.social_headline !== c.title;
+            const body = c.social_post || c.outcome || '';
+            return (
+              <div key={c.id} className="result-card cursor-pointer" onClick={() => onOpenCase(c.slug)}>
+                <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                  <Badge value={c.osint_value} />
+                  {c.fetch_failed ? <span className="badge failed">not retrieved</span> : null}
+                  {c.is_crime ? <CrimeBadge /> : null}
+                </div>
+                <div className="font-extrabold" style={{ color: '#16243f', fontSize: '1.05rem', lineHeight: 1.3 }}>{headline}</div>
+                <div className="text-xs mt-1" style={{ color: '#5b6780' }}>
+                  {[showTitle ? c.title : null, c.citation, c.court, c.case_date].filter(Boolean).join(' · ')}
+                </div>
+                {body ? <div className="text-sm mt-1.5" style={{ color: '#39435a' }}>{body.slice(0, 220)}{body.length > 220 ? '…' : ''}</div> : null}
               </div>
-              <div className="text-xs mt-1" style={{ color: '#5b6780' }}>
-                {[c.citation, c.court, c.case_date].filter(Boolean).join(' · ')}
-              </div>
-              {c.outcome ? <div className="text-sm mt-1.5" style={{ color: '#39435a' }}>{c.outcome.slice(0, 200)}{c.outcome.length > 200 ? '…' : ''}</div> : null}
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
