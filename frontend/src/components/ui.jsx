@@ -5,6 +5,11 @@ export function Badge({ value }) {
   return <span className={`badge ${v}`}>{v}</span>;
 }
 
+// Red badge for crime-flagged content. Pass a label (e.g. a category) or default.
+export function CrimeBadge({ label }) {
+  return <span className="badge crime">{label || 'crime'}</span>;
+}
+
 export function webSearch(name) {
   return `https://www.google.com/search?q=${encodeURIComponent((name || '') + ' Trinidad')}`;
 }

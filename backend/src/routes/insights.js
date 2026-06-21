@@ -12,6 +12,7 @@ router.get('/insights', async (req, res) => {
         SUM(osint_value='high')   AS high,
         SUM(osint_value='medium') AS medium,
         SUM(osint_value='low')    AS low,
+        SUM(is_crime=1)           AS crime,
         SUM(fetch_failed=1)       AS failed
       FROM cases
     `);
@@ -58,7 +59,7 @@ router.get('/insights', async (req, res) => {
     res.json({
       totals: {
         total: +totals.total, high: +totals.high, medium: +totals.medium,
-        low: +totals.low, failed: +totals.failed,
+        low: +totals.low, crime: +totals.crime, failed: +totals.failed,
       },
       recurringEntities, topFigures, properties,
     });

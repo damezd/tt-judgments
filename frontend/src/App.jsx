@@ -6,12 +6,14 @@ import CasesBrowse  from './components/CasesBrowse';
 import CaseDetail   from './components/CaseDetail';
 import Insights     from './components/Insights';
 import NetworkGraph from './components/NetworkGraph';
+import CrimeView    from './components/CrimeView';
 import { getToken, logout } from './api/auth';
 
 const TABS = [
   { id: 'people',   label: 'People' },
   { id: 'entities', label: 'Companies' },
   { id: 'cases',    label: 'Cases' },
+  { id: 'crime',    label: 'Crime' },
   { id: 'insights', label: 'Insights' },
   { id: 'network',  label: 'Network' },
 ];
@@ -48,6 +50,7 @@ export default function App() {
       {tab === 'people'   && <PeopleSearch onOpenCase={openCase} />}
       {tab === 'entities' && <EntitySearch onOpenCase={openCase} />}
       {tab === 'cases'    && <CasesBrowse  onOpenCase={openCase} />}
+      {tab === 'crime'    && <CrimeView    onOpenCase={openCase} />}
       {tab === 'insights' && <Insights     onOpenCase={openCase} />}
       {tab === 'network'  && <NetworkGraph onOpenCase={openCase} />}
 

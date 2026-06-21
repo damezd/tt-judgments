@@ -1,24 +1,25 @@
 import { useState, useEffect } from 'react';
 import { listCases } from '../api/client';
-import { Badge } from './ui';
+import { Badge, CrimeBadge } from './ui';
 
 export default function CasesBrowse({ onOpenCase }) {
   const [value, setValue] = useState('');
   const [court, setCourt] = useState('');
   const [q, setQ] = useState('');
+  const [crime, setCrime] = useState(false);
   const [state, setState] = useState({ loading: true });
 
   async function load() {
     setState({ loading: true });
     try {
-      const data = await listCases({ value, court, q });
+      const data = await listCases({ value, court, q, crime: crime ? '1' : '' });
       setState({ loading: false, ...data });
     } catch (e) {
       if (e.message === 'UNAUTHORIZED') throw e;
       setState({ loading: false, error: 'Failed to load cases.' });
     }
   }
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [value, court]);
+  useEffect(() => { load(); /* eslint-disable-next-line */ }, [value, court, crime]);
 
   return (
     <div className="panel-in">
@@ -43,6 +44,10 @@ export default function CasesBrowse({ onOpenCase }) {
               <option>Court of Appeal</option><option>Other</option>
             </select>
           </div>
+          <label className="flex items-center gap-1.5 text-xs cursor-pointer pb-2.5" style={{ color: 'rgba(238,244,255,.9)' }}>
+            <input type="checkbox" checked={crime} onChange={e => setCrime(e.target.checked)} />
+            <span className="badge crime">crime</span> only
+          </label>
           <button className="btn-primary" onClick={load}>Apply</button>
         </div>
       </div>
@@ -57,6 +62,7 @@ export default function CasesBrowse({ onOpenCase }) {
               <div className="flex flex-wrap items-center gap-2">
                 <Badge value={c.osint_value} />
                 {c.fetch_failed ? <span className="badge failed">not retrieved</span> : null}
+                {c.is_crime ? <CrimeBadge /> : null}
                 <span className="font-bold" style={{ color: '#1F3864' }}>{c.title}</span>
               </div>
               <div className="text-xs mt-1" style={{ color: '#5b6780' }}>

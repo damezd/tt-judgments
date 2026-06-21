@@ -13,7 +13,7 @@ router.get('/search/people', async (req, res) => {
 
   try {
     const sql = `
-      SELECT p.name, p.kind, p.role, p.note, p.company,
+      SELECT p.name, p.kind, p.role, p.note, p.company, p.offences, p.crime_category,
              c.id AS case_id, c.slug, c.title, c.citation, c.court,
              c.case_date, c.osint_value, c.url
       FROM people p
@@ -24,12 +24,14 @@ router.get('/search/people', async (req, res) => {
     `;
     const [rows] = await db.query(sql, [`%${q}%`]);
 
+    const splitList = s => (s ? s.split('||').map(x => x.trim()).filter(Boolean) : []);
     const map = new Map();
     for (const r of rows) {
       const key = r.name.toLowerCase();
       if (!map.has(key)) map.set(key, { name: r.name, mentions: [] });
       map.get(key).mentions.push({
         kind: r.kind, role: r.role, note: r.note, company: r.company,
+        offences: splitList(r.offences), crime_category: splitList(r.crime_category),
         case_id: r.case_id, slug: r.slug, title: r.title, citation: r.citation,
         court: r.court, date: r.case_date, value: r.osint_value, url: r.url,
       });

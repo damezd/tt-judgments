@@ -7,18 +7,20 @@ router.get('/cases', async (req, res) => {
   const value = (req.query.value || '').trim().toLowerCase();
   const court = (req.query.court || '').trim();
   const q     = (req.query.q     || '').trim();
+  const crime = (req.query.crime || '').trim();
 
   try {
     const cond = [];
     const params = [];
     if (value && ['high', 'medium', 'low'].includes(value)) { cond.push('osint_value = ?'); params.push(value); }
     if (court) { cond.push('court_type = ?'); params.push(court); }
+    if (crime === '1') cond.push('is_crime = 1');
     if (q)     { cond.push('(title LIKE ? OR citation LIKE ? OR osint_notes LIKE ?)'); params.push(`%${q}%`, `%${q}%`, `%${q}%`); }
 
     const where = cond.length ? `WHERE ${cond.join(' AND ')}` : '';
     const sql = `
       SELECT id, slug, title, citation, court, court_type, case_date,
-             osint_value, fetch_failed, outcome
+             osint_value, fetch_failed, outcome, is_crime, crime_flags
       FROM cases
       ${where}
       ORDER BY FIELD(osint_value,'high','medium','low'), case_date DESC, title
@@ -38,7 +40,7 @@ router.get('/cases/:slug', async (req, res) => {
     const [[c]] = await db.query('SELECT * FROM cases WHERE slug = ? OR id = ?', [req.params.slug, req.params.slug]);
     if (!c) return res.status(404).json({ error: 'Case not found' });
 
-    const [people]     = await db.query('SELECT name, kind, role, note, company FROM people WHERE case_id = ?', [c.id]);
+    const [people]     = await db.query('SELECT name, kind, role, note, company, offences, crime_category FROM people WHERE case_id = ?', [c.id]);
     const [companies]  = await db.query('SELECT name, role, directors, ownership_notes, is_bank FROM companies WHERE case_id = ?', [c.id]);
     const [financials] = await db.query('SELECT amount, currency, what_it_is FROM financials WHERE case_id = ?', [c.id]);
     const [properties] = await db.query('SELECT description, lease_terms, rent, landlord, tenant, outcome FROM properties WHERE case_id = ?', [c.id]);
@@ -49,6 +51,8 @@ router.get('/cases/:slug', async (req, res) => {
       claimants:  splitList(c.claimants),
       defendants: splitList(c.defendants),
       related_litigation: splitList(c.related_litigation),
+      practical_takeaways: splitList(c.practical_takeaways),
+      crime_flags: splitList(c.crime_flags),
       people, companies, financials, properties,
     });
   } catch (err) {

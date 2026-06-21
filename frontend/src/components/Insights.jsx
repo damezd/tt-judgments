@@ -60,6 +60,7 @@ export default function Insights({ onOpenCase }) {
         <div className="stat"><div className="num" style={{ color: '#9b2412' }}>{fmt(t.high)}</div><div className="lbl">High value</div></div>
         <div className="stat"><div className="num" style={{ color: '#1e4e86' }}>{fmt(t.medium)}</div><div className="lbl">Medium</div></div>
         <div className="stat"><div className="num" style={{ color: '#54606f' }}>{fmt(t.low)}</div><div className="lbl">Low</div></div>
+        <div className="stat"><div className="num" style={{ color: '#8e1414' }}>{fmt(t.crime)}</div><div className="lbl">Crime-flagged</div></div>
         <div className="stat"><div className="num" style={{ color: '#7a5310' }}>{fmt(t.failed)}</div><div className="lbl">Not retrieved</div></div>
       </div>
 

@@ -1,10 +1,11 @@
 import { useState, useRef } from 'react';
 import { searchPeople } from '../api/client';
-import { Badge, webSearch, debounce } from './ui';
+import { Badge, CrimeBadge, webSearch, debounce } from './ui';
 
 function PersonCard({ group, onOpenCase }) {
   const [open, setOpen] = useState(group.mentions.length <= 3);
   const roles = [...new Set(group.mentions.map(m => m.kind))];
+  const hasCrime = group.mentions.some(m => m.crime_category?.length || m.kind === 'accused');
   return (
     <div className="result-card">
       <div className="flex flex-wrap items-center gap-2">
@@ -12,6 +13,7 @@ function PersonCard({ group, onOpenCase }) {
           <span>{group.name}</span>
           <span className={`chevron ${open ? 'open' : ''}`}>▸</span>
         </button>
+        {hasCrime ? <CrimeBadge /> : null}
         <span className="text-xs" style={{ color: '#5b6780' }}>
           {group.mentions.length} case{group.mentions.length !== 1 ? 's' : ''} · {roles.join(', ')}
         </span>
@@ -22,12 +24,14 @@ function PersonCard({ group, onOpenCase }) {
           {group.mentions.map((m, i) => (
             <div key={i} className="flex flex-wrap items-center gap-2 text-sm">
               <Badge value={m.value} />
+              {m.crime_category?.map((cat, j) => <CrimeBadge key={j} label={cat} />)}
               <button className="font-semibold text-left underline decoration-dotted"
                 style={{ color: '#1F3864' }} onClick={() => onOpenCase(m.slug)}>
                 {m.title}
               </button>
               <span className="text-xs" style={{ color: '#5b6780' }}>
-                {m.citation} · {m.kind}{m.company ? ` of ${m.company}` : ''}{m.role && m.kind === 'individual' ? ` — ${m.role}` : ''}
+                {m.citation} · {m.kind}{m.company ? ` of ${m.company}` : ''}{m.role && (m.kind === 'individual' || m.kind === 'accused') ? ` — ${m.role}` : ''}
+                {m.offences?.length ? ` · ${m.offences.join('; ')}` : ''}
               </span>
             </div>
           ))}

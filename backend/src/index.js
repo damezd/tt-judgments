@@ -7,6 +7,7 @@ const searchRoutes   = require('./routes/search');
 const casesRoutes    = require('./routes/cases');
 const insightsRoutes = require('./routes/insights');
 const networkRoutes  = require('./routes/network');
+const crimeRoutes    = require('./routes/crime');
 const requireAuth    = require('./middleware/auth');
 
 const app  = express();
@@ -26,6 +27,7 @@ app.use('/api', requireAuth, searchRoutes);
 app.use('/api', requireAuth, casesRoutes);
 app.use('/api', requireAuth, insightsRoutes);
 app.use('/api', requireAuth, networkRoutes);
+app.use('/api', requireAuth, crimeRoutes);
 
 app.listen(PORT, () => {
   console.log(`TT Judgments backend running on port ${PORT}`);

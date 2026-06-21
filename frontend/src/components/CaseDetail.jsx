@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCase } from '../api/client';
-import { Badge, copyText } from './ui';
+import { Badge, CrimeBadge, copyText } from './ui';
 
 function Section({ title, children }) {
   return (
@@ -32,9 +32,12 @@ export default function CaseDetail({ slug, onClose }) {
           <>
             <div className="flex justify-between items-start gap-3 mb-2">
               <div>
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex flex-wrap items-center gap-2 mb-1">
                   <Badge value={c.osint_value} />
                   {c.fetch_failed ? <span className="badge failed">not retrieved</span> : null}
+                  {c.is_crime ? (c.crime_flags?.length
+                    ? c.crime_flags.map((f, i) => <CrimeBadge key={i} label={f} />)
+                    : <CrimeBadge />) : null}
                 </div>
                 <h2 className="font-extrabold" style={{ fontSize: '1.3rem', lineHeight: 1.2 }}>{c.title}</h2>
                 <p className="text-xs mt-1" style={{ color: 'rgba(238,244,255,.7)' }}>
@@ -45,6 +48,29 @@ export default function CaseDetail({ slug, onClose }) {
             </div>
 
             <div className="rounded-2xl p-4 mt-2" style={{ background: 'rgba(255,255,255,.93)', color: '#0f172a' }}>
+              {(c.social_headline || c.social_post) ? (
+                <div className="social-card mb-4">
+                  {c.social_headline ? <div className="headline">{c.social_headline}</div> : null}
+                  {c.social_post ? <div className="post">{c.social_post}</div> : null}
+                  {c.social_post ? (
+                    <button className="pill-link mt-2" onClick={() => copyText(`${c.social_headline ? c.social_headline + '\n\n' : ''}${c.social_post}`)}>Copy post</button>
+                  ) : null}
+                </div>
+              ) : null}
+
+              {c.people?.filter(p => p.kind === 'accused').length ? (
+                <Section title="Criminal Charges / Accused">
+                  {c.people.filter(p => p.kind === 'accused').map((p, i) => (
+                    <p className="kv mb-1" key={i}>
+                      <b>{p.name}</b>{p.role ? ` — ${p.role}` : ''}
+                      {p.crime_category ? <span> {p.crime_category.split('||').filter(Boolean).map((cat, j) => <span key={j} className="badge crime ml-1">{cat}</span>)}</span> : null}
+                      {p.offences ? <span style={{ color: '#5b6780' }}> · {p.offences.split('||').filter(Boolean).join('; ')}</span> : null}
+                      {p.note ? <span style={{ color: '#5b6780' }}> · {p.note}</span> : null}
+                    </p>
+                  ))}
+                </Section>
+              ) : null}
+
               {c.judges?.length ? <Section title="Judge(s)"><p className="kv">{c.judges.join('; ')}</p></Section> : null}
               <Section title="Parties">
                 <p className="kv"><b>Claimants:</b> {c.claimants?.join('; ') || '—'}</p>
@@ -91,6 +117,11 @@ export default function CaseDetail({ slug, onClose }) {
 
               {c.related_litigation?.length ? <Section title="Related Litigation"><p className="kv">{c.related_litigation.join('; ')}</p></Section> : null}
               {c.outcome ? <Section title="Outcome"><p className="kv">{c.outcome}</p></Section> : null}
+              {c.practical_takeaways?.length ? (
+                <Section title="Practical Takeaways">
+                  <ul className="takeaways">{c.practical_takeaways.map((t, i) => <li key={i}>{t}</li>)}</ul>
+                </Section>
+              ) : null}
               {c.osint_notes ? <Section title="OSINT Notes"><p className="kv">{c.osint_notes}</p></Section> : null}
 
               <div className="flex gap-2 mt-3">

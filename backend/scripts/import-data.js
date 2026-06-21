@@ -36,11 +36,17 @@ CREATE TABLE IF NOT EXISTS cases (
   osint_value   VARCHAR(10)            DEFAULT 'low',
   osint_notes   TEXT,
   related_litigation TEXT,
+  social_headline    TEXT,
+  social_post        TEXT,
+  practical_takeaways TEXT,
+  crime_flags   VARCHAR(300)           DEFAULT '',
+  is_crime      TINYINT(1)             DEFAULT 0,
   url           VARCHAR(500)           DEFAULT '',
   fetch_failed  TINYINT(1)             DEFAULT 0,
   UNIQUE KEY uq_slug (slug),
   INDEX idx_value (osint_value),
   INDEX idx_court_type (court_type),
+  INDEX idx_crime (is_crime),
   INDEX idx_title (title)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -52,8 +58,11 @@ CREATE TABLE IF NOT EXISTS people (
   role        VARCHAR(400)          DEFAULT '',
   note        TEXT,
   company     VARCHAR(255)          DEFAULT '',
+  offences        TEXT,
+  crime_category  VARCHAR(200)      DEFAULT '',
   INDEX idx_name (name),
   INDEX idx_case (case_id),
+  INDEX idx_crimecat (crime_category),
   CONSTRAINT fk_people_case FOREIGN KEY (case_id) REFERENCES cases(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -117,7 +126,7 @@ const isBank = (name, banks) => {
   for (const t of ['people', 'companies', 'financials', 'properties', 'cases']) await db.query(`TRUNCATE TABLE ${t}`);
   await db.query('SET FOREIGN_KEY_CHECKS=1');
 
-  let nCases = 0, nPeople = 0, nCo = 0, nFin = 0, nProp = 0;
+  let nCases = 0, nPeople = 0, nCo = 0, nFin = 0, nProp = 0, nCrim = 0;
   const usedSlugs = new Set();
 
   for (const file of files) {
@@ -130,28 +139,41 @@ const isBank = (name, banks) => {
       while (usedSlugs.has(slug)) slug += '-x';
       usedSlugs.add(slug);
 
+      // Criminal individuals (firearms / drug & other serious offences).
+      const crims = d.criminal_individuals || [];
+      const crimeFlags = list(d.crime_flags);
+      const isCrime = (crimeFlags || crims.length) ? 1 : 0;
+
       const [r] = await db.query(
-        `INSERT INTO cases (slug,batch,title,case_date,citation,court,court_type,judges,claimants,defendants,outcome,osint_value,osint_notes,related_litigation,url,fetch_failed)
-         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        `INSERT INTO cases (slug,batch,title,case_date,citation,court,court_type,judges,claimants,defendants,outcome,osint_value,osint_notes,related_litigation,social_headline,social_post,practical_takeaways,crime_flags,is_crime,url,fetch_failed)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
         [slug, batch, d.title || '', d.date || '', d.citation || '', d.court || '', courtType(d.court),
          list(d.judges), list(d.claimants), list(d.defendants), d.outcome || '',
-         d.osint_value || 'low', d.osint_notes || '', list(d.related_litigation), d.url || '', d.fetch_failed ? 1 : 0]
+         d.osint_value || 'low', d.osint_notes || '', list(d.related_litigation),
+         d.social_headline || '', d.social_post || '', list(d.practical_takeaways),
+         crimeFlags, isCrime, d.url || '', d.fetch_failed ? 1 : 0]
       );
       const caseId = r.insertId;
       nCases++;
 
       const banks = d.banks_financial_institutions || [];
 
-      // people: claimants / defendants / individuals / directors
+      // people: claimants / defendants / individuals / directors / criminal-accused
+      // row shape: [case_id, name, kind, role, note, company, offences, crime_category]
       const peopleRows = [];
-      for (const n of (d.claimants || [])) peopleRows.push([caseId, n, 'claimant', '', '', '']);
-      for (const n of (d.defendants || [])) peopleRows.push([caseId, n, 'defendant', '', '', '']);
-      for (const i of (d.individuals || [])) peopleRows.push([caseId, i.name || '', 'individual', i.role || '', i.note || i.notes || '', '']);
+      for (const n of (d.claimants || [])) peopleRows.push([caseId, n, 'claimant', '', '', '', '', '']);
+      for (const n of (d.defendants || [])) peopleRows.push([caseId, n, 'defendant', '', '', '', '', '']);
+      for (const i of (d.individuals || [])) peopleRows.push([caseId, i.name || '', 'individual', i.role || '', i.note || i.notes || '', '', '', '']);
       for (const co of (d.companies || [])) {
-        for (const dir of (co.directors_officers || [])) peopleRows.push([caseId, dir, 'director', 'Director/officer of ' + (co.name || ''), '', co.name || '']);
+        for (const dir of (co.directors_officers || [])) peopleRows.push([caseId, dir, 'director', 'Director/officer of ' + (co.name || ''), '', co.name || '', '', '']);
+      }
+      for (const cr of crims) {
+        peopleRows.push([caseId, cr.name || '', 'accused', cr.role || '', cr.note || cr.notes || '', '',
+          list(cr.offences), list(cr.category || cr.categories)]);
+        nCrim++;
       }
       for (const row of peopleRows.filter(r => r[1])) {
-        await db.query('INSERT INTO people (case_id,name,kind,role,note,company) VALUES (?,?,?,?,?,?)', row);
+        await db.query('INSERT INTO people (case_id,name,kind,role,note,company,offences,crime_category) VALUES (?,?,?,?,?,?,?,?)', row);
         nPeople++;
       }
 
@@ -181,6 +203,6 @@ const isBank = (name, banks) => {
     }
   }
 
-  console.log(`\nDone. cases=${nCases} people=${nPeople} companies/banks=${nCo} financials=${nFin} properties=${nProp}`);
+  console.log(`\nDone. cases=${nCases} people=${nPeople} (accused=${nCrim}) companies/banks=${nCo} financials=${nFin} properties=${nProp}`);
   await db.end();
 })().catch(e => { console.error(e); process.exit(1); });
