@@ -118,13 +118,15 @@ const isBank = (name, banks) => {
 
 (async () => {
   const db = await mysql.createConnection({ uri: process.env.MYSQL_URL, multipleStatements: true });
-  console.log('Ensuring schema...');
-  await db.query(SCHEMA);
 
-  // Clear (children cascade, but be explicit for clarity)
+  // Drop & recreate so schema changes (new columns) always take effect. The JSON
+  // is the source of truth and every row is rebuilt below, so this is safe and
+  // avoids "Unknown column" errors when the table already exists from an older deploy.
+  console.log('Resetting schema...');
   await db.query('SET FOREIGN_KEY_CHECKS=0');
-  for (const t of ['people', 'companies', 'financials', 'properties', 'cases']) await db.query(`TRUNCATE TABLE ${t}`);
+  for (const t of ['people', 'companies', 'financials', 'properties', 'cases']) await db.query(`DROP TABLE IF EXISTS ${t}`);
   await db.query('SET FOREIGN_KEY_CHECKS=1');
+  await db.query(SCHEMA);
 
   let nCases = 0, nPeople = 0, nCo = 0, nFin = 0, nProp = 0, nCrim = 0;
   const usedSlugs = new Set();
