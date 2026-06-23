@@ -103,6 +103,23 @@ CREATE TABLE IF NOT EXISTS properties (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 `;
 
+// Zero-downtime import: build everything in *_stg tables, then atomically swap
+// them in with a single RENAME. Parent/child order matters for create & drop.
+const TABLES = ['cases', 'people', 'companies', 'financials', 'properties'];
+const SFX = '_stg';
+
+// Staging DDL: suffix the table names and drop the FK constraints. The rebuilt
+// data is internally consistent (parents inserted before children with real
+// ids), so the foreign keys aren't needed — and dropping them avoids
+// constraint-name collisions between the staging and live tables.
+function stagingSchema() {
+  let s = SCHEMA.replace(/,\s*CONSTRAINT\s+\w+\s+FOREIGN KEY[^\n]*ON DELETE CASCADE/g, '');
+  for (const t of TABLES) {
+    s = s.replace(new RegExp(`(CREATE TABLE IF NOT EXISTS )${t}\\b`, 'g'), `$1${t}${SFX}`);
+  }
+  return s;
+}
+
 const files = process.argv.slice(2).length
   ? process.argv.slice(2)
   : fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json')).map(f => path.join(DATA_DIR, f));
@@ -119,14 +136,16 @@ const isBank = (name, banks) => {
 (async () => {
   const db = await mysql.createConnection({ uri: process.env.MYSQL_URL, multipleStatements: true });
 
-  // Drop & recreate so schema changes (new columns) always take effect. The JSON
-  // is the source of truth and every row is rebuilt below, so this is safe and
-  // avoids "Unknown column" errors when the table already exists from an older deploy.
-  console.log('Resetting schema...');
+  // Build fresh staging tables and import into them. The LIVE tables are left
+  // untouched and keep serving traffic for the entire import; we swap at the end.
+  console.log('Preparing staging tables...');
   await db.query('SET FOREIGN_KEY_CHECKS=0');
-  for (const t of ['people', 'companies', 'financials', 'properties', 'cases']) await db.query(`DROP TABLE IF EXISTS ${t}`);
+  for (const t of [...TABLES].reverse()) {
+    await db.query(`DROP TABLE IF EXISTS ${t}${SFX}`);  // leftovers from a failed run
+    await db.query(`DROP TABLE IF EXISTS ${t}_old`);
+  }
   await db.query('SET FOREIGN_KEY_CHECKS=1');
-  await db.query(SCHEMA);
+  await db.query(stagingSchema());
 
   let nCases = 0, nPeople = 0, nCo = 0, nFin = 0, nProp = 0, nCrim = 0;
   const usedSlugs = new Set();
@@ -147,7 +166,7 @@ const isBank = (name, banks) => {
       const isCrime = (crimeFlags || crims.length) ? 1 : 0;
 
       const [r] = await db.query(
-        `INSERT INTO cases (slug,batch,title,case_date,citation,court,court_type,judges,claimants,defendants,outcome,osint_value,osint_notes,related_litigation,social_headline,social_post,practical_takeaways,crime_flags,is_crime,url,fetch_failed)
+        `INSERT INTO cases${SFX} (slug,batch,title,case_date,citation,court,court_type,judges,claimants,defendants,outcome,osint_value,osint_notes,related_litigation,social_headline,social_post,practical_takeaways,crime_flags,is_crime,url,fetch_failed)
          VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
         [slug, batch, d.title || '', d.date || '', d.citation || '', d.court || '', courtType(d.court),
          list(d.judges), list(d.claimants), list(d.defendants), d.outcome || '',
@@ -175,35 +194,54 @@ const isBank = (name, banks) => {
         nCrim++;
       }
       for (const row of peopleRows.filter(r => r[1])) {
-        await db.query('INSERT INTO people (case_id,name,kind,role,note,company,offences,crime_category) VALUES (?,?,?,?,?,?,?,?)', row);
+        await db.query(`INSERT INTO people${SFX} (case_id,name,kind,role,note,company,offences,crime_category) VALUES (?,?,?,?,?,?,?,?)`, row);
         nPeople++;
       }
 
       // companies / banks
       for (const co of (d.companies || [])) {
-        await db.query('INSERT INTO companies (case_id,name,role,directors,ownership_notes,is_bank) VALUES (?,?,?,?,?,?)',
+        await db.query(`INSERT INTO companies${SFX} (case_id,name,role,directors,ownership_notes,is_bank) VALUES (?,?,?,?,?,?)`,
           [caseId, co.name || '', co.role || '', list(co.directors_officers), co.ownership_notes || '', isBank(co.name || '', banks) ? 1 : 0]);
         nCo++;
       }
       for (const b of banks) {
         // add bank as a company node if not already present by name
-        await db.query('INSERT INTO companies (case_id,name,role,directors,ownership_notes,is_bank) VALUES (?,?,?,?,?,1)',
+        await db.query(`INSERT INTO companies${SFX} (case_id,name,role,directors,ownership_notes,is_bank) VALUES (?,?,?,?,?,1)`,
           [caseId, b, 'Bank / financial institution', '', '']);
         nCo++;
       }
 
       for (const f of (d.financial_figures || [])) {
-        await db.query('INSERT INTO financials (case_id,amount,currency,what_it_is) VALUES (?,?,?,?)',
+        await db.query(`INSERT INTO financials${SFX} (case_id,amount,currency,what_it_is) VALUES (?,?,?,?)`,
           [caseId, String(f.amount || ''), f.currency || '', f.what_it_is || '']);
         nFin++;
       }
       for (const p of (d.property_lease || [])) {
-        await db.query('INSERT INTO properties (case_id,description,lease_terms,rent,landlord,tenant,outcome) VALUES (?,?,?,?,?,?,?)',
+        await db.query(`INSERT INTO properties${SFX} (case_id,description,lease_terms,rent,landlord,tenant,outcome) VALUES (?,?,?,?,?,?,?)`,
           [caseId, p.address_or_description || '', p.lease_terms || '', p.rent || '', p.landlord || '', p.tenant || '', p.outcome || '']);
         nProp++;
       }
     }
   }
+
+  // Atomically swap staging -> live. A single RENAME TABLE is atomic in MySQL,
+  // so there is no moment where a table is missing or empty for API queries.
+  console.log('Swapping staging tables into place...');
+  const [rows] = await db.query(
+    `SELECT table_name AS t FROM information_schema.tables
+     WHERE table_schema = DATABASE() AND table_name IN (${TABLES.map(() => '?').join(',')})`,
+    TABLES
+  );
+  const liveExists = new Set(rows.map(r => r.t));
+  const moves = [];
+  for (const t of TABLES) {
+    if (liveExists.has(t)) moves.push(`${t} TO ${t}_old`);   // park the current live table
+    moves.push(`${t}${SFX} TO ${t}`);                        // promote staging to live
+  }
+  await db.query('SET FOREIGN_KEY_CHECKS=0');
+  await db.query(`RENAME TABLE ${moves.join(', ')}`);
+  for (const t of [...TABLES].reverse()) if (liveExists.has(t)) await db.query(`DROP TABLE IF EXISTS ${t}_old`);
+  await db.query('SET FOREIGN_KEY_CHECKS=1');
 
   console.log(`\nDone. cases=${nCases} people=${nPeople} (accused=${nCrim}) companies/banks=${nCo} financials=${nFin} properties=${nProp}`);
   await db.end();
