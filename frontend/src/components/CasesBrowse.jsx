@@ -59,7 +59,12 @@ export default function CasesBrowse({ onOpenCase, initial }) {
       </div>
 
       {state.loading && <p className="text-center mt-6 text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>Loading…</p>}
-      {state.error && <p className="text-center mt-6 text-sm text-red-300">{state.error}</p>}
+      {state.error && (
+        <div className="text-center mt-6">
+          <p className="text-sm text-red-300">{state.error}</p>
+          <button className="btn-secondary text-sm mt-3" onClick={load}>Retry</button>
+        </div>
+      )}
       {state.cases && (
         <div style={{ maxWidth: 980, margin: '0 auto' }}>
           <p className="text-xs mb-1 mt-4" style={{ color: 'rgba(238,244,255,.7)' }}>{state.count} cases</p>
