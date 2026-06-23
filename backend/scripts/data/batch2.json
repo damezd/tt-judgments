@@ -6248,5 +6248,1437 @@
     "osint_value": "high",
     "osint_notes": "Commercial debt claim naming two corporate groups (Massy Machinery and the Junior Sammy Group's Jusamco Pavers) with a named in-house counsel and large financial figures, plus acknowledged inter-company indebtedness. Strong corporate-network and financial OSINT value; no criminal content.",
     "fetch_failed": false
+  },
+  {
+    "title": "The Attorney General v Boodram",
+    "date": "2026-06-16",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2024/Boodoosingh/CvA_24_S049DD16Jun2026.pdf",
+    "citation": "CA S049 of 2024",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "Ronnie Boodoosingh CJ",
+      "Gillian Lucky JA",
+      "Ricky Rahim JA"
+    ],
+    "claimants": [
+      "The Attorney General of Trinidad and Tobago (Appellant)"
+    ],
+    "defendants": [
+      "Daisy Boodram (Respondent)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Daisy Boodram",
+        "role": "respondent (public officer)",
+        "notes": "Won declarations at first instance about accumulation of leave under reg 78 CSR and reg 97 PSCR; partly upheld on appeal"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "High Court CV2022-04537 (Rampersad J, order 9 Jan 2024)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Appeal Court trims public officer's win over accumulated-leave entitlements",
+    "social_post": "The Court of Appeal has partly overturned a ruling on how public officers accumulate leave. Daisy Boodram had won declarations from Justice Rampersad about the combined effect of regulation 78 of the Civil Service Regulations and regulation 97 of the Public Service Commission Regulations, which govern how much annual leave an officer can build up. The Attorney General appealed. The Appeal Court, led by Chief Justice Boodoosingh with Justices Lucky and Rahim, allowed the appeal in part - setting aside three of the declarations and affirming the other three. Costs are to be argued separately. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Annual-leave accumulation for public officers is governed by reg 78 CSR and reg 97 PSCR, read together",
+      "An appeal court may affirm some declarations and set others aside where each turns on a distinct point"
+    ],
+    "outcome": "Appeal allowed in part: declarations 1.1, 1.2 and 1.5 of the trial judge's order set aside; declarations 1.3, 1.4 and 1.6 affirmed. Parties to be heard on costs.",
+    "osint_value": "low",
+    "osint_notes": "Public-service/constitutional appeal on leave-accumulation regulations. No commercial entities, property or financial figures; no criminal content.",
+    "fetch_failed": false
+  },
+  {
+    "title": "DCM Acute Stroke and Vascular Intervention Centre Limited v Howida Limited",
+    "date": "2026-06-15",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2024/cv_24_04094DD15Jun2026.pdf",
+    "citation": "CV2024-04094",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Mr. Justice Devindra Rampersad"
+    ],
+    "claimants": [
+      "DCM Acute Stroke and Vascular Intervention Centre Limited"
+    ],
+    "defendants": [
+      "Howida Limited"
+    ],
+    "companies": [
+      {
+        "name": "DCM Acute Stroke and Vascular Intervention Centre Limited",
+        "role": "claimant",
+        "directors_officers": [
+          "Dr. Conrad Murray (deponent)"
+        ],
+        "ownership_notes": "Medical (stroke/vascular) centre company; relieved from a deemed admission of the counterclaim"
+      },
+      {
+        "name": "Howida Limited",
+        "role": "defendant/counterclaimant",
+        "directors_officers": [
+          "Kerri-Ann Oliverie (deponent)"
+        ],
+        "ownership_notes": "Defendant whose judgment-on-admission application was dismissed"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Dr. Conrad Murray",
+        "role": "claimant's deponent",
+        "notes": "Swore the affidavit supporting the claimant's relief-from-sanctions application"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Stroke centre dodges automatic loss, wins relief from sanctions against Howida",
+    "social_post": "A procedural skirmish between DCM Acute Stroke and Vascular Intervention Centre and Howida Limited has gone the medical company's way. DCM had missed the deadline to file a defence to Howida's counterclaim, which would normally mean it was deemed to admit the counterclaim. Howida applied for judgment on that admission; DCM applied for relief from sanctions. Justice Devindra Rampersad relieved DCM from the sanction and extended its time to file, then dismissed Howida's application. DCM still has to pay the costs of both applications, and the case proceeds to a case management conference. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Failing to file a defence to a counterclaim in time can mean being deemed to have admitted it",
+      "Relief from sanctions turns on promptness, intentionality and a good explanation for the breach",
+      "Even a successful relief-from-sanctions applicant usually bears the costs of its own application"
+    ],
+    "outcome": "Claimant relieved from the sanction of being deemed to admit the counterclaim; time to file its defence to counterclaim extended. Defendant's judgment-on-admission application dismissed. Claimant to pay costs of both applications; matter set for a CMC on 30 June 2026.",
+    "osint_value": "medium",
+    "osint_notes": "Procedural ruling naming two companies (a stroke/vascular medical centre and Howida Limited) and a director. Corporate data of OSINT value; no criminal content or quantified figures.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Jankie v The Board of Inland Revenue",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2024/Mohammed_M/CvA_24_P259DD12Jun2026.pdf",
+    "citation": "CA P259/2024",
+    "court": "Court of Appeal, Trinidad and Tobago",
+    "judges": [
+      "M. Mohammed JA",
+      "M. Dean-Armorer JA",
+      "R. Rahim JA"
+    ],
+    "claimants": [
+      "Jagdeo Jankie (Appellant)"
+    ],
+    "defendants": [
+      "The Board of Inland Revenue (Respondent)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Jagdeo Jankie",
+        "role": "appellant/taxpayer",
+        "notes": "Private house-construction contractor of 126 Hindustan Road, New Grant; disputed his 2013 income-tax assessment"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "716,309.04",
+        "currency": "TTD",
+        "what_it_is": "Grand total of taxes, interest and levy assessed against the appellant for income year 2013"
+      },
+      {
+        "amount": "299,355.00",
+        "currency": "TTD",
+        "what_it_is": "Tax component of the assessment"
+      },
+      {
+        "amount": "440,579.51",
+        "currency": "TTD",
+        "what_it_is": "Interest component of the assessment"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Tax Appeal Board ruling of 16 April 2024 (Tax Appeal No. I 33 of 2022)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Contractor loses appeal over a $716k income-tax assessment for 2013",
+    "social_post": "A New Grant building contractor has lost his appeal against a large income-tax bill. Jagdeo Jankie challenged the Board of Inland Revenue's assessment of additional income tax for 2013, arguing the BIR's communications were too unclear to tell him how the figures were worked out. The Tax Appeal Board dismissed his application, and the Court of Appeal - with Justice Mark Mohammed writing - agreed: although the BIR's figures could have been presented more tidily, the tables, schedules and tax objection report gave him enough detail to understand the roughly $716,000 in taxes, interest and levy claimed. The appeal was dismissed; costs to be argued. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A tax assessment is not void for uncertainty merely because the figures were communicated untidily, if adequate particulars were given",
+      "The taxpayer must be able to understand the basis of the computation, not receive it in perfect form",
+      "Appeal courts are slow to overturn the Tax Appeal Board's findings unless plainly wrong"
+    ],
+    "outcome": "Appeal dismissed. The Board of Inland Revenue gave the appellant adequate particulars of his 2013 assessment (about $716,309 in tax, interest and levy); the assessment was not uncertain. Parties to be heard on costs.",
+    "osint_value": "medium",
+    "osint_notes": "Income-tax appeal naming an individual contractor (with business address) and the Board of Inland Revenue, with specific assessment figures. Financial/taxpayer data of OSINT value; no criminal content.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Pinto v The Arima Borough Corporation",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2023/cv_23_00153DD12Jun2026.pdf",
+    "citation": "CV2023-00153",
+    "court": "High Court of Justice, San Fernando, Trinidad and Tobago",
+    "judges": [
+      "Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Arnold Pinto"
+    ],
+    "defendants": [
+      "The Arima Borough Corporation"
+    ],
+    "companies": [
+      {
+        "name": "The Arima Borough Corporation",
+        "role": "defendant (local authority/employer)",
+        "directors_officers": [],
+        "ownership_notes": "Municipal corporation; counterclaimed unjust enrichment over the claimant's pay"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Arnold Pinto",
+        "role": "claimant",
+        "notes": "Employee who has not reported to duty since 7 August 2018; suing over pay; failed to file a defence to the corporation's counterclaim in time"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Both sides lose their applications in Arima Corporation pay dispute",
+    "social_post": "A procedural standoff between Arnold Pinto and the Arima Borough Corporation has ended with neither side getting what it wanted. Pinto, who the Corporation says has not reported to duty since August 2018, sued over his pay; the Corporation counterclaimed that paying him for services not rendered would be unjust enrichment. Pinto filed his defence to that counterclaim late and sought relief from sanctions; the Corporation asked the court to treat the counterclaim as admitted. Justice Karen Reid dismissed both applications and struck out the late defence, finding the unjust-enrichment counterclaim depended on the outcome of the main claim and could only be decided at trial. Each side bears its own costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A counterclaim that merely anticipates the outcome of the main claim may disclose no independent cause of action",
+      "Relief from sanctions can be refused even where the opposing 'deem admitted' application also fails",
+      "Unjust-enrichment claims contingent on a trial finding are dealt with after, not before, trial"
+    ],
+    "outcome": "Both applications dismissed: the claimant's relief-from-sanctions/extension application refused (and his late defence to counterclaim struck out), and the defendant's application to deem the counterclaim admitted also dismissed. Each party to bear its own costs.",
+    "osint_value": "low",
+    "osint_notes": "Employment/procedural dispute against a municipal corporation. No commercial entities beyond the public body, no property or financial figures, no criminal content.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application by Suruj Samaroo (Samaroo v The Attorney General)",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2018/cv_18_02902DD12Jun2026.pdf",
+    "citation": "CV2018-02902",
+    "court": "High Court of Justice, Trinidad and Tobago",
+    "judges": [
+      "Madam Justice Jacqueline Wilson KC"
+    ],
+    "claimants": [
+      "Suruj Samaroo"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Suruj Samaroo",
+        "role": "claimant",
+        "notes": "Mechanic and farmer of Carlsen Field Connector Road, Chaguanas; arrested, detained and prosecuted in 2015 over a charge a Magistrate had already dismissed in 2005"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "200,000.00",
+        "currency": "TTD",
+        "what_it_is": "Compensatory damages for breach of constitutional rights"
+      },
+      {
+        "amount": "25,000.00",
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Magistrate's Court Case No. 3047/02 (charge dismissed 18 October 2005)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "State pays $225k for arresting a man over a charge thrown out a decade earlier",
+    "social_post": "A Chaguanas mechanic and farmer has won $225,000 from the State after being arrested, detained and prosecuted in 2015 on a criminal charge that a Magistrate had already dismissed back in 2005. Suruj Samaroo brought a constitutional claim; the State filed no evidence, so his account stood uncontradicted. Justice Jacqueline Wilson KC found his rights to liberty, protection of the law and a fair hearing were breached, and that the systemic failures - prosecuting him on a dead charge despite his repeated protests, with no explanation from the State - made the violation grave. She awarded $200,000 compensatory and $25,000 vindicatory damages, plus interest and costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Re-prosecuting someone on a charge already dismissed can breach constitutional rights to liberty and protection of the law",
+      "Where the State files no evidence, the claimant's uncontradicted affidavit is accepted",
+      "Vindicatory damages may be added where compensation alone does not mark the gravity of a rights breach"
+    ],
+    "outcome": "Claim succeeds. Declared that the claimant's rights under ss.4(a), 4(b), 5(2)(c)(ii) and 5(2)(h) were contravened by his 2015 arrest and prosecution on a 2005-dismissed charge. State ordered to pay $200,000 compensatory and $25,000 vindicatory damages, plus 2.5% interest from May 2015 and costs.",
+    "osint_value": "low",
+    "osint_notes": "Constitutional/wrongful-prosecution claim against the State. No commercial entities or property; damages figures only. Crime context: an old dismissed charge wrongly revived (no new charge).",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Als, Joseph",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2024/cr_24_pos627DD12Jun2026.pdf",
+    "citation": "CR-HC-POS-2024-627-1",
+    "court": "High Court of Justice, Criminal Division, Port of Spain",
+    "judges": [
+      "Madame Justice Nalini Singh"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Joseph Als aka \"Joe\""
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Marvin Hosten",
+        "role": "deceased victim",
+        "notes": "Nephew of the offender; stabbed to death on 11 May 2020 at Edwin Roberts Crescent, La Horquetta"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Joseph Als",
+        "role": "convicted",
+        "offences": [
+          "manslaughter (originally charged with murder)"
+        ],
+        "category": [
+          "manslaughter"
+        ],
+        "notes": "Aka 'Joe'. Charged with the murder of his nephew Marvin Hosten (stabbed multiple times with a knife, 11 May 2020). Pleaded guilty to manslaughter on the basis of diminished responsibility. Sentenced by Justice Nalini Singh to 8 years 8 months' imprisonment (16-year starting point reduced to 13 for mitigation, then a one-third guilty-plea discount), with the full pre-trial custody (~4 years 3 months) deducted; bonded $5,000 to keep the peace for 3 years on release."
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": "5,000.00",
+        "currency": "TTD",
+        "what_it_is": "Sum in which the offender is bonded to keep the peace for 3 years on release"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "manslaughter"
+    ],
+    "social_headline": "La Horquetta man jailed for stabbing nephew to death; murder reduced to manslaughter",
+    "social_post": "Joseph Als, known as 'Joe', has been sentenced for killing his nephew Marvin Hosten at La Horquetta in May 2020. On the morning of the stabbing his sister noticed him acting strangely with a knife wrapped in a bandana and warned her son to be careful; soon after she left for work, the two had an altercation in the yard and Als stabbed Hosten multiple times. Charged with murder, Als pleaded guilty to manslaughter on the basis of diminished responsibility. Justice Nalini Singh set a 16-year starting point, reduced it to 13 years for his mental condition, applied a one-third plea discount to 8 years 8 months, and deducted his time on remand. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A murder charge can be reduced to manslaughter where diminished responsibility is established by a plea agreement",
+      "Sentencing starts from a notional starting point, adjusted for mitigation, then a guilty-plea discount, then credit for time served",
+      "Courts may add a peace bond and probation conditions (psychiatric follow-up, no alcohol/drugs) on release"
+    ],
+    "outcome": "Pleaded guilty to manslaughter (diminished responsibility) on a murder indictment. Sentenced to 8 years 8 months' imprisonment (16-year starting point reduced to 13 for mitigation, then a one-third plea discount), with full pre-trial custody (~4 years 3 months) deducted; bonded $5,000 to keep the peace for 3 years on release with probation/psychiatric conditions.",
+    "osint_value": "low",
+    "osint_notes": "Domestic manslaughter (knife) sentencing. No commercial entities or property; tracked for crime intelligence (homicide reduced to manslaughter, diminished responsibility).",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ramsamooj, Vishnu; Ramdhan, Jairam v Ramsamooj, Lilawatie; Jagessar, Roshni; Burke, Richard",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_01611DD12Jun2026.pdf",
+    "citation": "CV2025-01611",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Vishnu Ramsamooj",
+      "Jairam Ramdhan"
+    ],
+    "defendants": [
+      "Lilawatie Ramsamooj",
+      "Roshni Jagessar",
+      "Richard Burke aka Lennard/Lennon Burke",
+      "Any other occupant of the subject premises"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Vishnu Ramsamooj",
+        "role": "claimant",
+        "notes": "Asserted tenancy/superior possessory title to agricultural lands at L.P. 8/1 Geerahoo Trace, PCOL Village, Fyzabad"
+      },
+      {
+        "name": "Lilawatie Ramsamooj",
+        "role": "first defendant",
+        "notes": "Occupier; counterclaimed equitable interest via proprietary estoppel (dismissed); ordered to vacate within 90 days"
+      },
+      {
+        "name": "Richard Burke aka Lennard/Lennon Burke",
+        "role": "third defendant",
+        "notes": "Restrained from entering or remaining on the subject lands"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "5,000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass awarded to the claimants"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on the claim payable to the claimants"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on the counterclaim payable to the claimants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Agricultural lands at L.P. 8/1 Geerahoo Trace, PCOL Village, Fyzabad (with a wooden chattel dwelling)",
+        "lease_terms": "Claimants asserted tenancy/superior possessory title; defendants claimed equitable interest via long occupation and a gratuitous family licence",
+        "rent": "Not stated",
+        "landlord": "Claimants Vishnu Ramsamooj and Jairam Ramdhan (asserting superior title)",
+        "tenant": "Defendants Lilawatie Ramsamooj and Roshni Jagessar (occupiers)",
+        "outcome": "Possession granted to claimants; first and second defendants to vacate within 90 days (may remove their chattel structure); proprietary-estoppel counterclaim dismissed; 90-day stay of execution"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Fyzabad family land feud: court orders relatives off agricultural plot, dismisses estoppel claim",
+    "social_post": "A bitter family dispute over agricultural land at Geerahoo Trace, Fyzabad has ended with Justice Westmin James ordering Lilawatie Ramsamooj and Roshni Jagessar to give up possession to Vishnu Ramsamooj and Jairam Ramdhan within 90 days. The defendants' counterclaim that long occupation and money spent on a house gave them an equitable interest through proprietary estoppel was dismissed. The judge issued mutual restraining orders to keep the warring relatives apart, barred a third party, Richard 'Lennon' Burke, from the land, and awarded the claimants $5,000 nominal trespass damages plus costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A gratuitous family licence to occupy land can be revoked; long occupation alone does not confer ownership",
+      "Proprietary estoppel requires more than expenditure — a clear assurance and detrimental reliance must be proved",
+      "Courts can pair a possession order with mutual restraining orders where family relations have broken down"
+    ],
+    "outcome": "Possession granted to the claimants. First and second defendants ordered to vacate within 90 days (free to remove their wooden chattel structure); counterclaim for equitable interest by proprietary estoppel dismissed; mutual restraining orders made; third defendant restrained from the land; $5,000 nominal trespass damages and $14,000 + $14,000 costs awarded to claimants; 90-day stay of execution.",
+    "osint_value": "low",
+    "osint_notes": "Private family land-possession dispute (Fyzabad agricultural plot). No commercial entities or banks; relevant only for property/title tracking.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Tiwari, Leslie; Noreiga, Robert v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-12",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2019/cv_19_04011DD12Jun2026.pdf",
+    "citation": "CV2019-04011; CV2019-04016",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Leslie Tiwari",
+      "Robert Noreiga"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Leslie Tiwari",
+        "role": "applicant",
+        "notes": "Prisoner who obtained constitutional declarations of unconstitutional delay, arbitrary detention and cruel and unusual punishment over the failure to review his sentence; awarded damages on this assessment"
+      },
+      {
+        "name": "Robert Noreiga",
+        "role": "applicant",
+        "notes": "Co-applicant in materially similar matter; awarded $1,500,000 compensatory and $150,000 vindicatory damages"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "1,500,000.00",
+        "currency": "TTD",
+        "what_it_is": "Compensatory damages awarded to Robert Noreiga for breaches of constitutional rights"
+      },
+      {
+        "amount": "150,000.00",
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages awarded to each applicant (Tiwari and Noreiga)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Companion constitutional motion CV2019-04016 (Robert Noreiga), tried jointly with CV2019-04011 (Leslie Tiwari)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "State to pay millions for failing to review prisoners' sentences",
+    "social_post": "The State has been ordered to pay substantial constitutional damages to two prisoners, Leslie Tiwari and Robert Noreiga, after the High Court found their rights were breached by unconstitutional delay, arbitrary detention and cruel and unusual punishment in failing to review their sentences. On this assessment of damages Justice Robin Mohammed awarded Robert Noreiga $1.5 million in compensatory damages, plus $150,000 in vindicatory damages to each man to mark the gravity of the breaches and deter repetition, with costs certified for senior and junior counsel. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Prisoners are entitled to regular reviews of their sentences after four years, conducted with natural-justice safeguards",
+      "Unconstitutional delay and arbitrary detention can attract very large compensatory awards against the State",
+      "Vindicatory damages are awarded on top of compensation to emphasise the constitutional rights and deter future breaches"
+    ],
+    "outcome": "Assessment of damages for two jointly-tried constitutional motions. Robert Noreiga awarded $1,500,000 compensatory damages; each applicant awarded $150,000 vindicatory damages; costs certified fit for two counsel, to be assessed in default of agreement.",
+    "osint_value": "medium",
+    "osint_notes": "Large constitutional damages payout by the State over prison sentence-review failures. Useful for tracking government liability; no private commercial entities.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Singh, Troy v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-11",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_01579DD11Jun2026.pdf",
+    "citation": "CV2025-01579",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Troy Singh"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Troy Singh",
+        "role": "claimant",
+        "notes": "Public officer seconded from the Prison Service to Customs and Excise; State discontinued his pensionable allowance then demanded $122,108 repayment more than a decade later"
+      },
+      {
+        "name": "Stephen Jack",
+        "role": "comparator officer",
+        "notes": "Officer in materially indistinguishable circumstances who earlier obtained constitutional relief over the same allowance; relied on to show unequal treatment"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "122,108.00",
+        "currency": "TTD",
+        "what_it_is": "Repayment the State demanded as alleged overpayments (memorandum set aside, null and void)"
+      },
+      {
+        "amount": "97,154.00",
+        "currency": "TTD",
+        "what_it_is": "Compensatory damages awarded to the claimant"
+      },
+      {
+        "amount": "25,000.00",
+        "currency": "TTD",
+        "what_it_is": "Aggravated damages awarded to the claimant"
+      },
+      {
+        "amount": "50,000.00",
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages awarded to the claimant"
+      },
+      {
+        "amount": "172,154.00",
+        "currency": "TTD",
+        "what_it_is": "Total damages awarded"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Stephen Jack constitutional claim concerning the same pensionable allowance (relied on as comparator)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "State punished for clawing back officer's allowance while sparing a colleague",
+    "social_post": "Justice Westmin James has found the State breached the constitutional rights of public officer Troy Singh to protection of the law and equality of treatment. After Singh was seconded from the Prison Service to Customs and Excise, the State stopped his pensionable allowance, then a decade later branded the payments overpayments and demanded $122,108 back — even though a colleague in identical circumstances, Stephen Jack, had already won constitutional relief over the very same allowance. The court set aside the repayment demand and awarded Singh $172,154 in total damages ($97,154 compensatory, $25,000 aggravated, $50,000 vindicatory), and ordered his pension and benefits recalculated. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "The State must treat materially similar public officers consistently; differential treatment can breach the right to equality",
+      "A long-delayed demand to recharacterize past payments as overpayments can be struck down as unconstitutional",
+      "Aggravated and vindicatory damages may be added to compensation where State conduct is high-handed"
+    ],
+    "outcome": "Constitutional motion succeeded. Repayment demand of $122,108 set aside as null and void; claimant awarded $172,154 total damages ($97,154 compensatory, $25,000 aggravated, $50,000 vindicatory) plus interest; pension, gratuity and retirement benefits to be recalculated within 90 days; costs to claimant; 42-day stay.",
+    "osint_value": "medium",
+    "osint_notes": "Constitutional/equality ruling against the State with a named comparator (Stephen Jack). Tracks government liability over public-service pension allowances; no private commercial entities.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Baksh, Rajesh Rohan; Lalchan-Baksh, Shinel v Mohammed, Hadeed; Second Haven Realty Limited",
+    "date": "2026-06-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2024/cv_24_03846DD10Jun2026.pdf",
+    "citation": "CV2024-03846",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Rajesh Rohan Baksh",
+      "Shinel Lalchan-Baksh"
+    ],
+    "defendants": [
+      "Hadeed Mohammed (Defendant/Ancillary Claimant)",
+      "Second Haven Realty Limited (Ancillary Defendant)"
+    ],
+    "companies": [
+      {
+        "name": "Second Haven Realty Limited",
+        "role": "ancillary defendant",
+        "directors_officers": [],
+        "ownership_notes": "Realty company joined as ancillary defendant in a land sale/compromise dispute; ordered to be paid $234,100 by the defendant within 60 days in connection with conveyance of Lot B9"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Hadeed Mohammed",
+        "role": "defendant/ancillary claimant",
+        "notes": "Sought enforcement of an alleged November 2025 compromise agreement (acceptance of 'Option III') with the claimants over land"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "234,100.00",
+        "currency": "TTD",
+        "what_it_is": "Sum the Defendant/Ancillary Claimant must pay Second Haven Realty Limited within 60 days"
+      },
+      {
+        "amount": "5,500.00",
+        "currency": "TTD",
+        "what_it_is": "Costs of the application payable by the claimants to the defendant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot B9 (shown coloured pink on the General Plan), bounded partly by a 10.0m Road Reserve and partly by Lot B10",
+        "lease_terms": "Subject of a compromise/settlement agreement enforced by the court; parties to execute deeds of conveyance/release",
+        "rent": "Not applicable (sale/conveyance)",
+        "landlord": "Not stated",
+        "tenant": "Not stated",
+        "outcome": "Court enforced the compromise; parties to convey respective interests, each bearing their own registration costs; defendant to pay Second Haven Realty $234,100 within 60 days"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court enforces land settlement, orders six-figure payout to realty firm",
+    "social_post": "Justice Westmin James has enforced a compromise agreement struck between Rajesh and Shinel Baksh and Hadeed Mohammed over a parcel of land (Lot B9), finding that correspondence in late 2025 — the acceptance of 'Option III' — formed a binding settlement. The court directed the parties to execute their respective conveyances and ordered Mohammed to pay Second Haven Realty Limited $234,100 within 60 days. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "An exchange of correspondence accepting a defined option can form a binding, enforceable settlement",
+      "Courts will hold parties to a compromise even where the underlying claim is stayed",
+      "A defaulting party's conveyance can be executed by the Registrar on their behalf"
+    ],
+    "outcome": "Application to enforce a compromise agreement succeeded. Parties ordered to execute deeds conveying their respective interests in Lot B9; defendant to pay Second Haven Realty Limited $234,100 within 60 days; claimants to pay $5,500 costs; 28-day stay.",
+    "osint_value": "low",
+    "osint_notes": "Land sale/compromise enforcement involving realty company Second Haven Realty Limited. Useful for property/company tracking; no banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ajodha, Elizabeth v Baboo, Rohini (Administrator ad Litem of Gyandavi Vera Raghoo)",
+    "date": "2026-06-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rahim/2021/cv_21_04287DD9Jun2026.pdf",
+    "citation": "CV2021-04287",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice R. Rahim"
+    ],
+    "claimants": [
+      "Elizabeth Ajodha"
+    ],
+    "defendants": [
+      "Rohini Baboo (Administrator ad Litem of the estate of Gyandavi Vera Raghoo)"
+    ],
+    "companies": [
+      {
+        "name": "Scott Lands and Investment Company Limited",
+        "role": "adjoining landowner (boundary reference)",
+        "directors_officers": [],
+        "ownership_notes": "Named only as a boundary of the disputed parcel"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Elizabeth Ajodha",
+        "role": "claimant",
+        "notes": "Built a substantial permanent dwelling on land she did not own; claim dismissed and denied compensation for failing to secure title, formalise a sale, or use s.9 Land Tenants Act, and for not renewing the statutory tenancy"
+      },
+      {
+        "name": "Gyandavi Vera Raghoo",
+        "role": "deceased landowner",
+        "notes": "Estate represented by Administrator ad Litem Rohini Baboo; held to be entitled to the land"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of the claim payable by the claimant"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of the counterclaim payable by the claimant"
+      },
+      {
+        "amount": "28,000.00",
+        "currency": "TTD",
+        "what_it_is": "Total costs payable by the claimant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Parcel of approx. 5,000 sq ft (464.5 m2), portion of a larger 20,285 sq ft parcel, bounded north by a road, south by Scott Lands and Investment Company Limited, east by S & G Gowkaran, west by W. Week",
+        "lease_terms": "Statutory tenancy under the Land Tenants Act; claimant failed to renew it",
+        "rent": "Not stated",
+        "landlord": "Estate of Gyandavi Vera Raghoo (defendant)",
+        "tenant": "Elizabeth Ajodha (claimant)",
+        "outcome": "Claim dismissed; judgment for defendant on counterclaim declaring the statutory tenancy; no compensation for the dwelling the claimant built; claimant to pay $28,000 costs"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Woman who built house on another's land gets nothing after failing to secure title",
+    "social_post": "Justice Ricky Rahim has dismissed Elizabeth Ajodha's claim over a 5,000 sq ft parcel and given judgment to the estate of Gyandavi Vera Raghoo. The court found Ajodha built a substantial, permanent home on land she did not own without first securing the title in writing, signing a formal agreement for sale, using the protection of section 9 of the Land Tenants Act, or even renewing her statutory tenancy — risks she took on herself. She was awarded no compensation for the house and ordered to pay $28,000 in costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Building on land you do not own, without securing title first, is done at your own risk and may attract no compensation",
+      "Statutory tenants must renew their tenancy and can use s.9 of the Land Tenants Act to protect improvements",
+      "Equity will not rescue a party who ignored elementary legal precautions"
+    ],
+    "outcome": "Reasons for an earlier order: claim dismissed; judgment for the defendant on the counterclaim declaring the statutory tenancy; no compensation for the dwelling house; claimant to pay $28,000 total costs.",
+    "osint_value": "low",
+    "osint_notes": "Private land/statutory-tenancy dispute. Company named only as a boundary; no commercial or criminal significance.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Siberan, Rawle; Siberan, Sasha v Prabhudial, Shatri",
+    "date": "2026-06-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2020/cv_20_02153DD9Jun2026.pdf",
+    "citation": "CV2020-02153",
+    "court": "High Court of Justice, Sub-Registry San Fernando",
+    "judges": [
+      "The Hon. Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Rawle Siberan",
+      "Sasha Siberan"
+    ],
+    "defendants": [
+      "Shatri Prabhudial"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Rawle Siberan",
+        "role": "claimant/vendor",
+        "notes": "Co-owner of Lot 3, Chase Village, Chaguanas; sued for specific performance of a $1,050,000 sale agreement but could not show good marketable title"
+      },
+      {
+        "name": "Shatri Prabhudial",
+        "role": "defendant/purchaser",
+        "notes": "Agreed to buy the land; did not complete, citing title issues and 'working out his finances'; deposit cheque went stale in escrow"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "1,050,000.00",
+        "currency": "TTD",
+        "what_it_is": "Agreed sale price of Lot 3, Chase Village, Chaguanas"
+      },
+      {
+        "amount": "105,000.00",
+        "currency": "TTD",
+        "what_it_is": "Deposit held in escrow by the defendant's attorney (cheque became stale)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 3, Chase Village, Chaguanas",
+        "lease_terms": "Agreement for sale dated 14 May 2019; completion within 90 days (by 12 August 2019)",
+        "rent": "Not applicable (sale)",
+        "landlord": "Vendors Rawle and Sasha Siberan",
+        "tenant": "Purchaser Shatri Prabhudial",
+        "outcome": "Sale not completed; agreement declared terminated by mutual agreement around 30 October 2019; both claim and counterclaim dismissed; each party bears own costs"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "$1m Chaguanas land sale collapses; court says deal ended by mutual agreement",
+    "social_post": "A claim for specific performance of a $1.05 million land sale in Chase Village, Chaguanas has failed. Justice Karen Reid found that vendors Rawle and Sasha Siberan could not show a good and marketable title, while purchaser Shatri Prabhudial had not completed, citing title concerns and his finances. With the $105,000 deposit cheque having gone stale in escrow, the court held the agreement was terminated by mutual agreement in October 2019, dismissed both the claim and counterclaim, and ordered each side to bear its own costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A vendor cannot obtain specific performance without proving a good and marketable title",
+      "A purchaser's remedy where title is defective may be limited to a refund of the deposit, not damages",
+      "Conduct can lead a court to find a sale agreement was terminated by mutual agreement"
+    ],
+    "outcome": "Both claim and counterclaim dismissed. The 14 May 2019 sale agreement declared terminated by mutual agreement around 30 October 2019; no money ordered paid (deposit remained with the defendant via a stale escrow cheque); each party to bear its own costs.",
+    "osint_value": "low",
+    "osint_notes": "Private failed land-sale dispute. No companies, banks, or criminal element; routine property litigation.",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re continuous employment of Carla Trotman Parks v The Tobago House of Assembly",
+    "date": "2026-06-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/ramcharan/2025/cv_25_04778DD9Jun2026.pdf",
+    "citation": "CV2025-04778",
+    "court": "High Court of Justice (Tobago)",
+    "judges": [
+      "The Hon. Mr. Justice Kevin Ramcharan"
+    ],
+    "claimants": [
+      "Carla Trotman Parks aka Carla Parks"
+    ],
+    "defendants": [
+      "The Tobago House of Assembly"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Carla Trotman Parks",
+        "role": "claimant",
+        "notes": "Data Clerk on short-term contracts with the THA (2011-2018); brought a constitutional claim over the salary scale, gratuity and leave entitlements applied to her; claim struck out as a matter for the Industrial Court"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tobago data clerk's pay grievance struck out — court says it belongs in Industrial Court",
+    "social_post": "Justice Kevin Ramcharan has struck out a constitutional claim brought by Carla Trotman Parks, a former data clerk with the Tobago House of Assembly, over how her salary scale, gratuity and leave entitlements were calculated during years of short-term contracts. The court held that disputes about workers' terms and conditions generally belong before the Industrial Court as a trade dispute, and that invoking the constitutional jurisdiction was a misuse of process. But, noting the THA never gave Parks the courtesy of an official response over many years, the judge departed from the usual rule and made no order as to costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Workplace terms-and-conditions disputes generally belong in the Industrial Court, not a constitutional motion",
+      "Using the constitutional jurisdiction for what is really a trade dispute can be struck out as a misuse of process",
+      "A court may decline to award costs against a struck-out claimant where the public body behaved poorly"
+    ],
+    "outcome": "Claim struck out as a matter that should have been brought before the Industrial Court as a trade dispute; no order as to costs (court critical of the THA's failure to respond to the claimant over many years).",
+    "osint_value": "low",
+    "osint_notes": "Public-sector employment/constitutional jurisdiction dispute against the Tobago House of Assembly. No commercial entities, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Wharton, Virgil v The Public Service Appeal Board",
+    "date": "2026-06-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2019/cv_19_05010DD9Jun2026.pdf",
+    "citation": "CV2019-05010",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Virgil Wharton"
+    ],
+    "defendants": [
+      "The Public Service Appeal Board"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Virgil Wharton",
+        "role": "claimant",
+        "notes": "Former police constable dismissed by the Police Service Commission in 2004 following a larceny charge that a Magistrate dismissed without conviction in February 2004; won judicial review nearly two decades later"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Underlying Police Service Commission dismissal decision (2004) and Public Service Appeal Board appeal decision (12 September 2019)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Ex-constable wins after 20-year fight: court says firing breached his rights",
+    "social_post": "Nearly two decades after he was dismissed from the Trinidad and Tobago Police Service, former constable Virgil Wharton has won his judicial review. He had been fired by the Police Service Commission in 2004 over a larceny charge that a magistrate had already dismissed without any conviction, and the Public Service Appeal Board upheld the dismissal. Justice Robin Mohammed declared that dismissing him without a proper hearing breached his constitutional rights to the protection of the law and equality before the law, and that the Appeal Board erred in affirming it. Compensation — including lost salary and damages for distress — was referred to a Master for assessment. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A public officer must be given a fair hearing before dismissal; skipping mandatory procedures can be unconstitutional",
+      "A dismissed criminal charge (no conviction) is a weak foundation for disciplinary dismissal",
+      "Where rights are breached, compensation can include lost salary plus damages for distress, assessed by a Master"
+    ],
+    "outcome": "Judicial review succeeded. Declarations granted that the PSC's dismissal without a fair hearing and without following s.129(6) breached the claimant's rights under s.4(b) of the Constitution and that the PSAB erred in affirming it; compensation referred to a Master (lost salary/allowances plus distress damages) unless agreed within 60 days; defendant to pay costs.",
+    "osint_value": "low",
+    "osint_notes": "Long-running public-service/police dismissal judicial review. No commercial entities or banks; criminal charge (larceny) was dismissed without conviction.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Walker, Damion v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_04063DD8Jun2026.pdf",
+    "citation": "CV2022-04063",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Damion Walker"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Damion Walker",
+        "role": "claimant",
+        "notes": "41-year-old Jamaican national who was prosecuted for Robbery with Aggravation over a 2 March 2016 incident at a Lowlands, Tobago supermarket; criminal proceedings dismissed in his favour on 30 October 2018; his civil claim for malicious prosecution failed"
+      },
+      {
+        "name": "PC Marcus Turpin",
+        "role": "prosecuting police officer",
+        "notes": "Police constable who charged the claimant; the court did not find he lacked reasonable and probable cause or acted with malice"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs payable by the claimant to the State after his claim was dismissed"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Underlying criminal prosecution for Robbery with Aggravation (dismissed in the claimant's favour, 30 October 2018)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Jamaican man's malicious-prosecution claim against the State thrown out",
+    "social_post": "Damion Walker, a Jamaican national who was living in Tobago, sued the State for malicious prosecution after he was charged with Robbery with Aggravation over a 2016 supermarket incident in Lowlands — a charge later dismissed in his favour. Justice Robin Mohammed dismissed his civil claim, finding he had not shown that the prosecuting officer, PC Marcus Turpin, lacked reasonable and probable cause or acted with malice. Walker was ordered to pay $14,000 in costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A malicious-prosecution claim requires proof both of absence of reasonable and probable cause and of malice",
+      "An acquittal or dismissed charge does not by itself establish that a prosecution was malicious",
+      "Unsuccessful claimants in unquantified claims can be fixed with prescribed costs (here $14,000)"
+    ],
+    "outcome": "Claim for malicious prosecution dismissed. The court found the claimant failed to prove the prosecuting officer lacked reasonable and probable cause or acted with malice; claimant ordered to pay $14,000 prescribed costs.",
+    "osint_value": "low",
+    "osint_notes": "Failed malicious-prosecution claim against the State (robbery charge previously dismissed). No commercial entities or banks; routine civil litigation.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Hospedales, Louann v Ryan-Brathwaite, Jacqueline (Wills and Probate Act s.74)",
+    "date": "2026-06-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_04061DD8Jun2026.pdf",
+    "citation": "CV2025-04061",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Westmin R.A. James"
+    ],
+    "claimants": [
+      "Louann Hospedales"
+    ],
+    "defendants": [
+      "Jacqueline Ryan-Brathwaite"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Louann Hospedales",
+        "role": "claimant/beneficiary",
+        "notes": "Niece and co-beneficiary of the deceased; alleged she had not received her full benefit and sought an account of the estate"
+      },
+      {
+        "name": "Jacqueline Ryan-Brathwaite",
+        "role": "defendant/sole executrix",
+        "notes": "Niece, co-beneficiary and sole executrix of the estate; court found no breach of fiduciary duty or maladministration"
+      },
+      {
+        "name": "Merle Evelyn Harvey",
+        "role": "deceased",
+        "notes": "Died 1 July 2014; estate the subject of the accounting dispute; held an RBC account at 11 3rd Street, Springland, Gasparillo"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "RBC Bank Trinidad and Tobago Limited (account no. 100082075005818 in the name of Merle Evelyn Harvey / jointly with Raymond A. Harvey)"
+    ],
+    "crime_flags": [],
+    "social_headline": "Court dismisses niece's estate-accounting claim, allows bank inquiry by consent",
+    "social_post": "A dispute between two nieces over the estate of the late Merle Evelyn Harvey has ended with Justice Westmin James dismissing the claim. Louann Hospedales had alleged she never received her full share and sought a formal accounting from her cousin Jacqueline Ryan-Brathwaite, the sole executrix. The court found no evidence of undisclosed assets, unaccounted rental income, or any breach of fiduciary duty. By consent, Hospedales was authorised to inquire, at her own expense, into the deceased's RBC bank account for any sums that might be due to the estate. No order as to costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A beneficiary seeking an estate account must point to evidence of undisclosed assets or maladministration",
+      "Courts can allow a beneficiary to make targeted bank inquiries by consent without finding wrongdoing",
+      "An executor who keeps proper records can defeat allegations of breach of fiduciary duty"
+    ],
+    "outcome": "Claim dismissed; court found no undisclosed assets, unaccounted income, or breach of fiduciary duty by the executrix. By consent, the claimant authorised to inquire (at her own expense) into the deceased's RBC account for sums due to the estate; no order as to costs.",
+    "osint_value": "low",
+    "osint_notes": "Private estate/probate accounting dispute. References an RBC Bank Trinidad and Tobago account of the deceased; no commercial entities or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "De Coteau, Kennedy Clifton v Hastick, Lawrence",
+    "date": "2026-06-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2023/cv_23_03157DD8Jun2026.pdf",
+    "citation": "CV2023-03157",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Kennedy Clifton De Coteau"
+    ],
+    "defendants": [
+      "Lawrence Hastick"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Kennedy Clifton De Coteau",
+        "role": "claimant/registered owner",
+        "notes": "Registered owner (Crown Grant Vol. 6023 Folio 553) seeking possession of Lot #30 Seeree Trace, Sangre Grande; obtained summary judgment"
+      },
+      {
+        "name": "Lawrence Hastick",
+        "role": "defendant",
+        "notes": "Son of the late Grace Hastick (former statutory tenant); raised a proprietary estoppel/promise-of-sale defence that the court found had no realistic prospect of success"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "Lot No. 30 Seeree Trace, Foster Road, Sangre Grande, approx. 551.1 sq m (Crown Grant Vol. 6023 Folio 553)",
+        "lease_terms": "Defendant's late mother was a former statutory tenant under the Landlord and Tenant (Security of Tenure) Act",
+        "rent": "Not stated",
+        "landlord": "Kennedy De Coteau (registered owner)",
+        "tenant": "Lawrence Hastick (occupier, son of former statutory tenant)",
+        "outcome": "Summary judgment for the owner; defendant to deliver possession within 60 days and pay costs"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Sangre Grande owner wins quick possession order; estoppel defence fails",
+    "social_post": "Justice Robin Mohammed has granted summary judgment to Kennedy De Coteau, registered owner of Lot #30 Seeree Trace, Sangre Grande, ordering Lawrence Hastick to give up possession within 60 days. Hastick, the son of a former statutory tenant, argued he had a real defence based on proprietary estoppel and an alleged promise of sale, but the court held that defence had no realistic prospect of success and did not warrant a trial. He was ordered to pay the owner's costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Summary judgment can dispose of a weak proprietary-estoppel defence without a full trial",
+      "A vague alleged 'promise of sale' without supporting evidence may not raise a triable issue",
+      "The child of a former statutory tenant does not automatically inherit a right to occupy"
+    ],
+    "outcome": "Summary judgment granted for the claimant. Defendant ordered to deliver possession of Lot #30 Seeree Trace within 60 days and to pay the claimant's costs of the claim and the application (prescribed costs at 55% plus assessed costs of the application).",
+    "osint_value": "low",
+    "osint_notes": "Private land-possession dispute resolved on summary judgment. No companies, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Alexis, Dexter; Alexis, Michelle v James, Jeffrey",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2018/cv_18_03452DD5Jun2026.pdf",
+    "citation": "CV2018-03452",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Dexter Alexis",
+      "Michelle Alexis"
+    ],
+    "defendants": [
+      "Jeffrey James"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Dexter Alexis",
+        "role": "claimant",
+        "notes": "Co-claimant who proved title to and recovered possession of disputed land at Manzanilla; awarded trespass damages and an injunction"
+      },
+      {
+        "name": "Jeffrey James",
+        "role": "defendant",
+        "notes": "Found to have trespassed on the claimants' Manzanilla land; ordered to give up possession, remove poles he erected and pay damages and costs"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "30,000.00",
+        "currency": "TTD",
+        "what_it_is": "Damages for trespass awarded to the claimants"
+      },
+      {
+        "amount": "5,773.97",
+        "currency": "TTD",
+        "what_it_is": "Pre-judgment interest at 2.5% per annum from filing (26 Sep 2018) to judgment (5 Jun 2026)"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs payable by the defendant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Land at L.P. No. 1123 Eastern Main Road, Manzanilla, approx. 5,500 sq ft (portion of a larger ~16-acre parcel)",
+        "lease_terms": "Disputed ownership/possession; claimants established title",
+        "rent": "Not applicable",
+        "landlord": "Claimants Dexter and Michelle Alexis (owners)",
+        "tenant": "Not applicable (defendant was a trespasser)",
+        "outcome": "Trespass proved; defendant ordered to deliver possession, remove poles, and restrained by injunction; damages, interest and costs awarded to claimants"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Manzanilla landowners win trespass case; squatter ordered off and to pay $30,000",
+    "social_post": "After an eight-year battle, Dexter and Michelle Alexis have won their trespass claim over a parcel of land at Manzanilla. Justice Robin Mohammed found that Jeffrey James had trespassed on their land, ordered him to give up possession and remove the poles he had erected, and granted an injunction barring him from blocking the couple's access. He was ordered to pay $30,000 in damages plus interest and $14,000 in costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A landowner who proves title can recover possession, damages and an injunction against a trespasser",
+      "Pre-judgment interest can add up over a long-running case (here nearly 8 years)",
+      "Courts can order a trespasser to remove structures (e.g. poles/fencing) erected on the land"
+    ],
+    "outcome": "Judgment for the claimants. Defendant found to have trespassed; ordered to deliver up possession, remove poles, and restrained by injunction; awarded $30,000 damages plus $5,773.97 interest and $14,000 costs.",
+    "osint_value": "low",
+    "osint_notes": "Private land-trespass/possession dispute (Manzanilla). No companies, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "McLetchie, Samuel v McLetchie, Stella Elizabeth",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_03944DD5Jun2026.pdf",
+    "citation": "CV2022-03944",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Robin N. Mohammed"
+    ],
+    "claimants": [
+      "Samuel McLetchie"
+    ],
+    "defendants": [
+      "Stella Elizabeth McLetchie aka Stella Elizabeth Wint"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Samuel McLetchie",
+        "role": "claimant",
+        "notes": "Elderly brother who claimed ownership of family land at Signal Hill, Tobago; claim dismissed save for the one lot on which his dwelling house stands"
+      },
+      {
+        "name": "Stella Elizabeth McLetchie aka Stella Elizabeth Wint",
+        "role": "defendant",
+        "notes": "Elderly sister and registered owner of the subject parcel; succeeded on her counterclaim and obtained an injunction against her brother"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of the claim payable by the claimant"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of the counterclaim payable by the claimant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Land at Makala Hill Drive, Signal Hill, Tobago, approx. 1,405.6 sq m (Memorandum of Transfer Vol. 1257 Folio 128 Inst. No. 74)",
+        "lease_terms": "Disputed ownership between siblings; defendant the registered owner",
+        "rent": "Not applicable",
+        "landlord": "Stella Elizabeth McLetchie (registered owner)",
+        "tenant": "Not applicable",
+        "outcome": "Claimant declared to have no entitlement except the single lot on which his dwelling sits; permanent injunction in the defendant's favour barring him from the rest of the parcel; claimant to pay costs"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tobago siblings' land feud: brother kept off sister's land except his own house lot",
+    "social_post": "A land dispute between an elderly brother and sister at Signal Hill, Tobago has gone largely against the brother. Samuel McLetchie claimed ownership of the family parcel, but Justice Robin Mohammed dismissed his claim and gave judgment to his sister, Stella, the registered owner, on her counterclaim. The court declared Samuel had no right to the land except the single lot on which his own dwelling house stands, granted a permanent injunction keeping him off the rest of the parcel, and ordered him to pay $28,000 in costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Long occupation of family land does not override a registered owner's title",
+      "A court can recognise a limited right to the lot under one's home while denying any claim to the wider parcel",
+      "Losing both a claim and a counterclaim can mean paying two sets of prescribed costs"
+    ],
+    "outcome": "Claim dismissed; judgment for the defendant on her counterclaim. Declaration that the claimant has no entitlement to the Signal Hill parcel except the single lot on which his dwelling house stands; permanent injunction in the defendant's favour; claimant to pay $14,000 + $14,000 costs.",
+    "osint_value": "low",
+    "osint_notes": "Private sibling land-ownership dispute (Signal Hill, Tobago). No companies, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Telecommunications Services of Trinidad and Tobago v Telecommunications Authority of Trinidad and Tobago",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2022/rajkumar/CvA_22_P165DD5Jun2026.pdf",
+    "citation": "Civil Appeal No. P-165 of 2022 (CV2021-02135)",
+    "court": "Court of Appeal",
+    "judges": [
+      "P.A. Rajkumar JA",
+      "G. Henderson JA",
+      "R. Rahim JA"
+    ],
+    "claimants": [
+      "Telecommunications Services of Trinidad and Tobago Limited (TSTT) - Appellant/Claimant"
+    ],
+    "defendants": [
+      "Telecommunications Authority of Trinidad and Tobago (TATT) - Respondent/Defendant"
+    ],
+    "companies": [
+      {
+        "name": "Telecommunications Services of Trinidad and Tobago Limited (TSTT)",
+        "role": "appellant/claimant",
+        "directors_officers": [],
+        "ownership_notes": "National telecommunications provider; challenged the regulator's 2021 interconnection Determination"
+      },
+      {
+        "name": "Telecommunications Authority of Trinidad and Tobago (TATT)",
+        "role": "respondent/defendant; statutory regulator",
+        "directors_officers": [],
+        "ownership_notes": "Regulator established under the Telecommunications Act Ch. 47:21; published Determination 2021/01 (16 March 2021) and a 2021 Interconnection Benchmarking Study"
+      }
+    ],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "High Court Claim No. CV2021-02135 (judicial review of Determination 2021/01)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Appeal Court quashes telecoms regulator's 2021 interconnection ruling, orders consultation",
+    "social_post": "The Court of Appeal has sided with TSTT in its battle with the telecommunications regulator, TATT. At issue was TATT's Determination 2021/01, published in March 2021 alongside an interconnection benchmarking study, which set price-regulation terms for the sector. Delivering the court's judgment, Justice of Appeal Peter Rajkumar (with Henderson and Rahim JJA agreeing) granted certiorari quashing the Determination and ordered TATT, by mandamus, to publish the benchmarking study and a draft determination for proper consultation with reasonable timelines. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A regulator must follow its own published consultation procedures before making binding determinations",
+      "Courts can quash a regulatory determination (certiorari) and compel a fresh, consultative process (mandamus)",
+      "Procedural fairness applies even to expert economic/price regulation of the telecoms sector"
+    ],
+    "outcome": "Appeal allowed. Order of certiorari quashing TATT's Determination 2021/01; order of mandamus compelling TATT to publish the 2021 Interconnection Benchmarking Study and a draft determination for consultation in accordance with its published procedures and reasonable timelines.",
+    "osint_value": "medium",
+    "osint_notes": "Significant Court of Appeal regulatory ruling involving the national telecoms provider (TSTT) and the regulator (TATT). Relevant for sector/commercial intelligence; no banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Antoine, Leroy; Antoine, Sumintra Judy v Brown, Jennifer (Administratrix of Irma Agatha Brown); Phillip, Desmond",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2022/cv_22_05079DD5Jun2026.pdf",
+    "citation": "CV2022-05079",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Leroy Antoine",
+      "Sumintra Judy Antoine"
+    ],
+    "defendants": [
+      "Jennifer Brown (Administratrix ad Litem of the Estate of Irma Agatha Brown)",
+      "Desmond Phillip"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Leroy Antoine",
+        "role": "claimant",
+        "notes": "Claimed adverse possession of ~6 acres of agricultural land at Las Lomas; succeeded after the court found 16+ years' exclusive occupation"
+      },
+      {
+        "name": "Irma Agatha Brown",
+        "role": "deceased former owner",
+        "notes": "Original owner of the disputed lands; estate represented by Administratrix Jennifer Brown"
+      },
+      {
+        "name": "Desmond Phillip",
+        "role": "second defendant",
+        "notes": "Held a power of attorney from the first defendant; alleged to have trespassed on and damaged crops on the disputed lands from 2014"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs of the claim payable to the claimants"
+      },
+      {
+        "amount": "14,000.00",
+        "currency": "TTD",
+        "what_it_is": "Costs of the counterclaim payable by the first defendant to the claimants"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Two parcels (~6 acres total) of agricultural land at No. 2 Ramoo Trace East, Las Lomas #21, Ward of Cunupia (Deed No. 9982 of 1971)",
+        "lease_terms": "Claimants rented 1977-1980 then occupied adversely without rent after the owner abandoned the land",
+        "rent": "None after 1980 (adverse possession)",
+        "landlord": "Estate of Irma Agatha Brown (paper owner)",
+        "tenant": "Leroy and Sumintra Judy Antoine (adverse possessors)",
+        "outcome": "Claimants declared to have been in undisturbed, exclusive and continuous occupation for more than 16 years; judgment for the claimants; counterclaim dismissed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Couple win 6 acres at Las Lomas through adverse possession after decades of occupation",
+    "social_post": "Leroy and Sumintra Judy Antoine have won title to roughly six acres of agricultural land at Las Lomas through adverse possession. Justice Karen Reid found that after renting the land between 1977 and 1980, the couple stayed on it rent-free for decades after the owner abandoned it, in undisturbed and exclusive occupation for well over the 16 years the law requires. The court gave judgment for the Antoines against the estate of the late Irma Agatha Brown and Desmond Phillip, dismissed the estate's counterclaim, and awarded the couple costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Sixteen years of undisturbed, exclusive, continuous occupation can defeat a paper owner's title",
+      "A tenancy that ends can ripen into adverse possession once rent stops and the owner abandons the land",
+      "A power of attorney from the paper owner does not defeat an established adverse-possession claim"
+    ],
+    "outcome": "Judgment for the claimants. Declaration that they were in undisturbed, exclusive and continuous occupation of the ~6-acre disputed lands for more than 16 years (adverse possession); first defendant's counterclaim dismissed; defendants to pay the claimants' costs ($14,000 claim + $14,000 counterclaim).",
+    "osint_value": "low",
+    "osint_notes": "Private adverse-possession land dispute (Las Lomas agricultural land). No companies, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Jackson, Llewellyn v Jackson, Ernest; Jackson Ghent, Maxine",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2021/cv_21_04415DD5Jun2026.pdf",
+    "citation": "CV2021-04415",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Devindra Rampersad"
+    ],
+    "claimants": [
+      "Llewellyn Jackson"
+    ],
+    "defendants": [
+      "Ernest Jackson",
+      "Maxine Jackson Ghent"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Llewellyn Jackson",
+        "role": "claimant",
+        "notes": "Built/financed an annex on family property and was evicted in April 2021; court declared he holds an equity worth 70% of the annex's value plus trespass damages"
+      },
+      {
+        "name": "Maxine Jackson Ghent",
+        "role": "second defendant",
+        "notes": "Ordered to pay the claimant 70% of the annex's value (to be agreed or valued as at April 2021)"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": "20,000.00",
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass payable by the defendants to the claimant"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Annex of the disputed family property (built/financed by the claimant)",
+        "lease_terms": "Claimant asserted a proprietary equity from his expenditure on the annex; evicted April 2021",
+        "rent": "Not stated",
+        "landlord": "Defendants (paper owners)",
+        "tenant": "Llewellyn Jackson (occupier who built the annex)",
+        "outcome": "Claimant declared to hold an equity and share of 70% of the annex's value; second defendant to pay that sum once agreed/valued; $20,000 nominal trespass damages and costs awarded to claimant"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Man who built family home annex wins 70% equity after eviction",
+    "social_post": "A family property dispute has ended with Justice Devindra Rampersad declaring that Llewellyn Jackson, who built and paid for an annex on the family property before being evicted in April 2021, holds an equity worth 70% of that annex's value. The court directed the parties to agree a value (or have the annex valued as at April 2021), ordered the second defendant to pay him that 70% share, and awarded $20,000 nominal damages for trespass plus costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Money spent building on family land can create an equitable interest enforceable in court",
+      "Courts can quantify that interest as a percentage of the structure's value rather than ordering possession",
+      "Eviction of someone holding such an equity can attract nominal trespass damages"
+    ],
+    "outcome": "Claimant declared to have an equity coupled with a 70% share in the value of the annex; second defendant to pay 70% of the annex's value (agreed or valued as at April 2021); $20,000 nominal trespass damages and prescribed costs awarded to the claimant; liberty to apply.",
+    "osint_value": "low",
+    "osint_notes": "Private family property/proprietary-equity dispute. No companies, banks or criminal element.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Khan, Kendelle; James, Lyndon v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2016/cv_16_02471DD5Jun2026.pdf",
+    "citation": "CV2016-02471; CV2018-02932",
+    "court": "High Court of Justice, San Fernando",
+    "judges": [
+      "The Hon. Madame Justice Karen Reid"
+    ],
+    "claimants": [
+      "Kendelle Khan",
+      "Lyndon James",
+      "Antares Khan"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Kendelle Khan",
+        "role": "claimant",
+        "notes": "Brought a constitutional redress claim (ss.4 and 5) against the State; succeeded in part on an application to admit fresh evidence"
+      },
+      {
+        "name": "Lyndon James",
+        "role": "claimant",
+        "notes": "Co-claimant in companion constitutional claim CV2018-02932 against the State"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Companion constitutional claim CV2018-02932 (Lyndon James)",
+      "CV2020-00510 Melina Charles v Attorney General (source of the fresh affidavit/cross-examination evidence)"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court lets claimants add fresh evidence in constitutional case against the State",
+    "social_post": "In a procedural ruling in long-running constitutional claims against the State, Justice Karen Reid has partly granted an application by Kendelle Khan and Lyndon James to lead fresh evidence. The court allowed them to rely on affidavits and certified cross-examination transcripts of two witnesses drawn from a separate matter, Melina Charles v Attorney General, and set a timetable for supplemental affidavits and submissions ahead of the substantive hearing. Each side was ordered to bear its own costs of the application. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Fresh evidence may be admitted late where it is cogent and material to the case as a whole",
+      "Evidence given in a related matter can sometimes be imported into another with leave of the court",
+      "Procedural applications of this kind often end with each party bearing its own costs"
+    ],
+    "outcome": "Interlocutory ruling: application to lead fresh evidence succeeds in part. Claimants permitted to rely on specified affidavits and certified cross-examination transcripts from CV2020-00510 (Melina Charles v AG), with a timetable for further affidavits and submissions; each party to bear its own costs of the application.",
+    "osint_value": "low",
+    "osint_notes": "Procedural/evidential ruling in consolidated constitutional claims against the State. No commercial entities, banks or named criminal conduct in this ruling.",
+    "fetch_failed": false
+  },
+  {
+    "title": "Mc Comie, Christiana v Gomez, Arnella; Rouse, Reginald; Joseph, Cayce; Guardian General Insurance Limited",
+    "date": "2026-06-05",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2024/cv_24_01579DD5Jun2026.pdf",
+    "citation": "CV2024-01579",
+    "court": "High Court of Justice",
+    "judges": [
+      "The Hon. Mr. Justice Devindra Rampersad"
+    ],
+    "claimants": [
+      "Christiana Mc Comie"
+    ],
+    "defendants": [
+      "Arnella Gomez",
+      "Reginald Rouse",
+      "Cayce Joseph",
+      "Guardian General Insurance Limited (Co-Defendant)"
+    ],
+    "companies": [
+      {
+        "name": "Guardian General Insurance Limited",
+        "role": "co-defendant (insurer)",
+        "directors_officers": [],
+        "ownership_notes": "Insurer joined as co-defendant; the applicant's earlier action had been dismissed and costs never satisfied"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Christiana Mc Comie",
+        "role": "applicant/claimant",
+        "notes": "Sought to revive litigation after her earlier action was dismissed; application to extend time/proceed refused for delay, lack of cogent evidence and prejudice to the respondents (files closed and destroyed)"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Earlier (first) action by the applicant arising from the same matter, dismissed with costs unsatisfied"
+    ],
+    "banks_financial_institutions": [
+      "Guardian General Insurance Limited (insurer co-defendant)"
+    ],
+    "crime_flags": [],
+    "social_headline": "Court refuses to revive long-stalled claim; insurer and defendants get finality",
+    "social_post": "Justice Devindra Rampersad has refused Christiana Mc Comie's bid to revive litigation after her earlier action was dismissed, naming Guardian General Insurance Limited among the co-defendants. Weighing the long delay, the absence of any cogent professional evidence explaining the conduct of the case, and the severe prejudice to the respondents — whose files had been closed and destroyed and whose witnesses could not reliably recall events nearly a decade old — the court held there was no adequate foundation for relief. The judge acknowledged the human cost but dismissed the application, by consent with no order as to costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Applications to extend time or revive a dismissed claim require cogent evidence and promptness",
+      "Severe prejudice to the other side — destroyed files, faded memories — can be decisive against reopening",
+      "A litigant failed by their attorney may have other avenues of redress but still cannot reopen a stale claim without foundation"
+    ],
+    "outcome": "Application (filed 6 May 2024) to revive/extend time dismissed. Court found undue delay, no cogent evidence on the conduct of the earlier litigation, and severe irreparable prejudice to the respondents; by consent, no order as to costs.",
+    "osint_value": "low",
+    "osint_notes": "Procedural ruling refusing to revive a stale claim; names insurer Guardian General Insurance Limited as co-defendant. Relevant for insurer/litigation tracking; no criminal element.",
+    "fetch_failed": false
   }
 ]
