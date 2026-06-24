@@ -61,7 +61,7 @@ export default function PeopleSearch({ onOpenCase }) {
   return (
     <div className="panel-in">
       <div className="glass p-5">
-        <label className="block text-xs mb-1.5" style={{ color: 'rgba(238,244,255,.8)' }}>
+        <label className="block text-xs mb-1.5" style={{ color: 'var(--muted)' }}>
           Search a person (claimant, defendant, director/officer, or named individual)
         </label>
         <div className="flex gap-2">
@@ -72,14 +72,14 @@ export default function PeopleSearch({ onOpenCase }) {
         </div>
       </div>
 
-      {state?.loading && <p className="text-center mt-6 text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>Searching…</p>}
+      {state?.loading && <p className="text-center mt-6 text-sm" style={{ color: 'var(--muted)' }}>Searching…</p>}
       {state?.error && <p className="text-center mt-6 text-sm text-red-300">{state.error}</p>}
       {state && !state.loading && !state.error && (
         <div style={{ maxWidth: 980, margin: '0 auto' }}>
-          <p className="text-xs mb-1 mt-4" style={{ color: 'rgba(238,244,255,.7)' }}>
+          <p className="text-xs mb-1 mt-4" style={{ color: 'var(--muted)' }}>
             {state.count} {state.count === 1 ? 'person' : 'people'} matched
           </p>
-          {state.groups.length === 0 && <p className="text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>No matches.</p>}
+          {state.groups.length === 0 && <p className="text-sm" style={{ color: 'var(--muted)' }}>No matches.</p>}
           {state.groups.map((g, i) => <PersonCard key={i} group={g} onOpenCase={onOpenCase} />)}
         </div>
       )}
