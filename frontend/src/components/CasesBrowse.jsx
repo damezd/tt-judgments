@@ -113,7 +113,6 @@ export default function CasesBrowse({ onOpenCase, initial, onCount }) {
           const [prioClass, prioLabel] = PRIO[(c.osint_value || 'low').toLowerCase()] || PRIO.low;
           const amount = parseAmount(c);
           const headline = c.social_headline || c.title;
-          const meta = [c.title, c.citation, c.court].filter(Boolean).join(' · ');
           const bodyText = c.social_post || c.outcome || '';
           const excerpt = bodyText.length > 180 ? bodyText.slice(0, 180).trimEnd() + '…' : bodyText;
           return (
@@ -132,7 +131,6 @@ export default function CasesBrowse({ onOpenCase, initial, onCount }) {
                   </div>
                 )}
                 <div className="card-headline">{headline}</div>
-                <div className="card-meta">{meta}</div>
                 {excerpt && <div className="card-excerpt">{excerpt}</div>}
               </div>
               <div className="card-footer">
