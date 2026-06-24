@@ -204,7 +204,8 @@ body {
 .type-criminal   .rail { background: var(--red); }   /* Hall of Justice (court) */
 
 .card-illustration { width: 100%; overflow: hidden; background: #f8f5f0; }
-.card-illustration svg { width: 100%; display: block; }
+.card-illustration svg,
+.card-illustration img { width: 100%; display: block; }
 
 .card-body { padding: 14px 16px 0; }
 
