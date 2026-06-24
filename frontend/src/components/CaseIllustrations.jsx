@@ -1,64 +1,10 @@
 import hallOfJustice from '../assets/hall-of-justice.png';
 import hallOfJusticeCrime from '../assets/hall-of-justice-crime.png';
+import property from '../assets/property.png';
 
-// Poster-card illustrations. Property/corporate are inline SVGs; court cards
-// use the Hall of Justice illustration (criminal gets the cleaner cut).
-
-export function PropertySVG() {
-  return (
-    <svg viewBox="0 0 430 110" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sky-c2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#fef9e7" />
-          <stop offset="100%" stopColor="#fdf8ed" />
-        </linearGradient>
-        <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" fill="#b7950b" opacity="0.6" />
-        </marker>
-      </defs>
-      <rect width="430" height="110" fill="url(#sky-c2)" />
-      {/* Road / landscape */}
-      <rect x="0" y="90" width="430" height="20" fill="#e8d58a" />
-      <rect x="0" y="98" width="430" height="4" fill="#d4c070" opacity="0.5" />
-      {/* Highway / road */}
-      <rect x="0" y="85" width="430" height="10" fill="#c8b840" />
-      {/* Highway lane markings */}
-      <g fill="#fff" opacity="0.5">
-        <rect x="40" y="88" width="30" height="3" rx="1" />
-        <rect x="100" y="88" width="30" height="3" rx="1" />
-        <rect x="160" y="88" width="30" height="3" rx="1" />
-        <rect x="220" y="88" width="30" height="3" rx="1" />
-        <rect x="280" y="88" width="30" height="3" rx="1" />
-        <rect x="340" y="88" width="30" height="3" rx="1" />
-      </g>
-      {/* Land plot */}
-      <rect x="60" y="40" width="160" height="46" fill="#e6d080" rx="2" />
-      <rect x="60" y="40" width="160" height="46" fill="none" stroke="#b7950b" strokeWidth="2" strokeDasharray="6,3" rx="2" />
-      {/* Survey markers */}
-      <circle cx="60" cy="40" r="4" fill="#b7950b" />
-      <circle cx="220" cy="40" r="4" fill="#b7950b" />
-      <circle cx="60" cy="86" r="4" fill="#b7950b" />
-      <circle cx="220" cy="86" r="4" fill="#b7950b" />
-      {/* Land label */}
-      <text x="140" y="68" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#b7950b" opacity="0.7" letterSpacing="1">5.11 ACRES</text>
-      <text x="140" y="80" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#b7950b" opacity="0.5" letterSpacing="0.5">JOKHAN TRACE, PENAL</text>
-      {/* Arrow — NIDCO acquisition */}
-      <path d="M230 62 L290 62" stroke="#b7950b" strokeWidth="2" markerEnd="url(#arrow)" opacity="0.6" />
-      {/* NIDCO label */}
-      <rect x="295" y="52" width="80" height="22" fill="#fff8e0" rx="4" />
-      <rect x="295" y="52" width="80" height="22" fill="none" stroke="#b7950b" strokeWidth="1.5" rx="4" />
-      <text x="335" y="63" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#b7950b" fontWeight="600">NIDCO</text>
-      <text x="335" y="72" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#b7950b" opacity="0.6">STATE</text>
-      {/* Trees */}
-      <ellipse cx="30" cy="65" rx="20" ry="14" fill="#8bc34a" opacity="0.4" />
-      <ellipse cx="20" cy="58" rx="14" ry="10" fill="#7cb342" opacity="0.35" />
-      <ellipse cx="405" cy="60" rx="20" ry="14" fill="#8bc34a" opacity="0.4" />
-      <ellipse cx="415" cy="54" rx="14" ry="10" fill="#7cb342" opacity="0.35" />
-      {/* SF-PF highway label */}
-      <text x="215" y="96" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#fff" opacity="0.7" letterSpacing="1">SAN FERNANDO — POINT FORTIN HIGHWAY</text>
-    </svg>
-  );
-}
+// Poster-card illustrations. Corporate is an inline SVG; court cards use the
+// Hall of Justice illustration (criminal gets the cleaner cut); property uses
+// the surveyed-house illustration.
 
 export function CorporateSVG() {
   return (
@@ -116,7 +62,7 @@ export function CorporateSVG() {
 
 // Court cards (employment + criminal) show the Hall of Justice illustration.
 export function CaseIllustration({ type }) {
-  if (type === 'property') return <PropertySVG />;
+  if (type === 'property') return <img src={property} alt="Surveyed property" loading="lazy" />;
   if (type === 'corporate') return <CorporateSVG />;
   if (type === 'criminal') return <img src={hallOfJusticeCrime} alt="Hall of Justice" loading="lazy" />;
   return <img src={hallOfJustice} alt="Hall of Justice" loading="lazy" />;
