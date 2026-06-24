@@ -201,7 +201,7 @@ body {
 .type-employment .rail { background: var(--red); }
 .type-property   .rail { background: var(--amber); }
 .type-corporate  .rail { background: var(--blue); }
-.type-criminal   .rail { background: #5d3a1a; }
+.type-criminal   .rail { background: var(--red); }   /* Hall of Justice (court) */
 
 .card-illustration { width: 100%; overflow: hidden; background: #f8f5f0; }
 .card-illustration svg { width: 100%; display: block; }
@@ -226,7 +226,7 @@ body {
 .badge-type-employment { background: #fde8e6; color: var(--red);  border: 1px solid #f5c0bb; }
 .badge-type-property   { background: #fef9e7; color: #8a6d00;     border: 1px solid #f0d870; }
 .badge-type-corporate  { background: #e8f0f8; color: var(--blue); border: 1px solid #b8d0e8; }
-.badge-type-criminal   { background: #f0ebe5; color: #5d3a1a;     border: 1px solid #d4c0a8; }
+.badge-type-criminal   { background: #fde8e6; color: var(--red);  border: 1px solid #f5c0bb; }
 
 /* OSINT value badges (ui.jsx Badge / CrimeBadge) — share the .badge base */
 .badge.high   { background:#fde8e6; color:var(--red);   border:1px solid #f5c0bb; }
