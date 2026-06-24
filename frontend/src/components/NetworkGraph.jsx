@@ -119,7 +119,7 @@ export default function NetworkGraph({ onOpenCase }) {
   function reset() { apply(F); netRef.current?.fit(); }
 
   const Chk = ({ k, label, dot }) => (
-    <label className="flex items-center gap-1.5 text-xs cursor-pointer" style={{ color: '#dce8ff' }}>
+    <label className="flex items-center gap-1.5 text-xs cursor-pointer" style={{ color: 'var(--muted)' }}>
       <input type="checkbox" checked={F[k]} onChange={() => toggle(k)} />
       <span style={{ width: 11, height: 11, borderRadius: 6, background: dot, display: 'inline-block' }} /> {label}
     </label>
@@ -133,9 +133,9 @@ export default function NetworkGraph({ onOpenCase }) {
         <Chk k="group" label="Groups" dot={COL.group} />
         <Chk k="director" label="Directors" dot={COL.director} />
         <Chk k="party" label="Parties/witnesses" dot={COL.person} />
-        <span className="text-xs" style={{ color: 'rgba(238,244,255,.5)' }}>|</span>
+        <span className="text-xs" style={{ color: 'var(--border)' }}>|</span>
         {['high', 'medium', 'low'].map(v => (
-          <label key={v} className="flex items-center gap-1.5 text-xs cursor-pointer" style={{ color: '#dce8ff' }}>
+          <label key={v} className="flex items-center gap-1.5 text-xs cursor-pointer" style={{ color: 'var(--muted)' }}>
             <input type="checkbox" checked={F.caseV[v]} onChange={() => toggleV(v)} />
             <span style={{ width: 11, height: 11, borderRadius: 6, background: CASECOL[v], display: 'inline-block' }} /> {v} cases
           </label>
@@ -151,11 +151,11 @@ export default function NetworkGraph({ onOpenCase }) {
         {building && !err && (
           <div style={{
             position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-            pointerEvents: 'none', color: 'rgba(238,244,255,.85)', fontSize: 14,
+            pointerEvents: 'none', color: 'rgba(255,255,255,.9)', fontSize: 14,
           }}>Laying out network…</div>
         )}
       </div>
-      <p className="text-xs mt-2" style={{ color: 'rgba(238,244,255,.8)' }}>{info}</p>
+      <p className="text-xs mt-2" style={{ color: 'var(--muted)' }}>{info}</p>
     </div>
   );
 }

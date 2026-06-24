@@ -45,7 +45,7 @@ export default function Insights({ onOpenCase, onFilterCases }) {
   useEffect(() => { getInsights().then(setD).catch(() => setErr('Failed to load insights.')); }, []);
 
   if (err) return <p className="text-center mt-6 text-red-300">{err}</p>;
-  if (!d) return <p className="text-center mt-6 text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>Loading…</p>;
+  if (!d) return <p className="text-center mt-6 text-sm" style={{ color: 'var(--muted)' }}>Loading…</p>;
 
   const t = d.totals;
   const props = d.properties || [];

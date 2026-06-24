@@ -26,7 +26,7 @@ export default function CaseDetail({ slug, onClose }) {
       style={{ position: 'fixed', inset: 0, background: 'rgba(3,8,20,.6)', zIndex: 40, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', overflow: 'auto', padding: '5vh 12px' }}>
       <div onClick={e => e.stopPropagation()} className="glass panel-in"
         style={{ width: '100%', maxWidth: 820, padding: 22 }}>
-        {!c && !err && <p style={{ color: 'rgba(238,244,255,.8)' }}>Loading…</p>}
+        {!c && !err && <p style={{ color: 'var(--muted)' }}>Loading…</p>}
         {err && <p className="text-red-300">{err}</p>}
         {c && (
           <>
@@ -40,7 +40,7 @@ export default function CaseDetail({ slug, onClose }) {
                     : <CrimeBadge />) : null}
                 </div>
                 <h2 className="font-extrabold" style={{ fontSize: '1.3rem', lineHeight: 1.2 }}>{c.title}</h2>
-                <p className="text-xs mt-1" style={{ color: 'rgba(238,244,255,.7)' }}>
+                <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>
                   {[c.citation, c.court, c.case_date].filter(Boolean).join(' · ')}
                 </p>
               </div>

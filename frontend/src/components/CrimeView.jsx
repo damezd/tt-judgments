@@ -55,23 +55,23 @@ export default function CrimeView({ onOpenCase }) {
   }, [d, q, cat]);
 
   if (err) return <p className="text-center mt-6 text-red-300">{err}</p>;
-  if (!d) return <p className="text-center mt-6 text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>Loading…</p>;
+  if (!d) return <p className="text-center mt-6 text-sm" style={{ color: 'var(--muted)' }}>Loading…</p>;
 
   return (
     <div className="panel-in">
       <div className="glass p-5">
         <div className="flex flex-wrap items-center gap-3 mb-3">
-          <span className="text-sm" style={{ color: 'rgba(238,244,255,.9)' }}>
+          <span className="text-sm" style={{ color: 'var(--text)' }}>
             <b>{d.count}</b> people tied to criminal matters across <b>{d.crimeCases}</b> cases
           </span>
         </div>
         <div className="flex flex-wrap gap-2 items-end">
           <div className="flex-1 min-w-[200px]">
-            <label className="block text-xs mb-1.5" style={{ color: 'rgba(238,244,255,.8)' }}>Search name</label>
+            <label className="block text-xs mb-1.5" style={{ color: 'var(--muted)' }}>Search name</label>
             <input className="field-input" value={q} placeholder="e.g. surname…" onChange={e => setQ(e.target.value)} />
           </div>
           <div>
-            <label className="block text-xs mb-1.5" style={{ color: 'rgba(238,244,255,.8)' }}>Offence category</label>
+            <label className="block text-xs mb-1.5" style={{ color: 'var(--muted)' }}>Offence category</label>
             <select className="field-input" value={cat} onChange={e => setCat(e.target.value)}>
               <option value="">All</option>
               {d.categories.map(c => <option key={c.name} value={c.name}>{c.name} ({c.n})</option>)}
@@ -81,10 +81,10 @@ export default function CrimeView({ onOpenCase }) {
       </div>
 
       <div style={{ maxWidth: 980, margin: '0 auto' }}>
-        <p className="text-xs mb-1 mt-4" style={{ color: 'rgba(238,244,255,.7)' }}>
+        <p className="text-xs mb-1 mt-4" style={{ color: 'var(--muted)' }}>
           {filtered.length} {filtered.length === 1 ? 'person' : 'people'}
         </p>
-        {filtered.length === 0 && <p className="text-sm" style={{ color: 'rgba(238,244,255,.7)' }}>No matches.</p>}
+        {filtered.length === 0 && <p className="text-sm" style={{ color: 'var(--muted)' }}>No matches.</p>}
         {filtered.map((g, i) => <PersonCard key={i} group={g} onOpenCase={onOpenCase} />)}
       </div>
     </div>
