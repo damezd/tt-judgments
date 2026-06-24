@@ -1,9 +1,8 @@
-import hallOfJustice from '../assets/hall-of-justice.png';
-import hallOfJusticeCrime from '../assets/hall-of-justice-crime.png';
+import hallOfJustice from '../assets/hall-of-justice-crime.png';
 import property from '../assets/property.png';
 
-// Poster-card illustrations. Corporate is an inline SVG; court cards use the
-// Hall of Justice illustration (criminal gets the cleaner cut); property uses
+// Poster-card illustrations. Corporate is an inline SVG; court cards
+// (employment + criminal) use the Hall of Justice illustration; property uses
 // the surveyed-house illustration.
 
 export function CorporateSVG() {
@@ -64,6 +63,5 @@ export function CorporateSVG() {
 export function CaseIllustration({ type }) {
   if (type === 'property') return <img src={property} alt="Surveyed property" loading="lazy" />;
   if (type === 'corporate') return <CorporateSVG />;
-  if (type === 'criminal') return <img src={hallOfJusticeCrime} alt="Hall of Justice" loading="lazy" />;
-  return <img src={hallOfJustice} alt="Hall of Justice" loading="lazy" />;
+  return <img src={hallOfJustice} alt="Hall of Justice" loading="lazy" />; // employment + criminal
 }
