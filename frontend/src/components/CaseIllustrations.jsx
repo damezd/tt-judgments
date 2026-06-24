@@ -1,93 +1,7 @@
-// Poster-card illustrations, copied verbatim from the InsightTT reference design
-// (SVG attributes converted to JSX camelCase). One per case type.
+import hallOfJustice from '../assets/hall-of-justice.png';
 
-// Trinidad & Tobago Hall of Justice — symmetric brutalist façade: two
-// cantilevered wing-stacks with chamfered corners flanking a recessed central
-// block with the national crest, twin towers, flagpoles and a grand staircase.
-// Drawn for the right half and mirrored, so it stays perfectly symmetric.
-// Used for court cards (employment + criminal).
-export function EmploymentSVG() {
-  const half = (
-    <g>
-      {/* cloud */}
-      <g fill="none" stroke="#c0392b" strokeWidth="1" opacity="0.16">
-        <ellipse cx="350" cy="20" rx="18" ry="6" />
-        <ellipse cx="366" cy="16" rx="11" ry="5" />
-      </g>
-      {/* low outer wing receding to the side */}
-      <rect x="366" y="92" width="52" height="22" fill="#fde8e6" stroke="#c0392b" strokeWidth="1" />
-      <g stroke="#c0392b" strokeWidth="0.7" opacity="0.3">
-        <line x1="374" y1="98" x2="410" y2="98" /><line x1="374" y1="104" x2="410" y2="104" />
-      </g>
-      {/* tower rising above the roofline */}
-      <rect x="256" y="22" width="8" height="66" fill="#fde8e6" stroke="#c0392b" strokeWidth="1.3" />
-      <rect x="254" y="19" width="12" height="4" fill="#c0392b" />
-      {/* cantilevered wing tiers (chamfered top-outer corner, each overhangs the one below) */}
-      <polygon points="262,80 348,80 356,88 356,102 262,102" fill="#fff" stroke="#c0392b" strokeWidth="1.4" />
-      <polygon points="258,64 352,64 360,72 360,80 258,80" fill="#fff" stroke="#c0392b" strokeWidth="1.4" />
-      <polygon points="254,50 356,50 364,58 364,64 254,64" fill="#fff" stroke="#c0392b" strokeWidth="1.4" />
-      {/* overhang undersides */}
-      <rect x="348" y="80" width="8" height="2" fill="#f5c0bb" />
-      <rect x="352" y="64" width="8" height="2" fill="#f5c0bb" />
-      {/* ribbon glazing per tier */}
-      <g fill="#c0392b" opacity="0.10">
-        <rect x="266" y="84" width="82" height="13" /><rect x="264" y="68" width="88" height="8" /><rect x="260" y="53" width="92" height="8" />
-      </g>
-      {/* a few lit windows */}
-      <g fill="#c0392b" opacity="0.5">
-        <rect x="272" y="85" width="12" height="11" /><rect x="320" y="85" width="12" height="11" />
-        <rect x="300" y="69" width="12" height="6" /><rect x="334" y="54" width="12" height="6" />
-      </g>
-    </g>
-  );
-  return (
-    <svg viewBox="0 0 430 120" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sky-c1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#fce8e6" />
-          <stop offset="100%" stopColor="#fdf4f3" />
-        </linearGradient>
-      </defs>
-      <rect width="430" height="120" fill="url(#sky-c1)" />
-      {/* plaza / ground */}
-      <rect x="0" y="114" width="430" height="6" fill="#f5c0bb" />
-
-      {/* recessed central block (drawn first so the wings read as in front) */}
-      <rect x="176" y="50" width="78" height="62" fill="#fff" stroke="#c0392b" strokeWidth="1.4" />
-      <g stroke="#c0392b" strokeWidth="0.8" opacity="0.18">
-        <line x1="188" y1="54" x2="188" y2="110" /><line x1="200" y1="54" x2="200" y2="110" />
-        <line x1="230" y1="54" x2="230" y2="110" /><line x1="242" y1="54" x2="242" y2="110" />
-      </g>
-
-      {/* right half + mirrored left half */}
-      {half}
-      <g transform="translate(430,0) scale(-1,1)">{half}</g>
-
-      {/* national crest on the central block */}
-      <circle cx="215" cy="66" r="8" fill="#fde8e6" stroke="#c0392b" strokeWidth="1.2" />
-      <line x1="215" y1="61" x2="215" y2="71" stroke="#c0392b" strokeWidth="1" />
-      <line x1="210" y1="64" x2="220" y2="64" stroke="#c0392b" strokeWidth="1" />
-      {/* entrance */}
-      <rect x="200" y="92" width="30" height="20" fill="#c0392b" opacity="0.16" />
-      <line x1="215" y1="92" x2="215" y2="112" stroke="#fff" strokeWidth="1" opacity="0.6" />
-
-      {/* flagpoles in front */}
-      <g stroke="#c0392b" strokeWidth="1" opacity="0.6">
-        <line x1="206" y1="48" x2="206" y2="104" /><line x1="224" y1="48" x2="224" y2="104" />
-      </g>
-      <rect x="206" y="48" width="7" height="5" fill="#c0392b" opacity="0.45" />
-      <rect x="224" y="48" width="7" height="5" fill="#c0392b" opacity="0.45" />
-
-      {/* grand staircase */}
-      <g fill="#fde8e6" stroke="#c0392b" strokeWidth="0.7">
-        <rect x="172" y="104" width="86" height="3" />
-        <rect x="166" y="107" width="98" height="3" />
-        <rect x="160" y="110" width="110" height="3" />
-        <rect x="154" y="113" width="122" height="3" />
-      </g>
-    </svg>
-  );
-}
+// Poster-card illustrations. Property/corporate are inline SVGs; court cards
+// (employment + criminal) use the Hall of Justice illustration.
 
 export function PropertySVG() {
   return (
@@ -199,9 +113,9 @@ export function CorporateSVG() {
   );
 }
 
-// Employment (court) art doubles for criminal (court) cases.
+// Court cards (employment + criminal) show the Hall of Justice illustration.
 export function CaseIllustration({ type }) {
   if (type === 'property') return <PropertySVG />;
   if (type === 'corporate') return <CorporateSVG />;
-  return <EmploymentSVG />; // employment + criminal
+  return <img src={hallOfJustice} alt="Hall of Justice" loading="lazy" />;
 }
