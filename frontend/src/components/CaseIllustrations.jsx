@@ -1,7 +1,17 @@
 // Poster-card illustrations, copied verbatim from the InsightTT reference design
 // (SVG attributes converted to JSX camelCase). One per case type.
 
+// Trinidad & Tobago Hall of Justice — the brutalist stack of cantilevered
+// concrete tiers (widening as they rise) on pillars. Used for court cards
+// (employment + criminal).
 export function EmploymentSVG() {
+  // Tiers from bottom to top — each wider than the one below (top-heavy cantilever).
+  const tiers = [
+    { x: 118, w: 194, y: 78 },
+    { x: 106, w: 218, y: 64 },
+    { x: 92,  w: 246, y: 50 },
+    { x: 78,  w: 274, y: 36 },
+  ];
   return (
     <svg viewBox="0 0 430 120" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -11,57 +21,49 @@ export function EmploymentSVG() {
         </linearGradient>
       </defs>
       <rect width="430" height="120" fill="url(#sky-c1)" />
+      {/* Plaza / ground */}
       <rect x="0" y="110" width="430" height="10" fill="#f5c0bb" />
-      {/* Flanking trees */}
-      <rect x="28" y="86" width="4" height="24" fill="#a0522d" />
-      <ellipse cx="30" cy="82" rx="14" ry="9" fill="#c0392b" opacity="0.2" />
-      <rect x="398" y="86" width="4" height="24" fill="#a0522d" />
-      <ellipse cx="400" cy="82" rx="14" ry="9" fill="#c0392b" opacity="0.2" />
-      {/* Main block */}
-      <rect x="65" y="30" width="300" height="80" fill="#fff" rx="2" />
-      <rect x="65" y="30" width="300" height="80" fill="none" stroke="#c0392b" strokeWidth="2" rx="2" />
-      {/* Horizontal bands */}
-      <rect x="65" y="46" width="300" height="5" fill="#fde8e6" />
-      <rect x="65" y="62" width="300" height="5" fill="#fde8e6" />
-      <rect x="65" y="78" width="300" height="5" fill="#fde8e6" />
-      <rect x="65" y="94" width="300" height="5" fill="#fde8e6" />
-      {/* Columns */}
-      <g fill="#fde8e6">
-        <rect x="98" y="30" width="6" height="80" />
-        <rect x="138" y="30" width="6" height="80" />
-        <rect x="178" y="30" width="6" height="80" />
-        <rect x="218" y="30" width="6" height="80" />
-        <rect x="258" y="30" width="6" height="80" />
-        <rect x="298" y="30" width="6" height="80" />
-        <rect x="338" y="30" width="6" height="80" />
+      {/* Flanking palms */}
+      <rect x="32" y="84" width="3" height="26" fill="#c0392b" opacity="0.4" />
+      <ellipse cx="33" cy="80" rx="13" ry="8" fill="#c0392b" opacity="0.18" />
+      <rect x="396" y="84" width="3" height="26" fill="#c0392b" opacity="0.4" />
+      <ellipse cx="397" cy="80" rx="13" ry="8" fill="#c0392b" opacity="0.18" />
+      {/* Ground-floor pillars (open colonnade the stack sits on) */}
+      <g fill="#fde8e6" stroke="#c0392b" strokeWidth="1">
+        <rect x="126" y="90" width="8" height="20" />
+        <rect x="162" y="90" width="8" height="20" />
+        <rect x="198" y="90" width="8" height="20" />
+        <rect x="234" y="90" width="8" height="20" />
+        <rect x="270" y="90" width="8" height="20" />
+        <rect x="296" y="90" width="8" height="20" />
       </g>
-      {/* Windows */}
-      <g fill="#c0392b" opacity="0.1">
-        <rect x="74" y="35" width="18" height="8" rx="1" /><rect x="106" y="35" width="18" height="8" rx="1" /><rect x="146" y="35" width="18" height="8" rx="1" /><rect x="186" y="35" width="18" height="8" rx="1" /><rect x="226" y="35" width="18" height="8" rx="1" /><rect x="266" y="35" width="18" height="8" rx="1" /><rect x="306" y="35" width="18" height="8" rx="1" /><rect x="346" y="35" width="18" height="8" rx="1" />
-        <rect x="74" y="52" width="18" height="8" rx="1" /><rect x="106" y="52" width="18" height="8" rx="1" /><rect x="146" y="52" width="18" height="8" rx="1" /><rect x="186" y="52" width="18" height="8" rx="1" /><rect x="226" y="52" width="18" height="8" rx="1" /><rect x="266" y="52" width="18" height="8" rx="1" /><rect x="306" y="52" width="18" height="8" rx="1" /><rect x="346" y="52" width="18" height="8" rx="1" />
-        <rect x="74" y="68" width="18" height="8" rx="1" /><rect x="106" y="68" width="18" height="8" rx="1" /><rect x="146" y="68" width="18" height="8" rx="1" /><rect x="186" y="68" width="18" height="8" rx="1" /><rect x="226" y="68" width="18" height="8" rx="1" /><rect x="266" y="68" width="18" height="8" rx="1" /><rect x="306" y="68" width="18" height="8" rx="1" /><rect x="346" y="68" width="18" height="8" rx="1" />
-      </g>
-      <rect x="146" y="35" width="18" height="8" rx="1" fill="#c0392b" opacity="0.55" />
-      <rect x="266" y="52" width="18" height="8" rx="1" fill="#c0392b" opacity="0.55" />
-      <rect x="186" y="68" width="18" height="8" rx="1" fill="#c0392b" opacity="0.55" />
-      {/* Top bar */}
-      <rect x="65" y="26" width="300" height="5" fill="#c0392b" rx="1" />
-      {/* Rooftop */}
-      <rect x="188" y="16" width="54" height="12" fill="#f5c0bb" rx="1" />
-      <rect x="188" y="16" width="54" height="12" fill="none" stroke="#c0392b" strokeWidth="1.5" rx="1" />
-      {/* Scales icon */}
-      <line x1="215" y1="6" x2="215" y2="17" stroke="#c0392b" strokeWidth="1.5" opacity="0.4" />
-      <line x1="207" y1="10" x2="223" y2="10" stroke="#c0392b" strokeWidth="1.5" opacity="0.4" />
-      <circle cx="207" cy="13" r="3" fill="none" stroke="#c0392b" strokeWidth="1" opacity="0.4" />
-      <circle cx="223" cy="13" r="3" fill="none" stroke="#c0392b" strokeWidth="1" opacity="0.4" />
-      {/* Entrance */}
-      <rect x="188" y="90" width="54" height="20" fill="#fde8e6" rx="1" />
-      <rect x="188" y="90" width="54" height="20" fill="none" stroke="#c0392b" strokeWidth="1.2" rx="1" />
-      <rect x="198" y="95" width="10" height="15" rx="5" fill="#c0392b" opacity="0.15" />
-      <rect x="215" y="95" width="10" height="15" rx="5" fill="#c0392b" opacity="0.15" />
-      <rect x="232" y="95" width="6" height="15" fill="#c0392b" opacity="0.15" />
-      {/* Steps */}
-      <rect x="176" y="108" width="78" height="3" fill="#f5c0bb" rx="1" />
+      {/* Base plinth */}
+      <rect x="112" y="108" width="206" height="3" fill="#f5c0bb" />
+      {/* Stacked cantilevered tiers (bottom -> top), each overhanging the one below */}
+      {tiers.map((t, i) => (
+        <g key={i}>
+          {/* slab */}
+          <rect x={t.x} y={t.y} width={t.w} height="14" fill="#fff" />
+          <rect x={t.x} y={t.y} width={t.w} height="14" fill="none" stroke="#c0392b" strokeWidth="1.5" />
+          {/* projecting cantilever underside */}
+          <rect x={t.x} y={t.y + 14} width={t.w} height="2" fill="#f5c0bb" />
+          {/* ribbon glazing */}
+          <rect x={t.x + 6} y={t.y + 3} width={t.w - 12} height="7" fill="#c0392b" opacity="0.12" />
+          {/* a couple of lit windows */}
+          <rect x={t.x + 6 + (i % 2 === 0 ? 14 : 40)} y={t.y + 3} width="12" height="7" fill="#c0392b" opacity="0.5" />
+          <rect x={t.x + t.w - 30} y={t.y + 3} width="12" height="7" fill="#c0392b" opacity="0.5" />
+        </g>
+      ))}
+      {/* Rooftop service block */}
+      <rect x="186" y="28" width="58" height="8" fill="#f5c0bb" />
+      <rect x="186" y="28" width="58" height="8" fill="none" stroke="#c0392b" strokeWidth="1" />
+      {/* Scales of justice on the roof */}
+      <line x1="215" y1="14" x2="215" y2="28" stroke="#c0392b" strokeWidth="1.5" opacity="0.55" />
+      <line x1="205" y1="18" x2="225" y2="18" stroke="#c0392b" strokeWidth="1.5" opacity="0.55" />
+      <path d="M205 18 L201 24 L209 24 Z" fill="none" stroke="#c0392b" strokeWidth="1" opacity="0.55" />
+      <path d="M225 18 L221 24 L229 24 Z" fill="none" stroke="#c0392b" strokeWidth="1" opacity="0.55" />
+      {/* Entrance under the colonnade */}
+      <rect x="196" y="96" width="38" height="14" fill="#c0392b" opacity="0.14" />
     </svg>
   );
 }
