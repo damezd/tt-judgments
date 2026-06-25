@@ -7,10 +7,12 @@ import CaseViewer   from './components/CaseViewer';
 import Insights     from './components/Insights';
 import NetworkGraph from './components/NetworkGraph';
 import CrimeView    from './components/CrimeView';
+import NoticesBrowse from './components/NoticesBrowse';
 import { getToken, logout } from './api/auth';
 
 const TABS = [
   { id: 'cases',    label: 'Cases' },
+  { id: 'notices',  label: 'Notices' },
   { id: 'people',   label: 'People' },
   { id: 'entities', label: 'Companies' },
   { id: 'crime',    label: 'Crime' },
@@ -63,6 +65,7 @@ export default function App() {
 
       <main style={edgeToEdge ? undefined : { padding: '16px 14px' }}>
         {tab === 'cases'    && <CasesBrowse  onOpenCase={openCase} initial={casesInit} onCount={setCaseCount} />}
+        {tab === 'notices'  && <NoticesBrowse />}
         {tab === 'people'   && <PeopleSearch onOpenCase={openCase} />}
         {tab === 'entities' && <EntitySearch onOpenCase={openCase} />}
         {tab === 'crime'    && <CrimeView    onOpenCase={openCase} />}
