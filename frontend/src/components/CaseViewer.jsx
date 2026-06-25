@@ -91,12 +91,12 @@ export default function CaseViewer({ slug, onClose }) {
     <div className="viewer-overlay" onClick={onClose}>
       <div className="viewer-sheet" onClick={e => e.stopPropagation()}>
         <div className="viewer-bar">
-          <button className="viewer-x" onClick={onClose}>Close</button>
+          <button className="viewer-x" onClick={onClose}>‹ Back</button>
           <div className="viewer-dots">
             <span className={page === 0 ? 'on' : ''} onClick={() => goTo(0)} />
             <span className={page === 1 ? 'on' : ''} onClick={() => goTo(1)} />
           </div>
-          <button className="viewer-x" onClick={share} disabled={!c}>Share</button>
+          <button className="viewer-x" onClick={share} disabled={!c}>Share ↗</button>
         </div>
 
         {err && <p className="text-center text-red-300" style={{ padding: 24 }}>{err}</p>}
