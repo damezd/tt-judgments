@@ -46,3 +46,4 @@ export const getCase        = (slug)=> get(`/api/cases/${encodeURIComponent(slug
 export const getInsights    = ()    => get('/api/insights');
 export const getNetwork     = ()    => get('/api/network');
 export const getCrime       = ()    => get('/api/crime');
+export const getNotices     = ()    => get('/api/notices');

@@ -101,11 +101,36 @@ CREATE TABLE IF NOT EXISTS properties (
   INDEX idx_pcase (case_id),
   CONSTRAINT fk_prop_case FOREIGN KEY (case_id) REFERENCES cases(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS notices (
+  id             INT AUTO_INCREMENT PRIMARY KEY,
+  slug           VARCHAR(80)  NOT NULL,
+  notice_no      INT,
+  ntype          VARCHAR(40)  DEFAULT '',
+  title          VARCHAR(400) NOT NULL,
+  act            VARCHAR(300) DEFAULT '',
+  instrument     VARCHAR(120) DEFAULT '',
+  person_name    VARCHAR(255) DEFAULT '',
+  alias          VARCHAR(120) DEFAULT '',
+  address        VARCHAR(400) DEFAULT '',
+  detained_at    VARCHAR(300) DEFAULT '',
+  official       VARCHAR(200) DEFAULT '',
+  official_role  VARCHAR(200) DEFAULT '',
+  date_made      VARCHAR(20)  DEFAULT '',
+  date_published VARCHAR(20)  DEFAULT '',
+  citation       VARCHAR(300) DEFAULT '',
+  summary        TEXT,
+  social_headline TEXT,
+  social_post    TEXT,
+  source_file    VARCHAR(200) DEFAULT '',
+  UNIQUE KEY uq_notice_slug (slug),
+  INDEX idx_ntype (ntype)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 `;
 
 // Zero-downtime import: build everything in *_stg tables, then atomically swap
 // them in with a single RENAME. Parent/child order matters for create & drop.
-const TABLES = ['cases', 'people', 'companies', 'financials', 'properties'];
+const TABLES = ['cases', 'people', 'companies', 'financials', 'properties', 'notices'];
 const SFX = '_stg';
 
 // Staging DDL: suffix the table names and drop the FK constraints. The rebuilt
@@ -122,7 +147,7 @@ function stagingSchema() {
 
 const files = process.argv.slice(2).length
   ? process.argv.slice(2)
-  : fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json')).map(f => path.join(DATA_DIR, f));
+  : fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json') && f !== 'notices.json').map(f => path.join(DATA_DIR, f));
 
 const list  = a => (Array.isArray(a) ? a : []).map(x => String(x).trim()).filter(Boolean).join('||');
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
@@ -224,6 +249,27 @@ const isBank = (name, banks) => {
     }
   }
 
+  // Legal notices (Gazette) — separate source file, own table.
+  let nNotice = 0;
+  const noticesFile = path.join(DATA_DIR, 'notices.json');
+  if (fs.existsSync(noticesFile)) {
+    const notices = JSON.parse(fs.readFileSync(noticesFile, 'utf8'));
+    console.log(`Importing ${notices.length} legal notices...`);
+    for (const n of notices) {
+      let slug = slugify(`notice-${n.notice_no}-${n.person_name || n.title}`) || ('notice-' + (nNotice + 1));
+      while (usedSlugs.has(slug)) slug += '-x';
+      usedSlugs.add(slug);
+      await db.query(
+        `INSERT INTO notices${SFX} (slug,notice_no,ntype,title,act,instrument,person_name,alias,address,detained_at,official,official_role,date_made,date_published,citation,summary,social_headline,social_post,source_file)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [slug, n.notice_no || null, n.type || '', n.title || '', n.act || '', n.instrument || '', n.person_name || '', n.alias || '',
+         n.address || '', n.detained_at || '', n.official || '', n.official_role || '', n.date_made || '', n.date_published || '',
+         n.citation || '', n.summary || '', n.social_headline || '', n.social_post || '', n.source_file || '']
+      );
+      nNotice++;
+    }
+  }
+
   // Atomically swap staging -> live. A single RENAME TABLE is atomic in MySQL,
   // so there is no moment where a table is missing or empty for API queries.
   console.log('Swapping staging tables into place...');
@@ -243,6 +289,6 @@ const isBank = (name, banks) => {
   for (const t of [...TABLES].reverse()) if (liveExists.has(t)) await db.query(`DROP TABLE IF EXISTS ${t}_old`);
   await db.query('SET FOREIGN_KEY_CHECKS=1');
 
-  console.log(`\nDone. cases=${nCases} people=${nPeople} (accused=${nCrim}) companies/banks=${nCo} financials=${nFin} properties=${nProp}`);
+  console.log(`\nDone. cases=${nCases} people=${nPeople} (accused=${nCrim}) companies/banks=${nCo} financials=${nFin} properties=${nProp} notices=${nNotice}`);
   await db.end();
 })().catch(e => { console.error(e); process.exit(1); });
