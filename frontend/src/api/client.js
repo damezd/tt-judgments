@@ -1,4 +1,4 @@
-import { getToken } from './auth';
+import { getToken, logout } from './auth';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
@@ -17,7 +17,13 @@ async function get(path) {
         signal: ctrl.signal,
       });
       clearTimeout(timer);
-      if (res.status === 401) throw new Error('UNAUTHORIZED');
+      if (res.status === 401) {
+        // Token expired/invalid — drop it and send the user back to login.
+        logout();
+        try { sessionStorage.setItem('ttj_expired', '1'); } catch {}
+        if (typeof window !== 'undefined') window.dispatchEvent(new Event('ttj-auth-expired'));
+        throw new Error('UNAUTHORIZED');
+      }
       if (!res.ok) throw new Error(res.status >= 500 ? '__retry__' : 'Request failed');
       return await res.json();
     } catch (e) {

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { login } from '../api/auth';
 
+let wasExpired = false;
+try { wasExpired = sessionStorage.getItem('ttj_expired') === '1'; sessionStorage.removeItem('ttj_expired'); } catch {}
+
 export default function LoginPage({ onLogin }) {
   const [password, setPassword] = useState('');
   const [error,    setError]    = useState('');
@@ -30,6 +33,11 @@ export default function LoginPage({ onLogin }) {
         <p className="text-center text-xs mb-6" style={{ color: 'var(--muted)' }}>
           Court-judgment knowledge base · enter password to continue
         </p>
+        {wasExpired && !error && (
+          <p className="text-center text-xs mb-4" style={{ color: 'var(--amber)' }}>
+            Your session expired — please sign in again.
+          </p>
+        )}
         <form onSubmit={handleSubmit}>
           <label className="block text-xs mb-1.5" style={{ color: 'var(--muted)' }}>Password</label>
           <input className="field-input mb-4" type="password" placeholder="••••••••"
