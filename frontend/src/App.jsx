@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LoginPage    from './components/LoginPage';
 import PeopleSearch from './components/PeopleSearch';
 import EntitySearch from './components/EntitySearch';
@@ -24,6 +24,13 @@ export default function App() {
   const [openSlug, setOpenSlug] = useState(null);
   const [casesInit, setCasesInit] = useState(null);
   const [caseCount, setCaseCount] = useState(null);
+
+  // When any request hits a 401 (expired/invalid token), bounce to login.
+  useEffect(() => {
+    const onExpired = () => { setOpenSlug(null); setAuthed(false); };
+    window.addEventListener('ttj-auth-expired', onExpired);
+    return () => window.removeEventListener('ttj-auth-expired', onExpired);
+  }, []);
 
   const handleLogout = () => { logout(); setAuthed(false); };
   const openCase = (slug) => setOpenSlug(slug);
