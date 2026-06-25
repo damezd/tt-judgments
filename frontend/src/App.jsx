@@ -3,7 +3,7 @@ import LoginPage    from './components/LoginPage';
 import PeopleSearch from './components/PeopleSearch';
 import EntitySearch from './components/EntitySearch';
 import CasesBrowse  from './components/CasesBrowse';
-import CaseDetail   from './components/CaseDetail';
+import CaseViewer   from './components/CaseViewer';
 import Insights     from './components/Insights';
 import NetworkGraph from './components/NetworkGraph';
 import CrimeView    from './components/CrimeView';
@@ -63,7 +63,7 @@ export default function App() {
         {tab === 'network'  && <NetworkGraph onOpenCase={openCase} />}
       </main>
 
-      {openSlug && <CaseDetail slug={openSlug} onClose={() => setOpenSlug(null)} />}
+      {openSlug && <CaseViewer slug={openSlug} onClose={() => setOpenSlug(null)} />}
       <div id="copy-toast" />
 
       <p className="text-center" style={{ color: 'var(--muted)', fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '.08em', padding: '20px 16px 28px', textTransform: 'uppercase' }}>
