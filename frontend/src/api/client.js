@@ -2,24 +2,31 @@ import { getToken } from './auth';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 async function get(path) {
-  // Abort slow requests so the UI can show an error/retry instead of hanging
-  // forever (e.g. while the backend is redeploying or cold-starting).
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 25000);
-  try {
-    const res = await fetch(`${API_BASE}${path}`, {
-      headers: { Authorization: `Bearer ${getToken()}` },
-      signal: ctrl.signal,
-    });
-    if (res.status === 401) throw new Error('UNAUTHORIZED');
-    if (!res.ok) throw new Error('Request failed');
-    return res.json();
-  } catch (e) {
-    if (e.name === 'AbortError') throw new Error('The server took too long to respond — it may be waking up. Please retry.');
-    throw e;
-  } finally {
-    clearTimeout(timer);
+  // Retry transient failures (cold start / redeploy / flaky network) with
+  // backoff so the UI self-heals instead of hanging on "Loading…".
+  const attempts = 4;
+  for (let i = 0; i < attempts; i++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 12000);
+    try {
+      const res = await fetch(`${API_BASE}${path}`, {
+        headers: { Authorization: `Bearer ${getToken()}` },
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      if (res.status === 401) throw new Error('UNAUTHORIZED');
+      if (!res.ok) throw new Error(res.status >= 500 ? '__retry__' : 'Request failed');
+      return await res.json();
+    } catch (e) {
+      clearTimeout(timer);
+      if (e.message === 'UNAUTHORIZED' || e.message === 'Request failed') throw e;
+      // retryable: timeout (AbortError), network error, or 5xx
+      if (i < attempts - 1) { await sleep(800 * 2 ** i); continue; }
+      throw new Error('The server took too long to respond — it may be waking up. Please retry.');
+    }
   }
 }
 
