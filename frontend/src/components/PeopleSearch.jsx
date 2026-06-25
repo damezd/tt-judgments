@@ -6,6 +6,8 @@ function PersonCard({ group, onOpenCase }) {
   const [open, setOpen] = useState(group.mentions.length <= 3);
   const roles = [...new Set(group.mentions.map(m => m.kind))];
   const hasCrime = group.mentions.some(m => m.crime_category?.length || m.kind === 'accused');
+  const detained = group.mentions.some(m => m.notice && m.ntype === 'detention_order');
+  const n = group.mentions.length;
   return (
     <div className="result-card">
       <div className="flex flex-wrap items-center gap-2">
@@ -13,15 +15,26 @@ function PersonCard({ group, onOpenCase }) {
           <span>{group.name}</span>
           <span className={`chevron ${open ? 'open' : ''}`}>▸</span>
         </button>
-        {hasCrime ? <CrimeBadge /> : null}
+        {detained ? <span className="badge crime">Detained · SoE 2026</span> : (hasCrime ? <CrimeBadge /> : null)}
         <span className="text-xs" style={{ color: '#5b6780' }}>
-          {group.mentions.length} case{group.mentions.length !== 1 ? 's' : ''} · {roles.join(', ')}
+          {n} record{n !== 1 ? 's' : ''} · {roles.join(', ')}
         </span>
         <a className="pill-link ml-1" href={webSearch(group.name)} target="_blank" rel="noreferrer">Web</a>
       </div>
       {open && (
         <div className="mt-2 flex flex-col gap-2">
-          {group.mentions.map((m, i) => (
+          {group.mentions.map((m, i) => m.notice ? (
+            <div key={i} className="flex flex-wrap items-center gap-2 text-sm">
+              <span className="badge" style={{ background: '#fde8e6', color: '#c0392b', border: '1px solid #f5c0bb' }}>
+                {m.ntype === 'detention_order' ? 'Detention Order' : 'Legal Notice'}
+              </span>
+              <span className="font-semibold" style={{ color: '#1F3864' }}>{m.headline || m.title}</span>
+              <span className="text-xs" style={{ color: '#5b6780' }}>
+                Legal Notice No. {m.notice_no} · {m.act}{m.official ? ` · ${m.official}` : ''}
+                {m.alias ? ` · aka “${m.alias}”` : ''}{m.address ? ` · ${m.address}` : ''}
+              </span>
+            </div>
+          ) : (
             <div key={i} className="flex flex-wrap items-center gap-2 text-sm">
               <Badge value={m.value} />
               {m.crime_category?.map((cat, j) => <CrimeBadge key={j} label={cat} />)}
