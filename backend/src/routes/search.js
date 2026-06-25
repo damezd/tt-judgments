@@ -36,6 +36,23 @@ router.get('/search/people', async (req, res) => {
         court: r.court, date: r.case_date, value: r.osint_value, url: r.url,
       });
     }
+    // Cross-link Gazette legal-notice detainees into the same person groups.
+    const [nrows] = await db.query(`
+      SELECT notice_no, ntype, title, social_headline, person_name, alias, address,
+             detained_at, official, act, date_published, citation
+      FROM notices WHERE person_name <> '' AND person_name LIKE ?
+    `, [`%${q}%`]);
+    for (const n of nrows) {
+      const key = n.person_name.toLowerCase();
+      if (!map.has(key)) map.set(key, { name: n.person_name, mentions: [] });
+      map.get(key).mentions.push({
+        notice: true, ntype: n.ntype, kind: 'detainee', value: 'high',
+        title: n.title, headline: n.social_headline, notice_no: n.notice_no,
+        act: n.act, official: n.official, alias: n.alias, address: n.address,
+        detained_at: n.detained_at, date: n.date_published, citation: n.citation,
+      });
+    }
+
     const groups = Array.from(map.values())
       .sort((a, b) => b.mentions.length - a.mentions.length || a.name.localeCompare(b.name));
     res.json({ count: groups.length, groups });
