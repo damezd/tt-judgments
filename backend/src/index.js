@@ -2,6 +2,8 @@ const express = require('express');
 const cors    = require('cors');
 require('dotenv').config();
 
+// (redeploy nudge) keep service warm; health check is DB-independent below.
+
 const authRoutes     = require('./routes/auth');
 const searchRoutes   = require('./routes/search');
 const casesRoutes    = require('./routes/cases');
