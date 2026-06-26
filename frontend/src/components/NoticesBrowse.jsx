@@ -116,18 +116,26 @@ function NoticeArt({ no, accent, tint }) {
   );
 }
 
-// ── Dark infographic poster (detention detail) ──
-const D = { bg: '#16100e', panel: '#221915', line: '#3a2b25', red: '#e23d2e', redDim: '#7d241b', text: '#f4ece8', mut: '#a99c95' };
-const BIGPIC = [
-  ['public', 'Organised crime affects communities through violence, fear and instability.'],
-  ['verified_user', 'Strong laws plus enforcement build safer communities.'],
-  ['balance', 'The justice system is acting to hold OCG members accountable.'],
-];
+// ── Light editorial poster (detention detail) ──
+const L = { paper: '#f0ece3', card: '#ffffff', line: '#e3ddd0', ink: '#211c16', sub: '#6f665b', amber: '#b8763a', disc: '#2b2620', tint: '#f4ece0', footer: '#16100e', fInk: '#f0ece3', fSub: '#9a9088' };
+
+// duotone SVG illustrations (0..100 box), amber fill — match the share card
+function Illus({ kind, color = L.amber, size = 80 }) {
+  const inner = {
+    pistol: <><path fill={color} d="M5 40 h67 q3 0 3 3 v8 q0 2 -2 2 h-9 v-4 h-4 v4 h-9 q-1 5 -6 7 l-5 23 q-1 3 -4 3 h-8 q-4 0 -3 -4 l5 -22 h-2 q-13 0 -13 -12 v-6 q0 -4 4 -5z" /><rect x="1" y="40" width="5" height="6" rx="1" fill={color} /></>,
+    kidnap: <><circle cx="50" cy="22" r="13" fill={color} /><path fill={color} d="M30 80 q0 -34 20 -34 q20 0 20 34 z" /><g stroke={L.tint} strokeWidth="3" fill="none"><path d="M33 58 h34" /><path d="M31 68 h38" /></g><rect x="46" y="54" width="8" height="20" rx="2" fill={L.tint} /></>,
+    gang: <>{[[28, 0.9], [72, 0.9], [50, 1.05]].map(([x, sc], i) => <g key={i} transform={`translate(${x},0) scale(${sc})`}><circle cx="0" cy="22" r="11" fill={color} /><path fill={color} d="M-17 80 q0 -28 17 -28 q17 0 17 28 z" /></g>)}</>,
+    justice: <><circle cx="50" cy="15" r="9" fill={color} /><path fill={color} d="M40 90 q-2 -54 10 -54 q12 0 10 54 z" /><rect x="48" y="20" width="4" height="44" fill={color} /><rect x="20" y="30" width="60" height="3.5" rx="1.5" fill={color} /><rect x="26" y="22" width="4" height="9" fill={color} /><rect x="70" y="22" width="4" height="9" fill={color} /><g stroke={color} strokeWidth="2" fill="none"><path d="M28 33 l-7 13 h14 z" /><path d="M72 33 l-7 13 h14 z" /></g><path fill={color} d="M14 46 a7 5 0 0 0 14 0 z" /><path fill={color} d="M58 46 a7 5 0 0 0 14 0 z" /></>,
+  }[kind];
+  if (!inner) return null;
+  return <svg viewBox="0 0 100 100" width={size} height={size} style={{ display: 'block' }}>{inner}</svg>;
+}
+const ART_KEY = { 'Firearms': 'pistol', 'Kidnapping': 'kidnap', 'Gang / OCG activity': 'gang' };
 
 function Headline({ text, name }) {
   if (name && text && text.toLowerCase().includes(name.toLowerCase())) {
     const i = text.toLowerCase().indexOf(name.toLowerCase());
-    return <>{text.slice(0, i)}<span style={{ color: D.red }}>{text.slice(i, i + name.length)}</span>{text.slice(i + name.length)}</>;
+    return <>{text.slice(0, i)}<span style={{ color: L.amber }}>{text.slice(i, i + name.length)}</span>{text.slice(i + name.length)}</>;
   }
   return <>{text}</>;
 }
@@ -143,151 +151,111 @@ function NoticeDetail({ n, onClose, onShare }) {
   const t = TYPE[n.ntype] || TYPE.default;
   const isPerson = !!n.person_name;
   const { gang, role } = gangRole(n.summary);
-  const grounds = isPerson ? allegationsFrom(n.summary, n.person_name) : [];
-  const aliases = (n.alias || '').split(';').map(s => s.trim()).filter(Boolean);
-  const heroIcon = n.ntype === 'proceeds_of_crime' ? 'paid' : 'lock';
+  const grounds = (isPerson ? allegationsFrom(n.summary, n.person_name) : []).slice(0, 3);
+  const intro = firstSentences(n.social_post || n.summary, 170);
+  const inFull = firstSentences(n.summary || n.social_post, 520);
   const copyPost = () => copyText(`${n.social_headline ? n.social_headline + '\n\n' : ''}${n.social_post || n.summary || ''}`);
 
-  const card = { background: D.panel, border: `1px solid ${D.line}`, borderRadius: 14, padding: 16 };
-  const numBadge = i => (
-    <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 11, fontWeight: 700, color: '#fff', background: D.red, borderRadius: 6, padding: '2px 7px', letterSpacing: 1 }}>
-      {String(i).padStart(2, '0')}
-    </span>
-  );
-  const iconChip = name => (
-    <span style={{ flex: '0 0 40px', width: 40, height: 40, borderRadius: '50%', background: D.red, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <MIcon name={name} color={D.bg} size={24} />
-    </span>
-  );
-
-  let no = 0;
   return (
     <div onClick={onClose}
       style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.7)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', overflow: 'auto', padding: '4vh 10px' }}>
+      <svg width="0" height="0" style={{ position: 'absolute' }}><filter id="noticeGold" colorInterpolationFilters="sRGB"><feColorMatrix type="matrix" values="1.05 0.35 0 0 0.03  0.78 0.32 0 0 0.02  0.22 0.05 0 0 0  0 0 0 1 0" /></filter></svg>
       <div onClick={e => e.stopPropagation()} className="panel-in"
-        style={{ width: '100%', maxWidth: 460, background: D.bg, color: D.text, borderRadius: 18, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.6)' }}>
+        style={{ width: '100%', maxWidth: 460, background: L.paper, color: L.ink, borderRadius: 18, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.45)' }}>
 
         {/* HERO */}
-        <div style={{ position: 'relative', padding: '18px 18px 20px', overflow: 'hidden', minHeight: 300, background: D.bg }}>
-          {/* blood-moon figure photo, anchored right; fades into the dark headline zone */}
+        <div style={{ position: 'relative', padding: '20px 20px 22px', overflow: 'hidden', minHeight: 300, background: L.paper }}>
+          {/* gold-toned figure photo, anchored right; fades into the cream headline zone */}
           {isPerson && (
-            <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '62%', pointerEvents: 'none',
-              backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center 22%' }} />
+            <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '60%', pointerEvents: 'none',
+              backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center 20%', filter: 'url(#noticeGold)' }} />
           )}
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none',
-            background: `linear-gradient(90deg, ${D.bg} 34%, rgba(22,16,14,0.55) 56%, rgba(22,16,14,0) 78%), linear-gradient(0deg, ${D.bg} 2%, rgba(22,16,14,0) 28%)` }} />
-          {!isPerson && (
-            <div style={{ position: 'absolute', top: 24, right: 14, opacity: 0.12, pointerEvents: 'none' }}>
-              <MIcon name={heroIcon} color={D.text} size={120} />
-            </div>
-          )}
+            background: `linear-gradient(90deg, ${L.paper} 36%, rgba(240,236,227,0.5) 58%, rgba(240,236,227,0) 80%), linear-gradient(0deg, ${L.paper} 1%, rgba(240,236,227,0) 26%)` }} />
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative' }}>
             <div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 13, fontWeight: 600, letterSpacing: '.05em' }}>Insight<span style={{ color: D.red }}>TT</span></div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 8, letterSpacing: '.12em', color: D.mut, textTransform: 'uppercase' }}>Court Judgments</div>
+              <div style={{ fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 22, lineHeight: 1 }}>Insight<span style={{ color: L.amber }}>TT</span></div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 8, letterSpacing: '.14em', color: L.amber, textTransform: 'uppercase', marginTop: 3 }}>Court Judgments</div>
             </div>
-            <button onClick={onClose} aria-label="Close" style={{ background: 'rgba(255,255,255,.1)', border: 'none', color: '#fff', width: 30, height: 30, borderRadius: '50%', fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
+            <button onClick={onClose} aria-label="Close" style={{ background: L.card, border: `1px solid ${L.line}`, color: L.ink, width: 30, height: 30, borderRadius: '50%', fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
           </div>
 
           {/* citation ribbon */}
-          <div style={{ display: 'inline-block', marginTop: 16, background: D.red, color: '#fff', fontFamily: 'JetBrains Mono, monospace', fontSize: 9, fontWeight: 600, letterSpacing: '.06em', padding: '5px 10px', borderRadius: 4, position: 'relative' }}>
+          <div style={{ display: 'inline-block', marginTop: 14, background: L.amber, color: '#fff', fontFamily: 'JetBrains Mono, monospace', fontSize: 9, fontWeight: 600, letterSpacing: '.06em', padding: '5px 10px', borderRadius: 4, position: 'relative' }}>
             {(n.citation || `${t.label} · No. ${n.notice_no}`).toUpperCase()}
           </div>
 
-          <h2 style={{ position: 'relative', marginTop: 14, fontSize: 28, lineHeight: 1.06, fontWeight: 800, letterSpacing: '-.01em', textTransform: 'uppercase', maxWidth: isPerson ? 250 : undefined }}>
+          <h2 style={{ position: 'relative', marginTop: 14, fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 30, lineHeight: 1.12, fontWeight: 400, maxWidth: isPerson ? 250 : undefined }}>
             <Headline text={n.social_headline || n.title} name={n.person_name} />
           </h2>
-          <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: D.mut, maxWidth: isPerson ? 250 : 360 }}>
-            {firstSentences(n.social_post || n.summary, isPerson ? 150 : 220)}
+          <div style={{ width: 56, height: 4, borderRadius: 2, background: L.amber, marginTop: 12 }} />
+          <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: L.sub, maxWidth: isPerson ? 250 : 360 }}>
+            {intro}
           </p>
           <div style={{ marginTop: 12, display: 'flex', gap: 16, alignItems: 'center' }}>
-            <button onClick={copyPost} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.mut, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
-              <MIcon name="bookmark" color={D.mut} size={15} /> Copy post
+            <button onClick={copyPost} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: L.sub, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
+              <MIcon name="bookmark" color={L.sub} size={15} /> Copy post
             </button>
             {onShare && (
-              <button onClick={onShare} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.red, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
-              <MIcon name="public" color={D.red} size={15} /> Share card ↗
+              <button onClick={onShare} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: L.amber, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
+              <MIcon name="public" color={L.amber} size={15} /> Share card ↗
             </button>
             )}
           </div>
         </div>
 
-        <div style={{ padding: '4px 14px 14px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {/* PERSON CARD — cream, to match the shareable card */}
+        <div style={{ padding: '0 18px 20px', display: 'flex', flexDirection: 'column', gap: 18 }}>
+          {/* PROFILE CARD (white) */}
           {isPerson && (
-            <div style={{ background: '#efe7db', border: '1px solid #d8cdbd', borderRadius: 14, padding: 16, display: 'flex', alignItems: 'center', gap: 13 }}>
-              <div style={{ flex: '0 0 52px', width: 52, height: 52, borderRadius: '50%', background: D.red, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 21 }}>{initials(n.person_name)}</div>
+            <div style={{ background: L.card, border: `1px solid ${L.line}`, borderRadius: 16, padding: 16, display: 'flex', alignItems: 'center', gap: 13, marginTop: 4 }}>
+              <div style={{ flex: '0 0 52px', width: 52, height: 52, borderRadius: '50%', background: L.disc, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: 18 }}>{initials(n.person_name)}</div>
               <div style={{ minWidth: 0, flex: 1 }}>
-                <div style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.1, color: '#1a1310' }}>{n.person_name}</div>
-                {aliases.length ? <div style={{ fontSize: 12.5, color: D.red, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
-                {(role || gang) ? <div style={{ fontSize: 12.5, color: '#6e5f52', marginTop: 2 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, paddingTop: 8, borderTop: '1px solid #d8cdbd', fontSize: 12, color: '#1a1310' }}>
-                  <MIcon name="lock" color={D.red} size={16} /> Detained under the {(n.act || 'Emergency Powers Regulations, 2026').replace(/^The\s+/i, '')}
+                <div style={{ fontSize: 16, fontWeight: 800, lineHeight: 1.1, color: L.ink, textTransform: 'uppercase' }}>{n.person_name}</div>
+                <div style={{ fontSize: 12.5, color: L.sub, marginTop: 3 }}>{(role || gang) ? `${[role, gang].filter(Boolean).join(' • ')} (alleged)` : 'Named in detention order'}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 9, paddingTop: 9, borderTop: `1px solid ${L.line}`, fontSize: 12, color: L.ink }}>
+                  <MIcon name="lock" color={L.amber} size={16} /> Detained under the {(n.act || 'Anti-Gang Act, 2021').replace(/^The\s+/i, '')}
                 </div>
               </div>
             </div>
           )}
 
-          {/* GROUND CARDS */}
-          {grounds.map((g, i) => {
-            no = i + 1;
-            return (
-              <div key={i} style={card}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 9 }}>
-                  {numBadge(no)}
-                  {iconChip(g.icon || 'shield')}
-                  <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.02em', color: D.text }}>{g.label}</span>
-                </div>
-                {g.ev ? <div style={{ fontSize: 12.5, lineHeight: 1.5, color: D.mut }}>{g.ev}</div> : null}
-                {g.insight ? (
-                  <div style={{ display: 'flex', gap: 8, marginTop: 11, background: 'rgba(226,61,46,.1)', border: `1px solid ${D.redDim}55`, borderRadius: 9, padding: '8px 10px' }}>
-                    <MIcon name="lightbulb" color={D.red} size={16} />
-                    <span style={{ fontSize: 11.5, lineHeight: 1.4, color: D.text }}><b style={{ color: D.red }}>Key insight:</b> {g.insight}</span>
+          {/* GROUND CIRCLES */}
+          {grounds.length > 0 && (
+            <div style={{ display: 'flex', justifyContent: grounds.length < 3 ? 'space-evenly' : 'space-between', gap: 8 }}>
+              {grounds.map((g, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '0 0 auto', width: 124 }}>
+                  <div style={{ position: 'relative', width: 116, height: 116, borderRadius: '50%', background: L.tint, border: `1px solid ${L.line}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {ART_KEY[g.label] ? <Illus kind={ART_KEY[g.label]} size={78} /> : <MIcon name={g.icon || 'shield'} color={L.amber} size={56} />}
+                    <span style={{ position: 'absolute', top: 6, left: 6, width: 26, height: 26, borderRadius: '50%', background: L.amber, color: '#fff', fontFamily: 'JetBrains Mono, monospace', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{String(i + 1).padStart(2, '0')}</span>
                   </div>
-                ) : null}
-              </div>
-            );
-          })}
-
-          {/* LEGAL BASIS */}
-          <div style={card}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 9 }}>
-              {numBadge(no + 1)}{iconChip('balance')}
-              <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', color: D.text }}>Legal basis</span>
-            </div>
-            <div style={{ fontSize: 12.5, lineHeight: 1.5, color: D.mut }}>
-              Detention is granted under the <b style={{ color: D.text }}>{(n.act || 'Emergency Powers Regulations, 2026').replace(/^The\s+/i, '')}</b>
-              {n.official ? `, ordered by ${n.official}${n.official_role ? `, ${n.official_role}` : ''}.` : '.'}
-            </div>
-            <div style={{ marginTop: 9, fontSize: 11.5, color: D.text }}><b style={{ color: D.red }}>Purpose:</b> prevent further criminal activity and protect the public.</div>
-          </div>
-
-          {/* THE BIG PICTURE */}
-          <div style={card}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11 }}>
-              {numBadge(no + 2)}{iconChip('public')}
-              <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', color: D.text }}>The big picture</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-              {BIGPIC.map(([ic, txt], i) => (
-                <div key={i} style={{ display: 'flex', gap: 9, alignItems: 'flex-start' }}>
-                  <MIcon name={ic} color={D.red} size={17} />
-                  <span style={{ fontSize: 12, lineHeight: 1.45, color: D.mut }}>{txt}</span>
+                  <div style={{ marginTop: 10, fontSize: 12, fontWeight: 800, textTransform: 'uppercase', textAlign: 'center', color: L.ink, lineHeight: 1.2 }}>{g.label}</div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* IN FULL */}
+          <div>
+            <div style={{ display: 'inline-block', background: L.amber, color: '#fff', fontFamily: 'JetBrains Mono, monospace', fontSize: 11, fontWeight: 600, letterSpacing: '.08em', padding: '5px 12px', borderRadius: 4 }}>IN FULL</div>
+            <div style={{ display: 'flex', gap: 10, marginTop: 12, alignItems: 'flex-start' }}>
+              <p style={{ flex: 1, fontSize: 13, lineHeight: 1.6, color: L.ink, margin: 0 }}>{inFull}</p>
+              <div style={{ flex: '0 0 110px', opacity: 0.9 }}><Illus kind="justice" size={110} /></div>
             </div>
           </div>
         </div>
 
         {/* FOOTER */}
-        <div style={{ borderTop: `1px solid ${D.line}`, padding: '14px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
-          <div>
-            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '.03em' }}>STAY INFORMED. STAY SAFE.</div>
-            <div style={{ fontSize: 10, color: D.mut, marginTop: 2 }}>Real judgments. Real impact.</div>
+        <div style={{ background: L.footer, color: L.fInk, padding: '16px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ width: 30, height: 30, borderRadius: '50%', background: L.amber, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><MIcon name="balance" color={L.footer} size={18} /></span>
+            <div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, fontWeight: 600, letterSpacing: '.02em' }}>STAY INFORMED. STAY SAFE.</div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 10, color: L.fSub, marginTop: 2 }}>Real Judgments. Real Impact.</div>
+            </div>
           </div>
-          <div style={{ textAlign: 'right', fontSize: 9.5, color: D.mut, fontFamily: 'JetBrains Mono, monospace', maxWidth: 180 }}>
-            Follow <span style={{ color: D.red }}>@InsightTT</span> for court updates
+          <div style={{ textAlign: 'right', fontFamily: 'JetBrains Mono, monospace', fontSize: 9.5, color: L.fSub, maxWidth: 150 }}>
+            Follow <span style={{ color: L.amber }}>@InsightTT</span> for more court updates
           </div>
         </div>
       </div>
