@@ -10,12 +10,12 @@ const TYPE = {
   default: { label: 'Legal Notice', tag: 'Gazette', accent: '#1a1814', tint: '#efece5' },
 };
 
-// ── story-breakdown helpers (parsed from the grounds text) ───────────────────
+// ── parse the alleged grounds into labelled findings (each with a supporting line) ──
 const ALLEGATIONS = [
   [/contract killing/i, 'Contract killings'],
   [/reprisal/i, 'Reprisal attacks'],
   [/double homicide|homicide|\bmurder|to kill|assassinat/i, 'Murder / homicide'],
-  [/firearm|illegal gun|ammunition|high-powered/i, 'Firearms'],
+  [/firearm|illegal gun|ammunition|high-powered|rounds of/i, 'Firearms'],
   [/cocaine|marijuana|narcotic|\bdrug|trafficking/i, 'Drug trafficking'],
   [/motor vehicle|larceny ring|car[- ]theft|vehicle theft/i, 'Vehicle theft'],
   [/extortion|demanding money|menaces/i, 'Extortion'],
@@ -23,11 +23,24 @@ const ALLEGATIONS = [
   [/kidnap/i, 'Kidnapping'],
   [/wounding|grievous/i, 'Wounding'],
   [/outstanding warrant|warrants/i, 'Outstanding warrants'],
-  [/evade|evading|escape/i, 'Evading police'],
+  [/evade|evading|escape|avoided police/i, 'Evading police'],
+  [/gang|organised crim|organized crim|\bocg\b|\bicg\b/i, 'Gang / OCG activity'],
 ];
-function allegationsFrom(text) {
+function allegationsFrom(text, name) {
+  text = text || '';
+  if (name) text = text.split(name.toUpperCase()).join(name);
+  const sentences = text.split(/(?<=[.])\s+/);
   const out = [];
-  for (const [re, label] of ALLEGATIONS) if (re.test(text || '')) out.push(label);
+  const seen = new Set();
+  for (const [re, label] of ALLEGATIONS) {
+    if (!re.test(text)) continue;
+    let ev = '';
+    for (const s of sentences) { if (re.test(s)) { ev = s.trim(); break; } }
+    if (ev && seen.has(ev)) ev = '';
+    else if (ev) seen.add(ev);
+    if (ev.length > 165) ev = ev.slice(0, 162).trimEnd() + '…';
+    out.push({ label, ev });
+  }
   return out.slice(0, 6);
 }
 function gangRole(text) {
@@ -49,7 +62,6 @@ function initials(name) {
   return (name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
 }
 
-// Simple Gazette-style illustration: an official notice sheet with a seal.
 function NoticeArt({ no, accent, tint }) {
   return (
     <svg viewBox="0 0 430 168" xmlns="http://www.w3.org/2000/svg">
@@ -76,17 +88,7 @@ function NoticeArt({ no, accent, tint }) {
   );
 }
 
-// Small labelled block used across the infographic.
-function Block({ label, accent, children, span }) {
-  return (
-    <div style={{ gridColumn: span ? '1 / -1' : 'auto', border: '1px solid var(--border)', borderRadius: 10, padding: '11px 13px', background: 'rgba(255,255,255,.55)' }}>
-      <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: accent, fontWeight: 700, marginBottom: 5 }}>{label}</div>
-      <div style={{ fontSize: 14, lineHeight: 1.45, color: '#10131a' }}>{children}</div>
-    </div>
-  );
-}
-
-// The "second insight card" — a visual breakdown of one notice.
+// The "second insight card" — the alleged grounds, broken down.
 function NoticeDetail({ n, onClose }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
@@ -98,91 +100,66 @@ function NoticeDetail({ n, onClose }) {
   const t = TYPE[n.ntype] || TYPE.default;
   const isPerson = !!n.person_name;
   const { gang, role } = gangRole(n.summary);
-  const allegs = allegationsFrom(n.summary);
-  const addresses = (n.address || '').split(';').map(s => s.trim()).filter(Boolean);
+  const allegs = allegationsFrom(n.summary, n.person_name);
   const aliases = (n.alias || '').split(';').map(s => s.trim()).filter(Boolean);
-
   const copyPost = () => copyText(`${n.social_headline ? n.social_headline + '\n\n' : ''}${n.social_post || n.summary || ''}`);
 
   return (
     <div onClick={onClose}
       style={{ position: 'fixed', inset: 0, background: 'rgba(3,8,20,.6)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', overflow: 'auto', padding: '5vh 12px' }}>
-      <div onClick={e => e.stopPropagation()} className="glass panel-in" style={{ width: '100%', maxWidth: 760, padding: 0, overflow: 'hidden' }}>
+      <div onClick={e => e.stopPropagation()} className="glass panel-in" style={{ width: '100%', maxWidth: 720, padding: 0, overflow: 'hidden' }}>
 
-        {/* header band */}
         <div style={{ background: t.accent, color: '#fff', padding: '13px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, letterSpacing: 1 }}>
-            {t.label.toUpperCase()} · NO. {n.notice_no}
-          </span>
+          <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, letterSpacing: 1 }}>{t.label.toUpperCase()} · NO. {n.notice_no}</span>
           <button onClick={onClose} aria-label="Close" style={{ background: 'transparent', border: 'none', color: '#fff', fontSize: 24, lineHeight: 1, cursor: 'pointer', padding: 0 }}>×</button>
         </div>
 
         <div style={{ padding: 20, background: 'rgba(255,255,255,.93)', color: '#0f172a' }}>
-          {/* headline */}
           <h2 className="font-extrabold" style={{ fontSize: '1.32rem', lineHeight: 1.22, marginBottom: 6 }}>{n.social_headline || n.title}</h2>
-          <p style={{ fontSize: 12, color: '#5b6780', marginBottom: 14 }}>{[n.act, n.citation].filter(Boolean).join(' · ')}</p>
+          <p style={{ fontSize: 12, color: '#5b6780', marginBottom: 14 }}>{[n.citation, fmtDate(n.date_published)].filter(Boolean).join(' · ')}</p>
 
-          {/* WHO hero (detention/person notices) */}
+          {/* WHO */}
           {isPerson && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '12px 14px', borderRadius: 12, background: t.tint, border: `1px solid ${t.accent}33`, marginBottom: 14 }}>
-              <div style={{ flex: '0 0 56px', width: 56, height: 56, borderRadius: '50%', background: t.accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 22 }}>
-                {initials(n.person_name)}
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '12px 14px', borderRadius: 12, background: t.tint, border: `1px solid ${t.accent}33`, marginBottom: 16 }}>
+              <div style={{ flex: '0 0 56px', width: 56, height: 56, borderRadius: '50%', background: t.accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 22 }}>{initials(n.person_name)}</div>
               <div style={{ minWidth: 0 }}>
                 <div style={{ fontSize: 18, fontWeight: 800, lineHeight: 1.1 }}>{n.person_name}</div>
                 {aliases.length ? <div style={{ fontSize: 13, color: t.accent, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
-                {(role || gang) ? (
-                  <div style={{ fontSize: 13, color: '#475569', marginTop: 3 }}>
-                    {[role, gang].filter(Boolean).join(' · ')}{(role || gang) ? ' (alleged)' : ''}
-                  </div>
-                ) : null}
+                {(role || gang) ? <div style={{ fontSize: 13, color: '#475569', marginTop: 3 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
               </div>
             </div>
           )}
 
-          {/* KEY ALLEGATIONS chips */}
+          {/* INFOGRAPHIC = the alleged grounds, broken down */}
           {allegs.length ? (
-            <div style={{ marginBottom: 14 }}>
-              <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 7 }}>Alleged grounds</div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+            <>
+              <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 9 }}>Alleged grounds for detention</div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 10, marginBottom: 16 }}>
                 {allegs.map((a, i) => (
-                  <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12.5, padding: '4px 11px', borderRadius: 999, background: t.tint, color: t.accent, border: `1px solid ${t.accent}40`, fontWeight: 600 }}>
-                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: t.accent }} />{a}
-                  </span>
+                  <div key={i} style={{ border: '1px solid var(--border)', borderRadius: 10, padding: '12px 13px', background: 'rgba(255,255,255,.6)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: a.ev ? 6 : 0 }}>
+                      <span style={{ flex: '0 0 22px', width: 22, height: 22, borderRadius: '50%', background: t.accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700 }}>{i + 1}</span>
+                      <span style={{ fontSize: 13.5, fontWeight: 700, color: t.accent }}>{a.label}</span>
+                    </div>
+                    {a.ev ? <div style={{ fontSize: 13, lineHeight: 1.45, color: '#334155' }}>{a.ev}</div> : null}
+                  </div>
                 ))}
               </div>
+            </>
+          ) : null}
+
+          {/* full narrative */}
+          {(n.social_post || n.summary) ? (
+            <div style={{ border: '1px solid var(--border)', borderRadius: 10, padding: '12px 14px', background: 'rgba(255,255,255,.6)' }}>
+              <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 6 }}>{allegs.length ? 'In full' : 'Summary'}</div>
+              <div style={{ fontSize: 13.5, lineHeight: 1.55, color: '#10131a', whiteSpace: 'pre-line' }}>{n.social_post || n.summary}</div>
             </div>
           ) : null}
 
-          {/* infographic grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 10, marginBottom: 14 }}>
-            {addresses.length ? <Block label="Last known address" accent={t.accent}>{addresses.map((a, i) => <div key={i}>📍 {a}</div>)}</Block> : null}
-            {n.detained_at ? <Block label="Detained at" accent={t.accent}>{n.detained_at}</Block> : null}
-            {(n.official || n.official_role) ? <Block label="Ordered by" accent={t.accent}>{n.official}{n.official_role ? <div style={{ color: '#5b6780', fontSize: 12.5 }}>{n.official_role}</div> : null}</Block> : null}
-            {(n.date_made || n.date_published) ? (
-              <Block label="Timeline" accent={t.accent}>
-                {n.date_made ? <div>Made · {fmtDate(n.date_made)}</div> : null}
-                {n.date_published ? <div style={{ color: '#5b6780' }}>Gazetted · {fmtDate(n.date_published)}</div> : null}
-              </Block>
-            ) : null}
-            {!isPerson && n.instrument ? <Block label="Instrument" accent={t.accent}>{n.instrument}</Block> : null}
-            {n.act ? <Block label="Legal basis" accent={t.accent}>{n.act}</Block> : null}
-          </div>
-
-          {/* the story, in plain words */}
-          {(n.summary || n.social_post) ? (
-            <Block label="The story" accent={t.accent} span>
-              <div style={{ whiteSpace: 'pre-line' }}>{n.social_post || n.summary}</div>
-              {n.summary && n.summary !== n.social_post ? (
-                <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid var(--border)', color: '#475569', fontSize: 13 }}>{n.summary}</div>
-              ) : null}
-            </Block>
-          ) : null}
-
-          <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
+          <div style={{ display: 'flex', gap: 8, marginTop: 14, alignItems: 'center' }}>
             <button className="pill-link" onClick={copyPost}>Copy post</button>
             <button className="pill-link" onClick={() => copyText(`${n.title} — ${n.citation}`)}>Copy ref</button>
-            {n.source_file ? <span style={{ marginLeft: 'auto', alignSelf: 'center', fontSize: 11, color: '#94a3b8' }}>{n.source_file}</span> : null}
+            {n.source_file ? <span style={{ marginLeft: 'auto', fontSize: 11, color: '#94a3b8' }}>{n.source_file}</span> : null}
           </div>
         </div>
       </div>
@@ -251,7 +228,7 @@ export default function NoticesBrowse() {
                 </div>
                 <div className="card-headline">{n.social_headline || n.title}</div>
                 {excerpt && <div className="card-excerpt">{excerpt}</div>}
-                <div style={{ fontSize: 11.5, color: 'var(--muted)', marginTop: 6 }}>Tap to break down the story →</div>
+                <div style={{ fontSize: 11.5, color: 'var(--muted)', marginTop: 6 }}>Tap to break down the grounds →</div>
               </div>
               <div className="card-footer">
                 <span className="card-date">{n.citation}</span>
