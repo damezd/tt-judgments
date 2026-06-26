@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { copyText } from './ui';
-import { CaseIllustration } from './CaseIllustrations';
+import { NoticeIllustration } from './NoticeIllustration';
 import NoticeFull from './NoticeFull';
 import { fmtDate, ACCENT, ACCENT_TINT } from './caseMeta';
 import { noticeMeta, allegationsFrom, gangRole, firstSentences } from './noticeUtils';
@@ -67,7 +67,7 @@ export default function NoticeViewer({ n, onClose }) {
             <section className={`vpage type-${type}`}>
               <div className="vposter">
                 <div className="rail" />
-                <div className="card-illustration"><CaseIllustration type={type} /></div>
+                <div className="card-illustration"><NoticeIllustration /></div>
                 <div className="card-body">
                   <div className="badge-row">
                     <span className={`badge badge-type-${type}`}>{meta.label}</span>

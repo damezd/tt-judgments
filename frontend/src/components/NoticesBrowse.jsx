@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getNotices } from '../api/client';
 import { copyText } from './ui';
-import { CaseIllustration } from './CaseIllustrations';
+import { NoticeIllustration } from './NoticeIllustration';
 import NoticeViewer from './NoticeViewer';
 import { fmtDate } from './caseMeta';
 import { noticeMeta, allegationsFrom } from './noticeUtils';
@@ -49,7 +49,7 @@ export default function NoticesBrowse() {
             <article key={n.id} className={`case-card type-${type}`} onClick={() => setSelected(n)}
               role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') setSelected(n); }}>
               <div className="rail" />
-              <div className="card-illustration"><CaseIllustration type={type} /></div>
+              <div className="card-illustration"><NoticeIllustration /></div>
               <div className="card-body">
                 <div className="badge-row">
                   <span className={`badge badge-type-${type}`}>{meta.label}</span>
