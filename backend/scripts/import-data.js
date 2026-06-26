@@ -14,6 +14,7 @@ require('dotenv').config();
 const fs    = require('fs');
 const path  = require('path');
 const mysql = require('mysql2/promise');
+const { normalizeNotice } = require('./clean-notice');
 
 const DATA_DIR = path.join(__dirname, 'data');
 
@@ -255,7 +256,9 @@ const isBank = (name, banks) => {
   if (fs.existsSync(noticesFile)) {
     const notices = JSON.parse(fs.readFileSync(noticesFile, 'utf8'));
     console.log(`Importing ${notices.length} legal notices...`);
-    for (const n of notices) {
+    for (const raw of notices) {
+      // Self-heal malformed "also known as" alias chains on every import.
+      const n = normalizeNotice(raw);
       let slug = slugify(`notice-${n.notice_no}-${n.person_name || n.title}`) || ('notice-' + (nNotice + 1));
       while (usedSlugs.has(slug)) slug += '-x';
       usedSlugs.add(slug);
