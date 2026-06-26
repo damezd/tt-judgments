@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import CardRenderPage from './components/CardRenderPage';
 
 // Fonts (self-hosted via fontsource)
 import '@fontsource/dm-serif-display/400.css';
@@ -15,8 +16,10 @@ import '@fontsource/jetbrains-mono/600.css';
 
 import './index.css';
 
+const isCard = new URLSearchParams(window.location.search).has('card');
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    {isCard ? <CardRenderPage /> : <App />}
   </React.StrictMode>
 );
