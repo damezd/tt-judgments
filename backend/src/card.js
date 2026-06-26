@@ -153,7 +153,9 @@ function buildSvg(n) {
     const ph = 168, py = aY - 6;
     s += `<rect x="${profX}" y="${py}" width="${profW}" height="${ph}" rx="14" fill="${C.cream}" stroke="${C.creamLine}"/>`;
     s += `<circle cx="${profX + 46}" cy="${py + 50}" r="30" fill="${C.red}"/>` + T(profX + 46, py + 59, initials(person), { size: 24, w: 800, fill: '#fff', anc: 'middle' });
-    s += T(profX + 90, py + 44, person.toUpperCase().slice(0, 22), { size: 19, w: 800, fill: C.dark });
+    const nm = person.toUpperCase();
+    const nmSize = Math.max(12.5, Math.min(19, (profW - 104) / (nm.length * 0.64)));
+    s += T(profX + 90, py + 44, nm, { size: nmSize, w: 800, fill: C.dark });
     const sub = [role, gang].filter(Boolean).join(' · ');
     s += T(profX + 90, py + 68, (sub ? sub + ' (alleged)' : 'Named in detention order').slice(0, 30), { size: 13.5, fill: C.darkMut });
     s += `<rect x="${profX + 20}" y="${py + 96}" width="${profW - 40}" height="1" fill="${C.creamLine}"/>`;
