@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getNotices } from '../api/client';
 import { copyText } from './ui';
 import { fmtDate } from './caseMeta';
+import { MI } from './materialIcons';
 
 const TYPE = {
   detention_order: { label: 'Detention Order', tag: 'Emergency Powers', accent: '#c0392b', tint: '#fdeceb' },
@@ -10,7 +11,7 @@ const TYPE = {
   default: { label: 'Legal Notice', tag: 'Gazette', accent: '#1a1814', tint: '#efece5' },
 };
 
-// ── parse the alleged grounds into labelled findings (each with a supporting line) ──
+// ── alleged grounds → label + supporting sentence ──
 const ALLEGATIONS = [
   [/contract killing/i, 'Contract killings'],
   [/reprisal/i, 'Reprisal attacks'],
@@ -26,6 +27,23 @@ const ALLEGATIONS = [
   [/evade|evading|escape|avoided police/i, 'Evading police'],
   [/gang|organised crim|organized crim|\bocg\b|\bicg\b/i, 'Gang / OCG activity'],
 ];
+// label → Material icon + a short "key insight"
+const GROUND = {
+  'Contract killings':   { icon: 'dangerous',            insight: 'Killings allegedly carried out for hire.' },
+  'Reprisal attacks':    { icon: 'local_fire_department', insight: 'Tit-for-tat violence between rival groups.' },
+  'Murder / homicide':   { icon: 'skull',                insight: 'Alleged involvement in killings.' },
+  'Firearms':            { icon: 'crisis_alert',         insight: 'Access to weapons raises the threat to public safety.' },
+  'Drug trafficking':    { icon: 'medication',           insight: 'Narcotics trade funds organised crime.' },
+  'Vehicle theft':       { icon: 'directions_car',       insight: 'Stolen-vehicle ring activity.' },
+  'Extortion':           { icon: 'paid',                 insight: 'Demanding money with menaces.' },
+  'Robbery':             { icon: 'shopping_bag',         insight: 'Armed robbery is a core allegation.' },
+  'Kidnapping':          { icon: 'person_off',           insight: 'Kidnapping for ransom is a core allegation.' },
+  'Wounding':            { icon: 'personal_injury',      insight: 'Violent assault causing injury.' },
+  'Outstanding warrants':{ icon: 'gavel',                insight: 'Wanted on existing warrants.' },
+  'Evading police':      { icon: 'directions_run',       insight: 'Allegedly evading lawful arrest.' },
+  'Gang / OCG activity': { icon: 'groups',               insight: 'OCGs operate in networks — disrupting one member impacts the whole.' },
+};
+
 function allegationsFrom(text, name) {
   text = text || '';
   if (name) text = text.split(name.toUpperCase()).join(name);
@@ -38,8 +56,8 @@ function allegationsFrom(text, name) {
     for (const s of sentences) { if (re.test(s)) { ev = s.trim(); break; } }
     if (ev && seen.has(ev)) ev = '';
     else if (ev) seen.add(ev);
-    if (ev.length > 165) ev = ev.slice(0, 162).trimEnd() + '…';
-    out.push({ label, ev });
+    if (ev.length > 150) ev = ev.slice(0, 147).trimEnd() + '…';
+    out.push({ label, ev, ...GROUND[label] });
   }
   return out.slice(0, 6);
 }
@@ -58,44 +76,21 @@ function gangRole(text) {
   else if (/\bmember\b/.test(l)) role = 'Member';
   return { gang, role };
 }
-function initials(name) {
-  return (name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+const initials = name => (name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+const firstSentences = (s, n) => {
+  const parts = (s || '').split(/(?<=[.])\s+/);
+  let out = '';
+  for (const p of parts) { if ((out + ' ' + p).trim().length > n) break; out = (out + ' ' + p).trim(); }
+  return out || (s || '').slice(0, n);
+};
+
+// Material Symbols icon (inline)
+function MIcon({ name, color = 'currentColor', size = 22 }) {
+  return <svg viewBox="0 -960 960 960" width={size} height={size} fill={color} style={{ display: 'block' }}
+    aria-hidden="true" dangerouslySetInnerHTML={{ __html: MI[name] || MI.shield }} />;
 }
 
-// Short tile label + icon per allegation (visual, Instagram-style breakdown).
-const SHORT = {
-  'Contract killings': 'Contract kill', 'Reprisal attacks': 'Reprisals', 'Murder / homicide': 'Homicide',
-  'Firearms': 'Firearms', 'Drug trafficking': 'Drugs', 'Vehicle theft': 'Vehicle theft',
-  'Extortion': 'Extortion', 'Robbery': 'Robbery', 'Kidnapping': 'Kidnapping', 'Wounding': 'Wounding',
-  'Outstanding warrants': 'Warrants', 'Evading police': 'Evading', 'Gang / OCG activity': 'Gang / OCG',
-};
-const ICON = {
-  'Contract killings': 'target', 'Reprisal attacks': 'flame', 'Murder / homicide': 'skull',
-  'Firearms': 'gun', 'Drug trafficking': 'pill', 'Vehicle theft': 'car', 'Extortion': 'money',
-  'Robbery': 'bag', 'Kidnapping': 'kidnap', 'Wounding': 'knife', 'Outstanding warrants': 'doc',
-  'Evading police': 'run', 'Gang / OCG activity': 'gang',
-};
-function Icon({ name, color, size = 30 }) {
-  const p = { fill: 'none', stroke: color, strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' };
-  const set = {
-    gun: <><rect x="2.5" y="8" width="12.5" height="3.3" rx="0.6" fill={color} /><path d="M10.6 11.3h4.1l-1.5 5.1a1 1 0 0 1-.96.7h-1.2a1 1 0 0 1-.95-1.3z" fill={color} /><path fill="none" stroke={color} strokeWidth="1.4" strokeLinecap="round" d="M9.6 11.6a2.2 2.2 0 0 0 1.7 2.5" /></>,
-    skull: <><path {...p} d="M5 11a7 7 0 0 1 14 0v3l-1.5 1.4V18h-2v-1.6h-1V18h-2v-1.6h-1V18h-2v-2.6L6.5 14z" /><circle cx="9.2" cy="11" r="1.3" fill={color} stroke="none" /><circle cx="14.8" cy="11" r="1.3" fill={color} stroke="none" /></>,
-    target: <><circle {...p} cx="12" cy="12" r="8" /><circle {...p} cx="12" cy="12" r="3.2" /><path {...p} d="M12 1.5v3.5M12 19v3.5M1.5 12h3.5M19 12h3.5" /></>,
-    flame: <path {...p} d="M12 3c3.5 4 5 6 5 9a5 5 0 1 1-10 0c0-2 .8-3.2 2-4.2.2 1.4 1 2.2 2 2.2-.6-2.2-1.4-4.4 1-7z" />,
-    pill: <g transform="rotate(45 12 12)"><rect {...p} x="3" y="9" width="18" height="6" rx="3" /><path d="M3 9h9v6H6a3 3 0 0 1-3-3z" fill={color} opacity="0.22" /><path stroke={color} strokeWidth="1.7" strokeLinecap="round" d="M12 9v6" /></g>,
-    car: <><path {...p} d="M4 13l1.8-4.5h12.4L20 13v4h-2.5M6.5 17H4v-4M9.5 17h5" /><circle {...p} cx="7.5" cy="17.3" r="1.7" /><circle {...p} cx="16.5" cy="17.3" r="1.7" /></>,
-    money: <><circle {...p} cx="12" cy="12" r="8.4" /><path {...p} d="M12 6.8v10.4M9.6 9.4a2.4 2 0 0 1 4.8 0c0 2.4-4.8 1.6-4.8 3.9a2.4 2 0 0 0 4.8.3" /></>,
-    bag: <><path {...p} d="M7 8.5h10l1.8 11H5.2z" /><path {...p} d="M9 8.5a3 3 0 0 1 6 0" /><path fill="none" stroke={color} strokeWidth="1.4" strokeLinecap="round" d="M12 12v4.4M10.7 13a1.3 1 0 0 1 2.6 0c0 1.3-2.6 .7-2.6 2a1.3 1 0 0 0 2.6 .2" /></>,
-    kidnap: <><circle {...p} cx="12" cy="7" r="3" /><path {...p} d="M6 20v-1a6 6 0 0 1 12 0v1" /><path {...p} d="M8.8 7h6.4" /></>,
-    knife: <><path d="M3.5 16.5L13 7q1.8-1.8 3.4-.2L7 16.8z" fill={color} opacity="0.9" /><path {...p} d="M7.2 17l2.6 2.6" /><path {...p} d="M12.2 7.8l1.8 1.8" /></>,
-    doc: <><rect {...p} x="6" y="3" width="12" height="18" rx="1.5" /><path {...p} d="M9 8h6M9 12h6M9 16h3.5" /></>,
-    run: <><circle {...p} cx="14" cy="5" r="2" /><path {...p} d="M5.5 21l3.5-5 2.5 2 1.6-3.6L9.2 11l-3 1" /><path {...p} d="M11 14.5l3.6 1 2 4.5" /></>,
-    gang: <><circle {...p} cx="12" cy="6" r="2.3" /><circle {...p} cx="6" cy="9" r="2" /><circle {...p} cx="18" cy="9" r="2" /><path {...p} d="M8.4 19a3.6 3.6 0 0 1 7.2 0M2.5 18a3 3 0 0 1 5-2M21.5 18a3 3 0 0 0-5-2" /></>,
-    alert: <><path {...p} d="M12 3l9 16H3z" /><path {...p} d="M12 10v4M12 16.4v.2" /></>,
-  };
-  return <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">{set[name] || set.alert}</svg>;
-}
-
+// Feed-card illustration (light)
 function NoticeArt({ no, accent, tint }) {
   return (
     <svg viewBox="0 0 430 168" xmlns="http://www.w3.org/2000/svg">
@@ -109,10 +104,8 @@ function NoticeArt({ no, accent, tint }) {
       <text x="215" y="36" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="11" fill="#fff" letterSpacing="2" fontWeight="600">LEGAL NOTICE</text>
       <text x="200" y="86" textAnchor="middle" fontFamily="DM Serif Display, Georgia, serif" fontSize="34" fill={accent}>No. {no}</text>
       <g fill={accent} opacity="0.14">
-        <rect x="138" y="98" width="120" height="5" rx="2" />
-        <rect x="138" y="110" width="150" height="5" rx="2" />
-        <rect x="138" y="122" width="96" height="5" rx="2" />
-        <rect x="138" y="134" width="134" height="5" rx="2" />
+        <rect x="138" y="98" width="120" height="5" rx="2" /><rect x="138" y="110" width="150" height="5" rx="2" />
+        <rect x="138" y="122" width="96" height="5" rx="2" /><rect x="138" y="134" width="134" height="5" rx="2" />
       </g>
       <circle cx="296" cy="120" r="22" fill="#fff" stroke={accent} strokeWidth="2" />
       <circle cx="296" cy="120" r="15" fill="none" stroke={accent} strokeWidth="1" opacity="0.7" />
@@ -122,76 +115,166 @@ function NoticeArt({ no, accent, tint }) {
   );
 }
 
-// The "second insight card" — the alleged grounds, broken down.
+// ── Dark infographic poster (detention detail) ──
+const D = { bg: '#16100e', panel: '#221915', line: '#3a2b25', red: '#e23d2e', redDim: '#7d241b', text: '#f4ece8', mut: '#a99c95' };
+const BIGPIC = [
+  ['public', 'Organised crime affects communities through violence, fear and instability.'],
+  ['verified_user', 'Strong laws plus enforcement build safer communities.'],
+  ['balance', 'The justice system is acting to hold OCG members accountable.'],
+];
+
+function Headline({ text, name }) {
+  if (name && text && text.toLowerCase().includes(name.toLowerCase())) {
+    const i = text.toLowerCase().indexOf(name.toLowerCase());
+    return <>{text.slice(0, i)}<span style={{ color: D.red }}>{text.slice(i, i + name.length)}</span>{text.slice(i + name.length)}</>;
+  }
+  return <>{text}</>;
+}
+
 function NoticeDetail({ n, onClose }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
-
   if (!n) return null;
+
   const t = TYPE[n.ntype] || TYPE.default;
   const isPerson = !!n.person_name;
   const { gang, role } = gangRole(n.summary);
-  const allegs = allegationsFrom(n.summary, n.person_name);
+  const grounds = isPerson ? allegationsFrom(n.summary, n.person_name) : [];
   const aliases = (n.alias || '').split(';').map(s => s.trim()).filter(Boolean);
+  const heroIcon = n.ntype === 'proceeds_of_crime' ? 'paid' : 'lock';
   const copyPost = () => copyText(`${n.social_headline ? n.social_headline + '\n\n' : ''}${n.social_post || n.summary || ''}`);
 
+  const card = { background: D.panel, border: `1px solid ${D.line}`, borderRadius: 14, padding: 16 };
+  const numBadge = i => (
+    <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 11, fontWeight: 700, color: '#fff', background: D.red, borderRadius: 6, padding: '2px 7px', letterSpacing: 1 }}>
+      {String(i).padStart(2, '0')}
+    </span>
+  );
+  const iconChip = name => (
+    <span style={{ flex: '0 0 38px', width: 38, height: 38, borderRadius: '50%', background: 'rgba(226,61,46,.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <MIcon name={name} color={D.red} size={22} />
+    </span>
+  );
+
+  let no = 0;
   return (
     <div onClick={onClose}
-      style={{ position: 'fixed', inset: 0, background: 'rgba(3,8,20,.6)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', overflow: 'auto', padding: '5vh 12px' }}>
-      <div onClick={e => e.stopPropagation()} className="glass panel-in" style={{ width: '100%', maxWidth: 720, padding: 0, overflow: 'hidden' }}>
+      style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.7)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', overflow: 'auto', padding: '4vh 10px' }}>
+      <div onClick={e => e.stopPropagation()} className="panel-in"
+        style={{ width: '100%', maxWidth: 460, background: D.bg, color: D.text, borderRadius: 18, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.6)' }}>
 
-        <div style={{ background: t.accent, color: '#fff', padding: '13px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, letterSpacing: 1 }}>{t.label.toUpperCase()} · NO. {n.notice_no}</span>
-          <button onClick={onClose} aria-label="Close" style={{ background: 'transparent', border: 'none', color: '#fff', fontSize: 24, lineHeight: 1, cursor: 'pointer', padding: 0 }}>×</button>
+        {/* HERO */}
+        <div style={{ position: 'relative', padding: '18px 18px 20px', overflow: 'hidden',
+          background: `radial-gradient(120% 90% at 88% 0%, ${D.redDim} 0%, rgba(125,36,27,0) 55%), ${D.bg}` }}>
+          {/* prison-bar motif + faded icon */}
+          <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 150, opacity: 0.16, pointerEvents: 'none',
+            backgroundImage: `repeating-linear-gradient(90deg, ${D.text} 0 2px, transparent 2px 16px)` }} />
+          <div style={{ position: 'absolute', top: 24, right: 14, opacity: 0.12, pointerEvents: 'none' }}>
+            <MIcon name={heroIcon} color={D.text} size={120} />
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative' }}>
+            <div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 13, fontWeight: 600, letterSpacing: '.05em' }}>Insight<span style={{ color: D.red }}>TT</span></div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 8, letterSpacing: '.12em', color: D.mut, textTransform: 'uppercase' }}>Court Judgments</div>
+            </div>
+            <button onClick={onClose} aria-label="Close" style={{ background: 'rgba(255,255,255,.1)', border: 'none', color: '#fff', width: 30, height: 30, borderRadius: '50%', fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
+          </div>
+
+          {/* citation ribbon */}
+          <div style={{ display: 'inline-block', marginTop: 16, background: D.red, color: '#fff', fontFamily: 'JetBrains Mono, monospace', fontSize: 9, fontWeight: 600, letterSpacing: '.06em', padding: '5px 10px', borderRadius: 4, position: 'relative' }}>
+            {(n.citation || `${t.label} · No. ${n.notice_no}`).toUpperCase()}
+          </div>
+
+          <h2 style={{ position: 'relative', marginTop: 14, fontSize: 27, lineHeight: 1.08, fontWeight: 800, letterSpacing: '-.01em', textTransform: 'uppercase' }}>
+            <Headline text={n.social_headline || n.title} name={n.person_name} />
+          </h2>
+          <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: D.mut, maxWidth: 360 }}>
+            {firstSentences(n.social_post || n.summary, 220)}
+          </p>
+          <button onClick={copyPost} style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.mut, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
+            <MIcon name="bookmark" color={D.mut} size={15} /> Save / copy post
+          </button>
         </div>
 
-        <div style={{ padding: 20, background: 'rgba(255,255,255,.93)', color: '#0f172a' }}>
-          <h2 className="font-extrabold" style={{ fontSize: '1.32rem', lineHeight: 1.22, marginBottom: 6 }}>{n.social_headline || n.title}</h2>
-          <p style={{ fontSize: 12, color: '#5b6780', marginBottom: 14 }}>{[n.citation, fmtDate(n.date_published)].filter(Boolean).join(' · ')}</p>
-
-          {/* WHO */}
+        <div style={{ padding: '4px 14px 14px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {/* PERSON CARD */}
           {isPerson && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '12px 14px', borderRadius: 12, background: t.tint, border: `1px solid ${t.accent}33`, marginBottom: 16 }}>
-              <div style={{ flex: '0 0 56px', width: 56, height: 56, borderRadius: '50%', background: t.accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 22 }}>{initials(n.person_name)}</div>
-              <div style={{ minWidth: 0 }}>
-                <div style={{ fontSize: 18, fontWeight: 800, lineHeight: 1.1 }}>{n.person_name}</div>
-                {aliases.length ? <div style={{ fontSize: 13, color: t.accent, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
-                {(role || gang) ? <div style={{ fontSize: 13, color: '#475569', marginTop: 3 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
+            <div style={{ ...card, display: 'flex', alignItems: 'center', gap: 13 }}>
+              <div style={{ flex: '0 0 52px', width: 52, height: 52, borderRadius: '50%', background: D.red, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 21 }}>{initials(n.person_name)}</div>
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <div style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.1 }}>{n.person_name}</div>
+                {aliases.length ? <div style={{ fontSize: 12.5, color: D.red, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
+                {(role || gang) ? <div style={{ fontSize: 12.5, color: D.mut, marginTop: 2 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, paddingTop: 8, borderTop: `1px solid ${D.line}`, fontSize: 12, color: D.text }}>
+                  <MIcon name="lock" color={D.red} size={16} /> Detained under the {n.act || 'Emergency Powers Regulations, 2026'}
+                </div>
               </div>
             </div>
           )}
 
-          {/* INFOGRAPHIC = alleged grounds as visual icon tiles */}
-          {allegs.length ? (
-            <>
-              <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 9 }}>Alleged grounds for detention</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))', gap: 9, marginBottom: 16 }}>
-                {allegs.map((a, i) => (
-                  <div key={i} title={a.ev || a.label}
-                    style={{ border: `1px solid ${t.accent}26`, borderRadius: 12, padding: '12px 6px 10px', background: t.tint, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 7, textAlign: 'center' }}>
-                    <Icon name={ICON[a.label] || 'alert'} color={t.accent} size={30} />
-                    <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: t.accent, lineHeight: 1.2 }}>{SHORT[a.label] || a.label}</span>
+          {/* GROUND CARDS */}
+          {grounds.map((g, i) => {
+            no = i + 1;
+            return (
+              <div key={i} style={card}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 9 }}>
+                  {numBadge(no)}
+                  {iconChip(g.icon || 'shield')}
+                  <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.02em', color: D.text }}>{g.label}</span>
+                </div>
+                {g.ev ? <div style={{ fontSize: 12.5, lineHeight: 1.5, color: D.mut }}>{g.ev}</div> : null}
+                {g.insight ? (
+                  <div style={{ display: 'flex', gap: 8, marginTop: 11, background: 'rgba(226,61,46,.1)', border: `1px solid ${D.redDim}55`, borderRadius: 9, padding: '8px 10px' }}>
+                    <MIcon name="lightbulb" color={D.red} size={16} />
+                    <span style={{ fontSize: 11.5, lineHeight: 1.4, color: D.text }}><b style={{ color: D.red }}>Key insight:</b> {g.insight}</span>
                   </div>
-                ))}
+                ) : null}
               </div>
-            </>
-          ) : null}
+            );
+          })}
 
-          {/* full narrative */}
-          {(n.social_post || n.summary) ? (
-            <div style={{ border: '1px solid var(--border)', borderRadius: 10, padding: '12px 14px', background: 'rgba(255,255,255,.6)' }}>
-              <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 6 }}>{allegs.length ? 'In full' : 'Summary'}</div>
-              <div style={{ fontSize: 13.5, lineHeight: 1.55, color: '#10131a', whiteSpace: 'pre-line' }}>{n.social_post || n.summary}</div>
+          {/* LEGAL BASIS */}
+          <div style={card}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 9 }}>
+              {numBadge(no + 1)}{iconChip('balance')}
+              <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', color: D.text }}>Legal basis</span>
             </div>
-          ) : null}
+            <div style={{ fontSize: 12.5, lineHeight: 1.5, color: D.mut }}>
+              Detention is granted under the <b style={{ color: D.text }}>{n.act || 'Emergency Powers Regulations, 2026'}</b>
+              {n.official ? `, ordered by ${n.official}${n.official_role ? `, ${n.official_role}` : ''}.` : '.'}
+            </div>
+            <div style={{ marginTop: 9, fontSize: 11.5, color: D.text }}><b style={{ color: D.red }}>Purpose:</b> prevent further criminal activity and protect the public.</div>
+          </div>
 
-          <div style={{ display: 'flex', gap: 8, marginTop: 14, alignItems: 'center' }}>
-            <button className="pill-link" onClick={copyPost}>Copy post</button>
-            <button className="pill-link" onClick={() => copyText(`${n.title} — ${n.citation}`)}>Copy ref</button>
-            {n.source_file ? <span style={{ marginLeft: 'auto', fontSize: 11, color: '#94a3b8' }}>{n.source_file}</span> : null}
+          {/* THE BIG PICTURE */}
+          <div style={card}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11 }}>
+              {numBadge(no + 2)}{iconChip('public')}
+              <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', color: D.text }}>The big picture</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+              {BIGPIC.map(([ic, txt], i) => (
+                <div key={i} style={{ display: 'flex', gap: 9, alignItems: 'flex-start' }}>
+                  <MIcon name={ic} color={D.red} size={17} />
+                  <span style={{ fontSize: 12, lineHeight: 1.45, color: D.mut }}>{txt}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* FOOTER */}
+        <div style={{ borderTop: `1px solid ${D.line}`, padding: '14px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '.03em' }}>STAY INFORMED. STAY SAFE.</div>
+            <div style={{ fontSize: 10, color: D.mut, marginTop: 2 }}>Real judgments. Real impact.</div>
+          </div>
+          <div style={{ textAlign: 'right', fontSize: 9.5, color: D.mut, fontFamily: 'JetBrains Mono, monospace', maxWidth: 180 }}>
+            Follow <span style={{ color: D.red }}>@InsightTT</span> for court updates
           </div>
         </div>
       </div>
@@ -242,15 +325,8 @@ export default function NoticesBrowse() {
           const body = n.social_post || n.summary || '';
           const excerpt = body.length > 200 ? body.slice(0, 200).trimEnd() + '…' : body;
           return (
-            <article
-              key={n.id}
-              className="case-card"
-              style={{ cursor: 'pointer' }}
-              onClick={() => setSelected(n)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => { if (e.key === 'Enter') setSelected(n); }}
-            >
+            <article key={n.id} className="case-card" style={{ cursor: 'pointer' }} onClick={() => setSelected(n)}
+              role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') setSelected(n); }}>
               <div className="rail" style={{ background: t.accent }} />
               <div className="card-illustration"><NoticeArt no={n.notice_no} accent={t.accent} tint={t.tint} /></div>
               <div className="card-body">
@@ -260,7 +336,7 @@ export default function NoticesBrowse() {
                 </div>
                 <div className="card-headline">{n.social_headline || n.title}</div>
                 {excerpt && <div className="card-excerpt">{excerpt}</div>}
-                <div style={{ fontSize: 11.5, color: 'var(--muted)', marginTop: 6 }}>Tap to break down the grounds →</div>
+                <div style={{ fontSize: 11.5, color: 'var(--muted)', marginTop: 6 }}>Tap for the full breakdown →</div>
               </div>
               <div className="card-footer">
                 <span className="card-date">{n.citation}</span>
