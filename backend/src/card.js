@@ -12,7 +12,8 @@ const FONT_FILES = [
   'inter-latin-800-normal.ttf', 'jetbrains-mono-latin-500-normal.ttf', 'jetbrains-mono-latin-600-normal.ttf',
 ].map(f => path.join(ASSETS, 'fonts', f));
 
-const C = { bg: '#15110e', panel: '#211b16', line: '#3a3029', ink: '#efe7db', mut: '#a2978c', red: '#cf3a2b' };
+const C = { bg: '#15110e', panel: '#241c16', line: '#3a2f26', ink: '#efe7db', mut: '#a2978c', red: '#cf3a2b',
+  cream: '#efe7db', creamLine: '#d8cdbd', dark: '#1a1310', darkMut: '#6e5f52' };
 const SAN = 'Inter, Arial, sans-serif', MON = 'JetBrains Mono, monospace';
 const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const T = (x, y, s, { size = 16, f = SAN, fill = C.ink, w, anc = 'start', ls } = {}) =>
@@ -67,119 +68,156 @@ function gangRole(text) {
 }
 const initials = name => (name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
 
+// wrap a string to lines of at most `max` chars (word-aware)
+function wrap(text, max) {
+  const out = []; let cur = '';
+  for (const w of String(text || '').split(/\s+/).filter(Boolean)) {
+    if ((cur + ' ' + w).trim().length > max) { if (cur) out.push(cur.trim()); cur = w; }
+    else cur = (cur + ' ' + w).trim();
+  }
+  if (cur) out.push(cur.trim());
+  return out;
+}
+
 function buildSvg(n) {
   const W = 1080, H = 1350, M = 60;
   const person = n.person_name || '';
   const grounds = person ? allegationsFrom(n.summary, person) : [];
   const { gang, role } = gangRole(n.summary);
   const headline = n.social_headline || n.title || '';
-  const aliases = (n.alias || '').split(';').map(s => s.trim()).filter(Boolean);
 
   let s = `<rect width="${W}" height="${H}" fill="${C.bg}"/>`;
   s += `<defs>
-    <linearGradient id="ts" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+    <linearGradient id="ts" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.6"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+    <linearGradient id="lf" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.bg}" stop-opacity="0.96"/><stop offset="0.55" stop-color="${C.bg}" stop-opacity="0.6"/><stop offset="1" stop-color="${C.bg}" stop-opacity="0"/></linearGradient>
     <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.bg}" stop-opacity="0"/><stop offset="1" stop-color="${C.bg}" stop-opacity="1"/></linearGradient></defs>`;
 
-  const HERO = 500;
+  // ── HERO: full-bleed photo with dark top, left, and bottom scrims ──────────
+  const HERO = 470;
   s += `<image x="0" y="0" width="${W}" height="${HERO}" href="data:image/png;base64,${HERO_B64}" preserveAspectRatio="xMidYMin slice"/>`;
-  s += `<rect x="0" y="0" width="${W}" height="120" fill="url(#ts)"/><rect x="0" y="${HERO - 130}" width="${W}" height="130" fill="url(#bf)"/>`;
-  s += T(M, 64, 'Insight', { size: 25, f: MON, w: 600 }) + T(M + 82, 64, 'TT', { size: 25, f: MON, w: 600, fill: C.red });
-  s += T(W - M, 60, 'INVESTIGATION', { size: 11, f: MON, fill: '#d8cfc6', anc: 'end', ls: '3' });
-  const ribbon = (n.citation || `${(n.ntype || 'legal notice').replace(/_/g, ' ')} · No. ${n.notice_no}`).toUpperCase();
-  s += `<rect x="${M}" y="86" width="320" height="22" rx="3" fill="${C.red}"/>` + T(M + 10, 101, ribbon.slice(0, 40), { size: 10, f: MON, fill: '#fff', w: 600 });
+  s += `<rect x="0" y="0" width="${W}" height="150" fill="url(#ts)"/>`;
+  s += `<rect x="0" y="0" width="${W}" height="${HERO}" fill="url(#lf)"/>`;
+  s += `<rect x="0" y="${HERO - 150}" width="${W}" height="150" fill="url(#bf)"/>`;
 
-  // profile card
-  const pcy = HERO - 36, pch = 82;
+  // brand + ribbon (top-left), kicker tag (top-right)
+  s += T(M, 60, 'Insight', { size: 24, f: MON, w: 600 }) + T(M + 78, 60, 'TT', { size: 24, f: MON, w: 600, fill: C.red });
+  s += T(M + 2, 84, 'COURT JUDGMENTS', { size: 10, f: MON, fill: C.mut, ls: '3' });
+  const ribbon = (n.citation || `${(n.ntype || 'legal notice').replace(/_/g, ' ')} · No. ${n.notice_no}`).toUpperCase();
+  const rlines = wrap(ribbon, 30).slice(0, 2);
+  const rw = Math.min(360, 14 + Math.max(...rlines.map(l => l.length)) * 6.7);
+  s += `<rect x="${M}" y="104" width="${rw}" height="${10 + rlines.length * 18}" rx="3" fill="${C.red}"/>`;
+  rlines.forEach((l, i) => s += T(M + 10, 122 + i * 18, l, { size: 10, f: MON, fill: '#fff', w: 600 }));
+
+  // ── HEADLINE: big uppercase, overlaid bottom-left of hero, name in red ─────
+  const hu = headline.toUpperCase();
+  const hl = wrap(hu, 16);
+  const nLines = Math.min(hl.length, 4);
+  const hsize = nLines >= 4 ? 50 : nLines === 3 ? 56 : 62;
+  const lh = hsize * 1.02;
+  const lastBase = HERO - 46;
+  const firstBase = lastBase - (nLines - 1) * lh;
+  const nameTokens = person.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+  hl.slice(0, 4).forEach((ln, i) => {
+    const isName = nameTokens.some(t => ln.toLowerCase().includes(t));
+    s += T(M, firstBase + i * lh, ln, { size: hsize, w: 800, ls: '-1.5', fill: isName ? C.red : C.ink });
+  });
+
+  // ── SECTION A: summary (left) + cream profile card (right) ─────────────────
+  const aY = HERO + 34;
+  const profW = 392, profX = W - M - profW, sumW = profX - M - 28;
+  // summary paragraph
+  const sum = (n.summary || n.social_post || '').replace(/\s+/g, ' ').trim();
+  wrap(sum, Math.floor(sumW / 8.6)).slice(0, 5).forEach((ln, i) => s += T(M, aY + 18 + i * 25, ln, { size: 16, fill: '#cfc6bb' }));
+
+  // cream profile card
   if (person) {
-    s += `<rect x="${M}" y="${pcy}" width="${W - 2 * M}" height="${pch}" rx="12" fill="${C.panel}" stroke="${C.line}"/>`;
-    s += `<circle cx="${M + 48}" cy="${pcy + 41}" r="28" fill="${C.red}"/>` + T(M + 48, pcy + 49, initials(person), { size: 24, w: 800, fill: '#fff', anc: 'middle' });
-    s += T(M + 92, pcy + 36, person.toUpperCase(), { size: 21, w: 800 });
-    s += T(M + 92, pcy + 60, [role, gang].filter(Boolean).join(' • ') ? `${[role, gang].filter(Boolean).join(' • ')} (alleged)` : 'Named in detention order', { size: 14, fill: C.mut });
-    s += cuffs(W - M - 196, pcy + 28, 24, C.red) + T(W - M - 164, pcy + 46, 'Detained — Anti-Gang Act', { size: 12.5, f: MON, fill: C.ink });
+    const ph = 168, py = aY - 6;
+    s += `<rect x="${profX}" y="${py}" width="${profW}" height="${ph}" rx="14" fill="${C.cream}" stroke="${C.creamLine}"/>`;
+    s += `<circle cx="${profX + 46}" cy="${py + 50}" r="30" fill="${C.red}"/>` + T(profX + 46, py + 59, initials(person), { size: 24, w: 800, fill: '#fff', anc: 'middle' });
+    s += T(profX + 90, py + 44, person.toUpperCase().slice(0, 22), { size: 19, w: 800, fill: C.dark });
+    const sub = [role, gang].filter(Boolean).join(' · ');
+    s += T(profX + 90, py + 68, (sub ? sub + ' (alleged)' : 'Named in detention order').slice(0, 30), { size: 13.5, fill: C.darkMut });
+    s += `<rect x="${profX + 20}" y="${py + 96}" width="${profW - 40}" height="1" fill="${C.creamLine}"/>`;
+    s += cuffs(profX + 24, py + 112, 26, C.red);
+    s += T(profX + 62, py + 124, 'Detained under the', { size: 14, fill: C.darkMut })
+       + T(profX + 62, py + 145, (n.act ? n.act.replace(/^The\s+/, '') : 'Anti-Gang Act, 2021').slice(0, 28), { size: 14.5, w: 700, fill: C.dark });
   }
 
-  // headline
-  let y = (person ? pcy + pch : HERO) + 52;
-  s += T(M, y, (n.ntype === 'detention_order' ? 'DETENTION ORDER' : (n.ntype || 'legal notice').replace(/_/g, ' ').toUpperCase()), { size: 12, f: MON, fill: C.red, ls: '3' });
-  y += 38;
-  // headline: up to 3 lines, name highlighted red if present
-  const words = headline.split(' ');
-  const lines = []; let cur = '';
-  for (const w of words) { if ((cur + ' ' + w).trim().length > 30) { lines.push(cur.trim()); cur = w; } else cur = (cur + ' ' + w).trim(); }
-  if (cur) lines.push(cur.trim());
-  lines.slice(0, 3).forEach((ln, i) => {
-    const isName = person && ln.toLowerCase().includes(person.split(' ')[0].toLowerCase());
-    s += T(M, y + i * 40, ln, { size: 33, w: 800, fill: isName ? C.red : C.ink });
-  });
-  y += Math.min(lines.length, 3) * 40 + 6;
-  // summary
-  const sum = (n.summary || n.social_post || '').replace(/\s+/g, ' ').trim();
-  const sw = sum.split(' '); const sl = []; let sc = '';
-  for (const w of sw) { if ((sc + ' ' + w).trim().length > 64) { sl.push(sc.trim()); sc = w; } else sc = (sc + ' ' + w).trim(); }
-  if (sc) sl.push(sc.trim());
-  sl.slice(0, 2).forEach((ln, i) => s += T(M, y + i * 24, ln, { size: 15.5, fill: C.mut }));
-  y += Math.min(sl.length, 2) * 24 + 18;
+  // ── numbered/iconed card helpers ──────────────────────────────────────────
+  const gap = 18;
+  const box = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="${C.panel}" stroke="${C.line}"/>`;
+  const numTag = (x, y, num) => `<rect x="${x}" y="${y}" width="30" height="26" rx="5" fill="${C.red}"/>` + T(x + 15, y + 18, num, { size: 13, f: MON, w: 700, fill: '#fff', anc: 'middle' });
+  const iconDisc = (cx, cy, icon, label) => {
+    let g = `<circle cx="${cx}" cy="${cy}" r="26" fill="${C.red}"/>`;
+    g += (label === 'Firearms') ? gun(cx - 12, cy - 11, 24, C.dark) : ico(icon || 'shield', cx - 13, cy - 13, 26, C.dark);
+    return g;
+  };
+  const keyStrip = (x, y, w, txt) => {
+    let g = `<rect x="${x}" y="${y}" width="${w}" height="46" rx="9" fill="rgba(207,58,43,0.12)"/>`;
+    g += ico('lightbulb', x + 14, y + 9, 16, C.red);
+    g += T(x + 38, y + 19, 'KEY INSIGHT', { size: 9, f: MON, fill: C.red, ls: '1', w: 700 });
+    wrap(txt, Math.floor((w - 44) / 5.6)).slice(0, 1).forEach(l => g += T(x + 38, y + 37, l, { size: 11.5, fill: C.ink }));
+    return g;
+  };
 
-  const chip = (cx, cy, r = 22) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(207,58,43,0.15)"/>`;
-  const box = (x, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="12" fill="${C.panel}" stroke="${C.line}"/>`;
-  const gap = 16;
-
-  // 3-up grounds row
+  // ── 3-up grounds row ───────────────────────────────────────────────────────
+  let gy = aY + 196;
   if (grounds.length) {
-    const col = (W - 2 * M - 2 * gap) / 3, rh = 196;
+    const col = (W - 2 * M - 2 * gap) / 3, rh = 250;
     grounds.forEach((g, idx) => {
       const x = M + idx * (col + gap);
-      s += box(x, col, rh);
-      const cx = x + 28, cy = y + 36;
-      const draw = g.icon === 'gun' || g.label === 'Firearms' ? gun(cx - 12, cy - 11, 24, C.red) : ico(g.icon || 'shield', cx - 12, cy - 12, 24, C.red);
-      s += chip(cx, cy) + draw;
-      s += T(x + 22, y + 70, '0' + (idx + 1), { size: 12, f: MON, fill: C.red, w: 700 });
-      s += T(x + 22, y + 92, g.label.toUpperCase(), { size: 15, w: 800 });
-      (g.short || []).forEach((ln, i) => s += T(x + 22, y + 114 + i * 18, ln, { size: 12.5, fill: C.mut }));
-      const ky = y + rh - 30;
-      s += `<rect x="${x + 12}" y="${ky - 14}" width="${col - 24}" height="40" rx="8" fill="rgba(207,58,43,0.10)" stroke="${C.red}" stroke-opacity="0.35"/>`;
-      s += ico('lightbulb', x + 20, ky - 8, 14, C.red) + T(x + 40, ky + 3, 'KEY INSIGHT', { size: 8.5, f: MON, fill: C.red, ls: '1', w: 700 });
-      s += T(x + 20, ky + 19, g.key, { size: 11, fill: C.ink });
+      s += box(x, gy, col, rh);
+      s += numTag(x + 20, gy + 20, '0' + (idx + 1));
+      s += iconDisc(x + 46, gy + 96, g.icon, g.label);
+      wrap(g.label.toUpperCase(), 11).slice(0, 2).forEach((l, i) => s += T(x + 84, gy + 90 + i * 20, l, { size: 16, w: 800 }));
+      const dtxt = (g.short || []).join(' ');
+      wrap(dtxt, Math.floor((col - 44) / 6.0)).slice(0, 4).forEach((l, i) => s += T(x + 22, gy + 150 + i * 19, l, { size: 13, fill: C.mut }));
+      s += keyStrip(x + 14, gy + rh - 58, col - 28, g.key);
     });
-    y += rh + gap;
+    gy += rh + gap;
   }
 
-  // 2-up row: legal basis + big picture
-  const col2 = (W - 2 * M - gap) / 2, rh2 = 196;
-  s += box(M, col2, rh2);
+  // ── 2-up row: legal basis + big picture ────────────────────────────────────
+  const col2 = (W - 2 * M - gap) / 2, rh2 = 232;
+  s += box(M, gy, col2, rh2);
   {
-    const cx = M + 28, cy = y + 36; s += chip(cx, cy) + ico('balance', cx - 12, cy - 12, 24, C.red);
-    s += T(M + 22, y + 70, '04', { size: 12, f: MON, fill: C.red, w: 700 }) + T(M + 22, y + 92, 'LEGAL BASIS', { size: 16, w: 800 });
+    s += numTag(M + 20, gy + 20, '04');
+    s += iconDisc(M + 46, gy + 96, 'balance', 'Legal basis');
+    s += T(M + 84, gy + 100, 'LEGAL BASIS', { size: 17, w: 800 });
     const act = n.act || 'Anti-Gang Act, 2021';
-    s += T(M + 22, y + 114, 'Detention granted under', { size: 12.5, fill: C.mut }) + T(M + 22, y + 132, ('the ' + act).slice(0, 30) + '.', { size: 12.5, fill: C.mut });
-    const ky = y + rh2 - 30;
-    s += `<rect x="${M + 12}" y="${ky - 14}" width="${col2 - 24}" height="40" rx="8" fill="rgba(207,58,43,0.10)" stroke="${C.red}" stroke-opacity="0.35"/>`;
-    s += ico('shield', M + 20, ky - 8, 14, C.red) + T(M + 40, ky + 3, 'PURPOSE', { size: 8.5, f: MON, fill: C.red, ls: '1', w: 700 });
-    s += T(M + 20, ky + 19, 'Prevent further crime; protect the public.', { size: 11, fill: C.ink });
+    wrap('Detention is granted under the ' + act.replace(/^The\s+/, '') + '.', Math.floor((col2 - 44) / 6.0)).slice(0, 4)
+      .forEach((l, i) => s += T(M + 22, gy + 150 + i * 19, l, { size: 13, fill: C.mut }));
+    s += keyStrip(M + 14, gy + rh2 - 58, col2 - 28, 'Prevent further crime; protect the public.');
   }
   const bx = M + col2 + gap;
-  s += box(bx, col2, rh2);
+  s += box(bx, gy, col2, rh2);
   {
-    s += `<g fill="${C.ink}" opacity="0.06" transform="translate(${bx + col2 - 120},${y + 64})"><circle cx="48" cy="10" r="9"/><path d="M48 20 L70 96 H26 Z"/><rect x="46.5" y="20" width="3" height="50"/><rect x="16" y="36" width="64" height="3"/><path d="M16 39 l-7 13 h14 z"/><path d="M80 39 l-7 13 h14 z"/></g>`;
-    const cx = bx + 28, cy = y + 36; s += chip(cx, cy) + ico('public', cx - 12, cy - 12, 24, C.red);
-    s += T(bx + 22, y + 70, '05', { size: 12, f: MON, fill: C.red, w: 700 }) + T(bx + 22, y + 92, 'THE BIG PICTURE', { size: 16, w: 800 });
-    [['gavel', 'Organised crime drives fear'], ['verified_user', 'Enforcement = safer streets'], ['balance', 'Courts holding OCGs to account']]
-      .forEach(([icn, txt], i) => { const by = y + 116 + i * 24; s += ico(icn, bx + 20, by - 13, 15, C.red) + T(bx + 42, by, txt, { size: 12, fill: C.mut }); });
+    s += `<g fill="${C.ink}" opacity="0.06" transform="translate(${bx + col2 - 116},${gy + 70})"><circle cx="48" cy="10" r="9"/><path d="M48 20 L70 96 H26 Z"/><rect x="46.5" y="20" width="3" height="50"/><rect x="16" y="36" width="64" height="3"/><path d="M16 39 l-7 13 h14 z"/><path d="M80 39 l-7 13 h14 z"/></g>`;
+    s += numTag(bx + 20, gy + 20, '05');
+    s += iconDisc(bx + 46, gy + 96, 'public', 'Big picture');
+    s += T(bx + 84, gy + 100, 'THE BIG PICTURE', { size: 17, w: 800 });
+    [['gavel', 'Organised crime drives fear and violence.'], ['verified_user', 'Strong enforcement = safer communities.'], ['balance', 'Courts are holding OCGs to account.']]
+      .forEach(([icn, txt], i) => { const by = gy + 150 + i * 24; s += ico(icn, bx + 20, by - 13, 16, C.red) + T(bx + 44, by, txt, { size: 12.5, fill: C.mut }); });
   }
-  y += rh2;
+  gy += rh2;
 
-  // footer
-  const fy = H - 38;
-  s += `<rect x="${M}" y="${fy - 20}" width="${W - 2 * M}" height="1.5" fill="${C.red}"/>`;
-  s += T(M, fy + 2, 'InsightTT', { size: 14, f: MON, w: 600 }) + T(M + 74, fy + 2, '· Court Judgments', { size: 12, f: MON, fill: C.mut });
-  s += T(W - M, fy + 2, 'STAY INFORMED. STAY SAFE.', { size: 11, f: MON, fill: C.red, anc: 'end', ls: '1' });
+  // ── footer ─────────────────────────────────────────────────────────────────
+  const fy = H - 56;
+  s += `<rect x="${M}" y="${fy - 6}" width="${W - 2 * M}" height="2" fill="${C.red}"/>`;
+  s += T(M, fy + 22, 'STAY INFORMED. STAY SAFE.', { size: 14, f: MON, fill: C.red, w: 600, ls: '0.5' });
+  s += T(M, fy + 42, 'Real Judgments. Real Impact.', { size: 12, f: MON, fill: C.mut });
+  s += T(W - M - 26, fy + 22, 'Follow @InsightTT for more', { size: 12, f: MON, fill: C.ink, anc: 'end' });
+  s += T(W - M - 26, fy + 42, 'court updates and legal insights.', { size: 11.5, f: MON, fill: C.mut, anc: 'end' });
+  s += ico('bookmark', W - M - 18, fy + 18, 20, C.mut);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${s}</svg>`;
 }
 
-function renderNoticeCard(n) {
+function renderNoticeCard(n, { width } = {}) {
   const svg = buildSvg(n);
-  const r = new Resvg(svg, { font: { loadSystemFonts: false, fontFiles: FONT_FILES, defaultFontFamily: 'Inter' } });
+  const opts = { font: { loadSystemFonts: false, fontFiles: FONT_FILES, defaultFontFamily: 'Inter' } };
+  if (width) opts.fitTo = { mode: 'width', value: width };
+  const r = new Resvg(svg, opts);
   return r.render().asPng();
 }
 
