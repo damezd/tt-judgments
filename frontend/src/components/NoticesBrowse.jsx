@@ -125,12 +125,24 @@ function Illus({ kind, color = L.amber, size = 80 }) {
     pistol: <><path fill={color} d="M5 40 h67 q3 0 3 3 v8 q0 2 -2 2 h-9 v-4 h-4 v4 h-9 q-1 5 -6 7 l-5 23 q-1 3 -4 3 h-8 q-4 0 -3 -4 l5 -22 h-2 q-13 0 -13 -12 v-6 q0 -4 4 -5z" /><rect x="1" y="40" width="5" height="6" rx="1" fill={color} /></>,
     kidnap: <><circle cx="50" cy="22" r="13" fill={color} /><path fill={color} d="M30 80 q0 -34 20 -34 q20 0 20 34 z" /><g stroke={L.tint} strokeWidth="3" fill="none"><path d="M33 58 h34" /><path d="M31 68 h38" /></g><rect x="46" y="54" width="8" height="20" rx="2" fill={L.tint} /></>,
     gang: <>{[[28, 0.9], [72, 0.9], [50, 1.05]].map(([x, sc], i) => <g key={i} transform={`translate(${x},0) scale(${sc})`}><circle cx="0" cy="22" r="11" fill={color} /><path fill={color} d="M-17 80 q0 -28 17 -28 q17 0 17 28 z" /></g>)}</>,
-    justice: <><circle cx="50" cy="15" r="9" fill={color} /><path fill={color} d="M40 90 q-2 -54 10 -54 q12 0 10 54 z" /><rect x="48" y="20" width="4" height="44" fill={color} /><rect x="20" y="30" width="60" height="3.5" rx="1.5" fill={color} /><rect x="26" y="22" width="4" height="9" fill={color} /><rect x="70" y="22" width="4" height="9" fill={color} /><g stroke={color} strokeWidth="2" fill="none"><path d="M28 33 l-7 13 h14 z" /><path d="M72 33 l-7 13 h14 z" /></g><path fill={color} d="M14 46 a7 5 0 0 0 14 0 z" /><path fill={color} d="M58 46 a7 5 0 0 0 14 0 z" /></>,
+    murder: <><path fill={color} d="M50 14 q-25 0 -25 27 q0 13 9 19 v7 q0 5 5 5 h3 v-7 h4 v7 h6 v-7 h4 v7 h3 q5 0 5 -5 v-7 q9 -6 9 -19 q0 -27 -25 -27z" /><circle cx="40" cy="42" r="6.5" fill={L.tint} /><circle cx="60" cy="42" r="6.5" fill={L.tint} /><path d="M50 50 l-4 9 h8z" fill={L.tint} /></>,
+    contract: <><circle cx="50" cy="50" r="30" fill="none" stroke={color} strokeWidth="6" /><g stroke={color} strokeWidth="6" strokeLinecap="round"><path d="M50 8 v16" /><path d="M50 76 v16" /><path d="M8 50 h16" /><path d="M76 50 h16" /></g><circle cx="50" cy="50" r="6" fill={color} /></>,
+    reprisal: <><path fill={color} d="M53 10 q3 17 14 27 q11 12 6 29 q-5 16 -23 17 q-20 -1 -23 -22 q-1 -13 10 -22 q-2 11 6 13 q-7 -17 10 -42z" /><path fill={L.tint} d="M50 55 q7 4 7 13 q0 8 -7 10 q-7 -2 -7 -10 q0 -7 7 -13z" /></>,
+    drugs: <><path fill={color} d="M38 28 h24 l-5 9 h-14z" /><rect x="34" y="34" width="32" height="44" rx="7" fill={color} /><g fill={L.tint}><circle cx="45" cy="48" r="3.2" /><circle cx="56" cy="53" r="3.2" /><circle cx="47" cy="61" r="3.2" /><circle cx="57" cy="66" r="3.2" /></g></>,
+    car: <><path fill={color} d="M8 60 l9 -16 q2 -4 7 -4 h28 q4 0 7 3 l11 13 9 2 q4 1 4 5 v5 h-84z" /><path fill={L.tint} d="M30 44 l4 -7 h16 l6 7z" /><circle cx="30" cy="65" r="10" fill={color} /><circle cx="70" cy="65" r="10" fill={color} /><circle cx="30" cy="65" r="4.5" fill={L.tint} /><circle cx="70" cy="65" r="4.5" fill={L.tint} /></>,
+    extortion: <><rect x="18" y="38" width="64" height="36" rx="4" fill={color} /><circle cx="50" cy="56" r="12" fill={L.tint} /><path d="M50 48 v16 M55 52 q-9 -3 -9 3 q0 4 9 4.5 q9 .5 9 5 q0 6 -9 3" stroke={color} strokeWidth="2.6" fill="none" strokeLinecap="round" /><g fill={L.tint}><circle cx="26" cy="46" r="2.4" /><circle cx="74" cy="66" r="2.4" /></g></>,
+    robbery: <><rect x="34" y="28" width="32" height="7" rx="3" fill={color} /><path fill={color} d="M37 35 h26 l-6 8 q15 9 15 25 q0 14 -22 14 q-22 0 -22 -14 q0 -16 15 -25z" /><path d="M50 52 v22 M55 57 q-8 -3 -8 2.5 q0 4 8 4.5 q8 .5 8 5 q0 5.5 -8 3" stroke={L.tint} strokeWidth="3" fill="none" strokeLinecap="round" /></>,
+    wounding: <><path fill={color} d="M22 74 l40 -40 q5 -5 9 -1 q4 4 -1 9 l-40 40z" /><path fill={color} d="M18 70 l8 8 -6 6 q-3 3 -6 0 l-2 -2 q-3 -3 0 -6z" /><path fill={L.tint} d="M30 66 l30 -30 q2 -2 3 -1 l-31 33z" /></>,
+    justice:<><circle cx="50" cy="15" r="9" fill={color} /><path fill={color} d="M40 90 q-2 -54 10 -54 q12 0 10 54 z" /><rect x="48" y="20" width="4" height="44" fill={color} /><rect x="20" y="30" width="60" height="3.5" rx="1.5" fill={color} /><rect x="26" y="22" width="4" height="9" fill={color} /><rect x="70" y="22" width="4" height="9" fill={color} /><g stroke={color} strokeWidth="2" fill="none"><path d="M28 33 l-7 13 h14 z" /><path d="M72 33 l-7 13 h14 z" /></g><path fill={color} d="M14 46 a7 5 0 0 0 14 0 z" /><path fill={color} d="M58 46 a7 5 0 0 0 14 0 z" /></>,
   }[kind];
   if (!inner) return null;
   return <svg viewBox="0 0 100 100" width={size} height={size} style={{ display: 'block' }}>{inner}</svg>;
 }
-const ART_KEY = { 'Firearms': 'pistol', 'Kidnapping': 'kidnap', 'Gang / OCG activity': 'gang' };
+const ART_KEY = {
+  'Firearms': 'pistol', 'Kidnapping': 'kidnap', 'Gang / OCG activity': 'gang', 'Murder / homicide': 'murder',
+  'Contract killings': 'contract', 'Reprisal attacks': 'reprisal', 'Drug trafficking': 'drugs',
+  'Vehicle theft': 'car', 'Extortion': 'extortion', 'Robbery': 'robbery', 'Wounding': 'wounding',
+};
 
 function Headline({ text, name }) {
   if (name && text && text.toLowerCase().includes(name.toLowerCase())) {

@@ -34,10 +34,22 @@ const ART = {
     const fig = (x, s) => `<g transform="translate(${x},0) scale(${s})"><circle cx="0" cy="22" r="11" fill="${c}"/><path fill="${c}" d="M-17 80 q0 -28 17 -28 q17 0 17 28 z"/></g>`;
     return fig(28, 0.9) + fig(72, 0.9) + fig(50, 1.05);
   },
+  murder: c => `<path fill="${c}" d="M50 14 q-25 0 -25 27 q0 13 9 19 v7 q0 5 5 5 h3 v-7 h4 v7 h6 v-7 h4 v7 h3 q5 0 5 -5 v-7 q9 -6 9 -19 q0 -27 -25 -27z"/><circle cx="40" cy="42" r="6.5" fill="${C.tint}"/><circle cx="60" cy="42" r="6.5" fill="${C.tint}"/><path d="M50 50 l-4 9 h8z" fill="${C.tint}"/>`,
+  contract: c => `<circle cx="50" cy="50" r="30" fill="none" stroke="${c}" stroke-width="6"/><g stroke="${c}" stroke-width="6" stroke-linecap="round"><path d="M50 8 v16"/><path d="M50 76 v16"/><path d="M8 50 h16"/><path d="M76 50 h16"/></g><circle cx="50" cy="50" r="6" fill="${c}"/>`,
+  reprisal: c => `<path fill="${c}" d="M53 10 q3 17 14 27 q11 12 6 29 q-5 16 -23 17 q-20 -1 -23 -22 q-1 -13 10 -22 q-2 11 6 13 q-7 -17 10 -42z"/><path fill="${C.tint}" d="M50 55 q7 4 7 13 q0 8 -7 10 q-7 -2 -7 -10 q0 -7 7 -13z"/>`,
+  drugs: c => `<path fill="${c}" d="M38 28 h24 l-5 9 h-14z"/><rect x="34" y="34" width="32" height="44" rx="7" fill="${c}"/><g fill="${C.tint}"><circle cx="45" cy="48" r="3.2"/><circle cx="56" cy="53" r="3.2"/><circle cx="47" cy="61" r="3.2"/><circle cx="57" cy="66" r="3.2"/></g>`,
+  car: c => `<path fill="${c}" d="M8 60 l9 -16 q2 -4 7 -4 h28 q4 0 7 3 l11 13 9 2 q4 1 4 5 v5 h-84z"/><path fill="${C.tint}" d="M30 44 l4 -7 h16 l6 7z"/><circle cx="30" cy="65" r="10" fill="${c}"/><circle cx="70" cy="65" r="10" fill="${c}"/><circle cx="30" cy="65" r="4.5" fill="${C.tint}"/><circle cx="70" cy="65" r="4.5" fill="${C.tint}"/>`,
+  extortion: c => `<rect x="18" y="38" width="64" height="36" rx="4" fill="${c}"/><circle cx="50" cy="56" r="12" fill="${C.tint}"/><path d="M50 48 v16 M55 52 q-9 -3 -9 3 q0 4 9 4.5 q9 .5 9 5 q0 6 -9 3" stroke="${c}" stroke-width="2.6" fill="none" stroke-linecap="round"/><g fill="${C.tint}"><circle cx="26" cy="46" r="2.4"/><circle cx="74" cy="66" r="2.4"/></g>`,
+  robbery: c => `<rect x="34" y="28" width="32" height="7" rx="3" fill="${c}"/><path fill="${c}" d="M37 35 h26 l-6 8 q15 9 15 25 q0 14 -22 14 q-22 0 -22 -14 q0 -16 15 -25z"/><path d="M50 52 v22 M55 57 q-8 -3 -8 2.5 q0 4 8 4.5 q8 .5 8 5 q0 5.5 -8 3" stroke="${C.tint}" stroke-width="3" fill="none" stroke-linecap="round"/>`,
+  wounding: c => `<path fill="${c}" d="M22 74 l40 -40 q5 -5 9 -1 q4 4 -1 9 l-40 40z"/><path fill="${c}" d="M18 70 l8 8 -6 6 q-3 3 -6 0 l-2 -2 q-3 -3 0 -6z"/><path fill="${C.tint}" d="M30 66 l30 -30 q2 -2 3 -1 l-31 33z"/>`,
   justice: c => `<circle cx="50" cy="15" r="9" fill="${c}"/><path fill="${c}" d="M40 90 q-2 -54 10 -54 q12 0 10 54 z"/><rect x="48" y="20" width="4" height="44" fill="${c}"/><rect x="20" y="30" width="60" height="3.5" rx="1.5" fill="${c}"/><rect x="26" y="22" width="4" height="9" fill="${c}"/><rect x="70" y="22" width="4" height="9" fill="${c}"/><g stroke="${c}" stroke-width="2" fill="none"><path d="M28 33 l-7 13 h14 z"/><path d="M72 33 l-7 13 h14 z"/></g><path fill="${c}" d="M14 46 a7 5 0 0 0 14 0 z"/><path fill="${c}" d="M58 46 a7 5 0 0 0 14 0 z"/>`,
 };
 // ground label → illustration key (else fall back to a Material glyph)
-const ART_KEY = { 'Firearms': 'pistol', 'Kidnapping': 'kidnap', 'Gang / OCG': 'gang' };
+const ART_KEY = {
+  'Firearms': 'pistol', 'Kidnapping': 'kidnap', 'Gang / OCG': 'gang', 'Murder / homicide': 'murder',
+  'Contract killings': 'contract', 'Reprisal attacks': 'reprisal', 'Drug trafficking': 'drugs',
+  'Vehicle theft': 'car', 'Extortion': 'extortion', 'Robbery': 'robbery', 'Wounding': 'wounding',
+};
 const drawArt = (label, icon, x, y, size, color) => ART[ART_KEY[label]]
   ? `<svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="0 0 100 100">${ART[ART_KEY[label]](color)}</svg>`
   : ico(icon || 'shield', x + size * 0.12, y + size * 0.12, size * 0.76, color);
