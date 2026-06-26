@@ -43,8 +43,81 @@ function NoticeArt({ no, accent, tint }) {
   );
 }
 
+// Full-detail modal for a single notice.
+function NoticeModal({ n, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  if (!n) return null;
+  const t = TYPE[n.ntype] || TYPE.default;
+  const addresses = (n.address || '').split(';').map(s => s.trim()).filter(Boolean);
+
+  const Row = ({ label, children }) =>
+    children ? (
+      <div style={{ display: 'flex', gap: 12, padding: '8px 0', borderTop: '1px solid var(--border)' }}>
+        <div style={{ flex: '0 0 116px', fontSize: 11, textTransform: 'uppercase', letterSpacing: 1, color: 'var(--muted)', paddingTop: 2 }}>{label}</div>
+        <div style={{ flex: 1, fontSize: 14, lineHeight: 1.5 }}>{children}</div>
+      </div>
+    ) : null;
+
+  const share = () => {
+    const text = `${n.social_headline || n.title} — InsightTT`;
+    if (navigator.share) navigator.share({ title: 'InsightTT', text }).catch(() => {});
+    else copyText(text);
+  };
+
+  return (
+    <div
+      onClick={onClose}
+      style={{ position: 'fixed', inset: 0, background: 'rgba(20,16,12,0.55)', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', zIndex: 1000, padding: '32px 16px', overflowY: 'auto' }}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{ background: 'var(--bg)', color: 'var(--text, inherit)', border: '1px solid var(--border)', borderRadius: 12, width: '100%', maxWidth: 640, boxShadow: '0 20px 60px rgba(0,0,0,0.3)', overflow: 'hidden' }}
+      >
+        {/* header band */}
+        <div style={{ background: t.accent, color: '#fff', padding: '14px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, letterSpacing: 1 }}>
+            {t.label.toUpperCase()} · LEGAL NOTICE NO. {n.notice_no}
+          </span>
+          <button onClick={onClose} aria-label="Close" style={{ background: 'transparent', border: 'none', color: '#fff', fontSize: 22, lineHeight: 1, cursor: 'pointer', padding: 0 }}>×</button>
+        </div>
+
+        <div style={{ padding: '18px' }}>
+          <div style={{ fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 22, lineHeight: 1.25, marginBottom: 12 }}>
+            {n.social_headline || n.title}
+          </div>
+
+          <Row label="Type">{t.label}</Row>
+          <Row label="Act">{n.act}</Row>
+          <Row label="Instrument">{n.instrument}</Row>
+          <Row label="Person">{n.person_name}</Row>
+          <Row label="Aliases">{n.alias}</Row>
+          <Row label="Address">{addresses.length ? addresses.map((a, i) => <div key={i}>{a}</div>) : null}</Row>
+          <Row label="Detained at">{n.detained_at}</Row>
+          <Row label="Ordered by">{[n.official, n.official_role].filter(Boolean).join(' · ')}</Row>
+          <Row label="Date made">{fmtDate(n.date_made)}</Row>
+          <Row label="Published">{fmtDate(n.date_published)}</Row>
+          <Row label="Grounds">{n.summary}</Row>
+          <Row label="Summary">{n.social_post}</Row>
+          <Row label="Citation">{n.citation}</Row>
+          <Row label="Source">{n.source_file}</Row>
+
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 16 }}>
+            <button className="share-btn" onClick={share}>Share · @insighttt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function NoticesBrowse() {
   const [state, setState] = useState({ loading: true });
+  const [selected, setSelected] = useState(null);
 
   async function load() {
     setState({ loading: true });
@@ -84,9 +157,16 @@ export default function NoticesBrowse() {
           const t = TYPE[n.ntype] || TYPE.default;
           const body = n.social_post || n.summary || '';
           const excerpt = body.length > 200 ? body.slice(0, 200).trimEnd() + '…' : body;
-          const date = fmtDate(n.date_made || n.date_published);
           return (
-            <article key={n.id} className="case-card" style={{ cursor: 'default' }}>
+            <article
+              key={n.id}
+              className="case-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => setSelected(n)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter') setSelected(n); }}
+            >
               <div className="rail" style={{ background: t.accent }} />
               <div className="card-illustration"><NoticeArt no={n.notice_no} accent={t.accent} tint={t.tint} /></div>
               <div className="card-body">
@@ -95,22 +175,18 @@ export default function NoticesBrowse() {
                   <span className="badge" style={{ background: 'var(--bg)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{t.tag}</span>
                 </div>
                 <div className="card-headline">{n.social_headline || n.title}</div>
-                <div className="card-meta">{[n.act, n.official, date].filter(Boolean).join(' · ')}</div>
-                {n.person_name && (n.address || n.alias) && (
-                  <div className="card-meta" style={{ marginTop: -4 }}>
-                    {n.alias ? `aka “${n.alias}” · ` : ''}{n.address}{n.detained_at ? ` → held at ${n.detained_at.split(',')[0]}` : ''}
-                  </div>
-                )}
                 {excerpt && <div className="card-excerpt">{excerpt}</div>}
               </div>
               <div className="card-footer">
                 <span className="card-date">{n.citation}</span>
-                <button className="share-btn" onClick={() => share(n)}>Share · @insighttt</button>
+                <button className="share-btn" onClick={(e) => { e.stopPropagation(); share(n); }}>Share · @insighttt</button>
               </div>
             </article>
           );
         })}
       </div>
+
+      {selected && <NoticeModal n={selected} onClose={() => setSelected(null)} />}
     </div>
   );
 }
