@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { copyText } from './ui';
 import { NoticeIllustration } from './NoticeIllustration';
 import NoticeFull from './NoticeFull';
@@ -49,7 +50,7 @@ export default function NoticeViewer({ n, onClose }) {
   const body = n.social_post || n.summary || '';
   const basis = (n.act || '').replace(/^The\s+/i, '');
 
-  return (
+  return createPortal((
     <>
       <div className="viewer-overlay" onClick={onClose}>
         <div className="viewer-sheet" onClick={e => e.stopPropagation()}>
@@ -123,5 +124,5 @@ export default function NoticeViewer({ n, onClose }) {
       </div>
       {showFull && <NoticeFull n={n} onClose={() => setShowFull(false)} />}
     </>
-  );
+  ), document.body);
 }
