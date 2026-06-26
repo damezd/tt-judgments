@@ -3,6 +3,7 @@ import { getNotices, fetchNoticeCard } from '../api/client';
 import { copyText, toast } from './ui';
 import { fmtDate } from './caseMeta';
 import { MI } from './materialIcons';
+import heroImg from '../assets/hero.png';
 
 const TYPE = {
   detention_order: { label: 'Detention Order', tag: 'Emergency Powers', accent: '#c0392b', tint: '#fdeceb' },
@@ -154,8 +155,8 @@ function NoticeDetail({ n, onClose, onShare }) {
     </span>
   );
   const iconChip = name => (
-    <span style={{ flex: '0 0 38px', width: 38, height: 38, borderRadius: '50%', background: 'rgba(226,61,46,.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <MIcon name={name} color={D.red} size={22} />
+    <span style={{ flex: '0 0 40px', width: 40, height: 40, borderRadius: '50%', background: D.red, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <MIcon name={name} color={D.bg} size={24} />
     </span>
   );
 
@@ -167,14 +168,19 @@ function NoticeDetail({ n, onClose, onShare }) {
         style={{ width: '100%', maxWidth: 460, background: D.bg, color: D.text, borderRadius: 18, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.6)' }}>
 
         {/* HERO */}
-        <div style={{ position: 'relative', padding: '18px 18px 20px', overflow: 'hidden',
-          background: `radial-gradient(120% 90% at 88% 0%, ${D.redDim} 0%, rgba(125,36,27,0) 55%), ${D.bg}` }}>
-          {/* prison-bar motif + faded icon */}
-          <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 150, opacity: 0.16, pointerEvents: 'none',
-            backgroundImage: `repeating-linear-gradient(90deg, ${D.text} 0 2px, transparent 2px 16px)` }} />
-          <div style={{ position: 'absolute', top: 24, right: 14, opacity: 0.12, pointerEvents: 'none' }}>
-            <MIcon name={heroIcon} color={D.text} size={120} />
-          </div>
+        <div style={{ position: 'relative', padding: '18px 18px 20px', overflow: 'hidden', minHeight: 300, background: D.bg }}>
+          {/* blood-moon figure photo, anchored right; fades into the dark headline zone */}
+          {isPerson && (
+            <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '62%', pointerEvents: 'none',
+              backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center 22%' }} />
+          )}
+          <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none',
+            background: `linear-gradient(90deg, ${D.bg} 34%, rgba(22,16,14,0.55) 56%, rgba(22,16,14,0) 78%), linear-gradient(0deg, ${D.bg} 2%, rgba(22,16,14,0) 28%)` }} />
+          {!isPerson && (
+            <div style={{ position: 'absolute', top: 24, right: 14, opacity: 0.12, pointerEvents: 'none' }}>
+              <MIcon name={heroIcon} color={D.text} size={120} />
+            </div>
+          )}
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative' }}>
             <div>
@@ -189,11 +195,11 @@ function NoticeDetail({ n, onClose, onShare }) {
             {(n.citation || `${t.label} · No. ${n.notice_no}`).toUpperCase()}
           </div>
 
-          <h2 style={{ position: 'relative', marginTop: 14, fontSize: 27, lineHeight: 1.08, fontWeight: 800, letterSpacing: '-.01em', textTransform: 'uppercase' }}>
+          <h2 style={{ position: 'relative', marginTop: 14, fontSize: 28, lineHeight: 1.06, fontWeight: 800, letterSpacing: '-.01em', textTransform: 'uppercase', maxWidth: isPerson ? 250 : undefined }}>
             <Headline text={n.social_headline || n.title} name={n.person_name} />
           </h2>
-          <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: D.mut, maxWidth: 360 }}>
-            {firstSentences(n.social_post || n.summary, 220)}
+          <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: D.mut, maxWidth: isPerson ? 250 : 360 }}>
+            {firstSentences(n.social_post || n.summary, isPerson ? 150 : 220)}
           </p>
           <div style={{ marginTop: 12, display: 'flex', gap: 16, alignItems: 'center' }}>
             <button onClick={copyPost} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.mut, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
@@ -208,15 +214,15 @@ function NoticeDetail({ n, onClose, onShare }) {
         </div>
 
         <div style={{ padding: '4px 14px 14px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {/* PERSON CARD */}
+          {/* PERSON CARD — cream, to match the shareable card */}
           {isPerson && (
-            <div style={{ ...card, display: 'flex', alignItems: 'center', gap: 13 }}>
+            <div style={{ background: '#efe7db', border: '1px solid #d8cdbd', borderRadius: 14, padding: 16, display: 'flex', alignItems: 'center', gap: 13 }}>
               <div style={{ flex: '0 0 52px', width: 52, height: 52, borderRadius: '50%', background: D.red, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'DM Serif Display, Georgia, serif', fontSize: 21 }}>{initials(n.person_name)}</div>
               <div style={{ minWidth: 0, flex: 1 }}>
-                <div style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.1 }}>{n.person_name}</div>
+                <div style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.1, color: '#1a1310' }}>{n.person_name}</div>
                 {aliases.length ? <div style={{ fontSize: 12.5, color: D.red, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
-                {(role || gang) ? <div style={{ fontSize: 12.5, color: D.mut, marginTop: 2 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, paddingTop: 8, borderTop: `1px solid ${D.line}`, fontSize: 12, color: D.text }}>
+                {(role || gang) ? <div style={{ fontSize: 12.5, color: '#6e5f52', marginTop: 2 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, paddingTop: 8, borderTop: '1px solid #d8cdbd', fontSize: 12, color: '#1a1310' }}>
                   <MIcon name="lock" color={D.red} size={16} /> Detained under the {(n.act || 'Emergency Powers Regulations, 2026').replace(/^The\s+/i, '')}
                 </div>
               </div>

@@ -12,7 +12,7 @@ const FONT_FILES = [
   'inter-latin-800-normal.ttf', 'jetbrains-mono-latin-500-normal.ttf', 'jetbrains-mono-latin-600-normal.ttf',
 ].map(f => path.join(ASSETS, 'fonts', f));
 
-const C = { bg: '#15110e', panel: '#241c16', line: '#3a2f26', ink: '#efe7db', mut: '#a2978c', red: '#cf3a2b',
+const C = { bg: '#15110e', panel: '#29211a', line: '#42352b', ink: '#efe7db', mut: '#b3a89c', red: '#cf3a2b',
   cream: '#efe7db', creamLine: '#d8cdbd', dark: '#1a1310', darkMut: '#6e5f52' };
 const SAN = 'Inter, Arial, sans-serif', MON = 'JetBrains Mono, monospace';
 const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -33,17 +33,17 @@ const ALLEGATIONS = [
   [/gang|organised crim|organized crim|\bocg\b|\bicg\b/i, 'Gang / OCG'],
 ];
 const GROUND = {
-  'Contract killings': { icon: 'dangerous', short: ['Killings allegedly', 'carried out for hire.'], key: 'Murder-for-hire alleged.' },
-  'Reprisal attacks': { icon: 'local_fire_department', short: ['Tit-for-tat violence', 'between rival groups.'], key: 'Cycle of retaliation.' },
-  'Murder / homicide': { icon: 'skull', short: ['Alleged involvement', 'in killings.'], key: 'Most serious allegation.' },
-  'Firearms': { icon: 'crisis_alert', short: ['Alleged firearm and', 'ammunition access.'], key: 'Raises public-safety risk.' },
-  'Drug trafficking': { icon: 'medication', short: ['Narcotics trade ties.'], key: 'Funds organised crime.' },
-  'Vehicle theft': { icon: 'directions_car', short: ['Stolen-vehicle ring.'], key: 'Larceny network.' },
-  'Extortion': { icon: 'paid', short: ['Demanding money', 'with menaces.'], key: 'Community intimidation.' },
-  'Robbery': { icon: 'shopping_bag', short: ['Armed robbery alleged.'], key: 'A core allegation.' },
-  'Kidnapping': { icon: 'person_off', short: ['Tied to kidnapping', 'for ransom.'], key: 'A core allegation.' },
-  'Wounding': { icon: 'personal_injury', short: ['Violent assault', 'causing injury.'], key: 'Public-safety threat.' },
-  'Gang / OCG': { icon: 'groups', short: ['Named an active', 'member of an OCG.'], key: 'Networks amplify harm.' },
+  'Contract killings': { icon: 'dangerous', short: ['Allegedly ordered or carried out killings for payment on behalf of the network.'], key: 'Murder-for-hire alleged.' },
+  'Reprisal attacks': { icon: 'local_fire_department', short: ['Tied to tit-for-tat shootings between rival gangs, fuelling cycles of violence.'], key: 'Cycle of retaliation.' },
+  'Murder / homicide': { icon: 'skull', short: ['Alleged involvement in one or more killings linked to gang activity.'], key: 'Most serious allegation.' },
+  'Firearms': { icon: 'crisis_alert', short: ['Alleged access to firearms and ammunition, including high-powered weapons.'], key: 'Raises public-safety risk.' },
+  'Drug trafficking': { icon: 'medication', short: ['Linked to the narcotics trade that finances and sustains organised crime.'], key: 'Funds organised crime.' },
+  'Vehicle theft': { icon: 'directions_car', short: ['Connected to a stolen-vehicle and larceny ring operating across the area.'], key: 'Larceny network.' },
+  'Extortion': { icon: 'paid', short: ['Accused of demanding money with menaces, intimidating residents and businesses.'], key: 'Community intimidation.' },
+  'Robbery': { icon: 'shopping_bag', short: ['Tied to armed robberies carried out by members of the group.'], key: 'A core allegation.' },
+  'Kidnapping': { icon: 'person_off', short: ['Allegedly involved in kidnapping for ransom, a core charge in the order.'], key: 'A core allegation.' },
+  'Wounding': { icon: 'personal_injury', short: ['Linked to violent assaults causing serious injury to victims.'], key: 'Public-safety threat.' },
+  'Gang / OCG': { icon: 'groups', short: ['Named as an active member of an organised crime group in the region.'], key: 'Networks amplify harm.' },
 };
 function allegationsFrom(text, name) {
   text = text || '';
@@ -89,14 +89,16 @@ function buildSvg(n) {
   let s = `<rect width="${W}" height="${H}" fill="${C.bg}"/>`;
   s += `<defs>
     <linearGradient id="ts" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.6"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
-    <linearGradient id="lf" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.bg}" stop-opacity="0.96"/><stop offset="0.55" stop-color="${C.bg}" stop-opacity="0.6"/><stop offset="1" stop-color="${C.bg}" stop-opacity="0"/></linearGradient>
+    <linearGradient id="hf" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.bg}" stop-opacity="1"/><stop offset="0.62" stop-color="${C.bg}" stop-opacity="0"/></linearGradient>
     <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.bg}" stop-opacity="0"/><stop offset="1" stop-color="${C.bg}" stop-opacity="1"/></linearGradient></defs>`;
 
-  // ── HERO: full-bleed photo with dark top, left, and bottom scrims ──────────
+  // ── HERO: photo (blood-moon figure) anchored RIGHT, headline space LEFT ─────
   const HERO = 470;
-  s += `<image x="0" y="0" width="${W}" height="${HERO}" href="data:image/png;base64,${HERO_B64}" preserveAspectRatio="xMidYMin slice"/>`;
+  const photoW = 440, photoX = W - photoW;
+  s += `<image x="${photoX}" y="0" width="${photoW}" height="${HERO}" href="data:image/png;base64,${HERO_B64}" preserveAspectRatio="xMidYMid slice"/>`;
+  // fade the photo's left edge into the dark headline zone
+  s += `<rect x="${photoX}" y="0" width="280" height="${HERO}" fill="url(#hf)"/>`;
   s += `<rect x="0" y="0" width="${W}" height="150" fill="url(#ts)"/>`;
-  s += `<rect x="0" y="0" width="${W}" height="${HERO}" fill="url(#lf)"/>`;
   s += `<rect x="0" y="${HERO - 150}" width="${W}" height="150" fill="url(#bf)"/>`;
 
   // brand + ribbon (top-left), kicker tag (top-right)
@@ -108,18 +110,35 @@ function buildSvg(n) {
   s += `<rect x="${M}" y="104" width="${rw}" height="${10 + rlines.length * 18}" rx="3" fill="${C.red}"/>`;
   rlines.forEach((l, i) => s += T(M + 10, 122 + i * 18, l, { size: 10, f: MON, fill: '#fff', w: 600 }));
 
-  // ── HEADLINE: big uppercase, overlaid bottom-left of hero, name in red ─────
-  const hu = headline.toUpperCase();
-  const hl = wrap(hu, 16);
-  const nLines = Math.min(hl.length, 4);
-  const hsize = nLines >= 4 ? 50 : nLines === 3 ? 56 : 62;
-  const lh = hsize * 1.02;
-  const lastBase = HERO - 46;
-  const firstBase = lastBase - (nLines - 1) * lh;
-  const nameTokens = person.toLowerCase().split(/\s+/).filter(t => t.length > 2);
-  hl.slice(0, 4).forEach((ln, i) => {
-    const isName = nameTokens.some(t => ln.toLowerCase().includes(t));
-    s += T(M, firstBase + i * lh, ln, { size: hsize, w: 800, ls: '-1.5', fill: isName ? C.red : C.ink });
+  // ── HEADLINE: big uppercase, bottom-left of hero, subject NAME in red ──────
+  const zoneW = photoX - M - 28;
+  const nameTokens = person.toLowerCase().split(/\s+/).map(w => w.replace(/[^a-z]/g, '')).filter(t => t.length > 2);
+  const isNameTok = tok => { const c = tok.toLowerCase().replace(/[^a-z]/g, ''); return !!c && nameTokens.some(t => t === c || (c.length > 3 && t.includes(c)) || (t.length > 3 && c.includes(t))); };
+  // Keep it punchy: if the headline has dash-separated clauses, use the clause
+  // that names the subject (drops verbose trailing context).
+  let hsrc = headline;
+  const parts = headline.split(/\s[—–-]\s/);
+  if (parts.length > 1) hsrc = parts.find(p => p.toLowerCase().split(/\s+/).some(w => nameTokens.includes(w.replace(/[^a-z]/g, '')))) || parts[0];
+  const tokens = hsrc.toUpperCase().split(/\s+/).filter(Boolean);
+  // Pick the largest size that fits within 4 lines (else the largest within 5).
+  const layouts = [60, 54, 50, 46, 42, 38].map(size => {
+    const maxC = Math.floor(zoneW / (size * 0.60));
+    const ls = []; let cur = [], len = 0;
+    for (const tok of tokens) {
+      const add = (len ? len + 1 : 0) + tok.length;
+      if (cur.length && add > maxC) { ls.push(cur); cur = [tok]; len = tok.length; }
+      else { cur.push(tok); len = add; }
+    }
+    if (cur.length) ls.push(cur);
+    return { size, ls };
+  });
+  const pick = layouts.find(L => L.ls.length <= 4) || layouts.find(L => L.ls.length <= 5) || layouts[layouts.length - 1];
+  const hsize = pick.size, hlines = pick.ls.slice(0, 5);
+  const lh = hsize * 1.04;
+  const firstBase = (HERO - 46) - (hlines.length - 1) * lh;
+  hlines.forEach((line, i) => {
+    const runs = line.map(tok => `<tspan fill="${isNameTok(tok) ? C.red : C.ink}">${esc(tok)} </tspan>`).join('');
+    s += `<text x="${M}" y="${firstBase + i * lh}" font-family="${SAN}" font-size="${hsize}" font-weight="800" letter-spacing="-1.5">${runs}</text>`;
   });
 
   // ── SECTION A: summary (left) + cream profile card (right) ─────────────────
@@ -148,8 +167,8 @@ function buildSvg(n) {
   const box = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="${C.panel}" stroke="${C.line}"/>`;
   const numTag = (x, y, num) => `<rect x="${x}" y="${y}" width="30" height="26" rx="5" fill="${C.red}"/>` + T(x + 15, y + 18, num, { size: 13, f: MON, w: 700, fill: '#fff', anc: 'middle' });
   const iconDisc = (cx, cy, icon, label) => {
-    let g = `<circle cx="${cx}" cy="${cy}" r="26" fill="${C.red}"/>`;
-    g += (label === 'Firearms') ? gun(cx - 12, cy - 11, 24, C.dark) : ico(icon || 'shield', cx - 13, cy - 13, 26, C.dark);
+    let g = `<circle cx="${cx}" cy="${cy}" r="27" fill="${C.red}"/>`;
+    g += (label === 'Firearms') ? gun(cx - 15, cy - 14, 30, C.dark) : ico(icon || 'shield', cx - 15, cy - 15, 30, C.dark);
     return g;
   };
   const keyStrip = (x, y, w, txt) => {
@@ -171,7 +190,7 @@ function buildSvg(n) {
       s += iconDisc(x + 46, gy + 96, g.icon, g.label);
       wrap(g.label.toUpperCase(), 11).slice(0, 2).forEach((l, i) => s += T(x + 84, gy + 90 + i * 20, l, { size: 16, w: 800 }));
       const dtxt = (g.short || []).join(' ');
-      wrap(dtxt, Math.floor((col - 44) / 6.0)).slice(0, 4).forEach((l, i) => s += T(x + 22, gy + 150 + i * 19, l, { size: 13, fill: C.mut }));
+      wrap(dtxt, Math.floor((col - 40) / 6.4)).slice(0, 3).forEach((l, i) => s += T(x + 22, gy + 150 + i * 20, l, { size: 13, fill: C.mut }));
       s += keyStrip(x + 14, gy + rh - 58, col - 28, g.key);
     });
     gy += rh + gap;
