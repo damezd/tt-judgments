@@ -1,4 +1,4 @@
-import legalNotice from '../assets/legal-notice.png';
+import legalNotice from '../assets/legal-notice.webp';
 
 // Card illustration for all legal notices (T&T "Legal Notice" document).
 export function NoticeIllustration() {
