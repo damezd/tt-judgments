@@ -217,7 +217,7 @@ function NoticeDetail({ n, onClose, onShare }) {
                 {aliases.length ? <div style={{ fontSize: 12.5, color: D.red, marginTop: 2 }}>aka “{aliases.join('”, “')}”</div> : null}
                 {(role || gang) ? <div style={{ fontSize: 12.5, color: D.mut, marginTop: 2 }}>{[role, gang].filter(Boolean).join(' · ')} (alleged)</div> : null}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, paddingTop: 8, borderTop: `1px solid ${D.line}`, fontSize: 12, color: D.text }}>
-                  <MIcon name="lock" color={D.red} size={16} /> Detained under the {n.act || 'Emergency Powers Regulations, 2026'}
+                  <MIcon name="lock" color={D.red} size={16} /> Detained under the {(n.act || 'Emergency Powers Regulations, 2026').replace(/^The\s+/i, '')}
                 </div>
               </div>
             </div>
@@ -251,7 +251,7 @@ function NoticeDetail({ n, onClose, onShare }) {
               <span style={{ fontSize: 14.5, fontWeight: 800, textTransform: 'uppercase', color: D.text }}>Legal basis</span>
             </div>
             <div style={{ fontSize: 12.5, lineHeight: 1.5, color: D.mut }}>
-              Detention is granted under the <b style={{ color: D.text }}>{n.act || 'Emergency Powers Regulations, 2026'}</b>
+              Detention is granted under the <b style={{ color: D.text }}>{(n.act || 'Emergency Powers Regulations, 2026').replace(/^The\s+/i, '')}</b>
               {n.official ? `, ordered by ${n.official}${n.official_role ? `, ${n.official_role}` : ''}.` : '.'}
             </div>
             <div style={{ marginTop: 9, fontSize: 11.5, color: D.text }}><b style={{ color: D.red }}>Purpose:</b> prevent further criminal activity and protect the public.</div>
