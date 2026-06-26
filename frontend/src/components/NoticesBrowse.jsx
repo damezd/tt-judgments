@@ -62,6 +62,40 @@ function initials(name) {
   return (name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
 }
 
+// Short tile label + icon per allegation (visual, Instagram-style breakdown).
+const SHORT = {
+  'Contract killings': 'Contract kill', 'Reprisal attacks': 'Reprisals', 'Murder / homicide': 'Homicide',
+  'Firearms': 'Firearms', 'Drug trafficking': 'Drugs', 'Vehicle theft': 'Vehicle theft',
+  'Extortion': 'Extortion', 'Robbery': 'Robbery', 'Kidnapping': 'Kidnapping', 'Wounding': 'Wounding',
+  'Outstanding warrants': 'Warrants', 'Evading police': 'Evading', 'Gang / OCG activity': 'Gang / OCG',
+};
+const ICON = {
+  'Contract killings': 'target', 'Reprisal attacks': 'flame', 'Murder / homicide': 'skull',
+  'Firearms': 'gun', 'Drug trafficking': 'pill', 'Vehicle theft': 'car', 'Extortion': 'money',
+  'Robbery': 'bag', 'Kidnapping': 'kidnap', 'Wounding': 'knife', 'Outstanding warrants': 'doc',
+  'Evading police': 'run', 'Gang / OCG activity': 'gang',
+};
+function Icon({ name, color, size = 30 }) {
+  const p = { fill: 'none', stroke: color, strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  const set = {
+    gun: <><rect x="2.5" y="8" width="12.5" height="3.3" rx="0.6" fill={color} /><path d="M10.6 11.3h4.1l-1.5 5.1a1 1 0 0 1-.96.7h-1.2a1 1 0 0 1-.95-1.3z" fill={color} /><path fill="none" stroke={color} strokeWidth="1.4" strokeLinecap="round" d="M9.6 11.6a2.2 2.2 0 0 0 1.7 2.5" /></>,
+    skull: <><path {...p} d="M5 11a7 7 0 0 1 14 0v3l-1.5 1.4V18h-2v-1.6h-1V18h-2v-1.6h-1V18h-2v-2.6L6.5 14z" /><circle cx="9.2" cy="11" r="1.3" fill={color} stroke="none" /><circle cx="14.8" cy="11" r="1.3" fill={color} stroke="none" /></>,
+    target: <><circle {...p} cx="12" cy="12" r="8" /><circle {...p} cx="12" cy="12" r="3.2" /><path {...p} d="M12 1.5v3.5M12 19v3.5M1.5 12h3.5M19 12h3.5" /></>,
+    flame: <path {...p} d="M12 3c3.5 4 5 6 5 9a5 5 0 1 1-10 0c0-2 .8-3.2 2-4.2.2 1.4 1 2.2 2 2.2-.6-2.2-1.4-4.4 1-7z" />,
+    pill: <g transform="rotate(45 12 12)"><rect {...p} x="3" y="9" width="18" height="6" rx="3" /><path d="M3 9h9v6H6a3 3 0 0 1-3-3z" fill={color} opacity="0.22" /><path stroke={color} strokeWidth="1.7" strokeLinecap="round" d="M12 9v6" /></g>,
+    car: <><path {...p} d="M4 13l1.8-4.5h12.4L20 13v4h-2.5M6.5 17H4v-4M9.5 17h5" /><circle {...p} cx="7.5" cy="17.3" r="1.7" /><circle {...p} cx="16.5" cy="17.3" r="1.7" /></>,
+    money: <><circle {...p} cx="12" cy="12" r="8.4" /><path {...p} d="M12 6.8v10.4M9.6 9.4a2.4 2 0 0 1 4.8 0c0 2.4-4.8 1.6-4.8 3.9a2.4 2 0 0 0 4.8.3" /></>,
+    bag: <><path {...p} d="M7 8.5h10l1.8 11H5.2z" /><path {...p} d="M9 8.5a3 3 0 0 1 6 0" /><path fill="none" stroke={color} strokeWidth="1.4" strokeLinecap="round" d="M12 12v4.4M10.7 13a1.3 1 0 0 1 2.6 0c0 1.3-2.6 .7-2.6 2a1.3 1 0 0 0 2.6 .2" /></>,
+    kidnap: <><circle {...p} cx="12" cy="7" r="3" /><path {...p} d="M6 20v-1a6 6 0 0 1 12 0v1" /><path {...p} d="M8.8 7h6.4" /></>,
+    knife: <><path d="M3.5 16.5L13 7q1.8-1.8 3.4-.2L7 16.8z" fill={color} opacity="0.9" /><path {...p} d="M7.2 17l2.6 2.6" /><path {...p} d="M12.2 7.8l1.8 1.8" /></>,
+    doc: <><rect {...p} x="6" y="3" width="12" height="18" rx="1.5" /><path {...p} d="M9 8h6M9 12h6M9 16h3.5" /></>,
+    run: <><circle {...p} cx="14" cy="5" r="2" /><path {...p} d="M5.5 21l3.5-5 2.5 2 1.6-3.6L9.2 11l-3 1" /><path {...p} d="M11 14.5l3.6 1 2 4.5" /></>,
+    gang: <><circle {...p} cx="12" cy="6" r="2.3" /><circle {...p} cx="6" cy="9" r="2" /><circle {...p} cx="18" cy="9" r="2" /><path {...p} d="M8.4 19a3.6 3.6 0 0 1 7.2 0M2.5 18a3 3 0 0 1 5-2M21.5 18a3 3 0 0 0-5-2" /></>,
+    alert: <><path {...p} d="M12 3l9 16H3z" /><path {...p} d="M12 10v4M12 16.4v.2" /></>,
+  };
+  return <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">{set[name] || set.alert}</svg>;
+}
+
 function NoticeArt({ no, accent, tint }) {
   return (
     <svg viewBox="0 0 430 168" xmlns="http://www.w3.org/2000/svg">
@@ -130,18 +164,16 @@ function NoticeDetail({ n, onClose }) {
             </div>
           )}
 
-          {/* INFOGRAPHIC = the alleged grounds, broken down */}
+          {/* INFOGRAPHIC = alleged grounds as visual icon tiles */}
           {allegs.length ? (
             <>
               <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: 1, color: t.accent, fontWeight: 700, marginBottom: 9 }}>Alleged grounds for detention</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 10, marginBottom: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))', gap: 9, marginBottom: 16 }}>
                 {allegs.map((a, i) => (
-                  <div key={i} style={{ border: '1px solid var(--border)', borderRadius: 10, padding: '12px 13px', background: 'rgba(255,255,255,.6)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: a.ev ? 6 : 0 }}>
-                      <span style={{ flex: '0 0 22px', width: 22, height: 22, borderRadius: '50%', background: t.accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700 }}>{i + 1}</span>
-                      <span style={{ fontSize: 13.5, fontWeight: 700, color: t.accent }}>{a.label}</span>
-                    </div>
-                    {a.ev ? <div style={{ fontSize: 13, lineHeight: 1.45, color: '#334155' }}>{a.ev}</div> : null}
+                  <div key={i} title={a.ev || a.label}
+                    style={{ border: `1px solid ${t.accent}26`, borderRadius: 12, padding: '12px 6px 10px', background: t.tint, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 7, textAlign: 'center' }}>
+                    <Icon name={ICON[a.label] || 'alert'} color={t.accent} size={30} />
+                    <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: t.accent, lineHeight: 1.2 }}>{SHORT[a.label] || a.label}</span>
                   </div>
                 ))}
               </div>
