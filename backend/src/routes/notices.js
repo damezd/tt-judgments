@@ -21,4 +21,22 @@ router.get('/notices', async (req, res) => {
   }
 });
 
+// ── GET /api/notices/:slug/card.png ──────────────────────────────────────────
+// Server-rendered 1080×1350 shareable card for a notice.
+router.get('/notices/:slug/card.png', async (req, res) => {
+  try {
+    const [[n]] = await db.query('SELECT * FROM notices WHERE slug = ? OR id = ?', [req.params.slug, req.params.slug]);
+    if (!n) return res.status(404).json({ error: 'Notice not found' });
+    // Lazy-load the renderer so a missing native binary can't crash the server at boot.
+    const { renderNoticeCard } = require('../card');
+    const png = renderNoticeCard(n);
+    res.set('Content-Type', 'image/png');
+    res.set('Cache-Control', 'public, max-age=86400');
+    res.send(png);
+  } catch (err) {
+    console.error('Card render error:', err);
+    res.status(500).json({ error: 'Card render failed' });
+  }
+});
+
 module.exports = router;

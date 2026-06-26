@@ -47,3 +47,13 @@ export const getInsights    = ()    => get('/api/insights');
 export const getNetwork     = ()    => get('/api/network');
 export const getCrime       = ()    => get('/api/crime');
 export const getNotices     = ()    => get('/api/notices');
+
+// Fetch the server-rendered shareable card PNG (with auth) as a Blob.
+export async function fetchNoticeCard(slug) {
+  const res = await fetch(`${API_BASE}/api/notices/${encodeURIComponent(slug)}/card.png`, {
+    headers: { Authorization: `Bearer ${getToken()}` },
+  });
+  if (res.status === 401) throw new Error('UNAUTHORIZED');
+  if (!res.ok) throw new Error('Card unavailable');
+  return res.blob();
+}

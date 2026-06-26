@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getNotices } from '../api/client';
-import { copyText } from './ui';
+import { getNotices, fetchNoticeCard } from '../api/client';
+import { copyText, toast } from './ui';
 import { fmtDate } from './caseMeta';
 import { MI } from './materialIcons';
 
@@ -131,7 +131,7 @@ function Headline({ text, name }) {
   return <>{text}</>;
 }
 
-function NoticeDetail({ n, onClose }) {
+function NoticeDetail({ n, onClose, onShare }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
@@ -195,9 +195,16 @@ function NoticeDetail({ n, onClose }) {
           <p style={{ position: 'relative', marginTop: 12, fontSize: 13, lineHeight: 1.55, color: D.mut, maxWidth: 360 }}>
             {firstSentences(n.social_post || n.summary, 220)}
           </p>
-          <button onClick={copyPost} style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.mut, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
-            <MIcon name="bookmark" color={D.mut} size={15} /> Save / copy post
-          </button>
+          <div style={{ marginTop: 12, display: 'flex', gap: 16, alignItems: 'center' }}>
+            <button onClick={copyPost} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.mut, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
+              <MIcon name="bookmark" color={D.mut} size={15} /> Copy post
+            </button>
+            {onShare && (
+              <button onClick={onShare} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', color: D.red, fontFamily: 'JetBrains Mono, monospace', fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase', cursor: 'pointer', padding: 0 }}>
+              <MIcon name="public" color={D.red} size={15} /> Share card ↗
+            </button>
+            )}
+          </div>
         </div>
 
         <div style={{ padding: '4px 14px 14px', display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -298,10 +305,26 @@ export default function NoticesBrowse() {
   }
   useEffect(() => { load(); /* eslint-disable-next-line */ }, []);
 
-  const share = (n) => {
-    const text = `${n.social_headline || n.title} — InsightTT`;
-    if (navigator.share) navigator.share({ title: 'InsightTT', text }).catch(() => {});
-    else copyText(text);
+  // Generate the editorial card image and share it (native sheet) or download it.
+  const share = async (n) => {
+    try {
+      toast('Building card…');
+      const blob = await fetchNoticeCard(n.slug);
+      const file = new File([blob], `insighttt-notice-${n.notice_no}.png`, { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: 'InsightTT', text: n.social_headline || n.title });
+      } else {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = file.name; document.body.appendChild(a); a.click();
+        a.remove(); URL.revokeObjectURL(url);
+        toast('Card downloaded');
+      }
+    } catch (e) {
+      if (e.message === 'UNAUTHORIZED') throw e;
+      copyText(`${n.social_headline || n.title} — InsightTT`);
+      toast('Shared text (image unavailable)');
+    }
   };
 
   return (
@@ -347,7 +370,7 @@ export default function NoticesBrowse() {
         })}
       </div>
 
-      {selected && <NoticeDetail n={selected} onClose={() => setSelected(null)} />}
+      {selected && <NoticeDetail n={selected} onClose={() => setSelected(null)} onShare={() => share(selected)} />}
     </div>
   );
 }
