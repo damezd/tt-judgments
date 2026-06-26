@@ -59,3 +59,14 @@ export const firstSentences = (s, n) => {
   for (const p of parts) { if ((out + ' ' + p).trim().length > n) break; out = (out + ' ' + p).trim(); }
   return out || (s || '').slice(0, n);
 };
+
+// Map a notice to a case-style "type" so it reuses the case rail/illustration/badges.
+const NOTICE_TYPE = {
+  detention_order: { label: 'Detention Order', type: 'criminal' },
+  detention_revocation: { label: 'Detention Revoked', type: 'criminal' },
+  proceeds_of_crime: { label: 'Proceeds of Crime', type: 'corporate' },
+  land_acquisition: { label: 'Land Acquisition', type: 'property' },
+  state_lands: { label: 'State Lands', type: 'property' },
+  default: { label: 'Legal Notice', type: 'corporate' },
+};
+export const noticeMeta = n => NOTICE_TYPE[n && n.ntype] || NOTICE_TYPE.default;
