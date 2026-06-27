@@ -3,6 +3,7 @@ import LoginPage    from './components/LoginPage';
 import PeopleSearch from './components/PeopleSearch';
 import EntitySearch from './components/EntitySearch';
 import CasesBrowse  from './components/CasesBrowse';
+import CombinedFeed from './components/CombinedFeed';
 import CaseViewer   from './components/CaseViewer';
 import Insights     from './components/Insights';
 import NetworkGraph from './components/NetworkGraph';
@@ -11,6 +12,7 @@ import NoticesBrowse from './components/NoticesBrowse';
 import { getToken, logout } from './api/auth';
 
 const TABS = [
+  { id: 'feed',     label: 'Feed' },
   { id: 'cases',    label: 'Cases' },
   { id: 'notices',  label: 'Notices' },
   { id: 'people',   label: 'People' },
@@ -22,7 +24,7 @@ const TABS = [
 
 export default function App() {
   const [authed, setAuthed] = useState(!!getToken());
-  const [tab, setTab]       = useState('cases');
+  const [tab, setTab]       = useState('feed');
   const [openSlug, setOpenSlug] = useState(null);
   const [casesInit, setCasesInit] = useState(null);
   const [caseCount, setCaseCount] = useState(null);
@@ -41,7 +43,7 @@ export default function App() {
 
   if (!authed) return <LoginPage onLogin={() => setAuthed(true)} />;
 
-  const edgeToEdge = tab === 'cases';
+  const edgeToEdge = tab === 'cases' || tab === 'feed';
 
   return (
     <>
@@ -64,6 +66,7 @@ export default function App() {
       </div>
 
       <main style={edgeToEdge ? undefined : { padding: '16px 14px' }}>
+        {tab === 'feed'     && <CombinedFeed onOpenCase={openCase} />}
         {tab === 'cases'    && <CasesBrowse  onOpenCase={openCase} initial={casesInit} onCount={setCaseCount} />}
         {tab === 'notices'  && <NoticesBrowse />}
         {tab === 'people'   && <PeopleSearch onOpenCase={openCase} />}
