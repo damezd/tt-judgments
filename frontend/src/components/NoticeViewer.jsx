@@ -4,7 +4,7 @@ import { copyText } from './ui';
 import { NoticeIllustration } from './NoticeIllustration';
 import NoticeFull from './NoticeFull';
 import { fmtDate, ACCENT, ACCENT_TINT } from './caseMeta';
-import { noticeMeta, allegationsFrom, gangRole, firstSentences } from './noticeUtils';
+import { noticeMeta, allegationsFrom, gangRole } from './noticeUtils';
 
 // Up to 3 punchy insight points from whatever the notice carries.
 function buildPoints(n) {
@@ -47,8 +47,14 @@ export default function NoticeViewer({ n, onClose }) {
   const headline = n.social_headline || n.title;
   const grounds = allegationsFrom(n.summary, n.person_name);
   const points = buildPoints(n);
-  const body = n.social_post || n.summary || '';
+  // Full readable account on the poster page (the page scrolls); prefer the
+  // richer formal summary (carries the modus operandi / gang links).
+  const body = (n.summary || n.social_post || '').trim();
   const basis = (n.act || '').replace(/^The\s+/i, '');
+  // Insights verdict: a complete first sentence (word-safe if very long).
+  const snip = (t, max) => { t = (t || '').trim(); return t.length <= max ? t : t.slice(0, max).replace(/\s+\S*$/, '') + '…'; };
+  const firstSent = (n.summary || '').split(/(?<=[.])\s/)[0].trim();
+  const verdict = (firstSent && snip(firstSent, 170)) || (basis ? `Detained under the ${basis}` : 'Legal notice published');
 
   return createPortal((
     <>
@@ -76,7 +82,7 @@ export default function NoticeViewer({ n, onClose }) {
                   </div>
                   <div className="card-headline">{headline}</div>
                   <div className="card-meta">{[n.person_name, n.citation, basis].filter(Boolean).join(' · ')}</div>
-                  {body && <div className="card-excerpt">{body.slice(0, 240)}{body.length > 240 ? '…' : ''}</div>}
+                  {body && <div className="card-excerpt">{body}</div>}
                 </div>
               </div>
               <button className="vhint" onClick={() => goTo(1)}>Insights  ›</button>
@@ -95,7 +101,7 @@ export default function NoticeViewer({ n, onClose }) {
                     <div className="ig-handle">@insighttt</div>
                   </div>
                   <span className={`badge badge-type-${type}`} style={{ background: '#fff' }}>{meta.label}</span>
-                  <div className="ig-verdict">{firstSentences(n.summary, 70) || (basis ? `Detained under the ${basis}` : 'Legal notice published')}</div>
+                  <div className="ig-verdict">{verdict}</div>
                 </div>
 
                 <div className="ig-body">
