@@ -14,6 +14,19 @@ export function webSearch(name) {
   return `https://www.google.com/search?q=${encodeURIComponent((name || '') + ' Trinidad')}`;
 }
 
+// Open the TT Address Finder for a person. Splits the name into first/last and
+// passes them as query params (forward-compatible once tt-address reads them);
+// also copies the full name so it can be pasted into the form today.
+export function lookupAddress(name) {
+  const parts = (name || '').trim().split(/\s+/).filter(Boolean);
+  const first = parts[0] || '';
+  const last = parts.length > 1 ? parts[parts.length - 1] : '';
+  const url = `https://tt-address.vercel.app/?first=${encodeURIComponent(first)}&last=${encodeURIComponent(last)}`;
+  try { navigator.clipboard?.writeText(name); } catch { /* ignore */ }
+  if (typeof window !== 'undefined') window.open(url, '_blank', 'noopener,noreferrer');
+  toast('Opened TT-Address · name copied');
+}
+
 let toastTimer;
 export function toast(msg) {
   const el = document.getElementById('copy-toast');

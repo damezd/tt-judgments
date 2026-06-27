@@ -1,4 +1,4 @@
-import { copyText } from './ui';
+import { copyText, lookupAddress } from './ui';
 import { allegationsFrom, gangRole, noticeMeta } from './noticeUtils';
 
 function Section({ title, children }) {
@@ -55,6 +55,7 @@ export default function NoticeFull({ n, onClose }) {
               </p>
               {n.address ? <p className="kv mb-0.5"><b>Address:</b> {n.address}</p> : null}
               {n.detained_at ? <p className="kv mb-0.5"><b>Detained at:</b> {n.detained_at}</p> : null}
+              <button className="pill-link mt-1" onClick={() => lookupAddress(n.person_name)}>Look up in TT-Address ↗</button>
             </Section>
           ) : null}
 

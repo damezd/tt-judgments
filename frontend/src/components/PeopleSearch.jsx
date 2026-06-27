@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { searchPeople } from '../api/client';
-import { Badge, CrimeBadge, webSearch, debounce } from './ui';
+import { Badge, CrimeBadge, webSearch, lookupAddress, debounce } from './ui';
 
 function PersonCard({ group, onOpenCase }) {
   const [open, setOpen] = useState(group.mentions.length <= 3);
@@ -20,6 +20,7 @@ function PersonCard({ group, onOpenCase }) {
           {n} record{n !== 1 ? 's' : ''} · {roles.join(', ')}
         </span>
         <a className="pill-link ml-1" href={webSearch(group.name)} target="_blank" rel="noreferrer">Web</a>
+        <button className="pill-link ml-1" type="button" onClick={() => lookupAddress(group.name)}>TT-Address ↗</button>
       </div>
       {open && (
         <div className="mt-2 flex flex-col gap-2">
