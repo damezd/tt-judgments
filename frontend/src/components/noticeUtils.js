@@ -38,9 +38,16 @@ export function allegationsFrom(text, name) {
 export function gangRole(text) {
   text = text || '';
   let gang = '';
-  const gm = text.match(/[“"]([^”"]*?(?:Gang|OCG))[”"]/) || text.match(/\b(\d+\s+Gang)\b/) ||
-    text.match(/\b(Resistance Gang|Six Gang|Seven Gang|Rasta City|[A-Z][\w'.]+\s+Gang)\b/);
-  if (gm) gang = gm[1].replace(/^.*faction of the\s+/i, '');
+  // Prefer the actual group NAME over the generic "OCG"/"Gang" abbreviation.
+  const patterns = [
+    /["'“”‘’]([^"'“”‘’]*?\s+Gang)["'“”‘’]/,                 // "Ride Share Ring Gang"
+    /\bas\s+the\s+["'“”‘’]?([A-Z][\w'’.\- ]+?\s+Gang)\b/,   // known as the X Gang
+    /\b(\d+\s+Gang)\b/,                                      // 7 Gang
+    /\b((?:[A-Z][\w'’.\-]+\s+){1,3}Gang)\b/,                // Capitalised … Gang
+    /\b(Rasta City|Sixx?|Muslim City|Unruly ISIS)\b/,       // named OCGs without "Gang"
+  ];
+  for (const re of patterns) { const m = text.match(re); if (m) { gang = m[1].trim(); break; } }
+  gang = gang.replace(/^.*faction of the\s+/i, '').replace(/^the\s+/i, '').trim();
   const l = text.toLowerCase();
   let role = '';
   if (/high-ranking|general\b/.test(l)) role = 'Ranking member';
