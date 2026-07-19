@@ -13297,5 +13297,2727 @@
     "osint_value": "low",
     "osint_notes": "Assessment of damages in a State personal-injury/occupier's-liability claim; limited commercial content.",
     "fetch_failed": false
+  },
+  {
+    "title": "S.M. Jaleel and Company Limited v Government Industrial and General Workers Union",
+    "date": "2026-06-26",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2021/pemberton/CvA_21_P092DD26Jun2026.pdf",
+    "citation": "Civil Appeal No. P092 of 2021; Trade Dispute No. GSD-TD 782 of 2018",
+    "court": "Court of Appeal",
+    "judges": [
+      "C. Pemberton JA",
+      "M. TM Wilson JA",
+      "G. Henderson JA"
+    ],
+    "claimants": [
+      "S.M. Jaleel and Company Limited (Appellant)"
+    ],
+    "defendants": [
+      "Government Industrial and General Workers Union (Respondent)"
+    ],
+    "companies": [
+      {
+        "name": "S.M. Jaleel and Company Limited",
+        "role": "appellant / employer",
+        "directors_officers": [
+          "Dr. A. Mohammed (Chairman)",
+          "Brian Erdelyi (supervisor, deceased)"
+        ],
+        "ownership_notes": "Beverage manufacturer; dismissed HR Manager Allan Raghunanan"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Allan Raghunanan",
+        "role": "dismissed employee (HR Manager / VP HR)",
+        "notes": "Industrial Court found harsh and oppressive dismissal; awarded $400,000"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 400000,
+        "currency": "TTD",
+        "what_it_is": "Industrial Court compensation award to Raghunanan (affirmed)"
+      },
+      {
+        "amount": 2280000,
+        "currency": "TTD",
+        "what_it_is": "Total sum union originally sought"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Servol Limited v Early Childhood Teachers Trade Union",
+      "Stapp v The Shaftesbury Society (1982) IRLR 326"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court of Appeal upholds $400,000 unfair-dismissal award against S.M. Jaleel",
+    "social_post": "The Court of Appeal has dismissed S.M. Jaleel and Company Limited's appeal against an Industrial Court ruling that its former HR Manager, Allan Raghunanan, was dismissed in circumstances that were harsh and oppressive. Raghunanan, who rose to Vice President of Human Resources, said Chairman Dr. A. Mohammed forced him out in 2010. The Industrial Court awarded him $400,000, which remained unpaid even after a stay was refused in 2022. Justice Pemberton, with Wilson and Henderson JJA agreeing, held the Court cannot rehear findings of fact and affirmed the award, with no order as to costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Appellate courts will not disturb Industrial Court findings of fact absent an error of law",
+      "Employers must reflect section 10(3) IRA factors on the face of a decision"
+    ],
+    "outcome": "Appeal dismissed; Industrial Court award of $400,000 affirmed; no order as to costs",
+    "osint_value": "medium",
+    "osint_notes": "Names S.M. Jaleel & Company (major TT beverage manufacturer) and its Chairman Dr. A. Mohammed in an employment dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application for redress in accordance with Section 14 of the Constitution by Tot Lampkin...",
+    "date": "2026-06-26",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2021/cv_21_03178DD26Jun2026.pdf",
+    "citation": "CV2021-03178",
+    "court": "High Court",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Tot Lampkin (Administratrix ad litem of Estate of Samantha Stacey Isaacs; next friend of minor Kaiden Garcia)"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Samantha Stacey Isaacs",
+        "role": "deceased victim of domestic violence",
+        "notes": "Murdered by former partner Kahriym Garcia in Dec 2017; State found to have failed to protect her"
+      },
+      {
+        "name": "Kahriym Garcia",
+        "role": "perpetrator (murder of Isaacs)",
+        "notes": "Former partner; killed Samantha Isaacs"
+      },
+      {
+        "name": "Kaiden Garcia",
+        "role": "minor son of deceased",
+        "notes": "Born 2014; constitutional damages awarded"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 960000,
+        "currency": "TTD",
+        "what_it_is": "Loss of earnings for lost years"
+      },
+      {
+        "amount": 450000,
+        "currency": "TTD",
+        "what_it_is": "Non-pecuniary loss (s4(a)/(b)) incl aggravated"
+      },
+      {
+        "amount": 600000,
+        "currency": "TTD",
+        "what_it_is": "Non-pecuniary loss for family life (s4(c))"
+      },
+      {
+        "amount": 500000,
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "murder"
+    ],
+    "social_headline": "State ordered to pay millions after police failures preceded woman's domestic-violence murder",
+    "social_post": "A High Court judge has assessed damages against the State over the 2017 murder of Samantha Stacey Isaacs, killed by her former partner Kahriym Garcia after police repeatedly failed to act on her reports of abuse. Justice Robin Mohammed had earlier found the TTPS failed to investigate her first three reports, treated her fourth report perfunctorily, never prosecuted Garcia, and that a Magistrate prematurely dismissed her protection-order application. The Court awarded $960,000 for lost years, $450,000 and $600,000 for constitutional breaches, and $500,000 vindicatory damages, plus interest, to her mother Tot Lampkin and orphaned son Kaiden Garcia. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "State can be liable in constitutional damages for police/judicial failures in domestic-violence cases",
+      "Vindicatory damages available to mark the gravity of systemic State failures"
+    ],
+    "outcome": "Substantial constitutional damages assessed against the State, plus interest and costs",
+    "osint_value": "medium",
+    "osint_notes": "High-profile domestic-violence death (Samantha Isaacs) with State liability; sensitive matter involving a minor",
+    "fetch_failed": false
+  },
+  {
+    "title": "Quashie-Romeo, Glen (claimant) v Quashie, Yolande (first defendant); Quashie, Ava (second defendant); Quashie, Desiree (third defendant); Quashie, Denieca (fourth defendant)",
+    "date": "2026-06-26",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rahim/2019/cv_19_01583DD26Jun2026.pdf",
+    "citation": "CV2019-01583",
+    "court": "High Court",
+    "judges": [
+      "R. Rahim J"
+    ],
+    "claimants": [
+      "Glen Quashie-Romeo"
+    ],
+    "defendants": [
+      "Yoland (Yolande) Quashie",
+      "Arva (Ava) Quashie",
+      "Desiree Quashie",
+      "Denieca (Deniecia) Quashie"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 3000,
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass (cut electricity post)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "One-acre parcel (5137.0 sq m) along Windward Road, Mt. St. George, Tobago",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claimant declared paper-title owner save for defendants' house spot (adverse possession); nominal trespass damages $3,000"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tobago family land feud: court splits Windward Road acre after decades of dispute",
+    "social_post": "A long and acrimonious family land dispute over a one-acre parcel along the Windward Road in Mt. St. George, Tobago has been resolved by Justice Ricky Rahim. Glen Quashie-Romeo claimed title to the whole acre; her relatives, the Quashie defendants, claimed adverse possession. The Court declared Quashie-Romeo the paper-title owner of the surveyed 5,137-square-metre parcel, save for the house spot the first three defendants occupy, whose title was extinguished by adverse possession. The fourth defendant's attempted new structure was rejected. The defendants must pay $3,000 nominal damages for cutting down an electricity post. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Adverse possession can extinguish paper title to a specific occupied house spot only",
+      "Vague claims of possession over wider land will fail without cogent evidence"
+    ],
+    "outcome": "Claimant declared owner except for defendants' adversely-possessed house spot; $3,000 nominal trespass damages",
+    "osint_value": "medium",
+    "osint_notes": "Tobago land / adverse possession dispute with detailed property description",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Frederick, Clarence aka Tallman, Tallyboy and Bourie; Cruickshank, Errol aka Hulk; Singh, Steven, R. aka Smeagle for murder",
+    "date": "2026-06-25",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2026/cr_26_pos388DD25Jun2026.pdf",
+    "citation": "CR-HC-POS-2026-388-1-3; CR-HC-POS-2026-389-1-3",
+    "court": "High Court (Criminal, Port of Spain)",
+    "judges": [
+      "Nalini Singh J"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Clarence Frederick",
+      "Errol Cruickshank",
+      "Steven Ronald Singh"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Clarence Frederick aka Tallman/Tallboy/Bourie",
+        "role": "convicted (guilty plea)",
+        "offences": [
+          "unlawful act manslaughter",
+          "malicious wounding"
+        ],
+        "category": [
+          "murder",
+          "assault"
+        ],
+        "notes": "Restrained deceased Bissram Ramkissoon (Pedro); 14 years less time served"
+      },
+      {
+        "name": "Errol Cruickshank aka Hulk",
+        "role": "convicted (guilty plea)",
+        "offences": [
+          "unlawful act manslaughter",
+          "malicious wounding"
+        ],
+        "category": [
+          "murder",
+          "assault"
+        ],
+        "notes": "Stabbed the deceased; 15 years 4 months less time served"
+      },
+      {
+        "name": "Steven Ronald Singh aka Smeagle",
+        "role": "convicted (guilty plea)",
+        "offences": [
+          "unlawful act manslaughter",
+          "malicious wounding"
+        ],
+        "category": [
+          "murder",
+          "assault"
+        ],
+        "notes": "Supplied the knife; 15 years 4 months less time served"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "murder",
+      "assault"
+    ],
+    "social_headline": "Three men sentenced for 2019 Freeport wake stabbing that killed 'Pedro'",
+    "social_post": "Justice Nalini Singh has sentenced three men over the November 2019 killing of Bissram Ramkissoon, known as 'Pedro', at a wake in Freeport. Clarence Frederick ('Tallman'), Errol Cruickshank ('Hulk') and Steven Ronald Singh ('Smeagle') pleaded guilty to unlawful act manslaughter and to maliciously wounding Jim Jones Narine, on an agreed 24-year starting point. According to the plea facts, Singh handed a knife to Cruickshank, Frederick restrained Pedro in a hug, and Cruickshank stabbed him fatally. Frederick received 14 years and the other two 15 years four months, each less roughly six-plus years already served. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Guilty pleas attract a one-third sentencing discount",
+      "Joint participation (restraining, supplying weapon) grounds manslaughter liability for all"
+    ],
+    "outcome": "All three convicted on guilty pleas; sentenced to 14 years (Frederick) and 15 years 4 months (Cruickshank, Singh), less time served",
+    "osint_value": "low",
+    "osint_notes": "Criminal manslaughter/wounding; named accused with aliases",
+    "fetch_failed": false
+  },
+  {
+    "title": "Sheppard, Cletus v Brown, Carlos; Sampson, Ingrid",
+    "date": "2026-07-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_03572DD1Jul2026.pdf",
+    "citation": "CV2025-03572",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Cletus Sheppard"
+    ],
+    "defendants": [
+      "Carlos Brown",
+      "Ingrid Sampson (Administrator Ad Litem, Estate of James Laurence Brown)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Cletus Sheppard",
+        "role": "claimant (adverse possessor / welder)",
+        "notes": "Ran welding/fabrication business at No.9 Bushe Street North since 2003"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 500,
+        "currency": "TTD",
+        "what_it_is": "Nominal trespass damages"
+      },
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs of claim (and again on counterclaim)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 9 Bushe Street North, Petit Bourg, San Juan (3,600 sq ft)",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "Estate of James Laurence Brown",
+        "tenant": "",
+        "outcome": "Claimant acquired title by adverse possession; estate's title extinguished; nominal $500 trespass damages"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "San Juan welder wins property by adverse possession after 20+ years' occupation",
+    "social_post": "Justice Westmin James has ruled that Cletus Sheppard acquired ownership of No. 9 Bushe Street North, Petit Bourg, San Juan, by adverse possession. Sheppard occupied the abandoned property from 2003, parking vehicles, hosting family events and running a full-time welding and fabrication business, hiring watchmen for security. The heirs of the late owners James and Eileen Brown claimed his use was merely permissive, but the Court found continuous factual possession with intention to possess for over 16 years, extinguishing the estate's paper title under the Real Property Limitation Act. Sheppard was awarded possession and $500 nominal trespass damages. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "16 years' open, exclusive possession can extinguish a paper owner's title",
+      "Absentee owners risk losing property left unmanaged for decades"
+    ],
+    "outcome": "Judgment for claimant; adverse possession established; counterclaim dismissed; nominal damages and costs",
+    "osint_value": "medium",
+    "osint_notes": "Adverse possession of a named San Juan commercial/residential property",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application for the Issue of a Writ of Habeas Corpus Ad Subjiciendum against the Commissioner of Police.",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/seepersad/2026/cv_26_02618DD30Jun2026.pdf",
+    "citation": "CV2026-02618",
+    "court": "High Court",
+    "judges": [
+      "Frank Seepersad J"
+    ],
+    "claimants": [
+      "Dominic Hadeed",
+      "Genevieve Hadeed"
+    ],
+    "defendants": [
+      "The Commissioner of Police",
+      "The Minister of Homeland Security",
+      "The Attorney General of Trinidad and Tobago",
+      "PC Eldon Calliste No.16601"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Dominic Hadeed",
+        "role": "applicant/detainee",
+        "notes": "Detained under Emergency Powers Regulations 2026 amid alleged plot to assassinate the Prime Minister"
+      },
+      {
+        "name": "Genevieve Hadeed",
+        "role": "applicant/detainee",
+        "notes": "Detained under Preventive Detention Order during State of Emergency"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [
+      "Emergency Powers Regulations 2026",
+      "Judicial Review Act Ch. 7:08"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court refuses habeas corpus for Hadeeds held over alleged plot to assassinate PM",
+    "social_post": "Justice Frank Seepersad has dismissed applications by Dominic and Genevieve Hadeed for a writ of habeas corpus and interim relief challenging their detention under the Emergency Powers Regulations 2026. The pair were held during the State of Emergency declared in March 2026, with authorities alleging intelligence of a plot to assassinate the sitting Prime Minister and senior members of her government. Represented by a senior legal team including Douglas Mendes SC, Gilbert Peterson SC and Faris Al-Rawi SC, they argued their detention was unlawful. The Court found a serious issue to be tried but held the balance of convenience favoured continued detention, directing a judicial review hearing for 27 July 2026. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Courts weigh national-security intelligence heavily in emergency-detention habeas applications",
+      "A serious issue to be tried does not guarantee interim release"
+    ],
+    "outcome": "Habeas corpus and interim relief dismissed; judicial review claim to proceed to hearing 27 July 2026",
+    "osint_value": "high",
+    "osint_notes": "High-profile State of Emergency detention of Dominic and Genevieve Hadeed tied to alleged assassination plot against the Prime Minister; senior counsel involved",
+    "fetch_failed": false
+  },
+  {
+    "title": "Park Enterprises Limited (first claimant); Mohammed, Ronelle (substituted for Park Enterprises Limited with regard to Defendant No. 90 Ayoola Onika Brathwaite only) (second claimant) v Brathwaite, Ayoola, O. (90th defendant)",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2010/cv_10_02827DD30Jun2026.pdf",
+    "citation": "CV2010-02827",
+    "court": "High Court",
+    "judges": [
+      "Devindra Rampersad J"
+    ],
+    "claimants": [
+      "Park Enterprises Ltd",
+      "Ronelle Mohammed (2nd Claimant, substituted re Lot 106)"
+    ],
+    "defendants": [
+      "Ayoola Onika Brathwaite (90th Defendant, now Brathwaite-Barker)"
+    ],
+    "companies": [
+      {
+        "name": "Park Enterprises Ltd",
+        "role": "first claimant / registered landowner",
+        "directors_officers": [],
+        "ownership_notes": "Sold Lot 106 to Ronelle Mohammed for $260,000 in 2015"
+      }
+    ],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 260000,
+        "currency": "TTD",
+        "what_it_is": "Sale price of Lot 106 (2015)"
+      },
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Costs of claim and of counterclaim (each)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 106, Blake Avenue Extension, Sangre Grande",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Adverse possession counterclaim struck out; second claimant granted possession"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Sangre Grande adverse-possession claim fails; buyer gets Lot 106",
+    "social_post": "Justice Devindra Rampersad has ruled for Ronelle Mohammed in a long-running Sangre Grande land dispute. Ayoola Brathwaite claimed adverse possession of Lot 106 at Blake Avenue Extension, relying on her late father Oswald Brathwaite's cultivation of the land from 1984 and a foundation he built in 1991. Mohammed had bought the lot from Park Enterprises Ltd for $260,000 in 2015 after a mortgage survey. The Court found the defendant's evidence of possession vague and inconsistent, an abandoned intention rather than continuous occupation, and struck out her counterclaim, ordering her to deliver up possession and pay $28,000 in costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "An unfinished foundation shows intention, not continuous possession",
+      "Adverse possession requires precise, cogent evidence of exclusive occupation"
+    ],
+    "outcome": "Judgment for second claimant; adverse-possession counterclaim struck out; possession ordered; costs $28,000",
+    "osint_value": "medium",
+    "osint_notes": "Named company Park Enterprises Ltd and land sale; adverse possession",
+    "fetch_failed": false
+  },
+  {
+    "title": "Tirbany, Rabichand v Monar Industrial Services (Caribbean) Limited",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2024/cv_24_04222DD30Jun2026.pdf",
+    "citation": "CV2024-04222",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Rabichand Tirbany"
+    ],
+    "defendants": [
+      "Monar Industrial Services (Caribbean) Limited"
+    ],
+    "companies": [
+      {
+        "name": "Monar Industrial Services (Caribbean) Limited (MISCL)",
+        "role": "defendant / employer",
+        "directors_officers": [
+          "Mr. Deonath (Managing Director, claimant's younger brother)"
+        ],
+        "ownership_notes": "Industrial services firm; claimant was Operations Manager 17 years"
+      },
+      {
+        "name": "RAV4 General Contracting Services Ltd",
+        "role": "claimant's own company",
+        "directors_officers": [
+          "Rabichand Tirbany"
+        ],
+        "ownership_notes": "Incorporated July 2024 during notice period"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Rabichand Tirbany",
+        "role": "claimant / former Operations Manager",
+        "notes": "Alleged constructive dismissal; salary $22,000/month; claim dismissed"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 22000,
+        "currency": "TTD",
+        "what_it_is": "Claimant's monthly salary"
+      },
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs to defendant"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Brother v brother: Operations Manager loses constructive-dismissal case against family firm",
+    "social_post": "Justice Westmin James has dismissed a constructive-dismissal claim by Rabichand Tirbany against Monar Industrial Services (Caribbean) Limited, run by his younger brother, Managing Director Mr. Deonath. Tirbany, Operations Manager for 17 years on $22,000 a month, said a hostile June 2024 meeting restricted him to field-only work and sidelined him, forcing his resignation. The Court found he voluntarily resigned to pursue his own new company, RAV4 General Contracting Services Ltd, and that no repudiatory breach occurred. Even if it had, he was paid in full through his notice period and suffered no recoverable loss. His claim was dismissed with $14,000 costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Constructive dismissal requires a repudiatory breach, not mere dissatisfaction",
+      "Claimants must disclose post-termination earnings to prove loss"
+    ],
+    "outcome": "Claim dismissed; costs $14,000 to defendant; 28-day stay",
+    "osint_value": "medium",
+    "osint_notes": "Names Monar Industrial Services (Caribbean) Ltd and rival firm RAV4 General Contracting Services in a family employment dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "Khan, Wafiq; Khan, Siddiq a/c Khan, Saddiq v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2023/cv_23_04096DD29Jun2026.pdf",
+    "citation": "CV2023-04096",
+    "court": "High Court",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Wafiq Khan",
+      "Siddiq (Saddiq) Khan"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Wafiq Khan",
+        "role": "claimant (wrongful arrest)",
+        "notes": "Awarded $60,000 false imprisonment + $75,000 malicious prosecution"
+      },
+      {
+        "name": "Siddiq Khan",
+        "role": "claimant (wrongful arrest)",
+        "notes": "Same awards"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Wafiq Khan",
+        "role": "charged (later discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": "Charges discontinued Dec 2019; awarded damages for wrongful arrest/prosecution"
+      },
+      {
+        "name": "Siddiq Khan",
+        "role": "charged (later discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": "Charges discontinued Dec 2019"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 60000,
+        "currency": "TTD",
+        "what_it_is": "General damages each for false imprisonment (incl aggravation)"
+      },
+      {
+        "amount": 75000,
+        "currency": "TTD",
+        "what_it_is": "General damages each for malicious prosecution"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms",
+      "narcotics"
+    ],
+    "social_headline": "State pays Khan brothers for wrongful arrest in botched 2019 Carapichaima raid",
+    "social_post": "Master Rishma Ramrattan has assessed damages for Wafiq and Siddiq Khan, wrongly arrested after a November 2019 police raid at their Carapichaima home where officers in black scaled the wall. Officers claimed to find two rounds of ammunition and marijuana in an outside box and charged the family with firearm, ammunition and marijuana possession, but the DPP discontinued all charges within weeks. Liability was conceded by consent. Each brother was awarded $60,000 for false imprisonment and $75,000 for malicious prosecution, plus interest and costs. Related claims by other family members were assessed separately. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "The State concedes liability where charges are discontinued without basis",
+      "Special-damages claims fail without documentary proof"
+    ],
+    "outcome": "Damages assessed: $60,000 (false imprisonment) + $75,000 (malicious prosecution) each, plus interest and costs",
+    "osint_value": "medium",
+    "osint_notes": "One of three related Khan-family wrongful-arrest claims from the same 2019 Carapichaima raid (see CV2023-04094, CV2023-04684)",
+    "fetch_failed": false
+  },
+  {
+    "title": "Rivers, Clint v C.C.N. Television Limited; Bassant, Mark",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/williams_q/2019/cv_19_01518DD29Jun2026.pdf",
+    "citation": "CV2019-01518",
+    "court": "High Court",
+    "judges": [
+      "Avason Quinlan-Williams J"
+    ],
+    "claimants": [
+      "Clint Rivers"
+    ],
+    "defendants": [
+      "C.C.N. Television Limited",
+      "Mark Bassant"
+    ],
+    "companies": [
+      {
+        "name": "C.C.N. Television Limited (CNC3)",
+        "role": "first defendant / broadcaster",
+        "directors_officers": [],
+        "ownership_notes": "Aired 'ISIS Files Part I' segment in 2015"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Mark Bassant",
+        "role": "second defendant / investigative journalist",
+        "notes": "Presented 'ISIS Files' segment naming claimant; found liable in defamation"
+      },
+      {
+        "name": "Clint Rivers",
+        "role": "claimant",
+        "notes": "Muslim wrongly linked to ISIS; awarded $350,000"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 350000,
+        "currency": "TTD",
+        "what_it_is": "General damages incl aggravation for defamation"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [
+      "Robin Montano v Harry Harrinarine",
+      "Colm Imbert v Trinidad Express Newspaper",
+      "Anand Ramlogan v Austin Jack Warner"
+    ],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "CCN and journalist Mark Bassant ordered to pay $350,000 for branding man an ISIS terrorist",
+    "social_post": "Justice Avason Quinlan-Williams has found C.C.N. Television Limited and journalist Mark Bassant liable in defamation over the 2015 'ISIS Files Part I' broadcast, which named Clint Rivers among Trinidadians said to be lured to jihad in Syria. Rivers, a follower of Islam, had actually travelled abroad for pilgrimage in 2014. The Court held the defence of Reynolds (responsible journalism) privilege failed and that accusing a citizen of being an ISIS terrorist carries immense social stigma. Rivers was awarded $350,000 in general damages inclusive of aggravation, with costs, and a 30-day stay of execution. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Responsible-journalism (Reynolds) privilege requires genuine verification",
+      "Serious false allegations attract high defamation awards"
+    ],
+    "outcome": "Judgment for claimant; $350,000 general damages inclusive of aggravation; costs; 30-day stay",
+    "osint_value": "medium",
+    "osint_notes": "Defamation against CCN Television and named journalist Mark Bassant over 'ISIS Files' broadcast",
+    "fetch_failed": false
+  },
+  {
+    "title": "Unlimited Tours and Travels Limited; Krystal Tours Vacations Limited v Creation Group Limited (first defendant); Creation Advertising Limited (second defendant); Sukhdeo, Joey (third defendant)",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2024/cv_24_02072DD29Jun2026.pdf",
+    "citation": "CV2024-02072",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Unlimited Tours and Travels Limited",
+      "Krystal Tours Vacations Limited"
+    ],
+    "defendants": [
+      "Creation Group Limited",
+      "Creation Advertising Limited",
+      "Joey Sukhdeo"
+    ],
+    "companies": [
+      {
+        "name": "Unlimited Tours and Travels Limited",
+        "role": "first claimant",
+        "directors_officers": [
+          "Ainsley Boodoosingh (General Manager)"
+        ],
+        "ownership_notes": "Bought two digital advertising screens for $495,000"
+      },
+      {
+        "name": "Krystal Tours Vacations Limited",
+        "role": "second claimant",
+        "directors_officers": [
+          "Ainsley Boodoosingh (General Manager)"
+        ],
+        "ownership_notes": ""
+      },
+      {
+        "name": "Creation Group Limited",
+        "role": "first defendant / supplier",
+        "directors_officers": [
+          "Joey Sukhdeo"
+        ],
+        "ownership_notes": "Supplied defective digital advertising screens"
+      },
+      {
+        "name": "Creation Advertising Limited",
+        "role": "second defendant / supplier",
+        "directors_officers": [
+          "Joey Sukhdeo"
+        ],
+        "ownership_notes": ""
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Joey Sukhdeo",
+        "role": "third defendant / director",
+        "notes": "Held jointly and severally liable; personal invoice issued"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 495000,
+        "currency": "TTD",
+        "what_it_is": "Purchase price of screens (awarded as damages)"
+      },
+      {
+        "amount": 1449000,
+        "currency": "TTD",
+        "what_it_is": "Loss-of-profits claim (dismissed)"
+      },
+      {
+        "amount": 73039.73,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs (VAT exclusive)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tour firms win $495,000 refund over faulty digital billboard screens",
+    "social_post": "Justice Westmin James has ordered Creation Group Limited, Creation Advertising Limited and director Joey Sukhdeo to jointly and severally refund $495,000 to Unlimited Tours and Travels Limited and Krystal Tours Vacations Limited. The travel companies bought two dual-sided digital advertising screens in 2018 that repeatedly malfunctioned and were neither of merchantable quality nor fit for purpose. The Court rejected the defence that voltage problems at the claimants' premises were to blame, but dismissed a larger $1.449 million loss-of-profits claim as unproven and the fraudulent-misrepresentation claim. Costs of about $73,000 were awarded. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Suppliers are liable for goods not of merchantable quality under the Sale of Goods Act",
+      "Loss-of-profits claims fail without evidence of net profit"
+    ],
+    "outcome": "Judgment for claimants; $495,000 damages (joint and several); loss-of-profits and fraud claims dismissed; ~$73,000 costs",
+    "osint_value": "high",
+    "osint_notes": "Multiple named companies (Unlimited Tours, Krystal Tours, Creation Group, Creation Advertising) and director Joey Sukhdeo; commercial contract dispute with figures",
+    "fetch_failed": false
+  },
+  {
+    "title": "Diaz, Wendell v The State [C.A.CRIM.P.007/2025]. Arjune, Michael v The State [C.A.CRIM.P.011/2025]",
+    "date": "2026-06-26",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2025/Mohammed_M/CrA_25_P007DD26Jun2026.pdf",
+    "citation": "CR P007/2025; CR P011/2025",
+    "court": "Court of Appeal",
+    "judges": [
+      "M. Mohammed JA",
+      "M. T.M. Wilson JA",
+      "G. Henderson JA"
+    ],
+    "claimants": [
+      "The State (Respondent)"
+    ],
+    "defendants": [
+      "Wendell Diaz (Appellant)",
+      "Michael Arjune (Appellant)"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Wendell Diaz",
+        "role": "appellant / accused",
+        "offences": [
+          "corruption (s4 Prevention of Corruption Act)"
+        ],
+        "category": [
+          "corruption"
+        ],
+        "notes": "Appeal against referral to High Court dismissed for want of jurisdiction"
+      },
+      {
+        "name": "Michael Arjune",
+        "role": "appellant / accused",
+        "offences": [
+          "corruption (s4 Prevention of Corruption Act)"
+        ],
+        "category": [
+          "corruption"
+        ],
+        "notes": "Appeal dismissed"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "corruption"
+    ],
+    "social_headline": "Appeal Court: accused have no right to appeal a Master's referral to trial on corruption charges",
+    "social_post": "The Court of Appeal has dismissed appeals by Wendell Diaz and Michael Arjune, both indicted for corruption under the Prevention of Corruption Act, who challenged a Master's decision to refer them for trial in the High Court after a sufficiency hearing. Delivering the judgment, Justice Mark Mohammed held that an accused has no right of appeal under the Supreme Court of Judicature Act against such a referral under the Administration of Justice (Indictable Proceedings) Act, so the Court of Appeal had no jurisdiction. A trial judge also cannot quash an indictment for insufficient evidence. The men can still raise no-case submissions at trial. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "No right of appeal exists against a Master's committal for trial under AJIPA",
+      "Accused must challenge weak evidence via no-case submissions, not appeal"
+    ],
+    "outcome": "Appeals dismissed for want of jurisdiction",
+    "osint_value": "low",
+    "osint_notes": "Procedural criminal appeal; corruption charges against named accused",
+    "fetch_failed": false
+  },
+  {
+    "title": "Robley-Guy, Jerenia v Guy, Romelda",
+    "date": "2026-06-26",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2025/Pemberton/CvA_25_T403DD26Jun2026.pdf",
+    "citation": "CA T403/2025; CV2020-2182",
+    "court": "Court of Appeal",
+    "judges": [
+      "C. Pemberton JA",
+      "G. Henderson JA",
+      "R. Rahim JA"
+    ],
+    "claimants": [
+      "Jerenia Robley-Guy (Appellant)"
+    ],
+    "defendants": [
+      "Romelda Guy (Respondent)"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 5000,
+        "currency": "TTD",
+        "what_it_is": "Costs order of single judge (set aside)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Two-storey dwelling house, Bethlehem Road, Bethel, Tobago",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "Romelda Guy (paper owner)",
+        "tenant": "Jerenia Robley-Guy (former daughter-in-law, occupant since 1985)",
+        "outcome": "Conditional stay of eviction granted pending expedited appeal"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tobago mother-in-law's eviction of ex-daughter-in-law paused pending appeal",
+    "social_post": "The Court of Appeal has granted a conditional stay halting the eviction of Jerenia Robley-Guy from a two-storey house at Bethlehem Road, Bethel, Tobago, where she has lived since 1985. Her former mother-in-law, Romelda Guy, holds paper title and obtained a varied consent order naming Robley-Guy among those to be removed, though Robley-Guy was never a party to the original proceedings. Justice Pemberton, with Henderson and Rahim JJA, set aside a single judge's refusal of a stay, finding eviction could cause irreversible loss before her arguable appeal is heard. The stay is conditional on preserving the property, with the appeal expedited. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Courts may grant conditional stays where eviction risks irreversible loss",
+      "Consent orders bind only through proper parties and procedure"
+    ],
+    "outcome": "Conditional stay of execution granted; appeal expedited; single judge's costs order set aside",
+    "osint_value": "medium",
+    "osint_notes": "Tobago family property/eviction dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "Melville, Shanelle v The National Insurance Board of Trinidad and Tobago; The National Insurance Appeal Board",
+    "date": "2026-06-25",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2023/cv_23_04733DD25Jun2026.pdf",
+    "citation": "CV2023-04733",
+    "court": "High Court",
+    "judges": [
+      "Devindra Rampersad J"
+    ],
+    "claimants": [
+      "Shanelle Melville"
+    ],
+    "defendants": [
+      "The National Insurance Board of Trinidad and Tobago",
+      "The National Insurance Appeal Board (Tribunal)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Shanelle Melville",
+        "role": "claimant / Prison Officer",
+        "notes": "Injured on duty July 2015; NIS injury/disablement benefits refused as out of time; JR dismissed"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 4006.34,
+        "currency": "TTD",
+        "what_it_is": "Medical expense benefit allowed and paid"
+      },
+      {
+        "amount": 15050,
+        "currency": "TTD",
+        "what_it_is": "Costs to each defendant (total $30,100)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "National Insurance Board of Trinidad and Tobago (NIBTT)"
+    ],
+    "crime_flags": [],
+    "social_headline": "Prison officer loses NIS benefits fight over employer's unfilled form",
+    "social_post": "Justice Devindra Rampersad has dismissed a judicial review by Prison Officer Shanelle Melville against the National Insurance Board and the NIS Appeals Tribunal, which refused her injury and disablement benefit claims as out of time. Melville was injured on duty in July 2015 but her injury-benefit form was incomplete because her employer never completed the required employer's section. The Court held the regulations gave it no discretion to relieve her, even though the fault lay with the employer, and dismissed the claim with $30,100 in costs. In a pointed postscript, the judge urged lawmakers to reform provisions that penalise insured workers for their employer's default. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "NIS benefit time limits run against the insured even when the employer causes delay",
+      "Judges may flag harsh legislation for reform via postscript"
+    ],
+    "outcome": "Judicial review dismissed; costs $15,050 to each defendant ($30,100 total)",
+    "osint_value": "low",
+    "osint_notes": "Judicial review of NIBTT benefit refusal",
+    "fetch_failed": false
+  },
+  {
+    "title": "Danpath, Hemant; Ramkissoon, Rampatie a/c Ramkissoon, Rampathy v Danpath, Sookdeo a/c Danpat, Soodeo",
+    "date": "2026-07-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2022/cv_22_01246DD1Jul2026.pdf",
+    "citation": "CV2022-01246",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Hemant Danpath",
+      "Rampatie (Rampathy) Ramkissoon"
+    ],
+    "defendants": [
+      "Sookdeo (Soodeo) Danpath"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 500000,
+        "currency": "TTD",
+        "what_it_is": "Alleged value of claimants' property interests"
+      },
+      {
+        "amount": 10000,
+        "currency": "TTD",
+        "what_it_is": "Compensation under impugned consent order"
+      },
+      {
+        "amount": 7700,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs (VAT exclusive)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 3 and Lot 4, Piarco Old Road, D'Abadie",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Claim to set aside 2022 consent order struck out as abuse of process"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Family bid to unravel D'Abadie land settlement struck out as abuse of process",
+    "social_post": "Justice Westmin James has struck out a claim by Hemant Danpath and Rampatie Ramkissoon seeking to set aside a January 2022 consent order over property at Piarco Old Road, D'Abadie. They alleged their former attorney misled them into surrendering interests worth over $500,000 for just $10,000 while also owing $54,000 in costs. Their relative Sookdeo Danpath produced their signed instructions authorising the very settlement. The Court held that dissatisfaction with one's own attorney's advice is not a basis to reopen a perfected consent order, and the proceedings were a manifestly groundless abuse of process, struck out with $7,700 costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A perfected consent order can rarely be set aside absent fraud or duress",
+      "Complaints about your own lawyer's advice will not reopen a settlement"
+    ],
+    "outcome": "Statement of case struck out; claim dismissed as abuse of process; costs $7,700",
+    "osint_value": "medium",
+    "osint_notes": "Family land settlement dispute with figures; D'Abadie property",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Williams, Iran for rape and larceny",
+    "date": "2026-07-01",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/singh/2025/cr_25_sdo769DD1Jul2026.pdf",
+    "citation": "CR-HC-SDO-2025-769-1",
+    "court": "High Court (Criminal, San Fernando)",
+    "judges": [
+      "Nalini Singh J"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Iran Williams"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Iran Williams",
+        "role": "accused (acquitted of rape; convicted of larceny)",
+        "offences": [
+          "rape",
+          "larceny"
+        ],
+        "category": [
+          "sexual offences"
+        ],
+        "notes": "Acquitted of rape on reasonable doubt; convicted of larceny of a Samsung A05 phone ($860)"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 860,
+        "currency": "TTD",
+        "what_it_is": "Value of stolen Samsung A05 phone"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "sexual offences"
+    ],
+    "social_headline": "Man acquitted of rape but convicted of stealing ex-partner's phone",
+    "social_post": "Justice Nalini Singh has delivered a split verdict in the trial of Iran Williams, charged with rape and larceny arising from an April 2025 incident involving a former partner. On the rape count, the judge found reasonable doubt, citing significant omissions and inconsistencies in the complainant's account, notably a grocery trip absent from her first statement, and the absence of independent evidence such as DNA, CCTV or phone records. Williams was acquitted of rape. On the larceny count, however, the Court was sure of guilt after Williams himself admitted taking the complainant's Samsung A05 phone, valued at $860, without permission. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Rape convictions require the court to be sure the complainant is truthful and reliable",
+      "Late-emerging material omissions can create reasonable doubt"
+    ],
+    "outcome": "Acquitted of rape; convicted of larceny",
+    "osint_value": "low",
+    "osint_notes": "Sexual offence / larceny verdict; complainant anonymised as virtual complainant",
+    "fetch_failed": false
+  },
+  {
+    "title": "Nicholas, Anna (by her lawful attorney Venantius Nicholas by virtue of Power of Attorney given on the 29th day of March, 2018 registered as Deed No. DE201800721516D001) v Constantine, Burton",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Lochan/2022/cv_22_04230DD30Jun2026.pdf",
+    "citation": "CV2022-04230",
+    "court": "High Court",
+    "judges": [
+      "Master Wrenerson G. Lochan"
+    ],
+    "claimants": [
+      "Anna Nicholas (by lawful attorney Venantius Nicholas)"
+    ],
+    "defendants": [
+      "Burton Constantine"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 8527.13,
+        "currency": "TTD",
+        "what_it_is": "General damages"
+      },
+      {
+        "amount": 15375,
+        "currency": "TTD",
+        "what_it_is": "Special damages"
+      },
+      {
+        "amount": 10500,
+        "currency": "TTD",
+        "what_it_is": "Costs of two applications"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 2 of parent parcel (1 acre 2 roods 11 perches), Paramin, Maraval",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Damages assessed for trespass/nuisance from defendant's encroaching two-storey structure on Lot 2"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Paramin landowner wins damages after neighbour's building encroaches",
+    "social_post": "Master Wrenerson Lochan has assessed damages against Burton Constantine for trespass and nuisance after he built a two-storey concrete structure encroaching onto Lot 2 of a Paramin, Maraval property belonging to Anna Nicholas, represented by her attorney Venantius Nicholas. Constantine, who occupied the neighbouring Lot 3, continued construction despite objections and an interim injunction, extending a roof onto the claimant's land. With liability already established and no defence filed, the Master awarded $8,527.13 general damages, $15,375 special damages, interest and costs, plus $10,500 for related applications. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Encroaching construction grounds trespass and nuisance damages",
+      "Ignoring an interim injunction exposes a builder to costs and damages"
+    ],
+    "outcome": "Damages assessed: $8,527.13 general + $15,375 special + interest + costs",
+    "osint_value": "medium",
+    "osint_notes": "Paramin/Maraval land encroachment; property description",
+    "fetch_failed": false
+  },
+  {
+    "title": "Air Technology Limited v Sagramsingh, Sudhir trading as S. Sagramsingh Motors",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2018/cv_18_02253DD29Jun2026.pdf",
+    "citation": "CV2018-02253",
+    "court": "High Court",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Air Technology Limited"
+    ],
+    "defendants": [
+      "Sudhir Sagramsingh trading as S. Sagramsingh Motors"
+    ],
+    "companies": [
+      {
+        "name": "Air Technology Limited",
+        "role": "claimant",
+        "directors_officers": [
+          "Marcus Ghany (Managing Director)"
+        ],
+        "ownership_notes": "Paid for a Lexus NX F Sport that was mishandled by car dealer"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Sudhir Sagramsingh",
+        "role": "defendant / car dealer (S. Sagramsingh Motors)",
+        "notes": "Failed to transfer funds to UK supplier; ordered to pay $162,770.60 plus interest"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 162770.6,
+        "currency": "TTD",
+        "what_it_is": "Debt owed to claimant"
+      },
+      {
+        "amount": 32621.01,
+        "currency": "TTD",
+        "what_it_is": "Interest at 2.5% from 2018 to 2026"
+      },
+      {
+        "amount": 19154.37,
+        "currency": "TTD",
+        "what_it_is": "50% of prescribed costs"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Car dealer ordered to repay $162,770 over botched Lexus import",
+    "social_post": "Justice Robin Mohammed has ordered car dealer Sudhir Sagramsingh, trading as S. Sagramsingh Motors, to pay Air Technology Limited $162,770.60 plus interest over a mishandled 2016 Lexus NX F Sport import. Air Technology, through director Marcus Ghany, paid the dealer to source and register the UK-export vehicle for $550,000, but the dealer failed to transfer the funds promptly, leaving the company to pay an outstanding balance directly to the UK supplier and take delivery itself. The Court found the dealer breached the oral agreement, awarding the debt plus $32,621 interest, though costs were reduced by half to about $19,000. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Oral agreements are enforceable but hard to prove on precise terms",
+      "Partial success can justify reducing a costs award"
+    ],
+    "outcome": "Judgment for claimant; $162,770.60 plus $32,621.01 interest; 50% costs ($19,154.37)",
+    "osint_value": "medium",
+    "osint_notes": "Names Air Technology Ltd, dealer S. Sagramsingh Motors, and director Marcus Ghany; commercial vehicle-import dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "Khan, Amirah v The Attorney General of Trinidad and Tobago",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2023/cv_23_04094DD29Jun2026.pdf",
+    "citation": "CV2023-04094",
+    "court": "High Court",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Amirah Khan"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Amirah Khan",
+        "role": "claimant (wrongful arrest)",
+        "notes": "Awarded $90,000 false imprisonment + $80,000 malicious prosecution + $300 special"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Amirah Khan",
+        "role": "charged (later discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": "Charges discontinued Dec 2019; had a panic attack in custody"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 90000,
+        "currency": "TTD",
+        "what_it_is": "General damages for false imprisonment (incl aggravation)"
+      },
+      {
+        "amount": 80000,
+        "currency": "TTD",
+        "what_it_is": "General damages for malicious prosecution"
+      },
+      {
+        "amount": 300,
+        "currency": "TTD",
+        "what_it_is": "Special damages (medication)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms",
+      "narcotics"
+    ],
+    "social_headline": "Woman wrongly arrested in 2019 Carapichaima raid awarded $170,000",
+    "social_post": "Master Rishma Ramrattan has awarded Amirah Khan $170,300 for her wrongful arrest in the November 2019 police raid at her family's Carapichaima home. Officers in black scaled the wall, claimed to find ammunition and marijuana in an outside box, and charged the family with firearm, ammunition and marijuana possession; the DPP discontinued all charges within weeks. Khan, who suffered a panic attack in custody and was treated at a health centre, received $90,000 for false imprisonment, $80,000 for malicious prosecution, and $300 for medication, plus interest and costs. This is one of three related family claims from the same raid. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Aggravated damages reflect the trauma of an unlawful arrest",
+      "Only documented special damages are recoverable"
+    ],
+    "outcome": "Damages: $90,000 (false imprisonment) + $80,000 (malicious prosecution) + $300 special + interest/costs",
+    "osint_value": "medium",
+    "osint_notes": "Sibling case to CV2023-04096 and CV2023-04684 from the 2019 Carapichaima raid",
+    "fetch_failed": false
+  },
+  {
+    "title": "Khan, Mustapha (first claimant); Khan, Jennifer (second claimant); Garib-Khan, Kemilly (third claimant) v The Attorney General of Trinidad and Tobago (defendant)",
+    "date": "2026-06-29",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2023/cv_23_04684DD29Jun2026.pdf",
+    "citation": "CV2023-04684",
+    "court": "High Court",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Mustapha Khan",
+      "Jennifer Khan",
+      "Kemilly Garib-Khan"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Mustapha Khan",
+        "role": "claimant (malicious prosecution)",
+        "notes": "$75,000 each awarded; charged but not arrested"
+      },
+      {
+        "name": "Jennifer Khan",
+        "role": "claimant",
+        "notes": "$75,000"
+      },
+      {
+        "name": "Kemilly Garib-Khan",
+        "role": "claimant",
+        "notes": "$75,000"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Mustapha Khan",
+        "role": "charged (not arrested; discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "Jennifer Khan",
+        "role": "charged (not arrested; discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "Kemilly Garib-Khan",
+        "role": "charged (not arrested; discontinued)",
+        "offences": [
+          "possession of firearm",
+          "possession of ammunition",
+          "possession of marijuana"
+        ],
+        "category": [
+          "firearms",
+          "narcotics"
+        ],
+        "notes": ""
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 75000,
+        "currency": "TTD",
+        "what_it_is": "General damages each for malicious prosecution (incl aggravation)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms",
+      "narcotics"
+    ],
+    "social_headline": "Three more Khan family members compensated over 2019 Carapichaima raid",
+    "social_post": "Master Rishma Ramrattan has awarded Mustapha Khan, Jennifer Khan and Kemilly Garib-Khan $75,000 each for malicious prosecution following the November 2019 police raid at their Carapichaima home. Unlike relatives arrested that night, these three were charged with firearm, ammunition and marijuana possession but not arrested; the DPP discontinued all charges within weeks. The Court declined to award exemplary damages, finding insufficient evidence of oppressive conduct against them specifically, but allowed aggravated general damages, plus interest and costs. Special-damages claims for legal fees failed for lack of documentary proof. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Malicious prosecution is actionable even without arrest",
+      "Exemplary damages require clear evidence of oppressive State conduct"
+    ],
+    "outcome": "Damages: $75,000 each for malicious prosecution; special damages refused; interest and costs",
+    "osint_value": "medium",
+    "osint_notes": "Third of three related Khan-family claims from the 2019 Carapichaima raid",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application without notice by the Claimant for Judicial Review under Part 56 of the Civil Proceedings Rules (1998) and the Judicial Review Act Chapter 7:08.",
+    "date": "2026-07-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2025/cv_25_00316DD2Jul2026.pdf",
+    "citation": "CV2025-00316",
+    "court": "High Court",
+    "judges": [
+      "Margaret Y. Mohammed J"
+    ],
+    "claimants": [
+      "Derek Williams"
+    ],
+    "defendants": [
+      "The Commandant of the Trinidad and Tobago Cadet Force",
+      "The Committee of the Trinidad and Tobago Cadet Force",
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Derek Williams",
+        "role": "claimant / Captain (Cadet Force), registered nurse",
+        "notes": "Denied promotion to Major despite seniority; JR succeeded; ordered promoted with arrears"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 50000,
+        "currency": "TTD",
+        "what_it_is": "Compensatory damages"
+      },
+      {
+        "amount": 50000,
+        "currency": "TTD",
+        "what_it_is": "Vindicatory damages"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court orders Cadet Force to promote passed-over captain to Major",
+    "social_post": "Justice Margaret Mohammed has ruled that the Trinidad and Tobago Cadet Force unlawfully failed to promote Captain Derek Williams to the rank of Major, quashing the decision as unreasonable, unfair and irrational. Williams, a registered nurse who joined in 2000 and became a Battalion Second-in-Command, was ranked more senior than four of the seven captains promoted in 2023 yet was passed over without reasons. The Court found breaches of his constitutional rights to equality and protection of the law, ordered his promotion with effect from August 2023 with all arrears, and awarded $50,000 compensatory and $50,000 vindicatory damages, registering its disapproval of the Commandant's conduct. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Promotion decisions must follow standing orders and give reasons",
+      "Constitutional breaches by public bodies can attract vindicatory damages"
+    ],
+    "outcome": "Judicial review granted; promotion to Major ordered with arrears; $100,000 total damages; costs",
+    "osint_value": "low",
+    "osint_notes": "Judicial review of Cadet Force promotion decision",
+    "fetch_failed": false
+  },
+  {
+    "title": "Creese, Joy; Burke, Selwyn v Trinidad and Tobago Housing Development Corporation",
+    "date": "2026-07-02",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2019/mohammed_m/CvA_19_S260DD2Jul2026.pdf",
+    "citation": "CA S260/2019; CV2013-04790",
+    "court": "Court of Appeal",
+    "judges": [
+      "R. Boodoosingh CJ",
+      "M. Mohammed JA",
+      "M. Wilson JA"
+    ],
+    "claimants": [
+      "Joy Creese (Appellant)",
+      "Selwyn Burke (Appellant)"
+    ],
+    "defendants": [
+      "Trinidad and Tobago Housing Development Corporation (Respondent)"
+    ],
+    "companies": [
+      {
+        "name": "Trinidad and Tobago Housing Development Corporation (HDC)",
+        "role": "respondent",
+        "directors_officers": [],
+        "ownership_notes": "Successor to National Housing Authority; held 1946 acquired title to No. 90 Coffee Street"
+      }
+    ],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "No. 90 Coffee Street, San Fernando",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "HDC",
+        "tenant": "",
+        "outcome": "HDC's 1946 compulsory-acquisition title upheld; appellants' 2013 deed void"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "HDC wins San Fernando property fight; 1946 acquisition title upheld",
+    "social_post": "The Court of Appeal has dismissed an appeal by Joy Creese and Selwyn Burke over ownership of No. 90 Coffee Street, San Fernando. They claimed title through a 2013 Deed of Assent tracing to their late father Oscar Burke, but the Trinidad and Tobago Housing Development Corporation relied on a 1946 compulsory acquisition by its predecessor, the National Housing Authority. Justice Mark Mohammed, with the Chief Justice and Wilson JA agreeing, held the 1946 acquisition vested absolute title in the State, that non-payment of compensation did not create a reversion or trust, and that no resulting trust arose. The appellants' 2013 deed was correctly declared null and void. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Statutory compulsory acquisition vests absolute title in the State",
+      "Unpaid compensation is a statutory right, not a condition of vesting"
+    ],
+    "outcome": "Appeal dismissed; HDC's title affirmed; appellants' 2013 deed void",
+    "osint_value": "medium",
+    "osint_notes": "HDC (state housing corporation) property dispute; San Fernando; compulsory acquisition",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re the application without notice by the claimant for Judicial Review under Part 56 of the Civil Proceeding Rules (1998) and the Judicial Review Act Chapter 7:08.",
+    "date": "2026-07-06",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Reid/2023/cv_23_01834DD6Jul2026.pdf",
+    "citation": "CV2023-01834",
+    "court": "High Court",
+    "judges": [
+      "Karen Reid J"
+    ],
+    "claimants": [
+      "Torinio Tracey"
+    ],
+    "defendants": [
+      "The Commanding Officer of the Trinidad and Tobago Coast Guard",
+      "The Chief of Defence Staff",
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Torinio Tracey",
+        "role": "claimant / Lieutenant Commander, TT Coast Guard",
+        "notes": "22-year officer; challenged court-martial after his ship ran aground; won on firearm-seizure point"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 20000,
+        "currency": "TTD",
+        "what_it_is": "Damages for unlawful seizure of personal firearm"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Coast Guard captain partly wins case after his vessel ran aground",
+    "social_post": "Justice Karen Reid has partly upheld a claim by Lieutenant Commander Torinio Tracey, a 22-year Trinidad and Tobago Coast Guard officer, over the fallout from his vessel TTS Port of Spain CG 41 running aground near Herine Bay in February 2022. Tracey argued his commanding officer condoned the alleged offences before he was charged and remanded for court-martial. The Court lifted the stay on the court-martial, rejecting his condonation and protection-of-law arguments, but found the seizure and 13-month detention of his personal firearm breached his constitutional right to enjoyment of property, awarding $20,000 damages and 50% costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Unlawful seizure of property can breach section 4(a) constitutional rights",
+      "A court-martial stay will be lifted where condonation is not established"
+    ],
+    "outcome": "Court-martial stay lifted; firearm-seizure breach found; $20,000 damages; 50% costs",
+    "osint_value": "low",
+    "osint_notes": "Coast Guard court-martial / constitutional claim",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re the Mental Health Act Chapter 28:02. And in re Baptiste, Martha (a patient). And in re the application of Benoit-Noel, Teresa",
+    "date": "2026-07-03",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/williams_q/2026/cv_26_00952DD3Jul2026.pdf",
+    "citation": "CV2026-00952",
+    "court": "High Court",
+    "judges": [
+      "Avason Quinlan-Williams J"
+    ],
+    "claimants": [
+      "Teresa Benoit-Noel"
+    ],
+    "defendants": [
+      "Robert Benoit (Interested Party)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Martha Baptiste",
+        "role": "patient (subject of Committee application)",
+        "notes": "Born 28 Sept 1939; diagnosed with major neuro-cognitive disorder (Alzheimer's/dementia) by Prof. Gerard Hutchinson"
+      },
+      {
+        "name": "Teresa Benoit-Noel",
+        "role": "applicant (daughter)",
+        "notes": "Application to be Committee refused; found not credible on material matters"
+      },
+      {
+        "name": "Robert Benoit",
+        "role": "interested party (son)",
+        "notes": "Appointed sole Committee of the patient"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Estranged son named to manage mother's affairs in dementia case",
+    "social_post": "Justice Avason Quinlan-Williams has appointed Robert Benoit as sole Committee to manage the property and affairs of his mother, Martha Baptiste, who suffers from a major neuro-cognitive disorder likely Alzheimer's or fronto-temporal dementia, per psychiatrist Professor Gerard Hutchinson. Baptiste's two estranged children both sought control; the Court found a joint committee unworkable given their discord, and preferred the son's proposed care arrangements. The judge found the applicant daughter, Teresa Benoit-Noel, not credible on material matters. The Committee must file six-monthly financial and medical reports on the patient. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Committee appointments turn on the patient's best interests, not sibling rivalry",
+      "Courts require regular financial and medical accountability from a Committee"
+    ],
+    "outcome": "Interested party (son) appointed sole Committee; six-monthly reporting ordered",
+    "osint_value": "low",
+    "osint_notes": "Mental Health Act Committee appointment; sensitive medical matter",
+    "fetch_failed": false
+  },
+  {
+    "title": "Romain, Anthony v Gellineau, Stephen; Thomas, Glenn; Mass Contracting Company Limited; Dhanipersad, Shalini; Ali, Shaun; Persad, Naresh; Maharaj, Sushilla",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2022/cv_22_01839DD30Jun2026.pdf",
+    "citation": "CV2022-01839",
+    "court": "High Court",
+    "judges": [
+      "Margaret Y. Mohammed J"
+    ],
+    "claimants": [
+      "Anthony Romain"
+    ],
+    "defendants": [
+      "Stephen Gellineau",
+      "Glenn Thomas",
+      "Mass Contracting Company Limited",
+      "Shalini Dhanipersad",
+      "Shaun Ali",
+      "Naresh Persad",
+      "Sushilla Maharaj"
+    ],
+    "companies": [
+      {
+        "name": "Mass Contracting Company Limited",
+        "role": "third defendant / stakeholder",
+        "directors_officers": [
+          "Stephen Gellineau (Director)"
+        ],
+        "ownership_notes": "Company in which first defendant was a director; received sale proceeds"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Stephen Gellineau",
+        "role": "first defendant / attorney-in-fact",
+        "notes": "Used forged/void powers of attorney to sell claimant's Tobago property"
+      },
+      {
+        "name": "Naresh Persad",
+        "role": "sixth defendant / purchaser",
+        "notes": "Held liable for fraud, conspiracy to injure, unjust enrichment"
+      },
+      {
+        "name": "Sushilla Maharaj",
+        "role": "seventh defendant / purchaser",
+        "notes": "Held liable for fraud, conspiracy, unjust enrichment"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 1200000,
+        "currency": "TTD",
+        "what_it_is": "Price claimant agreed for the property"
+      },
+      {
+        "amount": 585000,
+        "currency": "TTD",
+        "what_it_is": "Each of two cheques (total $1.17m) paid to stakeholders not the owner"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 26, Mt Irvine Estate 'Golf Course', Tobago",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "Anthony Romain",
+        "tenant": "",
+        "outcome": "2018 deed set aside/expunged; property sale void; damages for fraud to be assessed"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "fraud"
+    ],
+    "social_headline": "Tobago golf-course land sale voided over forged powers of attorney",
+    "social_post": "Justice Margaret Mohammed has set aside the fraudulent 2018 sale of Anthony Romain's property at Lot 26, Mt Irvine Estate 'Golf Course', Tobago. Romain said his friend Stephen Gellineau induced him to sign powers of attorney, then used void POAs to sell the land, with two $585,000 cheques paid to the second defendant and to Mass Contracting Company Limited, a firm Gellineau directed, rather than to Romain, and at a reduced price. The Court declared the POAs and the sale void, ordered the deed expunged, and found purchasers Naresh Persad and Sushilla Maharaj liable for fraud, conspiracy to injure and unjust enrichment, with damages to be assessed. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Sales under forged or void powers of attorney can be set aside",
+      "Purchasers who ignore red flags in a deal can be liable for conspiracy and fraud"
+    ],
+    "outcome": "POAs and 2018 sale declared void; deed expunged; sixth/seventh defendants liable for fraud/conspiracy; damages to be assessed",
+    "osint_value": "high",
+    "osint_notes": "Property fraud involving forged POAs; Mass Contracting Company Ltd and multiple named individuals; high-value Tobago Mt Irvine land",
+    "fetch_failed": false
+  },
+  {
+    "title": "Mark, Kevin v The Attorney General of Trinidad and Tobago",
+    "date": "2026-07-09",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rahim/2022/cv_22_00004DD9Jul2026.pdf",
+    "citation": "CV2022-00004",
+    "court": "High Court",
+    "judges": [
+      "R. Rahim J"
+    ],
+    "claimants": [
+      "Kevin Mark"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Kevin Mark",
+        "role": "claimant (claim dismissed)",
+        "notes": "Alleged police framed him for marijuana and stole $2,500; claim dismissed as not credible"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Kevin Mark",
+        "role": "acquitted (magistrates' court) then civil claimant",
+        "offences": [
+          "possession of marijuana (s5(1) Dangerous Drugs Act)"
+        ],
+        "category": [
+          "narcotics"
+        ],
+        "notes": "Acquitted 2018; civil claim for false imprisonment/malicious prosecution failed"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 2500,
+        "currency": "TTD",
+        "what_it_is": "Sum Mark alleged police stole (claim rejected)"
+      },
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs against Mark"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "narcotics"
+    ],
+    "social_headline": "Tobago man's police-framing and theft claim dismissed for lack of proof",
+    "social_post": "Justice Ricky Rahim has dismissed a claim by Kevin Mark, who alleged Tobago police framed him for marijuana possession in 2017 and stole $2,500 from his car during his arrest at Buccoo. Although a magistrate acquitted him in 2018, the Court in this civil claim did not believe his account, finding it implausible and noting he failed to call available witnesses, drawing adverse inferences. The judge held Mark did not discharge his burden to prove absence of reasonable and probable cause, nor that police took the money. His claims for false imprisonment, malicious prosecution and conversion all failed, with $14,000 costs against him. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Civil claimants bear the burden of proving malicious prosecution",
+      "Failure to call key witnesses invites adverse inferences"
+    ],
+    "outcome": "Claim dismissed; costs $14,000 against claimant",
+    "osint_value": "low",
+    "osint_notes": "Malicious prosecution claim dismissed; narcotics charge background",
+    "fetch_failed": false
+  },
+  {
+    "title": "Moses, Clifton v Duke Moses, Yvonne",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2018/cv_18_01048DD8Jul2026.pdf",
+    "citation": "CV2018-01048",
+    "court": "High Court (Sub-Registry, Tobago)",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Clifton Moses"
+    ],
+    "defendants": [
+      "Yvonne Duke Moses"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs on claim"
+      },
+      {
+        "amount": 7000,
+        "currency": "TTD",
+        "what_it_is": "Costs on counterclaim (reduced 50%)"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "One-bedroom apartment, upstairs of No. 8B Pascal Village Street, Lambeau, Tobago (Deed No. 2671 of 1981)",
+        "lease_terms": "bare licence, revoked by Notice to Quit",
+        "rent": "",
+        "landlord": "Clifton Moses (father-in-law)",
+        "tenant": "Yvonne Duke Moses (daughter-in-law)",
+        "outcome": "Possession granted to claimant; defendant to vacate within 30 days"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Tobago father-in-law wins possession of apartment from estranged daughter-in-law",
+    "social_post": "Justice Robin Mohammed has granted Clifton Moses possession of a one-bedroom apartment at No. 8B Pascal Village Street, Lambeau, Tobago, occupied by his daughter-in-law Yvonne Duke Moses. Moses, the registered owner, had given her personal permission to live there in 2013, but after the relationship deteriorated he served a Notice to Quit in 2017. The Court found she was a bare licensee whose licence was lawfully revoked, rejecting her claim to a matrimonial-home interest, and ordered her to vacate within 30 days. Her counterclaim was dismissed, with costs of $14,000 and $7,000. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A bare licence to occupy family property can be revoked by notice",
+      "Occupation as a family member does not create a proprietary interest"
+    ],
+    "outcome": "Possession granted to claimant; defendant to vacate in 30 days; counterclaim dismissed; costs $21,000",
+    "osint_value": "low",
+    "osint_notes": "Family property/licence dispute in Tobago",
+    "fetch_failed": false
+  },
+  {
+    "title": "Mohammed, Andile, A. v The Attorney General of Trinidad and Tobago",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2024/cv_24_03414DD8Jul2026.pdf",
+    "citation": "CV2024-03414",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Andile Ansar Mohammed"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Andile Ansar Mohammed",
+        "role": "claimant / Police Constable",
+        "notes": "Shot in leg during 2020 Chaguanas firearms raid; negligence/employer-liability claim dismissed; 10% permanent disability"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 3459.35,
+        "currency": "TTD",
+        "what_it_is": "Special damages claimed (July 2022)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms"
+    ],
+    "social_headline": "Officer shot in gun raid loses negligence claim against police service",
+    "social_post": "Justice Westmin James has dismissed a negligence and employer's-liability claim by Police Constable Andile Ansar Mohammed, shot in the right leg during an October 2020 search-warrant raid for firearms at John Street, Chaguanas, when officers came under gunfire. Mohammed, attached to the Robbery Unit and assisting the Gang Unit, said the TTPS failed to provide a safe system of work, specialist training and protective gear such as ballistic shin guards. The Court held the injury flowed from the inherent dangers of armed policing rather than actionable negligence, and dismissed the claim, but made no order as to costs given his good-faith public service. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Employers are not liable for every inherent risk of dangerous work",
+      "Good-faith public-interest litigation can justify no order as to costs"
+    ],
+    "outcome": "Claim dismissed; no order as to costs",
+    "osint_value": "low",
+    "osint_notes": "Police officer injury / OSH Act negligence claim; firearms raid context",
+    "fetch_failed": false
+  },
+  {
+    "title": "Ramcharan, Nigel (Administrator Ad Litem of the Estate of Mahadeo Ramcharan, Nyron Ramcharan, and Nande Ramcharan, deceased) (claimant) v B.K. Holdings Limited (first defendant); Diaz, David (second defendant); Gulf Insurance Limited (co-defendant)",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/seepersad/2025/cv_25_03819DD8Jul2026.pdf",
+    "citation": "CV2025-03819",
+    "court": "High Court (San Fernando)",
+    "judges": [
+      "Frank Seepersad J"
+    ],
+    "claimants": [
+      "Nigel Ramcharan (Administrator Ad Litem, Estates of Mahadeo, Nyron and Nanda Ramcharan)"
+    ],
+    "defendants": [
+      "B.K. Holdings Limited",
+      "David Diaz",
+      "Gulf Insurance Limited (Co-Defendant)"
+    ],
+    "companies": [
+      {
+        "name": "B.K. Holdings Limited",
+        "role": "first defendant / vehicle owner",
+        "directors_officers": [],
+        "ownership_notes": "Owner of vehicle TCX 5957"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "David Diaz",
+        "role": "second defendant / driver",
+        "notes": "Driver of B.K. Holdings vehicle in fatal 2014 crash"
+      },
+      {
+        "name": "Nigel Ramcharan",
+        "role": "claimant / administrator",
+        "notes": "Lost parents and brother in 2014 Uriah Butler Highway crash"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "Gulf Insurance Limited",
+      "Maritime General Insurance Co Ltd"
+    ],
+    "crime_flags": [],
+    "social_headline": "Court revives time-barred claim over 2014 highway crash that killed a family of three",
+    "social_post": "Justice Frank Seepersad has allowed a statute-barred claim to proceed over the July 2014 Uriah Butler Highway crash that killed Mahadeo, Nanda and 13-year-old Nyron Ramcharan. Their son and brother Nigel Ramcharan, then 12, sued B.K. Holdings Limited, driver David Diaz and insurer Gulf Insurance Limited, alleging their negligence contributed to the collision in which another vehicle became airborne and landed on the family's car. The defendants sought to strike out the claim as filed outside the four-year limit, but the Court exercised its discretion to disapply the limitation period. Notably, the judge warned against any abdication of judicial decision-making to artificial intelligence or research staff. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Courts have discretion to disapply limitation periods in personal-injury/fatal claims",
+      "Judges retain a duty to decide cases personally, not defer to AI or staff"
+    ],
+    "outcome": "Striking-out application dismissed; limitation period disapplied; claim to proceed",
+    "osint_value": "medium",
+    "osint_notes": "Names B.K. Holdings Ltd, Gulf Insurance, Maritime General Insurance; notable judicial obiter on AI use in courts",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Ramdeo, Navin for Count 1: Kidnapping; Count 2: Robbery with violence",
+    "date": "2026-07-07",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/RHinds/2025/cr_25_sdo1339DD7Jul2026.pdf",
+    "citation": "CR-HC-SDO-2025-1339-1",
+    "court": "High Court (Criminal)",
+    "judges": [
+      "Lisa Ramsumair-Hinds J"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Navin Ramdeo"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Navin Ramdeo",
+        "role": "convicted (guilty plea)",
+        "offences": [
+          "kidnapping",
+          "robbery with violence"
+        ],
+        "category": [
+          "kidnapping",
+          "robbery",
+          "firearms"
+        ],
+        "notes": "Taxi driver who picked up gunmen who robbed victim Richard Ramkissoon; 3 years each concurrent after MSI"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 1200,
+        "currency": "TTD",
+        "what_it_is": "Value of stolen Samsung A03 phone"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "kidnapping",
+      "robbery",
+      "firearms"
+    ],
+    "social_headline": "Taxi driver jailed for Couva kidnapping-robbery of commuter",
+    "social_post": "Justice Lisa Ramsumair-Hinds has sentenced Navin Ramdeo to three years' imprisonment for the June 2024 kidnapping and armed robbery of Richard Ramkissoon, who was waiting for a taxi to work at Isaac Junction, Couva. Ramdeo picked up two men who, with a firearm, robbed the victim of his phone, headset, bank card and even a bowl of food, before dumping him on a roadway. Ramdeo accepted a Maximum Sentence Indication of three years and pleaded guilty; kidnapping and robbery-with-violence sentences of three years each will run concurrently from 7 July 2026. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A Maximum Sentence Indication caps the sentence once accepted",
+      "Guilty pleas earn a one-third discount"
+    ],
+    "outcome": "Convicted on guilty plea; 3 years each for kidnapping and robbery with violence, concurrent",
+    "osint_value": "low",
+    "osint_notes": "Kidnapping/robbery sentencing; firearm used",
+    "fetch_failed": false
+  },
+  {
+    "title": "Berment-Mc Dowald, Joseph; Au, Pui-Sum v Chung, Anthony a/c Chung, Anthony, K. (first defendant); Chung, Jocelyn a/c Chung, Jocelyn, M. (second defendant)",
+    "date": "2026-07-06",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_03942DD6Jul2026.pdf",
+    "citation": "CV2022-03942",
+    "court": "High Court",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Joseph Berment-McDowald",
+      "Pui-Sum Au"
+    ],
+    "defendants": [
+      "Anthony (Kenneth) Chung",
+      "Jocelyn (Mary) Chung"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 2000000,
+        "currency": "TTD",
+        "what_it_is": "Agreed sale price of the Mausica property"
+      },
+      {
+        "amount": 25000,
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for misrepresentation"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Lot 14 Crescent Drive, Crescent Gardens, Mausica",
+        "lease_terms": "sold Dec 2016 for TTD$2,000,000 (transfer at $1.9m)",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Misrepresentation on flooding found; nominal $25,000 damages"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Home buyers win flooding misrepresentation case but only nominal damages",
+    "social_post": "Justice Robin Mohammed has found that vendors Anthony and Jocelyn Chung misrepresented the flood history of their Mausica home when selling it to Joseph Berment-McDowald and Pui-Sum Au for $2 million in December 2016. The buyers said they were assured the house had never flooded inside; it later flooded in 2018 and 2022. The Court entered judgment for misrepresentation under the Misrepresentation Act, but awarded only $25,000 nominal damages plus interest, finding the buyers had largely failed to prove their quantified losses. Costs were awarded at 60% of the prescribed scale. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Pre-contract assurances about property can ground misrepresentation liability",
+      "Winning on liability means little without proof of quantifiable loss"
+    ],
+    "outcome": "Judgment for claimants on misrepresentation; $25,000 nominal damages plus interest; 60% costs",
+    "osint_value": "medium",
+    "osint_notes": "Property misrepresentation; named Mausica property and $2m sale",
+    "fetch_failed": false
+  },
+  {
+    "title": "Fermine, Claudette (first claimant); Fermine, Kareem (second claimant) v The Commissioner of Police (defendant)",
+    "date": "2026-07-03",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2024/cv_24_01354DD3Jul2026.pdf",
+    "citation": "CV2024-01354",
+    "court": "High Court",
+    "judges": [
+      "Robin Mohammed J"
+    ],
+    "claimants": [
+      "Claudette Fermine (WPC)",
+      "Kareem Fermine (PC)"
+    ],
+    "defendants": [
+      "The Commissioner of Police"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Claudette Fermine (Fermine-Garcia)",
+        "role": "claimant / Woman Police Corporal",
+        "notes": "Transferred from Inter Agency Task Force without notice/reasons; sought FOIA documents"
+      },
+      {
+        "name": "Kareem Fermine",
+        "role": "claimant / Police Constable (son)",
+        "notes": "Transferred from GEB to Western Division"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Court faults Police Commissioner over secrecy on officers' transfers",
+    "social_post": "Justice Robin Mohammed has ruled in favour of two serving police officers, Corporal Claudette Fermine and her son Constable Kareem Fermine, who were abruptly transferred out of specialist units in November 2023 without the required notice or reasons. When they sought the reasons under the Freedom of Information Act, the Commissioner of Police refused, calling the document an internal working paper 'of disinterest to the public.' The Court found the refusal contrary to law, based on an irrelevant consideration and a failure to weigh the public-interest override, and ordered the Commissioner to reconsider the FOIA requests within 35 days, with costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "FOIA refusals must properly weigh the public-interest override",
+      "Public authorities must give reasons and findings when refusing access"
+    ],
+    "outcome": "Judicial review granted; Commissioner ordered to reconsider FOIA requests within 35 days; costs",
+    "osint_value": "low",
+    "osint_notes": "Freedom of Information Act / police transfer dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re the Wills and Probate Act, Chapter 9:03. And in re the Estate of Annabel Eleanor Dove aka Annabell Eleanor Dove-Forjonel...",
+    "date": "2026-06-30",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/wilson/2022/cv_22_01884DD30Jun2026.pdf",
+    "citation": "CV2022-01884; CV2022-02040 (consolidated)",
+    "court": "High Court",
+    "judges": [
+      "Jacqueline Wilson KC J"
+    ],
+    "claimants": [
+      "Cheryl Hepburn"
+    ],
+    "defendants": [
+      "Theresa Diana Jean Nwosu (personally and as LPR of Estate of Annabel Eleanor Dove)",
+      "The Public Trustee (Interested Party)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Annabel Eleanor Dove (Dove-Forjonel)",
+        "role": "deceased pharmacist",
+        "notes": "Died 17 Feb 2015; owned No. 21 Gleneagles Drive, Mt. Irvine, Tobago"
+      },
+      {
+        "name": "Cheryl Hepburn",
+        "role": "claimant / late companion-caretaker",
+        "notes": "Proprietary estoppel claim to Property dismissed"
+      },
+      {
+        "name": "Theresa Diana Jean Nwosu",
+        "role": "defendant / sister and administratrix",
+        "notes": "Resides in Michigan, USA; granted summary possession"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "No. 21 Gleneagles Drive, Mt. Irvine, Scarborough, Tobago",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "Estate of Annabel Dove",
+        "tenant": "Cheryl Hepburn (caretaker/companion)",
+        "outcome": "Claimant's estoppel claim dismissed; ordered to deliver possession by 31 July 2026"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Caretaker loses claim to late pharmacist's Mt. Irvine home",
+    "social_post": "Justice Jacqueline Wilson has dismissed a proprietary-estoppel claim by Cheryl Hepburn, the live-in companion and caretaker of the late pharmacist Annabel Eleanor Dove, over her home at No. 21 Gleneagles Drive, Mt. Irvine, Tobago. Hepburn said Dove repeatedly assured her she could live there for life and that 'no one can put you out.' But the Court found that a 2015 Caretaker Agreement Hepburn signed with Dove's sister and administratrix, Theresa Nwosu, was inconsistent with any life interest, and that her six-year silence undermined the claim. Hepburn's claim and bid to revoke the grant of administration failed; she must deliver possession by 31 July 2026. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Signing a terminable caretaker agreement can defeat a proprietary-estoppel claim",
+      "Long delay in asserting a right undermines claims of a promised interest"
+    ],
+    "outcome": "Claim dismissed; claimant to deliver possession by 31 July 2026; costs $14,000",
+    "osint_value": "medium",
+    "osint_notes": "Estate/proprietary estoppel over named Mt. Irvine Tobago property; overseas administratrix",
+    "fetch_failed": false
+  },
+  {
+    "title": "Harricharan, Krishna (claimant) v Gialdo-Kennedy, Alexandrina (first named defendant); Kennedy, Florenica (second named defendant); Baker Guialdo, Susan; (third named defendant); Guialdo, Frankie (fourth named defendant);",
+    "date": "2026-07-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/rampersad/2021/cv_21_01683DD10July2026.pdf",
+    "citation": "CV2021-01683",
+    "court": "High Court",
+    "judges": [
+      "Devindra Rampersad J"
+    ],
+    "claimants": [
+      "Krishna Harricharan"
+    ],
+    "defendants": [
+      "Alexandrina Gialdo-Kennedy",
+      "Florenica Kennedy",
+      "Susan Baker Guialdo",
+      "Frankie Guialdo",
+      "Louis Guialdo"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [
+      {
+        "address_or_description": "Residential lot and ~3 acres agricultural land, Church Street/Trace, Tabaquite (former British Union Oil / TECU lands)",
+        "lease_terms": "tenancy from 1945; rent last paid 1994; notice to quit 2008",
+        "rent": "historic ground rents (e.g. $6/acre/yr)",
+        "landlord": "Guialdo/Kennedy defendants (registered proprietors via TECU transfer 1994)",
+        "tenant": "Krishna Harricharan (successor tenant)",
+        "outcome": "Dispute over when limitation time began to run against paper owners"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "TECU Credit Union Co-operative Society Limited"
+    ],
+    "crime_flags": [],
+    "social_headline": "Tabaquite land fight turns on decades-old tenancy and limitation clock",
+    "social_post": "Justice Devindra Rampersad has resolved a long-running dispute over a residential lot and about three acres of agricultural land at Church Street, Tabaquite, once held by British Union Oil Company and later acquired by TECU Credit Union. Krishna Harricharan, whose family held a tenancy dating from 1945, argued that with no rent paid since 1994 and no recovery step for over 16 years, the registered owners, the Guialdo and Kennedy family, had lost their title under the Real Property Limitation Act. The defendants counterclaimed for possession, contending time only ran from 2009 after a 2008 notice to quit. The judgment turns on the tenancy structure and effect of that notice. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "When limitation time starts running depends on tenancy structure and notices to quit",
+      "Historic tenancy records are decisive in agricultural land disputes"
+    ],
+    "outcome": "Judgment delivered on possession/ownership turning on limitation and tenancy analysis",
+    "osint_value": "medium",
+    "osint_notes": "Tabaquite agricultural land; TECU Credit Union and British Union Oil history",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application for leave to apply for Judicial Review pursuant to Part 56.3 of the Civil Proceedings Rules, 1998 (as amended) and pursuant to Section 6(1) of the Judicial Review Act Chap. 7:08.",
+    "date": "2026-07-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2023/Rahim/CvA_23_S120DD10Jul2026.pdf",
+    "citation": "CA S120/2023; CV2020-03937",
+    "court": "Court of Appeal",
+    "judges": [
+      "P. Rajkumar JA",
+      "M. Wilson JA",
+      "R. Rahim JA"
+    ],
+    "claimants": [
+      "Trinmesh Limited (Appellant)"
+    ],
+    "defendants": [
+      "The Comptroller of Customs and Excise (Respondent)"
+    ],
+    "companies": [
+      {
+        "name": "Trinmesh Limited",
+        "role": "appellant / importer",
+        "directors_officers": [],
+        "ownership_notes": "Importer of steel rods, wire rods and metal coils; subject to post-clearance customs audit"
+      }
+    ],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Appeal Court partly backs importer in customs back-duty dispute",
+    "social_post": "The Court of Appeal has partly allowed an appeal by Trinmesh Limited against the Comptroller of Customs and Excise over a post-clearance audit demanding additional duties on imported steel and wire rods. Justice Rahim, with Rajkumar and Wilson JJA, held that penalty provisions inserted by Act No. 2 of 2018 could not operate retrospectively, and that a request for Mill Test Certificates on four 2014-2015 entries was made in excess of jurisdiction and was null and void. However, the Court upheld the Comptroller's power to verify classification and confirmed additional-duty provisions applied to several later wire-rod entries. The appeal was allowed in part. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Customs penalty amendments do not apply retrospectively absent clear wording",
+      "The Comptroller may verify classification but only within statutory limits"
+    ],
+    "outcome": "Appeal allowed in part; some customs demands upheld, others declared null and void",
+    "osint_value": "medium",
+    "osint_notes": "Names Trinmesh Limited (steel/wire importer) in a customs valuation dispute",
+    "fetch_failed": false
+  },
+  {
+    "title": "Small, Vibert v Meighoo-Gildharry, Sharon",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2022/cv_22_00205DD8Jul2026.pdf",
+    "citation": "CV2022-00205",
+    "court": "High Court",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Vibert Small"
+    ],
+    "defendants": [
+      "Sharon Meighoo-Gildharry"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Vibert Small",
+        "role": "claimant / Ministry of Health Perifocal Officer",
+        "notes": "Falsely labelled a 'bandit' on Facebook; defamation proved but qualified privilege defeated claim"
+      },
+      {
+        "name": "Sharon Meighoo-Gildharry",
+        "role": "defendant",
+        "notes": "Posted Facebook allegation; succeeded on qualified privilege (no malice)"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 14000,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs to defendant"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "'Bandit' Facebook post was defamatory but honest, so mosquito officer's claim fails",
+    "social_post": "Justice Robin Mohammed has dismissed a defamation claim by Vibert Small, a Ministry of Health Insect Vector Control officer, over a 2019 Facebook post by Sharon Meighoo-Gildharry that branded him 'a bandit pretending to spray for mosquitos.' Small was doing legitimate dengue-control work in Westmoorings when someone photographed his ID; the post was shared over 4,900 times and reposted by outlets including LoopTT and the Trinidad Express, and his son was bullied at school. The Court found the post defamatory and harmful but held it was made on an occasion of qualified privilege without malice, so the claim failed. Small must pay $14,000 costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Qualified privilege can defeat a defamation claim absent proof of malice",
+      "Fact-check before posting: honest but false posts can still cause lasting harm"
+    ],
+    "outcome": "Claim dismissed (qualified privilege, no malice); costs $14,000",
+    "osint_value": "low",
+    "osint_notes": "Social-media defamation; named parties; posts amplified by LoopTT and Trinidad Express",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v Smart, Nkosi for wounding with intent; possession of firearm; possession of ammunition",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/RHinds/2025/cr_25_tgo73DD8Jul2026.pdf",
+    "citation": "CR-HC-TGO-2025-73-1-A-D",
+    "court": "High Court (Criminal, Tobago)",
+    "judges": [
+      "Lisa Ramsumair-Hinds J"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Nkosi Smart"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Nkosi Smart",
+        "role": "convicted (guilty plea mid-trial)",
+        "offences": [
+          "wounding with intent",
+          "possession of firearm",
+          "possession of ammunition"
+        ],
+        "category": [
+          "firearms",
+          "assault"
+        ],
+        "notes": "Carnbee, Tobago shooting of Davion Thomas (Jan 2025); 9 years each concurrent"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms",
+      "assault"
+    ],
+    "social_headline": "Tobago man gets 9 years for shooting and illegal gun possession",
+    "social_post": "Justice Lisa Ramsumair-Hinds has sentenced Nkosi Smart to nine years' imprisonment after he pleaded guilty mid-trial to wounding Davion Thomas with intent and to possession of a firearm and ammunition, arising from a January 2025 incident at Carnbee, Tobago. The judge noted Parliament's steadily rising maximum penalties for gun crimes, setting a 15-year starting point before adjustments and a one-fifth guilty-plea discount, then crediting time already served. The three sentences of nine years each will run concurrently at hard labour from the date of sentencing. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Rising statutory maxima signal Parliament's intent to deprecate gun crime",
+      "A mid-trial guilty plea attracts a reduced (one-fifth) discount"
+    ],
+    "outcome": "Convicted on guilty plea; 9 years each (concurrent) for wounding with intent and firearm/ammunition possession",
+    "osint_value": "low",
+    "osint_notes": "Firearms/wounding sentencing in Tobago",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re an application for constitutional redress pursuant to Section 14 of the Constitution of the Republic of Trinidad and Tobago.",
+    "date": "2026-07-08",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/coa/2023/Wilson/CvA_23_P181DD8Jul2026.pdf",
+    "citation": "CvA_23_P181 (2023)",
+    "court": "Court of Appeal",
+    "judges": [],
+    "claimants": [],
+    "defendants": [],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "",
+    "social_post": "",
+    "practical_takeaways": [],
+    "outcome": "",
+    "osint_value": "low",
+    "osint_notes": "PDF is a scanned image with no extractable text (pdftotext returned empty); record created from CSV metadata only. Re-scrape/OCR needed for full extraction.",
+    "fetch_failed": true
+  },
+  {
+    "title": "Paul, Joseph v The Attorney General of Trinidad and Tobago",
+    "date": "2026-07-07",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/Ramrattan/2021/cv_21_00658DD7Jul2026.pdf",
+    "citation": "CV2021-00658",
+    "court": "High Court",
+    "judges": [
+      "Master Rishma Ramrattan"
+    ],
+    "claimants": [
+      "Joseph Paul"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "Captain Mike's Marina",
+        "role": "claimant's workplace",
+        "directors_officers": [],
+        "ownership_notes": "Claimant was employed there at time of 2013 arrest"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Joseph Paul",
+        "role": "claimant / businessman, employee of Captain Mike's Marina",
+        "notes": "Detained 4 days, prosecuted 5 years for firearm; awarded ~$198,536 malicious prosecution"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Joseph Paul",
+        "role": "charged (later discharged)",
+        "offences": [
+          "possession of firearm without a licence"
+        ],
+        "category": [
+          "firearms"
+        ],
+        "notes": "Charged 2013; discharged 2018 for want of prosecution; USD9,000 seized then ordered returned"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 198536.37,
+        "currency": "TTD",
+        "what_it_is": "General damages for malicious prosecution incl aggravation"
+      },
+      {
+        "amount": 9000,
+        "currency": "USD",
+        "what_it_is": "Cash seized from vehicle (earlier ordered returned)"
+      },
+      {
+        "amount": 23268.27,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "firearms"
+    ],
+    "social_headline": "Marina worker wins ~$198,000 for five-year malicious firearm prosecution",
+    "social_post": "Master Rishma Ramrattan has awarded Joseph Paul, a businessman and Captain Mike's Marina employee, about $198,536 in damages for malicious prosecution. Paul was arrested in January 2013 after a boating accident, held in custody for four days in what the Court described as unsanitary and inhumane conditions, and charged with firearm possession without a licence; police also seized USD9,000, later ordered returned. The prosecution dragged on for five years before being discharged in 2018 for want of prosecution. With default judgment already entered, the Court awarded general damages inclusive of an aggravation uplift, plus interest and $23,268 costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Prolonged prosecutions and poor detention conditions justify aggravated damages",
+      "Exemplary and special damages require specific proof"
+    ],
+    "outcome": "Damages assessed: ~$198,536 general (incl aggravation) plus costs $23,268",
+    "osint_value": "medium",
+    "osint_notes": "Names Captain Mike's Marina; malicious prosecution with USD cash seizure",
+    "fetch_failed": false
+  },
+  {
+    "title": "Williams, Anthony a/c Williams, Anthony v Telecommunications Services of Trinidad and Tobago Limited",
+    "date": "2026-07-14",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2023/cv_23_04460DD14Jul2026.pdf",
+    "citation": "CV2023-04460",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Anthony Williams"
+    ],
+    "defendants": [
+      "Telecommunications Services of Trinidad and Tobago Limited (TSTT)"
+    ],
+    "companies": [
+      {
+        "name": "Telecommunications Services of Trinidad and Tobago Limited (TSTT)",
+        "role": "defendant / telecoms provider",
+        "directors_officers": [],
+        "ownership_notes": "Owner of utility pole and cables involved in accident"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Anthony Williams",
+        "role": "claimant / motorist",
+        "notes": "Vehicle overturned after hooking fallen TSTT cable; negligence claim dismissed"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 57720,
+        "currency": "TTD",
+        "what_it_is": "Special damages claimed (medical, rental, mechanical)"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "TSTT not liable for crash caused by cable a third party knocked down",
+    "social_post": "Justice Westmin James has dismissed a negligence claim against Telecommunications Services of Trinidad and Tobago (TSTT) by motorist Anthony Williams, whose car overturned on Erin Road, Buenos Ayres, in September 2020 after hooking a fallen telecommunications cable. TSTT's evidence was that an unidentified vehicle had struck its pole and cables shortly before, and that it responded once notified. The Court found Williams failed to prove TSTT had actual or constructive notice of the hazard before the accident, so no breach of duty was established, and dismissed the claim. Given TSTT's infrastructure was directly involved, however, the judge made no order as to costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Utility owners are not liable without notice of a hazard created by a third party",
+      "Courts may decline costs where a claim, though failed, was reasonably brought"
+    ],
+    "outcome": "Claim dismissed; no order as to costs",
+    "osint_value": "medium",
+    "osint_notes": "Names TSTT in a road-traffic negligence claim over fallen cables",
+    "fetch_failed": false
+  },
+  {
+    "title": "In re Judicial Review Act Chapter 7:08 of the Laws of Trinidad and Tobago.  And re an application by Earl Richards...",
+    "date": "2026-07-13",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/james/2025/cv_25_02957DD13July2026.pdf",
+    "citation": "CV2025-02957",
+    "court": "High Court",
+    "judges": [
+      "Westmin R.A. James J"
+    ],
+    "claimants": [
+      "Earl Richards"
+    ],
+    "defendants": [
+      "The Commissioner of Prisons of Trinidad and Tobago",
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Earl Richards",
+        "role": "applicant / detainee",
+        "notes": "Transferred from Maximum-Security Prison to Teteron military barracks during State of Emergency; challenges hooding and legal-access restrictions; granted leave for JR"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Prisoner granted leave to challenge transfer to military barracks and 'bag over head' rule",
+    "social_post": "Justice Westmin James has granted Earl Richards leave to pursue judicial review over his July 2025 transfer from the Maximum-Security Prison, Arouca, to a detention facility at Teteron Barracks, Chaguaramas. Richards, held amid a declared State of Emergency and later subject to a Preventive Detention Order, alleges the transfer to a military facility not lawfully designated as a prison was unlawful, that his whereabouts were initially hidden from his attorneys, and that legal visits were conditioned on his lawyers being blindfolded and a grey nylon drawstring bag being placed over his head. He was granted leave to seek mandamus, declarations and vindicatory damages, with costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Prison transfers must be lawfully authorised and respect access to counsel",
+      "Leave for judicial review requires only an arguable case"
+    ],
+    "outcome": "Leave to apply for judicial review granted; claimant to file fixed date claim; costs to applicant",
+    "osint_value": "high",
+    "osint_notes": "State of Emergency detention; transfer to Teteron military barracks; hooding and legal-access restrictions; senior counsel (Ramlogan, Benjamin SC) involved",
+    "fetch_failed": false
+  },
+  {
+    "title": "Phillips, Andrea v The Attorney General of Trinidad and Tobago",
+    "date": "2026-07-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_my/2023/cv_23_00192DD10Jul2026.pdf",
+    "citation": "CV2023-00192",
+    "court": "High Court",
+    "judges": [
+      "Margaret Y. Mohammed J"
+    ],
+    "claimants": [
+      "Andrea Phillips"
+    ],
+    "defendants": [
+      "The Attorney General of Trinidad and Tobago"
+    ],
+    "companies": [
+      {
+        "name": "Stumbling Night Club",
+        "role": "claimant's workplace",
+        "directors_officers": [],
+        "ownership_notes": "Ariapita Avenue, Woodbrook nightclub where 2017 incident occurred"
+      }
+    ],
+    "individuals": [
+      {
+        "name": "Andrea Phillips",
+        "role": "claimant / nightclub bouncer / security officer",
+        "notes": "Assaulted and wrongly charged after cover-charge dispute with off-duty officers; awarded $103,000"
+      }
+    ],
+    "criminal_individuals": [
+      {
+        "name": "Andrea Phillips",
+        "role": "charged (dismissed)",
+        "offences": [
+          "resisting arrest",
+          "obstructing a police officer",
+          "obscene language"
+        ],
+        "category": [
+          "assault"
+        ],
+        "notes": "Charges dismissed 2019; found she was assaulted by PC Holder"
+      }
+    ],
+    "financial_figures": [
+      {
+        "amount": 83000,
+        "currency": "TTD",
+        "what_it_is": "General damages incl aggravation"
+      },
+      {
+        "amount": 20000,
+        "currency": "TTD",
+        "what_it_is": "Exemplary damages"
+      },
+      {
+        "amount": 24450,
+        "currency": "TTD",
+        "what_it_is": "Prescribed costs"
+      }
+    ],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "assault"
+    ],
+    "social_headline": "Woodbrook bouncer wins $103,000 after officer assaulted and framed her over cover charge",
+    "social_post": "Justice Margaret Mohammed has awarded nightclub bouncer Andrea Phillips $103,000 after finding an off-duty officer assaulted and then wrongly charged her during a 2017 cover-charge dispute at the Stumbling Night Club on Ariapita Avenue, Woodbrook. Phillips, collecting entry fees, blocked PC Nicholas Holder when he tried to enter without paying; the Court accepted that Holder struck her, splitting her lip, and that police refused to take her report and instead charged her with resisting arrest, obstruction and obscene language. Those charges were dismissed in 2019. The judge awarded $83,000 general damages with aggravation and $20,000 exemplary damages for Holder's oppressive conduct as a State agent. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Exemplary damages punish oppressive conduct by State agents",
+      "Police who concoct charges expose the State to aggravated and exemplary awards"
+    ],
+    "outcome": "Judgment for claimant; $83,000 general (incl aggravation) + $20,000 exemplary + $24,450 costs",
+    "osint_value": "medium",
+    "osint_notes": "Names Stumbling Night Club, Woodbrook; assault/false-arrest by named officer PC Nicholas Holder",
+    "fetch_failed": false
+  },
+  {
+    "title": "Abdool, Ishmael; Abdool, Jaraad; Abdool, Shahnaaz v Ramsumair, Jodhan; Ramsumair, Baigentee",
+    "date": "2026-07-10",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/mohammed_r/2019/cv_19_02660DD10Jul2026.pdf",
+    "citation": "CV2019-02660",
+    "court": "High Court",
+    "judges": [
+      "Robin N. Mohammed J"
+    ],
+    "claimants": [
+      "Ishmael Abdool",
+      "Jaraad Abdool",
+      "Shahnaaz Abdool"
+    ],
+    "defendants": [
+      "Jodhan Ramsumair",
+      "Baigentee Ramsumair"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 10000,
+        "currency": "TTD",
+        "what_it_is": "Nominal damages for trespass to land"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "Parcel (464.9 sq m), Regal Court, Cunupia; 59.9 sq m encroachment",
+        "lease_terms": "",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "Trespass established; defendants ordered to demolish structure and pay $10,000 nominal damages"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [],
+    "social_headline": "Cunupia neighbours ordered to demolish structure encroaching on Abdool land",
+    "social_post": "Justice Robin Mohammed has ruled for the Abdool family in a boundary dispute at Regal Court, Cunupia. Ishmael, Jaraad and Shahnaaz Abdool, owners of a 464.9-square-metre parcel, said their neighbours Jodhan and Baigentee Ramsumair diverted a drain around 2009 and built an apartment, shed and wall encroaching 59.9 square metres onto their land. The Ramsumairs denied encroaching and counterclaimed. The Court found trespass proved, granted a declaration of the Abdools' title, ordered the encroaching structure demolished within 45 days and an injunction, dismissed the counterclaim, and awarded $10,000 nominal damages plus 65% assessed costs. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Diverting drains and building over boundaries constitutes trespass",
+      "Courts can order demolition of encroaching structures"
+    ],
+    "outcome": "Judgment for claimants; demolition ordered; counterclaim dismissed; $10,000 nominal damages plus costs",
+    "osint_value": "medium",
+    "osint_notes": "Cunupia land encroachment dispute with property description",
+    "fetch_failed": false
+  },
+  {
+    "title": "Morris, Carl v Beckles, Keith [CV.2023-03783].  Beckles, Keith v Morris, Carl [CV.2023-03859]",
+    "date": "2026-07-09",
+    "url": "https://webopac.ttlawcourts.org//LibraryJud/Judgments/HC/Reid/2023/cv_23_03783DD9Jul2026.pdf",
+    "citation": "CV2023-03783; CV2023-03859 (consolidated)",
+    "court": "High Court",
+    "judges": [
+      "Karen Reid J"
+    ],
+    "claimants": [
+      "Carl Morris",
+      "Keith Beckles"
+    ],
+    "defendants": [
+      "Keith Beckles",
+      "Carl Morris",
+      "PSCU Credit Union Co-Operative Society Limited (added Interested Party/Second Defendant)"
+    ],
+    "companies": [],
+    "individuals": [
+      {
+        "name": "Carl Morris",
+        "role": "claimant / purchaser-occupier",
+        "notes": "Paid $628,000 toward $1m purchase of 308 Denoso Drive; alleges undisclosed mortgage"
+      },
+      {
+        "name": "Keith Beckles",
+        "role": "defendant / vendor-mortgagor",
+        "notes": "Defaulted on PSCU mortgage; property subject to sale order"
+      }
+    ],
+    "criminal_individuals": [],
+    "financial_figures": [
+      {
+        "amount": 1000000,
+        "currency": "TTD",
+        "what_it_is": "Agreed sale price of the property"
+      },
+      {
+        "amount": 628000,
+        "currency": "TTD",
+        "what_it_is": "Amount Morris paid 2011-2018"
+      },
+      {
+        "amount": 978334.47,
+        "currency": "TTD",
+        "what_it_is": "Outstanding mortgage debt owed to PSCU"
+      }
+    ],
+    "property_lease": [
+      {
+        "address_or_description": "No. 308 Denoso Drive, Roystonia Development, Couva",
+        "lease_terms": "sale agreement 2011, price $1,000,000",
+        "rent": "",
+        "landlord": "",
+        "tenant": "",
+        "outcome": "PSCU joined as party; strike-out/enforcement relief refused as premature/irregular"
+      }
+    ],
+    "related_litigation": [],
+    "banks_financial_institutions": [
+      "PSCU Credit Union Co-Operative Society Limited"
+    ],
+    "crime_flags": [],
+    "social_headline": "Credit union joined to Couva property battle over defaulted mortgage",
+    "social_post": "Justice Karen Reid has added PSCU Credit Union to a tangled dispute over No. 308 Denoso Drive, Roystonia, Couva. Carl Morris says he agreed to buy the property from Keith Beckles for $1 million in 2011 and paid $628,000 before financial difficulties stopped him, plus $100,000 in renovations. It later emerged Beckles had mortgaged the property to PSCU and defaulted, and a separate court ordered its sale to clear a $978,334 debt, without Morris being a party. The Court allowed PSCU to be joined as a defendant but refused, as premature and irregular, its bid to strike out the claims or force Morris to comply with the sale order. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "A non-party cannot be compelled in separate proceedings to obey another action's order",
+      "Mortgagees may be joined where their interest overlaps a possession dispute"
+    ],
+    "outcome": "PSCU joined as second defendant; strike-out and enforcement relief refused; re-pleading directed",
+    "osint_value": "high",
+    "osint_notes": "Names PSCU Credit Union; property sale/mortgage default with figures; Couva Roystonia development",
+    "fetch_failed": false
+  },
+  {
+    "title": "The State v St Rose, Kerwine o/c Packet o/c Strongy for manslaughter (provocation)",
+    "date": "2026-07-06",
+    "url": "https://webopac.ttlawcourts.org/LibraryJud/Judgments/HC/RHinds/2024/cr_24_pos2694DD6Jul2026.pdf",
+    "citation": "CR-HC-POS-2024-2694-1",
+    "court": "High Court (Criminal)",
+    "judges": [
+      "Lisa Ramsumair-Hinds J"
+    ],
+    "claimants": [
+      "The State"
+    ],
+    "defendants": [
+      "Kerwine St. Rose o/c Packet o/c Strongy"
+    ],
+    "companies": [],
+    "individuals": [],
+    "criminal_individuals": [
+      {
+        "name": "Kerwine St. Rose o/c Packet o/c Strongy",
+        "role": "convicted (guilty plea to manslaughter)",
+        "offences": [
+          "manslaughter (provocation)"
+        ],
+        "category": [
+          "murder"
+        ],
+        "notes": "Fatally stabbed Matthew Mungaldeen ('Big Matthew'/'Bolo') at Bleu's Bar, Curepe, Aug 2024, in a dispute over sharing puncheon rum; 8 years 10 months 9 days"
+      }
+    ],
+    "financial_figures": [],
+    "property_lease": [],
+    "related_litigation": [],
+    "banks_financial_institutions": [],
+    "crime_flags": [
+      "murder"
+    ],
+    "social_headline": "Man jailed nearly 9 years for fatal Curepe bar stabbing over a drink",
+    "social_post": "Justice Lisa Ramsumair-Hinds has sentenced Kerwine St. Rose, known as 'Packet' and 'Strongy', to 8 years, 10 months and 9 days for the manslaughter of Matthew Mungaldeen, called 'Big Matthew' or 'Bolo', at Bleu's Bar in Curepe in August 2024. Originally charged with murder, St. Rose pleaded guilty to manslaughter on the basis of provocation after being repeatedly refused a share of a bottle of puncheon rum during a birthday lime and told to leave. He stabbed Mungaldeen in the cheek with a pocket knife, causing his death, then surrendered at a police station. The judge accepted his remorse and applied a two-fifths plea discount. Full judgment at ttlawcourts.org.",
+    "practical_takeaways": [
+      "Provocation can reduce murder to manslaughter but still attracts substantial jail time",
+      "Genuine remorse and an early plea can earn an enhanced sentencing discount"
+    ],
+    "outcome": "Convicted of manslaughter (provocation); sentenced to 8 years 10 months 9 days at hard labour",
+    "osint_value": "low",
+    "osint_notes": "Manslaughter sentencing; bar stabbing over rum dispute",
+    "fetch_failed": false
   }
 ]
